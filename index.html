@@ -1,0 +1,612 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Propuesta de tesis · TODO</title>
+<!-- GENERADO por web/build_todo.py el 2026-07-26. NO EDITAR A MANO: los TODO.md mandan, este archivo se reescribe. -->
+<style>
+:root{
+  --fondo:#fbfaf7; --papel:#fff; --tinta:#1c1a17; --suave:#6b6558;
+  --linea:#e4dfd4; --acento:#8a5a2b; --hecho:#3f7d4e; --pend:#b8b0a0;
+  --caja:#f6f3ec; --alerta:#c2410c; --aviso:#a16207;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --fondo:#15140f; --papel:#1d1b16; --tinta:#eae5da; --suave:#a39b8b;
+    --linea:#332f27; --acento:#d9a066; --hecho:#6bbf83; --pend:#5a5346;
+    --caja:#232019; --alerta:#f97316; --aviso:#eab308;
+  }
+}
+*{box-sizing:border-box}
+body{
+  margin:0; background:var(--fondo); color:var(--tinta);
+  font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+}
+.envoltura{max-width:900px; margin:0 auto; padding:2rem 1.25rem 5rem}
+header.principal{border-bottom:2px solid var(--linea); padding-bottom:1.25rem; margin-bottom:1.5rem}
+header.principal h1{margin:0 0 .3rem; font-size:1.6rem; letter-spacing:-.01em}
+header.principal .sub{margin:0; color:var(--suave); font-size:.9rem}
+header.principal .global{margin:.6rem 0 0; font-size:.9rem; color:var(--suave)}
+header.principal .global strong{color:var(--tinta)}
+
+nav.pestanas{display:flex; flex-wrap:wrap; gap:.4rem; margin-bottom:1.25rem}
+nav.pestanas button{
+  font:inherit; font-size:.88rem; cursor:pointer; padding:.45rem .85rem;
+  border:1px solid var(--linea); background:var(--papel); color:var(--suave);
+  border-radius:999px; transition:.15s;
+}
+nav.pestanas button:hover{border-color:var(--acento); color:var(--tinta)}
+nav.pestanas button.activa{background:var(--acento); border-color:var(--acento); color:#fff}
+nav.pestanas button .n{opacity:.7; font-variant-numeric:tabular-nums; margin-left:.35rem}
+
+.controles{display:flex; align-items:center; gap:.5rem; margin-bottom:1.5rem; font-size:.88rem; color:var(--suave)}
+.controles label{display:flex; align-items:center; gap:.4rem; cursor:pointer}
+
+.panel{display:none}
+.panel.activo{display:block}
+.panel h2{font-size:1.25rem; margin:0 0 .6rem}
+.panel h3{font-size:.8rem; text-transform:uppercase; letter-spacing:.08em;
+  color:var(--suave); margin:2rem 0 .75rem; font-weight:600}
+p.contexto{color:var(--suave); font-size:.93rem; margin:0 0 .7rem}
+p.contexto.aviso{color:var(--aviso); border-left:3px solid var(--aviso);
+  padding-left:.75rem; background:var(--caja)}
+
+.barra{height:5px; background:var(--linea); border-radius:99px; overflow:hidden; margin:1rem 0 .4rem}
+.barra .relleno{height:100%; background:var(--hecho); border-radius:99px}
+p.cuenta{margin:0 0 .5rem; font-size:.82rem; color:var(--suave); font-variant-numeric:tabular-nums}
+
+ul.tareas{list-style:none; padding:0; margin:0}
+li.tarea{background:var(--papel); border:1px solid var(--linea);
+  border-radius:10px; padding:.85rem 1rem; margin-bottom:.6rem}
+li.tarea.hecha{opacity:.82}
+.cabecera{display:flex; align-items:baseline; gap:.55rem; flex-wrap:wrap}
+.casilla{width:14px; height:14px; border-radius:4px; flex:none;
+  border:2px solid var(--pend); align-self:center}
+li.tarea.hecha .casilla{background:var(--hecho); border-color:var(--hecho); position:relative}
+li.tarea.hecha .casilla::after{content:"";position:absolute;left:3px;top:0px;
+  width:4px;height:8px;border:solid #fff;border-width:0 2px 2px 0;transform:rotate(42deg)}
+.ident{font:600 .74rem/1 ui-monospace,SFMono-Regular,Menlo,monospace;
+  letter-spacing:.04em; color:var(--acento); background:var(--caja);
+  padding:.25rem .45rem; border-radius:5px; flex:none}
+.titulo{font-weight:600; flex:1 1 12rem; min-width:0}
+li.tarea.hecha .titulo{font-weight:500; text-decoration:line-through;
+  text-decoration-color:var(--pend); text-decoration-thickness:1px}
+.fecha{font-size:.74rem; color:var(--suave); font-variant-numeric:tabular-nums; flex:none}
+
+.detalle{margin:.7rem 0 0; padding:.7rem .85rem; background:var(--caja);
+  border-radius:8px; font-size:.9rem; color:var(--suave)}
+.detalle p{margin:0 0 .55rem}
+.detalle p:last-child{margin-bottom:0}
+.detalle strong{color:var(--tinta)}
+.detalle ul{margin:.2rem 0 .55rem; padding-left:1.1rem}
+.detalle li{margin-bottom:.3rem}
+.detalle p.alerta,.detalle li.alerta{color:var(--tinta);
+  border-left:3px solid var(--alerta); padding-left:.6rem; margin-left:-.15rem}
+.detalle p.aviso,.detalle li.aviso{border-left:3px solid var(--aviso); padding-left:.6rem}
+.detalle p.artefacto{font-size:.82rem; padding-top:.45rem;
+  border-top:1px dashed var(--linea); margin-top:.6rem; color:var(--suave)}
+code{font:.86em ui-monospace,SFMono-Regular,Menlo,monospace;
+  background:var(--fondo); padding:.1rem .3rem; border-radius:4px;
+  border:1px solid var(--linea); word-break:break-word}
+.detalle a{color:var(--acento)}
+.mate{font-style:normal}
+
+footer{margin-top:3rem; padding-top:1rem; border-top:1px solid var(--linea);
+  font-size:.78rem; color:var(--suave)}
+footer code{font-size:.9em}
+@media (max-width:560px){
+  .envoltura{padding:1.25rem .85rem 4rem}
+  .fecha{width:100%}
+}
+</style>
+
+<script>
+window.MathJax={
+  tex:{inlineMath:[["$","$"]]},
+  options:{skipHtmlTags:["script","noscript","style","textarea","pre","code"]}
+};
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+<body>
+<div class="envoltura">
+<header class="principal">
+<h1>Propuesta de tesis — control óptimo</h1>
+<p class="sub">Decidir y proponer un tema en control óptimo inverso, en 2–3 meses desde el 2026-07-25.</p>
+<p class="global"><strong>18</strong> de <strong>36</strong> tareas completadas en todo el proyecto.</p>
+</header>
+<nav class="pestanas" role="tablist">
+<button data-slug="referencias" role="tab">referencias<span class="n">5/12</span></button>
+<button data-slug="asesor" role="tab">asesor<span class="n">4/4</span></button>
+<button data-slug="perfil" role="tab">perfil<span class="n">2/3</span></button>
+<button data-slug="transporte_optimo" role="tab">⚠️ transporte optimo<span class="n">0/3</span></button>
+<button data-slug="infra" role="tab">General<span class="n">7/14</span></button>
+</nav>
+<div class="controles">
+<label><input type="checkbox" id="ocultar"> Esconder las completadas</label>
+</div>
+<section class="panel activo" id="panel-referencias" role="tabpanel">
+  <h2>Fuentes y plan de estudio</h2>
+  <p class="contexto">Primero entender qué hay que hacer, con el paper de Junca–Leiva y los documentos que mandó el asesor. Solo después buscar con qué estudiarlo y construir el tracker. De aquí nacen los subproyectos <code>apuntes</code>, <code>explicaciones</code> y <code>propuesta</code>.</p>
+  <p class="contexto"><strong>Regla número uno: ninguna decisión sobre qué estudiar se toma antes de REF-1.</strong> Cumplida el 2026-07-26: REF-1 y REF-3 están fichadas, así que a partir de aquí sí se decide.</p>
+  <p class="contexto"><strong>El alcance quedó acotado en la reunión del 2026-07-23</strong>, y esto manda sobre todo lo de abajo: <em>«por ahora no es el objetivo llegar hasta el caso en el que no conocemos las cosas […] conocemos todo, simplemente tenemos que resolver el problema de control inverso, sin asumir que tenemos siempre muestras»</em>. Sale del alcance la §4 entera del paper (oráculos, estimadores de gradiente, SMD-RLfD y su cota de complejidad), que además era lo que peor sobrevivía al continuo.</p>
+  <div class="barra"><div class="relleno" style="width:42%"></div></div>
+  <p class="cuenta">5 de 12 completadas</p>
+  <ul class="tareas">
+<li class="tarea hecha" data-hecha="1">
+  <div class="cabecera">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">REF-1</span>
+    <span class="titulo">Fichar el paper Junca–Leiva a fondo</span>
+    <span class="fecha">2026-07-26</span>
+  </div>
+  <div class="detalle">
+    <p>Fichado. La cadena es: medida de ocupación normalizada al símplex → LP sobre el poliedro <code>F</code> → holgura complementaria → conjunto inverso-factible → <code>IO-AL_α</code> con previo <code>ĉ</code> → min-max caja×símplex → SMD. <strong>Nueve rupturas identificadas al pasar al continuo.</strong> Las dos graves: la holgura complementaria exige <code>V ∈ C²</code> y la HJB solo da viscosidad; y el regularizador <code>‖c-ĉ‖²</code> deja una <strong>medida</strong> en el Euler–Lagrange, que es justo lo que el borrador del asesor arregla con la discrepancia de Sobolev. Además la cota <code>O(α²|S|³|A|²/ε²)</code> <strong>diverge</strong> al refinar la malla, así que «discretizar y correr SMD» no es camino.</p>
+    <p class="artefacto">Artefacto: <code>subproyectos/referencias/fichas/paper_junca_leiva.md</code></p>
+  </div>
+</li>
+<li class="tarea hecha" data-hecha="1">
+  <div class="cabecera">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">REF-2</span>
+    <span class="titulo">Leer la presentación del asesor, foco en el bloque final</span>
+    <span class="fecha">2026-07-26</span>
+  </div>
+  <div class="detalle">
+    <p>Núcleo, pero por otra razón: el bloque final ya <strong>no</strong> es lo más cercano al enunciado del problema, porque el borrador de julio va más lejos. Lo que tiene y no tiene ningún otro documento es una diapositiva <strong>«Research questions»</strong>, o sea la agenda escrita por el asesor: <em>well-posedness</em> (unicidad, <strong>qué espacios de Sobolev son naturales para <code>c</code></strong>, qué condiciones de frontera), <em>numerics</em> y <em>estimation</em>. 🔴 <strong>De sus tres preguntas, una está fuera de alcance (estimation, lo dijo en la reunión), otra tiene esquema sin teoría (numerics, el borrador), y well-posedness sigue intacta. Esa es la tesis</strong>, y ahora se puede decir con su propia agenda en vez de con deducciones nuestras. Bonus: en junio escribía la optimalidad del experto como <strong>igualdad de valor sin mencionar <code>V</code></strong>, lo que esquiva el problema de viscosidad. El borrador lo abandonó. Merece explorarse.</p>
+    <p class="artefacto">Artefacto: <code>subproyectos/referencias/fichas/presentacion_junca_unibo.md</code></p>
+  </div>
+</li>
+<li class="tarea hecha" data-hecha="1">
+  <div class="cabecera">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">REF-3b</span>
+    <span class="titulo">Clasificar <code>posible_proyecto</code></span>
+    <span class="fecha">2026-07-26</span>
+  </div>
+  <div class="detalle">
+    <p><strong>CONTEXTO.</strong> No es un tema de tesis: es el <strong>formulario de solicitud de financiación</strong> MATH-AmSud 2025 (2STORM), a dos años y con once participantes. De ahí lo de «tal vez dé plata». No hay nada que atacar. Sirve por tres cosas: el problema <span class="mate">$\min_\theta F(\theta)+V(\theta)$</span> es <strong>la misma familia anidada que la tesis con el signo cambiado</strong>; su dificultad central (sensibilidad de la función de valor) <strong>es la misma patología</strong> del argmin multivaluado que bloquea el punto fijo; y da el vocabulario <em>discretize-then-optimize</em> contra <em>optimize-then-discretize</em>, que nombra justo la diferencia entre el paper y el borrador. 🔴 Y trae el CV de Junca, que <strong>desbloquea REF-7</strong>: tiene un paper con <strong>Henrion</strong> sobre la jerarquía <strong>Moment-SOS</strong> aplicada a procesos estocásticos, que es medidas de ocupación y es suyo.</p>
+    <p class="artefacto">Artefacto: <code>subproyectos/referencias/fichas/posible_proyecto.md</code></p>
+  </div>
+</li>
+<li class="tarea hecha" data-hecha="1">
+  <div class="cabecera">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">REF-3</span>
+    <span class="titulo">Fichar <code>junca_fixed_point_continuo</code></span>
+    <span class="fecha">2026-07-26</span>
+  </div>
+  <div class="detalle">
+    <p><strong>Núcleo, y el documento más importante del proyecto.</strong> Es el puente al continuo escrito por el propio asesor: flujo → EDP débil, programación dinámica → HJB, actualización del costo → ecuación elíptica. <strong>Seis secciones, cero teoremas, cero demostraciones.</strong> Eso no es un defecto suyo, es el dato: formula el punto fijo y no prueba nada sobre él, así que <strong>ahí empieza la tesis</strong>. Diez huecos catalogados; el §4 de la ficha es el borrador natural del «trabajo propuesto». Consecuencia dura: <strong>REF-7 deja de ser exploratorio</strong> (hace falta Kurtz–Stockbridge) y aparecen dos prerrequisitos que el plan no tenía, <strong>viscosidad para HJB</strong> y <strong>Fokker–Planck estacionaria</strong>.</p>
+    <p class="artefacto">Artefacto: <code>subproyectos/referencias/fichas/junca_fixed_point_continuo.md</code></p>
+  </div>
+</li>
+<li class="tarea pendiente" data-hecha="0">
+  <div class="cabecera">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">REF-4</span>
+    <span class="titulo">Decidir la «Semana 0»: qué material ya leído o escrito se recicla</span>
+  </div>
+  <div class="detalle">
+    <p><strong>Después de REF-1, no antes.</strong> Se cruza lo que el paper demuestre que hace falta contra el inventario del <code>CLAUDE.md</code> de este subproyecto (131/160 hojas del tracker viejo, 39 capítulos del compendio, <code>.mmd</code> en <code>material/</code>). Lo que sirva entra al tracker nuevo como Semana 0, con la ventaja de que parte de eso ya está explicado en español. <strong>Entradas nuevas de la reunión y de las fichas (2026-07-26):</strong></p>
+    <ul>
+      <li><strong>Baja SMD y la aproximación estocástica</strong>: el asesor los sacó del alcance. Sube <strong>viscosidad para HJB</strong> y <strong>Fokker–Planck estacionaria</strong>, que no estaban previstos y no salen de Øksendal, Touzi ni Pham.</li>
+      <li>El <strong>cono normal</strong> que Mauricio explicó en el dibujo del mal planteamiento sale en su curso tutorial, pero <strong>eso no lo hace material de la tesis</strong>: el curso va aparte (<code>subproyectos/transporte_optimo/</code>).</li>
+      <li class="aviso">⚠️ <strong>El transporte óptimo NO entra por la vía del curso.</strong> La primera versión de esta tarea decía lo contrario, por una mala lectura de la transcripción. La <strong>Semana 9</strong> vieja (Santambrogio, Wasserstein, flujos gradiente, JKO) solo entra a la Semana 0 si el problema de la tesis la pide. Hoy nada indica que la pida.</li>
+    </ul>
+    <p class="alerta">🔴 <strong><code>PER-1</code> ya hizo medio trabajo (2026-07-26).</strong> <code>formacion.md</code> §5 cruza los huecos de <code>REF-3</code> contra lo que hay escrito, y sale que <strong>casi todo el aparato analítico ya está</strong>: Sobolev y regularidad elíptica en el apéndice de operadores, Dirichlet y Neumann en Baudoin §4.7–4.8, Fokker–Planck en <code>fpe</code>, y dimensión infinita en todo el bloque de Bauschke &amp; Combettes. <strong>Lo que falta de verdad son tres cosas: control óptimo con HJB, soluciones de viscosidad, y medidas de ocupación.</strong> Cerrar REF-4 es ahora decidir el orden y la fuente de esas tres, no inventariar de nuevo.</p>
+  </div>
+</li>
+<li class="tarea pendiente" data-hecha="0">
+  <div class="cabecera">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">REF-5</span>
+    <span class="titulo">Referencias de control óptimo estocástico</span>
+  </div>
+  <div class="detalle">
+    <p><strong>Encargo explícito del asesor</strong>, no iniciativa propia: <em>«ahí le pregunta a Claude cuál va a ser su referencia para el control óptimo»</em> [12:30]. Øksendal, Touzi, Pham. Todo por verificar contra los libros reales; el detalle de cada pista está en el <code>CLAUDE.md</code> del subproyecto. <strong>Pista fuerte nueva:</strong> dijo que la ruta alternativa lleva a <strong>FBSDE</strong>, y el Touzi que se sospechaba es literalmente <em>Optimal Stochastic Control, Stochastic Target Problems and <strong>Backward SDE</strong></em>. Deja de ser conjetura. Filtrar con <code>subproyectos/perfil/</code>: el criterio del usuario es <strong>libro riguroso antes que paper en área nueva</strong>. Para confirmar cuál Øksendal trae los capítulos de control basta ver un índice, que es uno de los pocos usos legítimos de un PDF.</p>
+  </div>
+</li>
+<li class="tarea pendiente" data-hecha="0">
+  <div class="cabecera">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">REF-6</span>
+    <span class="titulo">Parada óptima como puerta de entrada</span>
+  </div>
+  <div class="detalle">
+    <p>Recomendación explícita del asesor. Merece entenderse <strong>por qué</strong> antes de estudiarla: es el problema de control donde el único control es <em>cuándo detenerse</em>, así que da la programación dinámica y la caracterización variacional sin el aparato completo de HJB. Clásico a verificar: Peskir–Shiryaev. <strong>Baja de urgencia</strong> tras fichar REF-3: sigue siendo buena puerta a la caracterización variacional, que es lo que hace falta para el problema de viscosidad, pero no es donde está el problema.</p>
+  </div>
+</li>
+<li class="tarea pendiente" data-hecha="0">
+  <div class="cabecera">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">REF-7</span>
+    <span class="titulo">Medidas de ocupación</span>
+  </div>
+  <div class="detalle">
+    <p><strong>Sube a prerrequisito duro.</strong> Deja de ser exploratorio por dos vías que coinciden: la ficha de REF-3 §4.4 (sin el análogo continuo de la Proposición 1 de Puterman, que es Kurtz–Stockbridge, la igualdad clave del borrador no está justificada) y el propio asesor, que sobre esta formulación dijo <em>«hay varios papers, hay libros como tal»</em> [00:00] y además <strong>dudó de si era la mejor forma, frente a plantearlo en políticas</strong>. 🔴 <strong>Deja de ser una búsqueda a ciegas (2026-07-26, de REF-3b).</strong> El CV de Junca trae un paper <strong>suyo</strong> con <strong>D. Henrion</strong> y M. Velasco, <em>Moment-SOS hierarchy and exit location of stochastic processes</em>, que es exactamente la maquinaria de medidas de ocupación sobre procesos estocásticos. Y otro con D. Avila, <em>On reachability of Markov chains: a long-run average approach</em>, en la misma línea. <strong>Empezar por los suyos, no por el canon.</strong> Pedirlos por el circuito Mathpix. Después, el canon: Hernández-Lerma &amp; Lasserre; <strong>Kurtz &amp; Stockbridge</strong> para el caso continuo, que es el que importa. Que Henrion aparezca aquí confirma que la escuela Lasserre era la pista correcta.</p>
+  </div>
+</li>
+<li class="tarea hecha" data-hecha="1">
+  <div class="cabecera">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">REF-9</span>
+    <span class="titulo">Revisión de literatura: ¿existe trabajo previo? Primera pasada</span>
+    <span class="fecha">2026-07-26</span>
+  </div>
+  <div class="detalle">
+    <p><strong>Su afirmación se sostiene, con un matiz que hay que meter en la propuesta.</strong> Nada combina las cinco piezas (continuo, estocástico, medidas de ocupación, previo, experto subóptimo), pero hay <strong>dos vecinos mucho más cercanos que «nada»</strong>:</p>
+    <ul>
+      <li class="alerta">🔴 <strong>Pauwels, Henrion &amp; Lasserre</strong>, <em>Linear conic optimization for inverse optimal control</em>, SIAM J. Control Optim. 54(3), 2016. Problema inverso <strong>por medidas de ocupación y holgura complementaria en LP</strong>, o sea el núcleo conceptual entero, en continuo. Sin previo y al parecer determinista. <strong>Henrion es coautor de Junca</strong>, así que es su propia red, y casi seguro es <em>«las cosas determinísticas»</em> que él mencionó.</li>
+      <li><strong>Nakano</strong>, <em>Inverse stochastic optimal controls</em>, Automatica 149 (2023). Difusiones generales, y <strong>demuestra buen planteamiento</strong> vía principio del máximo estocástico. Es la ruta B de REF-10 ya recorrida.</li>
+    </ul>
+    <p>El argumento de novedad mejora: cada vecino marca un eje y la tesis se sitúa en el cruce. <strong>Segunda pasada pendiente</strong>: las tres familias numéricas de REF-2 (elementos finitos, primal-dual, métodos neuronales para EDP) aplicadas a control inverso. Y esto fue buscador web, no revisión sistemática.</p>
+    <p class="artefacto">Artefacto: <code>subproyectos/referencias/estado_del_arte.md</code></p>
+  </div>
+</li>
+<li class="tarea pendiente" data-hecha="0">
+  <div class="cabecera">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">REF-11</span>
+    <span class="titulo">Fichar los dos vecinos que encontró REF-9</span>
+  </div>
+  <div class="detalle">
+    <p>Por orden: <strong>Pauwels–Henrion–Lasserre 2016</strong> (<code>arXiv:1412.2277</code>), que es el urgente porque hay que confirmar si es determinista y <strong>cómo tratan la holgura complementaria sin exigir <span class="mate">$V\in C^2$</span></strong>, que es justo la grieta del borrador. Después <strong>Nakano 2023</strong>. Los dos hay que pedirlos por el circuito Mathpix.</p>
+  </div>
+</li>
+<li class="tarea pendiente" data-hecha="0">
+  <div class="cabecera">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">REF-10</span>
+    <span class="titulo">La ruta alternativa: principio del máximo y FBSDE</span>
+  </div>
+  <div class="detalle">
+    <p><em>«Hay dos vertientes, dos escuelas: la escuela gringa con Bellman, y está la escuela [rusa?] con [Pontryagin?]»</em> [13:01]. La ruta del borrador es HJB, y <strong>es la que el asesor tiene más clara</strong>, pero dijo que hay que estar abierto. La otra lleva a sistemas acoplados hacia adelante y hacia atrás, y en estocástico a las <strong>Forward–Backward SDE</strong>. Dato operativo: <strong>Mauricio no ha estudiado FBSDE y Camilo sí</strong>. Antes de meterse, decidir con él si se explora o se descarta (va en <code>preguntas_pendientes.md</code>).</p>
+  </div>
+</li>
+<li class="tarea pendiente" data-hecha="0">
+  <div class="cabecera">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">REF-8</span>
+    <span class="titulo">Plan de estudios y tracker nuevo</span>
+  </div>
+  <div class="detalle">
+    <p>Depende de REF-1, REF-4..REF-7, <strong>REF-9, REF-10</strong> y de <strong>D1</strong> (qué debe contener la propuesta). Reusar lo que REF-4 salve en vez de inventar un plan entero. Forma por decidir sobre la marcha, con el tracker viejo como referencia. De él hereda el truco del <code>?s=</code> en la URL, que es lo que permite al usuario marcarlo y que Edge lo sincronice entre sus PCs. <strong>Artefacto separado de la web de TODOs</strong>: distinto dueño, distinta URL.</p>
+  </div>
+</li>
+  </ul>
+</section>
+<section class="panel" id="panel-asesor" role="tabpanel">
+  <h2>Conversaciones con el asesor</h2>
+  <p class="contexto">Todo lo que sale de hablar con Mauricio Junca: grabaciones, transcripciones, resúmenes y las preguntas que quedan pendientes para la próxima. Es un subproyecto <strong>recurrente</strong>: no se cierra cuando se procesa una reunión, solo espera la siguiente.</p>
+  <div class="barra"><div class="relleno" style="width:100%"></div></div>
+  <p class="cuenta">4 de 4 completadas</p>
+  <ul class="tareas">
+<li class="tarea hecha" data-hecha="1">
+  <div class="cabecera">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">ASE-1</span>
+    <span class="titulo">Montar el subproyecto y la carpeta <code>2026-07-23/</code></span>
+  </div>
+  <div class="detalle">
+    <p>Estructura creada y los 5 audios volcados a <code>2026-07-23/audio/</code>. El <code>CLAUDE.md</code> del subproyecto fija el procedimiento para las reuniones futuras, que es el motivo de que exista.</p>
+  </div>
+</li>
+<li class="tarea hecha" data-hecha="1">
+  <div class="cabecera">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">ASE-2</span>
+    <span class="titulo">Transcribir la reunión del 2026-07-23</span>
+    <span class="fecha">2026-07-26</span>
+  </div>
+  <div class="detalle">
+    <p>20:14 en cinco tramos, con <code>large-v3</code> y reloj global continuo. Los tres archivos hechos. <strong>No hizo falta <code>pyannote</code></strong>: la atribución por contenido salió limpia salvo en el tramo administrativo de 00:52–01:46, que es el que menos importa y queda marcado como dudoso. Lo grande que salió: el asesor <strong>saca del alcance</strong> los oráculos, el muestreo y el SMD (<em>«conocemos todo, simplemente resolver el problema de control inverso»</em>), dice que su sistema de EDP <strong>puede salir distinto</strong>, y nombra una segunda ruta, <strong>FBSDE</strong>, que él no domina y Camilo sí.</p>
+    <p><code>resumen.md</code>. Script reutilizable: <code>transcribir.py</code>. Pendiente de confirmación del usuario: quién habla en 00:52–01:46, y si el curso es de <strong>transporte óptimo</strong> (cuatro menciones, todas mal transcritas). Eso último decide si se recicla la Semana 9 vieja.</p>
+    <p class="artefacto">Artefactos: <code>2026-07-23/transcripcion_cruda.md</code>, <code>transcripcion_limpia.md</code>,</p>
+  </div>
+</li>
+<li class="tarea hecha" data-hecha="1">
+  <div class="cabecera">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">ASE-3</span>
+    <span class="titulo">Extraer de la transcripción lo que sea tarea o referencia</span>
+    <span class="fecha">2026-07-26</span>
+  </div>
+  <div class="detalle">
+    <p>Repartido a <code>referencias</code>. <strong>Dos tareas nuevas</strong>, las dos por encargo explícito del asesor: <code>REF-9</code> (revisión de literatura, que él ya intentó sin encontrar nada) y <code>REF-10</code> (la ruta alternativa del principio del máximo y las FBSDE). <strong>Cuatro reencuadradas</strong>: <code>REF-4</code> recupera el transporte óptimo y baja el SMD; <code>REF-5</code> pasa de iniciativa a encargo y gana la pista de Touzi; <code>REF-6</code> baja de urgencia; <code>REF-7</code> sube a prerrequisito duro. El acotamiento del alcance (control inverso con todo conocido, sin oráculos ni muestreo) va en la cabecera del <code>TODO.md</code> de <code>referencias</code>, porque manda sobre todas sus tareas.</p>
+  </div>
+</li>
+<li class="tarea hecha" data-hecha="1">
+  <div class="cabecera">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">ASE-4</span>
+    <span class="titulo">Abrir <code>preguntas_pendientes.md</code></span>
+    <span class="fecha">2026-07-26</span>
+  </div>
+  <div class="detalle">
+    <p>Quince preguntas en tres niveles. <strong>D1 sigue sin preguntarse</strong> y encabeza la lista: decide si el plan de estudio es ancho o estrecho. Las otras tres de prioridad alta salen de que el asesor dejó abierto más de lo que parecía: si el borrador es enunciado o trabajo en curso, si la ruta es HJB o FBSDE, y si la variable son medidas de ocupación o políticas, que dudó él mismo en el primer minuto.</p>
+    <p class="artefacto">Artefacto: <code>subproyectos/asesor/preguntas_pendientes.md</code></p>
+  </div>
+</li>
+  </ul>
+</section>
+<section class="panel" id="panel-perfil" role="tabpanel">
+  <h2>Contexto sobre el usuario</h2>
+  <p class="contexto">Reunir y mantener en un solo sitio lo que hace falta saber sobre el usuario para darle buenas recomendaciones: qué matemáticas domina y a qué nivel, cómo le gusta aprender, y cómo escribe. En el proyecto anterior esto estaba disperso e improvisado; aquí es un subproyecto con reglas de mantenimiento.</p>
+  <div class="barra"><div class="relleno" style="width:67%"></div></div>
+  <p class="cuenta">2 de 3 completadas</p>
+  <ul class="tareas">
+<li class="tarea hecha" data-hecha="1">
+  <div class="cabecera">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">PER-3</span>
+    <span class="titulo">Traer las guías de estilo y los trabajos propios</span>
+  </div>
+  <div class="detalle">
+    <p><code>ESTILO.md</code> y <code>ESTILO_EXPLICACIONES.md</code> en <code>estilo/</code>; los 4 textos del usuario en <code>trabajos_propios/</code> (solo los fuentes de texto, los PDFs no). <strong>Deja deuda con SKI-2:</strong> toda skill que los referencie apunta ahora a una ruta muerta.</p>
+  </div>
+</li>
+<li class="tarea hecha" data-hecha="1">
+  <div class="cabecera">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">PER-1</span>
+    <span class="titulo">Reconstruir <code>formacion.md</code></span>
+    <span class="fecha">2026-07-26</span>
+  </div>
+  <div class="detalle">
+    <p>Reconstruido cruzando el <code>.txt</code> de junio, el estado del tracker y el <strong>índice real del compendio</strong>, que resultó ser la fuente que más informa. El «CERO» de junio en cálculo estocástico hoy son ~7 000 líneas escritas sobre Baudoin 1–6, más un módulo propio de Fokker–Planck. 🔴 <strong>Tres hallazgos que cambian <code>REF-4</code>:</strong> el apéndice de operadores desarrolla <strong>espacios de Sobolev y regularidad elíptica desde cero</strong>, que es la maquinaria de la ecuación del costo del borrador; Baudoin §4.7 y §4.8 son los semigrupos de <strong>Dirichlet y Neumann</strong>, o sea condiciones de frontera; y Bauschke &amp; Combettes es análisis convexo <strong>en espacios de Hilbert</strong>, justo el marco que el asesor nombró en la reunión. Lo que sigue en CERO y hay que estudiar de verdad: <strong>control óptimo y HJB, soluciones de viscosidad, y medidas de ocupación</strong>. Nada más.</p>
+    <p class="artefacto">Artefacto: <code>subproyectos/perfil/formacion.md</code></p>
+  </div>
+</li>
+<li class="tarea pendiente" data-hecha="0">
+  <div class="cabecera">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">PER-2</span>
+    <span class="titulo">Escribir <code>preferencias.md</code> y <code>voz.md</code></span>
+  </div>
+  <div class="detalle">
+    <p>Preferencias: libro riguroso antes que paper en área nueva, nivel de rigor que espera, qué le aburre. Voz: puntero a E25–E30 de <code>ESTILO_EXPLICACIONES.md</code> y qué las generó (salieron de leer sus <code>trabajos_propios/</code>).</p>
+  </div>
+</li>
+  </ul>
+</section>
+<section class="panel" id="panel-transporte_optimo" role="tabpanel">
+  <h2>Curso tutorial con Junca</h2>
+  <p class="contexto aviso">⚠️ <strong>A priori NO relacionado con el objetivo del proyecto.</strong> Es un curso tutorial que el usuario ve con Mauricio Junca <strong>además</strong> de la tesis, martes y jueves. El propio Junca dijo que no creía que tuviera mucha relación con el tema de tesis. Está aquí porque comparte asesor y grabaciones, no porque sirva al objetivo. Nada de aquí entra al plan de estudio de la tesis sin una decisión explícita.</p>
+  <p class="contexto">Se parte de casi cero: la Semana 9 del proyecto viejo quedó entera sin leer y en el compendio no hay ni un capítulo de transporte óptimo.</p>
+  <div class="barra"><div class="relleno" style="width:0%"></div></div>
+  <p class="cuenta">0 de 3 completadas</p>
+  <ul class="tareas">
+<li class="tarea pendiente" data-hecha="0">
+  <div class="cabecera">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">TOP-1</span>
+    <span class="titulo">Conseguir el programa del curso</span>
+  </div>
+  <div class="detalle">
+    <p>Qué se cubre, qué libro sigue, cómo se evalúa y cuántas sesiones son. Sin eso no se puede planear nada. En la reunión solo se cuadró que son martes y jueves, y quedó pendiente <em>«definir el día»</em> del tutorial.</p>
+  </div>
+</li>
+<li class="tarea pendiente" data-hecha="0">
+  <div class="cabecera">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">TOP-2</span>
+    <span class="titulo">Fijar la referencia principal</span>
+  </div>
+  <div class="detalle">
+    <p>Candidato obvio por el material viejo: <strong>Santambrogio</strong>, <em>Optimal Transport for Applied Mathematicians</em>, que es de donde salían las hojas de la Semana 9 del tracker. <strong>Por confirmar contra el programa</strong>, no por suponer. Si Junca sigue otro libro, manda el suyo. Cuando esté decidido, pedirlo por el circuito Mathpix.</p>
+  </div>
+</li>
+<li class="tarea pendiente" data-hecha="0">
+  <div class="cabecera">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">TOP-3</span>
+    <span class="titulo">Decidir si se recicla algo del tracker viejo</span>
+  </div>
+  <div class="detalle">
+    <p>De la Semana 9 no se leyó nada, así que reciclar aquí significa reusar la <strong>lista de hojas</strong>, no conocimiento adquirido. Lo que sí puede servir es lo convexo, que sí se estudió: R&amp;W y Beck. <strong>No mezclar esta decisión con <code>REF-4</code></strong>, que es la Semana 0 de la tesis y responde a otra pregunta.</p>
+  </div>
+</li>
+  </ul>
+</section>
+<section class="panel" id="panel-infra" role="tabpanel">
+  <h2>Infraestructura del proyecto</h2>
+  <p class="contexto">Todo lo que no es contenido: montaje, herramientas, la web de TODOs y la migración de skills. El plan completo, con dependencias y decisiones, vive en <code>docs/plan.md</code>.</p>
+  <div class="barra"><div class="relleno" style="width:50%"></div></div>
+  <p class="cuenta">7 de 14 completadas</p>
+  <h3>Fase 0 — Fontanería</h3>
+  <ul class="tareas">
+<li class="tarea hecha" data-hecha="1">
+  <div class="cabecera">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">INF-2</span>
+    <span class="titulo">Esqueleto de carpetas y <code>git init</code></span>
+  </div>
+  <div class="detalle">
+    <p>Árbol de §3 del plan creado; repo local en rama <code>main</code>, sin remoto.</p>
+  </div>
+</li>
+<li class="tarea hecha" data-hecha="1">
+  <div class="cabecera">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">INF-3</span>
+    <span class="titulo">Stub de <code>CLAUDE.md</code> + <code>CLAUDE.md</code> y <code>TODO.md</code> de los subproyectos</span>
+  </div>
+  <div class="detalle">
+    <p>El stub se queda corto a propósito: la versión buena es DOC-1, con la bitácora fuera.</p>
+  </div>
+</li>
+<li class="tarea hecha" data-hecha="1">
+  <div class="cabecera">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">INF-4</span>
+    <span class="titulo">Venv de transcripción</span>
+  </div>
+  <div class="detalle">
+    <p><code>C:/Users/tejon/.venvs/whisper</code>, Python 3.12 x64 vía <code>uv</code>, con <code>faster-whisper 1.2.1</code>, <code>ctranslate2 4.8.1</code> y <code>av 18</code> (así el <code>.ogg</code> se decodifica sin <code>ffmpeg</code> del sistema). Modelo <code>large-v3</code> ya cacheado (~2,7 GB en <code>~/.cache/huggingface</code>, fuera de OneDrive). El venv va fuera de OneDrive a propósito. El <code>py -3</code> del sistema es 3.14 de <strong>32 bits</strong> y no sirve: no hay ruedas de <code>ctranslate2</code> para 32 bits.</p>
+  </div>
+</li>
+<li class="tarea hecha" data-hecha="1">
+  <div class="cabecera">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">INF-6</span>
+    <span class="titulo">Migrar el material</span>
+  </div>
+  <div class="detalle">
+    <p>34 fuentes Mathpix a <code>material/</code>, por área y con nombres normalizados (<code>images/</code> intacta para no romper los enlaces relativos). Los 4 <code>.mmd.zip</code> de <code>nueva_tesis</code> descomprimidos en <code>material/tema/</code>. Los 5 audios a <code>subproyectos/asesor/2026-07-23/audio/</code>. <strong>Ningún PDF</strong>: se copia, no se mueve, así que el proyecto viejo queda intacto.</p>
+  </div>
+</li>
+<li class="tarea hecha" data-hecha="1">
+  <div class="cabecera">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">INF-1</span>
+    <span class="titulo">Confiar la carpeta y verificar permisos</span>
+    <span class="fecha">2026-07-26</span>
+  </div>
+  <div class="detalle">
+    <p class="alerta">🔴 <strong>Estaba sin confiar, y se notó durante una sesión entera.</strong> <code>hasTrustDialogAccepted</code> valía <code>false</code>, así que <code>.claude/settings.json</code> no se aplicaba <strong>en absoluto</strong>: ni el <code>dontAsk</code>, ni las reglas de <code>allow</code>, ni el <code>deny</code>, ni <code>sandbox.enabled</code>. Sin ningún mensaje de error que lo dijera. El síntoma que lo delataba se estaba tratando como otro fallo: cada comando aprobado a mano <strong>se grababa como regla nueva</strong> en el archivo ignorado, y se acumularon <strong>17 reglas kilométricas</strong> que se limpiaban una por una sin que sirviera de nada. Confiadas ya las <strong>dos</strong> entradas, <code>c:</code> y <code>C:</code>, y purgado el <code>allow</code> (7 031 → 4 038 bytes). Requiere recargar la ventana. Ese archivo vive en el HOME, no en OneDrive: hay que repetirlo <strong>en cada PC</strong>.</p>
+    <p class="artefacto">Artefacto: <code>docs/lecciones.md</code> §L1</p>
+  </div>
+</li>
+<li class="tarea pendiente" data-hecha="0">
+  <div class="cabecera">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">INF-5</span>
+    <span class="titulo">Instalar <code>gh</code> y autenticarlo</span>
+  </div>
+  <div class="detalle">
+    <p>Aplazado hasta WEB-3, que es cuando hace falta de verdad. <code>gh auth login</code> abre un flujo de navegador y necesita al usuario.</p>
+  </div>
+</li>
+  </ul>
+  <h3>Fase 3 — Web y skills</h3>
+  <ul class="tareas">
+<li class="tarea hecha" data-hecha="1">
+  <div class="cabecera">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">WEB-1</span>
+    <span class="titulo"><code>build_todo.py</code>: los <code>.md</code> mandan, el HTML se genera</span>
+    <span class="fecha">2026-07-26</span>
+  </div>
+  <div class="detalle">
+    <p>El problema de la web no es la persistencia, es la duplicación: en el proyecto viejo hay dos TODOs con una regla de «marcar siempre en conjunto» que existe justo porque están duplicados a mano. Si además se edita un HTML aparte, son tres copias. Lee el <code>TODO.md</code> de la raíz y los de <code>subproyectos/*/</code>, y reescribe <code>index.html</code> entero. <strong>Ninguna tarea vive en el HTML</strong>, así que la copia número tres no puede existir. El parser valida el formato de §3 del plan y <strong>falla ruidosamente</strong> en la terminal si un <code>.md</code> no casa, que era el beneficio secundario buscado. Imprime además el recuento por subproyecto, útil para ver de un vistazo si se perdió una tarea.</p>
+    <p class="artefacto">Artefacto: <code>web/build_todo.py</code></p>
+  </div>
+</li>
+<li class="tarea hecha" data-hecha="1">
+  <div class="cabecera">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">WEB-2</span>
+    <span class="titulo">La página de TODOs</span>
+    <span class="fecha">2026-07-26</span>
+  </div>
+  <div class="detalle">
+    <p>Estático puro, sin persistencia, más <code>localStorage</code> solo para preferencias de interfaz (pestaña abierta y casilla de esconder completadas). Una pestaña por subproyecto más la general, cada una con su párrafo de contexto, barra de avance y recuento; caja de detalle <strong>solo si hay detalle</strong>; fecha y línea de artefacto en las completadas; y la pestaña de <code>transporte_optimo</code> marcada con ⚠️ automáticamente, porque su contexto lo lleva. Solo salen los subproyectos que existen. Las viñetas <code>·</code>, las alertas 🔴 y los avisos ⚠️ de los <code>.md</code> se reconocen y se destacan. La matemática entre <code>$</code> la compone MathJax si hay red, y si no se lee igual en crudo. Falta <code>WEB-3</code> para que tenga URL. Por ahora se abre el archivo local.</p>
+    <p class="artefacto">Artefacto: <code>web/index.html</code></p>
+  </div>
+</li>
+<li class="tarea pendiente" data-hecha="0">
+  <div class="cabecera">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">WEB-3</span>
+    <span class="titulo">Crear el repo y publicar</span>
+  </div>
+  <div class="detalle">
+    <p>Un repo, dos rutas: <code>/</code> los TODOs, <code>/tracker/</code> el tracker. Público, porque Pages gratis lo exige. Depende de INF-5.</p>
+  </div>
+</li>
+<li class="tarea pendiente" data-hecha="0">
+  <div class="cabecera">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">SKI-1</span>
+    <span class="titulo">Migrar las skills que hagan falta</span>
+  </div>
+  <div class="detalle">
+    <p>El modelo es <code>/aporta</code>: autocontenida, sin delegar su flujo en el <code>CLAUDE.md</code> del proyecto. Seis de las ocho del proyecto viejo delegan, así que copiadas tal cual no fallan, <strong>improvisan</strong>. Bugs ya localizados y qué migrar: SKI-1 del plan.</p>
+  </div>
+</li>
+<li class="tarea pendiente" data-hecha="0">
+  <div class="cabecera">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">SKI-2</span>
+    <span class="titulo">Re-apuntar las referencias a las guías de estilo y <strong>verificarlas</strong></span>
+  </div>
+  <div class="detalle">
+    <p>Deuda de PER-3. Criterio de cierre: una skill migrada es una skill <strong>corrida</strong> al menos una vez, no una skill leída.</p>
+  </div>
+</li>
+<li class="tarea pendiente" data-hecha="0">
+  <div class="cabecera">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">SKI-3</span>
+    <span class="titulo">Skills nuevas: fichar una referencia, procesar una reunión, cerrar tarea</span>
+  </div>
+</li>
+  </ul>
+  <h3>Fase 4 — Consolidación</h3>
+  <ul class="tareas">
+<li class="tarea pendiente" data-hecha="0">
+  <div class="cabecera">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">DOC-1</span>
+    <span class="titulo"><code>CLAUDE.md</code> definitivo, con la bitácora fuera</span>
+  </div>
+  <div class="detalle">
+    <p>El del proyecto viejo llegó a 947 líneas porque mezcló manual con bitácora forense. Aquí: <code>CLAUDE.md</code> corto e imperativo, <code>docs/lecciones.md</code> para el porqué de cada regla con su incidente.</p>
+  </div>
+</li>
+<li class="tarea pendiente" data-hecha="0">
+  <div class="cabecera">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">DOC-2</span>
+    <span class="titulo"><code>docs/trampas_shell.md</code></span>
+  </div>
+  <div class="detalle">
+    <p>Las trampas operativas del proyecto viejo, que son portables y ajenas al tema. Es el activo más reutilizable que produjo aquel proyecto.</p>
+  </div>
+</li>
+  </ul>
+</section>
+<footer>
+Generado el 2026-07-26 por <code>web/build_todo.py</code> a partir de los <code>TODO.md</code>. Editar esta página a mano no sirve de nada: se reescribe en la siguiente ejecución.
+</footer>
+</div>
+<script>
+(function(){
+  var CLAVE_PESTANA="propuesta_tesis_pestana", CLAVE_OCULTAR="propuesta_tesis_ocultar";
+  var botones=document.querySelectorAll("nav.pestanas button");
+  var paneles=document.querySelectorAll(".panel");
+  function activar(slug){
+    var hallado=false;
+    paneles.forEach(function(p){
+      var si=(p.id==="panel-"+slug);
+      p.classList.toggle("activo",si); if(si) hallado=true;
+    });
+    if(!hallado) return false;
+    botones.forEach(function(b){b.classList.toggle("activa",b.dataset.slug===slug);});
+    try{localStorage.setItem(CLAVE_PESTANA,slug);}catch(e){}
+    return true;
+  }
+  botones.forEach(function(b){
+    b.addEventListener("click",function(){activar(b.dataset.slug);});
+  });
+  var guardada=null;
+  try{guardada=localStorage.getItem(CLAVE_PESTANA);}catch(e){}
+  if(!guardada||!activar(guardada)){activar(botones[0].dataset.slug);}
+
+  var casilla=document.getElementById("ocultar");
+  function aplicar(){
+    document.querySelectorAll('li.tarea[data-hecha="1"]').forEach(function(t){
+      t.style.display=casilla.checked?"none":"";
+    });
+    try{localStorage.setItem(CLAVE_OCULTAR,casilla.checked?"1":"0");}catch(e){}
+  }
+  try{casilla.checked=(localStorage.getItem(CLAVE_OCULTAR)==="1");}catch(e){}
+  casilla.addEventListener("change",aplicar);
+  aplicar();
+})();
+</script>
+</body>
+</html>
