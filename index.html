@@ -116,14 +116,14 @@ window.MathJax={
 <header class="principal">
 <h1>Propuesta de tesis — control óptimo</h1>
 <p class="sub">Decidir y proponer un tema en control óptimo inverso, en 2–3 meses desde el 2026-07-25.</p>
-<p class="global"><strong>18</strong> de <strong>36</strong> tareas completadas en todo el proyecto.</p>
+<p class="global"><strong>20</strong> de <strong>36</strong> tareas completadas en todo el proyecto.</p>
 </header>
 <nav class="pestanas" role="tablist">
 <button data-slug="referencias" role="tab">referencias<span class="n">5/12</span></button>
 <button data-slug="asesor" role="tab">asesor<span class="n">4/4</span></button>
 <button data-slug="perfil" role="tab">perfil<span class="n">2/3</span></button>
 <button data-slug="transporte_optimo" role="tab">⚠️ transporte optimo<span class="n">0/3</span></button>
-<button data-slug="infra" role="tab">General<span class="n">7/14</span></button>
+<button data-slug="infra" role="tab">General<span class="n">9/14</span></button>
 </nav>
 <div class="controles">
 <label><input type="checkbox" id="ocultar"> Esconder las completadas</label>
@@ -415,8 +415,8 @@ window.MathJax={
 <section class="panel" id="panel-infra" role="tabpanel">
   <h2>Infraestructura del proyecto</h2>
   <p class="contexto">Todo lo que no es contenido: montaje, herramientas, la web de TODOs y la migración de skills. El plan completo, con dependencias y decisiones, vive en <code>docs/plan.md</code>.</p>
-  <div class="barra"><div class="relleno" style="width:50%"></div></div>
-  <p class="cuenta">7 de 14 completadas</p>
+  <div class="barra"><div class="relleno" style="width:64%"></div></div>
+  <p class="cuenta">9 de 14 completadas</p>
   <h3>Fase 0 — Fontanería</h3>
   <ul class="tareas">
 <li class="tarea hecha" data-hecha="1">
@@ -471,14 +471,15 @@ window.MathJax={
     <p class="artefacto">Artefacto: <code>docs/lecciones.md</code> §L1</p>
   </div>
 </li>
-<li class="tarea pendiente" data-hecha="0">
+<li class="tarea hecha" data-hecha="1">
   <div class="cabecera">
     <span class="casilla" aria-hidden="true"></span>
     <span class="ident">INF-5</span>
     <span class="titulo">Instalar <code>gh</code> y autenticarlo</span>
+    <span class="fecha">2026-07-26</span>
   </div>
   <div class="detalle">
-    <p>Aplazado hasta WEB-3, que es cuando hace falta de verdad. <code>gh auth login</code> abre un flujo de navegador y necesita al usuario.</p>
+    <p><code>gh 2.96.0</code> por <code>winget</code>, cuenta <code>luistejon17</code>, protocolo HTTPS. ⚠️ <strong>Trampa que costó tres intentos:</strong> tras instalar, <code>gh</code> no se reconoce en ninguna terminal ya abierta, y <strong>tampoco en una ventana que lance el agente</strong>, porque hereda el <code>PATH</code> del proceso padre, que arrancó antes de la instalación. Ni siquiera basta con abrir una ventana nueva desde aquí. Lo que sí funciona: un <code>.ps1</code> que <strong>reconstruya el <code>PATH</code> desde el registro</strong> (<code>[Environment]::GetEnvironmentVariable(&quot;Path&quot;,&quot;Machine&quot;)</code>) y llame al <code>.exe</code> por ruta completa. Y <code>gh auth login</code> es interactivo de verdad, así que lo corre el usuario en una ventana propia; desde aquí solo se puede lanzar la ventana.</p>
   </div>
 </li>
   </ul>
@@ -508,14 +509,15 @@ window.MathJax={
     <p class="artefacto">Artefacto: <code>web/index.html</code></p>
   </div>
 </li>
-<li class="tarea pendiente" data-hecha="0">
+<li class="tarea hecha" data-hecha="1">
   <div class="cabecera">
     <span class="casilla" aria-hidden="true"></span>
     <span class="ident">WEB-3</span>
     <span class="titulo">Crear el repo y publicar</span>
+    <span class="fecha">2026-07-26</span>
   </div>
   <div class="detalle">
-    <p>Un repo, dos rutas: <code>/</code> los TODOs, <code>/tracker/</code> el tracker. Público, porque Pages gratis lo exige. Depende de INF-5.</p>
+    <p>En línea: <strong>https://luistejon17.github.io/propuesta-tesis/</strong> y su <code>/tracker/</code>, que hoy es un marcador de posición hasta que exista REF-8. 🔴 <strong>El repo público NO es el del proyecto, y no puede serlo.</strong> Este contiene la transcripción de una reunión privada, fichas de un borrador del asesor <strong>sin publicar</strong> y <code>material/</code> con libros con derechos. Se publica solo <code>web/</code>, con <code>git subtree push --prefix web paginas main</code>, así que hay una sola fuente y ninguna carpeta duplicada. Verificado tras el primer empujón: en el repo público hay <strong>seis archivos y nada más</strong>. ⚠️ <strong>Y las páginas van con <code>noindex</code>.</strong> La decisión «público» se tomó el 2026-07-25 sobre una lista de tareas; hoy la página cita a Junca por su nombre, valora su borrador y menciona a Camilo. Público es inevitable porque Pages gratis lo exige, indexable no: <code>robots.txt</code> más <code>&lt;meta name=&quot;robots&quot; content=&quot;noindex,nofollow&quot;&gt;</code> en las dos páginas. <strong>Para republicar:</strong> <code>python web/build_todo.py</code>, commit, y el <code>subtree push</code> de arriba. Los tres pasos, o la web queda vieja.</p>
   </div>
 </li>
 <li class="tarea pendiente" data-hecha="0">
