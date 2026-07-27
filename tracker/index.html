@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tracker de estudio · aún no existe</title>
+<style>
+:root{
+  --fondo:#fbfaf7; --papel:#fff; --tinta:#1c1a17; --suave:#6b6558;
+  --linea:#e4dfd4; --acento:#8a5a2b; --caja:#f6f3ec;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --fondo:#15140f; --papel:#1d1b16; --tinta:#eae5da; --suave:#a39b8b;
+    --linea:#332f27; --acento:#d9a066; --caja:#232019;
+  }
+}
+*{box-sizing:border-box}
+body{margin:0; background:var(--fondo); color:var(--tinta);
+  font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
+.envoltura{max-width:680px; margin:0 auto; padding:4rem 1.25rem}
+h1{font-size:1.5rem; margin:0 0 .4rem; letter-spacing:-.01em}
+p.sub{margin:0 0 2rem; color:var(--suave); font-size:.92rem}
+.caja{background:var(--papel); border:1px solid var(--linea);
+  border-radius:10px; padding:1.25rem 1.4rem}
+.caja h2{font-size:.78rem; text-transform:uppercase; letter-spacing:.08em;
+  color:var(--suave); margin:0 0 .8rem; font-weight:600}
+p{margin:0 0 .8rem}
+p:last-child{margin-bottom:0}
+ul{margin:.4rem 0 .8rem; padding-left:1.2rem; color:var(--suave)}
+li{margin-bottom:.3rem}
+code{font:.86em ui-monospace,SFMono-Regular,Menlo,monospace;
+  background:var(--caja); padding:.1rem .3rem; border-radius:4px;
+  border:1px solid var(--linea)}
+a{color:var(--acento)}
+footer{margin-top:2.5rem; padding-top:1rem; border-top:1px solid var(--linea);
+  font-size:.8rem; color:var(--suave)}
+</style>
+</head>
+<body>
+<div class="envoltura">
+
+<h1>Tracker de estudio</h1>
+<p class="sub">Todavía no existe. Esta página es un marcador de posición para que
+la URL sea estable desde ya.</p>
+
+<div class="caja">
+  <h2>Por qué está vacío</h2>
+  <p>El tracker es el artefacto de la tarea <code>REF-8</code>, y no se puede
+  construir antes de saber qué hay que estudiar. Depende de que estén cerradas
+  <code>REF-4</code> a <code>REF-7</code>, <code>REF-9</code>,
+  <code>REF-10</code>, y sobre todo de la pregunta <strong>D1</strong>, que
+  decide si el plan de estudio es ancho o estrecho y aún no se le ha hecho al
+  asesor.</p>
+  <p>Inventar un plan de estudio antes de eso sería justo lo que la regla dos del
+  proyecto prohíbe: presuponer la ruta matemática.</p>
+</div>
+
+<p style="margin-top:1.5rem">Mientras tanto, el estado real del proyecto está en
+<a href="../">la página de tareas</a>.</p>
+
+<div class="caja" style="margin-top:1.5rem">
+  <h2>Cuando exista</h2>
+  <p>Hereda del tracker viejo el truco del <code>?s=</code>: el progreso viaja en
+  la URL, no en el HTML. Eso es lo que permite marcarlo y que Edge lo sincronice
+  entre PCs.</p>
+  <p>Y es la razón de que sean <strong>dos páginas y no una</strong>. El tracker
+  es del usuario y su estado está en el enlace; la página de tareas es del agente
+  y su estado está en el HTML. Fundirlas dejaría el tracker permanentemente en
+  0 % para cualquiera que abriera el enlace sin los parámetros.</p>
+</div>
+
+<footer>
+Marcador de posición, escrito a mano. A diferencia de <code>/</code>, esta página
+no la genera <code>build_todo.py</code>: el tracker es otro artefacto, con otro
+dueño.
+</footer>
+
+</div>
+</body>
+</html>
