@@ -116,10 +116,10 @@ window.MathJax={
 <header class="principal">
 <h1>Propuesta de tesis — control óptimo</h1>
 <p class="sub">Decidir y proponer un tema en control óptimo inverso, en 2–3 meses desde el 2026-07-25.</p>
-<p class="global"><strong>20</strong> de <strong>36</strong> tareas completadas en todo el proyecto.</p>
+<p class="global"><strong>22</strong> de <strong>36</strong> tareas completadas en todo el proyecto.</p>
 </header>
 <nav class="pestanas" role="tablist">
-<button data-slug="referencias" role="tab">referencias<span class="n">5/12</span></button>
+<button data-slug="referencias" role="tab">referencias<span class="n">7/12</span></button>
 <button data-slug="asesor" role="tab">asesor<span class="n">4/4</span></button>
 <button data-slug="perfil" role="tab">perfil<span class="n">2/3</span></button>
 <button data-slug="transporte_optimo" role="tab">⚠️ transporte optimo<span class="n">0/3</span></button>
@@ -133,8 +133,8 @@ window.MathJax={
   <p class="contexto">Primero entender qué hay que hacer, con el paper de Junca–Leiva y los documentos que mandó el asesor. Solo después buscar con qué estudiarlo y construir el tracker. De aquí nacen los subproyectos <code>apuntes</code>, <code>explicaciones</code> y <code>propuesta</code>.</p>
   <p class="contexto"><strong>Regla número uno: ninguna decisión sobre qué estudiar se toma antes de REF-1.</strong> Cumplida el 2026-07-26: REF-1 y REF-3 están fichadas, así que a partir de aquí sí se decide.</p>
   <p class="contexto"><strong>El alcance quedó acotado en la reunión del 2026-07-23</strong>, y esto manda sobre todo lo de abajo: <em>«por ahora no es el objetivo llegar hasta el caso en el que no conocemos las cosas […] conocemos todo, simplemente tenemos que resolver el problema de control inverso, sin asumir que tenemos siempre muestras»</em>. Sale del alcance la §4 entera del paper (oráculos, estimadores de gradiente, SMD-RLfD y su cota de complejidad), que además era lo que peor sobrevivía al continuo.</p>
-  <div class="barra"><div class="relleno" style="width:42%"></div></div>
-  <p class="cuenta">5 de 12 completadas</p>
+  <div class="barra"><div class="relleno" style="width:58%"></div></div>
+  <p class="cuenta">7 de 12 completadas</p>
   <ul class="tareas">
 <li class="tarea hecha" data-hecha="1">
   <div class="cabecera">
@@ -184,30 +184,35 @@ window.MathJax={
     <p class="artefacto">Artefacto: <code>subproyectos/referencias/fichas/junca_fixed_point_continuo.md</code></p>
   </div>
 </li>
-<li class="tarea pendiente" data-hecha="0">
+<li class="tarea hecha" data-hecha="1">
   <div class="cabecera">
     <span class="casilla" aria-hidden="true"></span>
     <span class="ident">REF-4</span>
     <span class="titulo">Decidir la «Semana 0»: qué material ya leído o escrito se recicla</span>
+    <span class="fecha">2026-07-26</span>
   </div>
   <div class="detalle">
-    <p><strong>Después de REF-1, no antes.</strong> Se cruza lo que el paper demuestre que hace falta contra el inventario del <code>CLAUDE.md</code> de este subproyecto (131/160 hojas del tracker viejo, 39 capítulos del compendio, <code>.mmd</code> en <code>material/</code>). Lo que sirva entra al tracker nuevo como Semana 0, con la ventaja de que parte de eso ya está explicado en español. <strong>Entradas nuevas de la reunión y de las fichas (2026-07-26):</strong></p>
+    <p class="alerta">🔴 <strong>La Semana 0 es un repaso corto, no un bloque de estudio.</strong> De los diez prerrequisitos del borrador, <strong>siete ya están escritos en español</strong> por el propio usuario y solo <strong>tres</strong> son nuevos. Eso invierte el supuesto del plan original, que reservaba semanas a reconstruir la base. <strong>Entra</strong> (repaso): generador y adjunto, Fokker–Planck, Sobolev y regularidad elíptica, el elíptico <code>(I−κΔ)⁻¹</code>, Dirichlet y Neumann, dualidad convexa en Hilbert, y SDE. <strong>No entra</strong>: la Semana 9 de transporte óptimo (es del curso, no de la tesis), el bloque viejo de difusión y score, el SMD y la §4 del paper (fuera de alcance por el asesor), y Hernández-Lerma &amp; Lasserre (discreto). <strong>Nuevo de verdad, tres cosas</strong>: control con HJB (Touzi 2, 4), viscosidad (Touzi 5, 6) y medidas de ocupación (Kurtz–Stockbridge). 🔴 <strong>El cuello de botella es viscosidad</strong>, no la base: es lo único genuinamente nuevo, difícil y en el camino crítico. ⚠️ No es el plan de estudio, que es <code>REF-8</code> y sigue bloqueado por <strong>D1</strong>.</p>
+    <p>Contexto original de la tarea, que se conserva: <strong>Después de REF-1, no antes.</strong> Se cruza lo que el paper demuestre que hace falta contra el inventario del <code>CLAUDE.md</code> de este subproyecto (131/160 hojas del tracker viejo, 39 capítulos del compendio, <code>.mmd</code> en <code>material/</code>). Lo que sirva entra al tracker nuevo como Semana 0, con la ventaja de que parte de eso ya está explicado en español. <strong>Entradas nuevas de la reunión y de las fichas (2026-07-26):</strong></p>
     <ul>
       <li><strong>Baja SMD y la aproximación estocástica</strong>: el asesor los sacó del alcance. Sube <strong>viscosidad para HJB</strong> y <strong>Fokker–Planck estacionaria</strong>, que no estaban previstos y no salen de Øksendal, Touzi ni Pham.</li>
       <li>El <strong>cono normal</strong> que Mauricio explicó en el dibujo del mal planteamiento sale en su curso tutorial, pero <strong>eso no lo hace material de la tesis</strong>: el curso va aparte (<code>subproyectos/transporte_optimo/</code>).</li>
       <li class="aviso">⚠️ <strong>El transporte óptimo NO entra por la vía del curso.</strong> La primera versión de esta tarea decía lo contrario, por una mala lectura de la transcripción. La <strong>Semana 9</strong> vieja (Santambrogio, Wasserstein, flujos gradiente, JKO) solo entra a la Semana 0 si el problema de la tesis la pide. Hoy nada indica que la pida.</li>
     </ul>
     <p class="alerta">🔴 <strong><code>PER-1</code> ya hizo medio trabajo (2026-07-26).</strong> <code>formacion.md</code> §5 cruza los huecos de <code>REF-3</code> contra lo que hay escrito, y sale que <strong>casi todo el aparato analítico ya está</strong>: Sobolev y regularidad elíptica en el apéndice de operadores, Dirichlet y Neumann en Baudoin §4.7–4.8, Fokker–Planck en <code>fpe</code>, y dimensión infinita en todo el bloque de Bauschke &amp; Combettes. <strong>Lo que falta de verdad son tres cosas: control óptimo con HJB, soluciones de viscosidad, y medidas de ocupación.</strong> Cerrar REF-4 es ahora decidir el orden y la fuente de esas tres, no inventariar de nuevo.</p>
+    <p class="artefacto">Artefacto: <code>subproyectos/referencias/semana_0.md</code></p>
   </div>
 </li>
-<li class="tarea pendiente" data-hecha="0">
+<li class="tarea hecha" data-hecha="1">
   <div class="cabecera">
     <span class="casilla" aria-hidden="true"></span>
     <span class="ident">REF-5</span>
     <span class="titulo">Referencias de control óptimo estocástico</span>
+    <span class="fecha">2026-07-26</span>
   </div>
   <div class="detalle">
-    <p><strong>Encargo explícito del asesor</strong>, no iniciativa propia: <em>«ahí le pregunta a Claude cuál va a ser su referencia para el control óptimo»</em> [12:30]. Øksendal, Touzi, Pham. Todo por verificar contra los libros reales; el detalle de cada pista está en el <code>CLAUDE.md</code> del subproyecto. <strong>Pista fuerte nueva:</strong> dijo que la ruta alternativa lleva a <strong>FBSDE</strong>, y el Touzi que se sospechaba es literalmente <em>Optimal Stochastic Control, Stochastic Target Problems and <strong>Backward SDE</strong></em>. Deja de ser conjetura. Filtrar con <code>subproyectos/perfil/</code>: el criterio del usuario es <strong>libro riguroso antes que paper en área nueva</strong>. Para confirmar cuál Øksendal trae los capítulos de control basta ver un índice, que es uno de los pocos usos legítimos de un PDF.</p>
+    <p><strong>Encargo explícito del asesor</strong> [12:30]. Las tres pistas venían de una conversación no grabada; las tres quedan <strong>confirmadas</strong> contra sus índices. 🔴 <strong>Gana Touzi</strong>, <em>Optimal Stochastic Control, Stochastic Target Problems and Backward SDE</em>. Sus capítulos 4 → 5 → 6 son literalmente el argumento que le falta al borrador: resolver por verificación con <code>V ∈ C²</code>, mostrar por qué no basta, y rehacer la programación dinámica en sentido viscoso. Cubre además <code>REF-6</code> (cap. 3) y <code>REF-10</code> (cap. 9), así que <strong>no cierra la puerta de <code>P3</code></strong>. Y sus apuntes están <strong>gratis</strong> en CMAP y en el Fields. <strong>Øksendal se descarta como principal</strong>: el control son tres secciones del cap. 11, van por verificación clásica y <strong>no mencionan viscosidad</strong>, o sea que reproducen la grieta en vez de resolverla. Sirve de puente corto desde Baudoin, que ya está escrito, y nada más. <strong>Pham</strong> confirmado (SMAP 61, cap. 4 es viscosidad) como segunda voz, y <strong>Fleming &amp; Soner</strong> 2.ª ed. como referencia de fondo, sin verificar capítulo a capítulo. 🔴 <strong>El hallazgo que más pesa:</strong> el tercer hueco, medidas de ocupación, <strong>no tiene libro</strong>. Hernández-Lerma &amp; Lasserre son tiempo discreto. Para el continuo la referencia es <strong>Kurtz &amp; Stockbridge 1998</strong>, SIAM JCO 36(2):609–653, que prueba que el problema de control <strong>equivale a un programa lineal sobre medidas</strong>. Eso es el análogo continuo de la Proposición 1 de Puterman, o sea justo la pieza que <code>REF-3</code> §4.4 daba por faltante. Hay que aceptar estudiar por paper aquí, contra la preferencia.</p>
+    <p class="artefacto">Artefacto: <code>subproyectos/referencias/fichas/referencias_control_optimo.md</code></p>
   </div>
 </li>
 <li class="tarea pendiente" data-hecha="0">
@@ -217,7 +222,7 @@ window.MathJax={
     <span class="titulo">Parada óptima como puerta de entrada</span>
   </div>
   <div class="detalle">
-    <p>Recomendación explícita del asesor. Merece entenderse <strong>por qué</strong> antes de estudiarla: es el problema de control donde el único control es <em>cuándo detenerse</em>, así que da la programación dinámica y la caracterización variacional sin el aparato completo de HJB. Clásico a verificar: Peskir–Shiryaev. <strong>Baja de urgencia</strong> tras fichar REF-3: sigue siendo buena puerta a la caracterización variacional, que es lo que hace falta para el problema de viscosidad, pero no es donde está el problema.</p>
+    <p>Recomendación explícita del asesor. Merece entenderse <strong>por qué</strong> antes de estudiarla: es el problema de control donde el único control es <em>cuándo detenerse</em>, así que da la programación dinámica y la caracterización variacional sin el aparato completo de HJB. Clásico a verificar: Peskir–Shiryaev. <strong>Baja de urgencia</strong> tras fichar REF-3: sigue siendo buena puerta a la caracterización variacional, que es lo que hace falta para el problema de viscosidad, pero no es donde está el problema. ✅ <strong>Resuelto el «con qué» (2026-07-26, de REF-5): es el capítulo 3 de Touzi</strong>, <em>Optimal Stopping and Dynamic Programming</em>, así que no hace falta material aparte ni abrir Peskir–Shiryaev, que para esto es desproporcionado. Queda como paso 4 del orden propuesto, o sea <strong>solo si después de viscosidad sigue haciendo falta</strong>.</p>
   </div>
 </li>
 <li class="tarea pendiente" data-hecha="0">
@@ -227,7 +232,7 @@ window.MathJax={
     <span class="titulo">Medidas de ocupación</span>
   </div>
   <div class="detalle">
-    <p><strong>Sube a prerrequisito duro.</strong> Deja de ser exploratorio por dos vías que coinciden: la ficha de REF-3 §4.4 (sin el análogo continuo de la Proposición 1 de Puterman, que es Kurtz–Stockbridge, la igualdad clave del borrador no está justificada) y el propio asesor, que sobre esta formulación dijo <em>«hay varios papers, hay libros como tal»</em> [00:00] y además <strong>dudó de si era la mejor forma, frente a plantearlo en políticas</strong>. 🔴 <strong>Deja de ser una búsqueda a ciegas (2026-07-26, de REF-3b).</strong> El CV de Junca trae un paper <strong>suyo</strong> con <strong>D. Henrion</strong> y M. Velasco, <em>Moment-SOS hierarchy and exit location of stochastic processes</em>, que es exactamente la maquinaria de medidas de ocupación sobre procesos estocásticos. Y otro con D. Avila, <em>On reachability of Markov chains: a long-run average approach</em>, en la misma línea. <strong>Empezar por los suyos, no por el canon.</strong> Pedirlos por el circuito Mathpix. Después, el canon: Hernández-Lerma &amp; Lasserre; <strong>Kurtz &amp; Stockbridge</strong> para el caso continuo, que es el que importa. Que Henrion aparezca aquí confirma que la escuela Lasserre era la pista correcta.</p>
+    <p><strong>Sube a prerrequisito duro.</strong> Deja de ser exploratorio por dos vías que coinciden: la ficha de REF-3 §4.4 (sin el análogo continuo de la Proposición 1 de Puterman, que es Kurtz–Stockbridge, la igualdad clave del borrador no está justificada) y el propio asesor, que sobre esta formulación dijo <em>«hay varios papers, hay libros como tal»</em> [00:00] y además <strong>dudó de si era la mejor forma, frente a plantearlo en políticas</strong>. 🔴 <strong>Deja de ser una búsqueda a ciegas (2026-07-26, de REF-3b).</strong> El CV de Junca trae un paper <strong>suyo</strong> con <strong>D. Henrion</strong> y M. Velasco, <em>Moment-SOS hierarchy and exit location of stochastic processes</em>, que es exactamente la maquinaria de medidas de ocupación sobre procesos estocásticos. Y otro con D. Avila, <em>On reachability of Markov chains: a long-run average approach</em>, en la misma línea. <strong>Empezar por los suyos, no por el canon.</strong> Pedirlos por el circuito Mathpix. Después, el canon. ✅ <strong>Localizado con precisión (2026-07-26, de REF-5):</strong> <strong>Kurtz &amp; Stockbridge</strong>, <em>Existence of Markov controls and characterization of optimal Markov controls</em>, <strong>SIAM JCO 36(2):609–653, 1998</strong>. Prueba que el problema de control <strong>equivale a un programa lineal sobre un espacio de medidas</strong>, que es el análogo continuo de la Proposición 1 de Puterman. ⚠️ Y <strong>Hernández-Lerma &amp; Lasserre queda fuera</strong>: sus tres libros son de <strong>tiempo discreto</strong>, justo el lado del que se está saliendo. Cómodo de leer, pero en la dirección equivocada. Que Henrion aparezca aquí confirma que la escuela Lasserre era la pista correcta.</p>
   </div>
 </li>
 <li class="tarea hecha" data-hecha="1">
