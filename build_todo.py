@@ -512,6 +512,10 @@ def construir():
     o.append("<head>")
     o.append('<meta charset="utf-8">')
     o.append('<meta name="viewport" content="width=device-width,initial-scale=1">')
+    # La pagina cita al asesor por su nombre y valora un borrador suyo sin
+    # publicar. El repo es publico porque Pages gratis lo exige, pero la pagina
+    # no debe salir en un buscador. Va junto con web/robots.txt.
+    o.append('<meta name="robots" content="noindex,nofollow">')
     o.append("<title>Propuesta de tesis · TODO</title>")
     o.append(
         "<!-- GENERADO por web/build_todo.py el %s. NO EDITAR A MANO: "

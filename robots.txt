@@ -1,0 +1,8 @@
+# El repositorio es publico porque GitHub Pages gratis solo sirve repos
+# publicos, pero estas paginas no son para un buscador: citan al asesor por su
+# nombre y valoran un borrador suyo sin publicar. El enlace se comparte a mano.
+#
+# Refuerzo por pagina: <meta name="robots" content="noindex,nofollow">.
+
+User-agent: *
+Disallow: /
