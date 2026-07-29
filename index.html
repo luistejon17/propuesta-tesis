@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
 <title>Propuesta de tesis · TODO</title>
-<!-- GENERADO por web/build_todo.py el 2026-07-28. NO EDITAR A MANO: los TODO.md mandan, este archivo se reescribe. -->
+<!-- GENERADO por web/build_todo.py el 2026-07-29. NO EDITAR A MANO: los TODO.md mandan, este archivo se reescribe. -->
 <style>
 :root{
   --fondo:#fbfaf7; --papel:#fff; --tinta:#1c1a17; --suave:#6b6558;
@@ -116,14 +116,14 @@ window.MathJax={
 <header class="principal">
 <h1>Propuesta de tesis — control óptimo</h1>
 <p class="sub">Decidir y proponer un tema en control óptimo inverso, en 2–3 meses desde el 2026-07-25.</p>
-<p class="global"><strong>23</strong> de <strong>38</strong> tareas completadas en todo el proyecto.</p>
+<p class="global"><strong>24</strong> de <strong>39</strong> tareas completadas en todo el proyecto.</p>
 </header>
 <nav class="pestanas" role="tablist">
 <button data-slug="referencias" role="tab">referencias<span class="n">7/13</span></button>
 <button data-slug="asesor" role="tab">asesor<span class="n">4/4</span></button>
 <button data-slug="perfil" role="tab">perfil<span class="n">3/3</span></button>
 <button data-slug="transporte_optimo" role="tab">⚠️ transporte optimo<span class="n">0/3</span></button>
-<button data-slug="infra" role="tab">General<span class="n">9/15</span></button>
+<button data-slug="infra" role="tab">General<span class="n">10/16</span></button>
 </nav>
 <div class="controles">
 <label><input type="checkbox" id="ocultar"> Esconder las completadas</label>
@@ -137,6 +137,7 @@ window.MathJax={
   <p class="contexto alerta">🔴 <strong>Y el caso con solo muestras está DIFERIDO, no descartado</strong>: <em>«luego de resolver así se mira qué se puede hacer al tener solo muestras»</em>. La §4 del paper es <strong>trabajo futuro declarado</strong>, y como tal tiene sitio en la propuesta. No se estudia ahora, pero tampoco se tira.</p>
   <p class="contexto alerta">🔴 <strong>Y el asesor acotó también la profundidad con la que hay que leer su propio paper</strong> (recordado por el usuario el 2026-07-27): del paper con Leiva importa <strong>la idea general, no las técnicas</strong>, porque en el caso continuo las técnicas son otras. Eso rebaja cualquier tentación de estudiar el SMD o el aparato de MDPs finitos a fondo.</p>
   <p class="contexto"><strong>Las preguntas abiertas viven en dos sitios y no se mezclan:</strong> las que dependen de su criterio, en <code>asesor/preguntas_pendientes.md</code>; las que responde el trabajo, en <code>preguntas_de_investigacion.md</code>.</p>
+  <p class="contexto hecho">✅ <strong>Y en dos y no en cuatro, desde el 2026-07-28.</strong> Los diez huecos del §4 de la ficha de <code>REF-3</code> y las nueve rupturas del §5 de la de <code>REF-1</code> se solapaban casi uno a uno, porque miran el mismo problema desde el borrador y desde el paper. Se fundieron en <code>preguntas_de_investigacion.md</code>, que pasa de nueve entradas a diecisiete y trae tabla de trazabilidad. Las fichas conservan el análisis y remiten allí para el estado.</p>
   <div class="barra"><div class="relleno" style="width:54%"></div></div>
   <p class="cuenta">7 de 13 completadas</p>
   <ul class="tareas">
@@ -446,8 +447,8 @@ window.MathJax={
 <section class="panel" id="panel-infra" role="tabpanel">
   <h2>Infraestructura del proyecto</h2>
   <p class="contexto">Todo lo que no es contenido: montaje, herramientas, la web de TODOs y la migración de skills. El plan completo, con dependencias y decisiones, vive en <code>docs/plan.md</code>.</p>
-  <div class="barra"><div class="relleno" style="width:60%"></div></div>
-  <p class="cuenta">9 de 15 completadas</p>
+  <div class="barra"><div class="relleno" style="width:62%"></div></div>
+  <p class="cuenta">10 de 16 completadas</p>
   <h3>Fase 0 — Fontanería</h3>
   <ul class="tareas">
 <li class="tarea hecha" data-hecha="1">
@@ -561,14 +562,26 @@ window.MathJax={
     <p>En línea: <strong>https://luistejon17.github.io/propuesta-tesis/</strong> y su <code>/tracker/</code>, que hoy es un marcador de posición hasta que exista REF-8. 🔴 <strong>El repo público NO es el del proyecto, y no puede serlo.</strong> Este contiene la transcripción de una reunión privada, fichas de un borrador del asesor <strong>sin publicar</strong> y <code>material/</code> con libros con derechos. Se publica solo <code>web/</code>, con <code>git subtree push --prefix web paginas main</code>, así que hay una sola fuente y ninguna carpeta duplicada. Verificado tras el primer empujón: en el repo público hay <strong>seis archivos y nada más</strong>. ⚠️ <strong>Y las páginas van con <code>noindex</code>.</strong> La decisión «público» se tomó el 2026-07-25 sobre una lista de tareas; hoy la página cita a Junca por su nombre, valora su borrador y menciona a Camilo. Público es inevitable porque Pages gratis lo exige, indexable no: <code>robots.txt</code> más <code>&lt;meta name=&quot;robots&quot; content=&quot;noindex,nofollow&quot;&gt;</code> en las dos páginas. <strong>Para republicar:</strong> <code>python web/build_todo.py</code>, commit, y el <code>subtree push</code> de arriba. Los tres pasos, o la web queda vieja.</p>
   </div>
 </li>
-<li class="tarea pendiente" data-hecha="0">
+<li class="tarea hecha" data-hecha="1">
   <div class="cabecera">
     <span class="casilla" aria-hidden="true"></span>
     <span class="ident">SKI-1</span>
-    <span class="titulo">Migrar las skills que hagan falta</span>
+    <span class="titulo">Migrar las skills</span>
+    <span class="fecha">2026-07-28</span>
   </div>
   <div class="detalle">
-    <p>El modelo es <code>/aporta</code>: autocontenida, sin delegar su flujo en el <code>CLAUDE.md</code> del proyecto. Seis de las ocho del proyecto viejo delegan, así que copiadas tal cual no fallan, <strong>improvisan</strong>. Bugs ya localizados y qué migrar: SKI-1 del plan.</p>
+    <p><strong>Las ocho</strong>, por decisión del usuario. <code>/t</code>, <code>/tl</code>, <code>/r</code>, <code>/cap</code>, <code>/explica</code>, <code>/xe</code>, <code>/rev</code>, <code>/aporta</code>, en <code>.claude/skills/</code>. El modelo era <code>/aporta</code>: <strong>autocontenida</strong>, sin delegar su flujo en el <code>CLAUDE.md</code> del proyecto. Seis de las ocho delegaban, así que copiadas tal cual no fallan, <strong>improvisan</strong>, que es el peor modo de fallo porque no avisa. Ahora cada una lleva su flujo entero escrito. 🔴 <strong>Ninguna se puede correr hoy, y no es defecto de la migración:</strong> las ocho escriben o auditan LaTeX en un Overleaf que aquí no existe, guiadas por un tracker que es <code>REF-8</code>. Por eso cada una abre con una <strong>puerta de requisitos</strong> y la regla dura de que si falta uno <strong>se detiene y lo dice</strong>, en vez de elegir un destino «razonable». Esa puerta es lo que convierte una skill inútil en una skill inofensiva. <strong>Dos bugs arreglados</strong>, los dos del plan: la cabecera de <code>/rev</code> decía «entrega informe primero y aplica tras aprobación» cuando su fase 9 dice lo contrario desde el 2026-07-16, y afirmaba un límite de <code>cobertura.py</code> falso desde hacía tres arreglos. <strong>Dos desacopladas de trabajo muerto:</strong> <code>/xe</code> estaba cableada al plan de ProxDM, que está cerrado, y ahora recibe el plan como argumento; <code>/cap</code> estaba cableada a <code>C-guía</code>, a las tandas T1–T30 y a las reglas R-A…R-I. <strong>La categoría de lectura</strong> deja de venir de <code>proxdm_study_tracker.html</code> y viene de <code>referencias/modos_de_lectura.md</code>.</p>
+    <p class="artefacto">Artefacto: <code>.claude/skills/README.md</code></p>
+  </div>
+</li>
+<li class="tarea pendiente" data-hecha="0">
+  <div class="cabecera">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">SKI-4</span>
+    <span class="titulo">Migrar los scripts de <code>explicaciones/grafo/</code></span>
+  </div>
+  <div class="detalle">
+    <p>Se quedaron fuera de SKI-1 <strong>a propósito</strong>, no por olvido. Su dato central, <code>conceptos.json</code>, son <strong>108 KB del grafo del compendio viejo</strong>: copiarlo sembraría el proyecto nuevo con los conceptos de ProxDM y Bauschke, y todo <code>grafo.py donde</code> respondería con la estructura de otro libro. <strong>Un dato equivocado es peor que ninguno</strong>, porque se consulta con confianza. Además se autolocalizan respecto a un árbol (<code>explicaciones/grafo/</code>, <code>overleaf/</code>, <code>mathpix/</code>) que este proyecto <strong>todavía no ha decidido</strong>. Se hace <strong>cuando exista el compendio nuevo</strong>, con <code>conceptos.json</code> vacío y con el <code>--dir</code> que le falta a <code>grafo.py</code>, <code>cobertura.py</code> y <code>citas.py</code> (<code>meta.py</code> ya lo tiene). Sin ellos, <code>/rev</code> pierde la red de las fases 2 y 4 y <strong>lo dice en el informe</strong>, que es lo que hace que la falta no pase desapercibida.</p>
   </div>
 </li>
 <li class="tarea pendiente" data-hecha="0">
@@ -578,7 +591,7 @@ window.MathJax={
     <span class="titulo">Re-apuntar las referencias a las guías de estilo y <strong>verificarlas</strong></span>
   </div>
   <div class="detalle">
-    <p>Deuda de PER-3. Criterio de cierre: una skill migrada es una skill <strong>corrida</strong> al menos una vez, no una skill leída.</p>
+    <p>Deuda de PER-3. Criterio de cierre: una skill migrada es una skill <strong>corrida</strong> al menos una vez, no una skill leída. ✅ <strong>Media hecha (2026-07-28):</strong> las rutas ya apuntan a <code>subproyectos/perfil/estilo/</code>, y <code>/explica</code> cambia además <code>prerequisitos.txt</code> por <code>perfil/formacion.md</code>, que es su sustituto real (el viejo está marcado DESFASADO y decía «CERO» en cálculo estocástico). <strong>La otra media no se puede hacer todavía</strong>, y por eso esta tarea sigue abierta: correr una skill exige el Overleaf que no existe. Se cierra skill a skill, según vayan teniendo dónde escribir.</p>
   </div>
 </li>
 <li class="tarea pendiente" data-hecha="0">
@@ -586,6 +599,9 @@ window.MathJax={
     <span class="casilla" aria-hidden="true"></span>
     <span class="ident">SKI-3</span>
     <span class="titulo">Skills nuevas: fichar una referencia, procesar una reunión, cerrar tarea</span>
+  </div>
+  <div class="detalle">
+    <p class="alerta">🔴 <strong>Y son las únicas tres que sí se podrían correr hoy</strong>, porque su destino existe: <code>fichas/</code>, <code>subproyectos/asesor/&lt;fecha&gt;/</code>, y los <code>TODO.md</code> con la web. Al revés que las ocho de SKI-1. <code>cerrar tarea</code> es la más rentable: marca el <code>TODO.md</code> y <strong>publica la web en un solo paso</strong>. Si no es un paso solo, se olvida, y una web vieja miente.</p>
   </div>
 </li>
   </ul>
@@ -614,7 +630,7 @@ window.MathJax={
   </ul>
 </section>
 <footer>
-Generado el 2026-07-28 por <code>web/build_todo.py</code> a partir de los <code>TODO.md</code>. Editar esta página a mano no sirve de nada: se reescribe en la siguiente ejecución.
+Generado el 2026-07-29 por <code>web/build_todo.py</code> a partir de los <code>TODO.md</code>. Editar esta página a mano no sirve de nada: se reescribe en la siguiente ejecución.
 </footer>
 </div>
 <script>
