@@ -116,14 +116,14 @@ window.MathJax={
 <header class="principal">
 <h1>Propuesta de tesis — control óptimo</h1>
 <p class="sub">Decidir y proponer un tema en control óptimo inverso, en 2–3 meses desde el 2026-07-25.</p>
-<p class="global"><strong>23</strong> de <strong>36</strong> tareas completadas en todo el proyecto.</p>
+<p class="global"><strong>23</strong> de <strong>38</strong> tareas completadas en todo el proyecto.</p>
 </header>
 <nav class="pestanas" role="tablist">
-<button data-slug="referencias" role="tab">referencias<span class="n">7/12</span></button>
+<button data-slug="referencias" role="tab">referencias<span class="n">7/13</span></button>
 <button data-slug="asesor" role="tab">asesor<span class="n">4/4</span></button>
 <button data-slug="perfil" role="tab">perfil<span class="n">3/3</span></button>
 <button data-slug="transporte_optimo" role="tab">⚠️ transporte optimo<span class="n">0/3</span></button>
-<button data-slug="infra" role="tab">General<span class="n">9/14</span></button>
+<button data-slug="infra" role="tab">General<span class="n">9/15</span></button>
 </nav>
 <div class="controles">
 <label><input type="checkbox" id="ocultar"> Esconder las completadas</label>
@@ -133,8 +133,10 @@ window.MathJax={
   <p class="contexto">Primero entender qué hay que hacer, con el paper de Junca–Leiva y los documentos que mandó el asesor. Solo después buscar con qué estudiarlo y construir el tracker. De aquí nacen los subproyectos <code>apuntes</code>, <code>explicaciones</code> y <code>propuesta</code>.</p>
   <p class="contexto"><strong>Regla número uno: ninguna decisión sobre qué estudiar se toma antes de REF-1.</strong> Cumplida el 2026-07-26: REF-1 y REF-3 están fichadas, así que a partir de aquí sí se decide.</p>
   <p class="contexto"><strong>El alcance quedó acotado en la reunión del 2026-07-23</strong>, y esto manda sobre todo lo de abajo: <em>«por ahora no es el objetivo llegar hasta el caso en el que no conocemos las cosas […] conocemos todo, simplemente tenemos que resolver el problema de control inverso, sin asumir que tenemos siempre muestras»</em>. Sale del alcance la §4 entera del paper (oráculos, estimadores de gradiente, SMD-RLfD y su cota de complejidad), que además era lo que peor sobrevivía al continuo.</p>
-  <div class="barra"><div class="relleno" style="width:58%"></div></div>
-  <p class="cuenta">7 de 12 completadas</p>
+  <p class="contexto alerta">🔴 <strong>Y el asesor acotó también la profundidad con la que hay que leer su propio paper</strong> (recordado por el usuario el 2026-07-27): del paper con Leiva importa <strong>la idea general, no las técnicas</strong>, porque en el caso continuo las técnicas son otras. Eso rebaja cualquier tentación de estudiar el SMD o el aparato de MDPs finitos a fondo.</p>
+  <p class="contexto"><strong>Las preguntas abiertas viven en dos sitios y no se mezclan:</strong> las que dependen de su criterio, en <code>asesor/preguntas_pendientes.md</code>; las que responde el trabajo, en <code>preguntas_de_investigacion.md</code>.</p>
+  <div class="barra"><div class="relleno" style="width:54%"></div></div>
+  <p class="cuenta">7 de 13 completadas</p>
   <ul class="tareas">
 <li class="tarea hecha" data-hecha="1">
   <div class="cabecera">
@@ -275,11 +277,21 @@ window.MathJax={
 <li class="tarea pendiente" data-hecha="0">
   <div class="cabecera">
     <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">REF-12</span>
+    <span class="titulo">Fichar el paper de <em>clustering</em> convexo del seminario de Adolfo</span>
+  </div>
+  <div class="detalle">
+    <p>Sale de retirar <code>P12</code> de la lista del asesor (2026-07-27): el usuario fue al seminario pero no recuerda de qué iba, así que <strong>es tarea de lectura, no pregunta</strong>. Junca dijo que <em>«está más alejado del curso»</em>. <code>https://www.jmlr.org/papers/volume22/18-694/18-694.pdf</code> (JMLR 22, 2021). La pregunta concreta: <strong>¿sirve para algo aquí?</strong> Prioridad baja, y el veredicto puede perfectamente ser «descartado». No es Junca–Leiva ni es <code>posible_proyecto</code>, así que no estaba inventariado en ninguna parte. Pedirlo por el circuito Mathpix solo si la primera ojeada dice que sí.</p>
+  </div>
+</li>
+<li class="tarea pendiente" data-hecha="0">
+  <div class="cabecera">
+    <span class="casilla" aria-hidden="true"></span>
     <span class="ident">REF-8</span>
     <span class="titulo">Plan de estudios y tracker nuevo</span>
   </div>
   <div class="detalle">
-    <p>Depende de REF-1, REF-4..REF-7, <strong>REF-9, REF-10</strong> y de <strong>D1</strong> (qué debe contener la propuesta). Reusar lo que REF-4 salve en vez de inventar un plan entero. Forma por decidir sobre la marcha, con el tracker viejo como referencia. De él hereda el truco del <code>?s=</code> en la URL, que es lo que permite al usuario marcarlo y que Edge lo sincronice entre sus PCs. <strong>Artefacto separado de la web de TODOs</strong>: distinto dueño, distinta URL. ✅ <strong>El sistema de modos de lectura ya está reconstruido (2026-07-27)</strong> y no hay que reinventarlo: dos ejes independientes (<code>skim</code> para la fuente, <code>e:&quot;deep&quot;|&quot;review&quot;</code> para la explicación), granularidad <strong>por subsección</strong>, y los tres perfiles de E14. Con el cambio de flujo que decidió el usuario el mismo día: <strong>la explicación se lee antes que la fuente</strong>, así que tiene que sostenerse sola y la categoría pasa a describir lo que el texto debe hacer, no lo que el usuario ya leyó. Dato para dimensionar: <strong>6–8 horas diarias</strong> disponibles.</p>
+    <p class="alerta">🔴 <strong>DESBLOQUEADO el 2026-07-27.</strong> <code>D1</code> era su único bloqueo duro y ya no lo es: el usuario sabe que el departamento pide bastante menos que su hipótesis, y decide seguir con la suya, que es más exigente, mientras no haya motivo para bajarla. Lo que queda para Mauricio (<code>P1</code>) es solo comprobar si es demasiado ambiciosa. Depende todavía de REF-6, REF-7, REF-10 y REF-11. Reusar lo que REF-4 salve en vez de inventar un plan entero. Forma por decidir sobre la marcha, con el tracker viejo como referencia. De él hereda el truco del <code>?s=</code> en la URL, que es lo que permite al usuario marcarlo y que Edge lo sincronice entre sus PCs. <strong>Artefacto separado de la web de TODOs</strong>: distinto dueño, distinta URL. ✅ <strong>El sistema de modos de lectura ya está reconstruido (2026-07-27)</strong> y no hay que reinventarlo: dos ejes independientes (<code>skim</code> para la fuente, <code>e:&quot;deep&quot;|&quot;review&quot;</code> para la explicación), granularidad <strong>por subsección</strong>, y los tres perfiles de E14. Con el cambio de flujo que decidió el usuario el mismo día: <strong>la explicación se lee antes que la fuente</strong>, así que tiene que sostenerse sola y la categoría pasa a describir lo que el texto debe hacer, no lo que el usuario ya leyó. Dato para dimensionar: <strong>6–8 horas diarias</strong> disponibles.</p>
     <p class="artefacto">Artefacto: <code>subproyectos/referencias/modos_de_lectura.md</code></p>
   </div>
 </li>
@@ -423,8 +435,8 @@ window.MathJax={
 <section class="panel" id="panel-infra" role="tabpanel">
   <h2>Infraestructura del proyecto</h2>
   <p class="contexto">Todo lo que no es contenido: montaje, herramientas, la web de TODOs y la migración de skills. El plan completo, con dependencias y decisiones, vive en <code>docs/plan.md</code>.</p>
-  <div class="barra"><div class="relleno" style="width:64%"></div></div>
-  <p class="cuenta">9 de 14 completadas</p>
+  <div class="barra"><div class="relleno" style="width:60%"></div></div>
+  <p class="cuenta">9 de 15 completadas</p>
   <h3>Fase 0 — Fontanería</h3>
   <ul class="tareas">
 <li class="tarea hecha" data-hecha="1">
@@ -488,6 +500,16 @@ window.MathJax={
   </div>
   <div class="detalle">
     <p><code>gh 2.96.0</code> por <code>winget</code>, cuenta <code>luistejon17</code>, protocolo HTTPS. ⚠️ <strong>Trampa que costó tres intentos:</strong> tras instalar, <code>gh</code> no se reconoce en ninguna terminal ya abierta, y <strong>tampoco en una ventana que lance el agente</strong>, porque hereda el <code>PATH</code> del proceso padre, que arrancó antes de la instalación. Ni siquiera basta con abrir una ventana nueva desde aquí. Lo que sí funciona: un <code>.ps1</code> que <strong>reconstruya el <code>PATH</code> desde el registro</strong> (<code>[Environment]::GetEnvironmentVariable(&quot;Path&quot;,&quot;Machine&quot;)</code>) y llame al <code>.exe</code> por ruta completa. Y <code>gh auth login</code> es interactivo de verdad, así que lo corre el usuario en una ventana propia; desde aquí solo se puede lanzar la ventana.</p>
+  </div>
+</li>
+<li class="tarea pendiente" data-hecha="0">
+  <div class="cabecera">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">INF-7</span>
+    <span class="titulo">Organizar el escritorio</span>
+  </div>
+  <div class="detalle">
+    <p>Pendiente general abierto por el usuario el 2026-07-27. El detonante: metió en <code>Escritorio/libros_control_optimo/</code> los libros que le mandó <strong>Camilo Hernández</strong>, y <strong>casi ninguno es de control óptimo</strong>. Lo que hay ahí de más: Karatzas &amp; Shreve, Revuz &amp; Yor, Protter y Jacod–Shiryaev son <strong>cálculo estocástico</strong>, no control, y en su mayoría cubren lo que el usuario ya tiene escrito sobre Baudoin. ⚠️ <strong>Touzi está duplicado</strong>, en dos escaneos distintos. 🔴 **Salvo uno: Stroock &amp; Varadhan, <em>Multidimensional Diffusion Processes</em>, sí importa.<strong> Es el libro del </strong>problema de martingala**, que es exactamente sobre lo que Kurtz–Stockbridge construye la equivalencia entre control y LP sobre medidas. Va a <code>REF-7</code>, no a la pila de sobras. Al ordenar, separar por función y no por quién los mandó.</p>
   </div>
 </li>
   </ul>
