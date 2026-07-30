@@ -116,7 +116,7 @@ window.MathJax={
 <header class="principal">
 <h1>Propuesta de tesis — control óptimo</h1>
 <p class="sub">Decidir y proponer un tema en control óptimo inverso, en 2–3 meses desde el 2026-07-25.</p>
-<p class="global"><strong>24</strong> de <strong>39</strong> tareas completadas en todo el proyecto.</p>
+<p class="global"><strong>26</strong> de <strong>41</strong> tareas completadas en todo el proyecto.</p>
 </header>
 <nav class="pestanas" role="tablist">
 <button data-slug="referencias" role="tab">referencias<span class="n">7/13</span></button>
@@ -124,6 +124,7 @@ window.MathJax={
 <button data-slug="perfil" role="tab">perfil<span class="n">3/3</span></button>
 <button data-slug="transporte_optimo" role="tab">⚠️ transporte optimo<span class="n">0/3</span></button>
 <button data-slug="infra" role="tab">General<span class="n">10/16</span></button>
+<button data-slug="reuniones" role="tab">reuniones<span class="n">2/2</span></button>
 </nav>
 <div class="controles">
 <label><input type="checkbox" id="ocultar"> Esconder las completadas</label>
@@ -625,6 +626,38 @@ window.MathJax={
   </div>
   <div class="detalle">
     <p>Las trampas operativas del proyecto viejo, que son portables y ajenas al tema. Es el activo más reutilizable que produjo aquel proyecto.</p>
+  </div>
+</li>
+  </ul>
+</section>
+<section class="panel" id="panel-reuniones" role="tabpanel">
+  <h2>Preparar cada reunión con el asesor</h2>
+  <p class="contexto">Hermano de <code>asesor</code> y con la frontera clara: aquel procesa el <strong>después</strong> de una reunión, este prepara el <strong>antes</strong>. Un capítulo por semana en un Overleaf propio, con las preguntas que se llevan, las lecturas que hay que hacer, y el contexto matemático que hace falta para poder seguir la conversación. <strong>Recurrente</strong>: no se cierra, solo espera la siguiente.</p>
+  <div class="barra"><div class="relleno" style="width:100%"></div></div>
+  <p class="cuenta">2 de 2 completadas</p>
+  <ul class="tareas">
+<li class="tarea hecha" data-hecha="1">
+  <div class="cabecera">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">REU-1</span>
+    <span class="titulo">Montar el subproyecto y la skill <code>/reunion</code></span>
+    <span class="fecha">2026-07-29</span>
+  </div>
+  <div class="detalle">
+    <p>Overleaf clonado en <code>overleaf/</code> y <strong>en <code>.gitignore</code></strong>: es un repo propio, con su token en el remote, y no se anida en este. 🔴 <strong>La decisión de diseño que más pesa: el contexto matemático NO es <code>/explica</code> en modo <code>review</code>.</strong> Ese modo exige cobertura completa, y aquí se quiere lo contrario: selectivo, sin demostraciones, y con la agenda decidiendo qué entra. Reutilizarlo tal cual habría producido un tratado que el usuario no tiene tiempo de leer. <strong>Frontera con <code>preguntas_pendientes.md</code>, para que no se dupliquen:</strong> la cola manda el <strong>estado</strong> (qué está abierto, con qué prioridad), el capítulo manda la <strong>redacción</strong> y cita el id. <strong>Paso 0 obligatorio</strong>: interrogar el estado de conocimiento y escribirlo con fecha en <code>estado_de_conocimiento.md</code>, acumulativo. Suponerlo produce un capítulo calibrado para otra persona.</p>
+    <p class="artefacto">Artefactos: <code>CLAUDE.md</code>, <code>.claude/skills/reunion/SKILL.md</code></p>
+  </div>
+</li>
+<li class="tarea hecha" data-hecha="1">
+  <div class="cabecera">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">REU-2</span>
+    <span class="titulo">Capítulo de la reunión del 2026-08-03</span>
+    <span class="fecha">2026-07-29</span>
+  </div>
+  <div class="detalle">
+    <p>La primera, y la escribe el <strong>v2 del documento de Junca</strong>, que llegó ese mismo día. Cuatro preguntas (<code>P16</code> reformulada, <code>P21</code>, <code>P17</code>, <code>P8-M</code>) y dos decisiones, más un contexto matemático de cero a la inclusión monótona. 🔴 <strong>El hallazgo que manda la reunión, y es lectura propia:</strong> el v2 construye toda su teoría sobre una <strong>igualdad de valores</strong> que no menciona <span class="mate">$V$</span>, y relega la HJB puntual al §6 bajo hipótesis de densidades. Si eso es deliberado, <strong>la viscosidad sale del camino crítico</strong> y con ella unas 70 páginas de Touzi. Va como pregunta, no como conclusión. <strong>Paso 0:</strong> el usuario declaró no haber leído <strong>ninguno</strong> de los tres documentos de Junca, solo los títulos. Las fichas las escribió el agente. Por eso el contexto se escribe asumiendo cero y ancla en lo que sí tiene escrito: B&amp;C, Baudoin, <code>fpe</code>, <code>apendice_operadores</code>. Nace <code>P22</code>, la decisión que desbloquea <code>REF-8</code>: cuál de las cinco direcciones del §11.</p>
+    <p class="artefacto">Artefactos: <code>overleaf/reuniones/2026-08-03/</code>, <code>estado_de_conocimiento.md</code></p>
   </div>
 </li>
   </ul>
