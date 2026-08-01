@@ -116,14 +116,14 @@ window.MathJax={
 <header class="principal">
 <h1>Propuesta de tesis — control óptimo</h1>
 <p class="sub">Decidir y proponer un tema en control óptimo inverso, en 2–3 meses desde el 2026-07-25.</p>
-<p class="global"><strong>31</strong> de <strong>47</strong> tareas completadas en todo el proyecto.</p>
+<p class="global"><strong>32</strong> de <strong>47</strong> tareas completadas en todo el proyecto.</p>
 </header>
 <nav class="pestanas" role="tablist">
 <button data-slug="referencias" role="tab">referencias<span class="n">6/13</span></button>
 <button data-slug="asesor" role="tab">asesor<span class="n">4/4</span></button>
 <button data-slug="perfil" role="tab">perfil<span class="n">4/4</span></button>
 <button data-slug="transporte_optimo" role="tab">⚠️ transporte optimo<span class="n">0/3</span></button>
-<button data-slug="infra" role="tab">General<span class="n">11/16</span></button>
+<button data-slug="infra" role="tab">General<span class="n">12/16</span></button>
 <button data-slug="correos" role="tab">correos<span class="n">2/3</span></button>
 <button data-slug="reuniones" role="tab">reuniones<span class="n">4/4</span></button>
 </nav>
@@ -466,8 +466,8 @@ window.MathJax={
 <section class="panel" id="panel-infra" role="tabpanel">
   <h2>Infraestructura del proyecto</h2>
   <p class="contexto">Todo lo que no es contenido: montaje, herramientas, la web de TODOs y la migración de skills. El plan completo, con dependencias y decisiones, vive en <code>docs/plan.md</code>.</p>
-  <div class="barra"><div class="relleno" style="width:69%"></div></div>
-  <p class="cuenta">11 de 16 completadas</p>
+  <div class="barra"><div class="relleno" style="width:75%"></div></div>
+  <p class="cuenta">12 de 16 completadas</p>
   <h3>Fase 0 — Fontanería</h3>
   <ul class="tareas">
 <li class="tarea hecha" data-hecha="1">
@@ -638,14 +638,16 @@ window.MathJax={
     <p>El del proyecto viejo llegó a 947 líneas porque mezcló manual con bitácora forense. Aquí: <code>CLAUDE.md</code> corto e imperativo, <code>docs/lecciones.md</code> para el porqué de cada regla con su incidente.</p>
   </div>
 </li>
-<li class="tarea pendiente" data-hecha="0">
+<li class="tarea hecha" data-hecha="1">
   <div class="cabecera">
     <span class="casilla" aria-hidden="true"></span>
     <span class="ident">DOC-2</span>
     <span class="titulo"><code>docs/trampas_shell.md</code></span>
+    <span class="fecha">2026-08-01</span>
   </div>
   <div class="detalle">
-    <p>Las trampas operativas del proyecto viejo, que son portables y ajenas al tema. Es el activo más reutilizable que produjo aquel proyecto.</p>
+    <p><strong>Diez trampas</strong>, cada una con su síntoma primero, su causa y su coste medido. Rescatadas del <code>CLAUDE.md</code> viejo, donde vivían diluidas entre instrucciones de un tema que ya no es este. 🔴 <strong>Lo que las une, y es la frase que resume el documento: ninguna produce un error. Todas producen un resultado plausible.</strong> Un <code>grep</code> que devuelve cero, un <code>sed</code> que no sustituye nada y deja el archivo escrito igual, un script que imprime «OK» tras corromper el <code>.tex</code>. <strong>La que más ha costado</strong> es el heredoc de Python (<code>T3</code>): sus escapes se parten en dos grupos, y <code>\b</code>, <code>\f</code>, <code>\n</code>, <code>\r</code>, <code>\t</code>, <code>\v</code> <strong>son válidos y se consumen en silencio</strong>, así que <code>&quot;\begin{align*}&quot;</code> se vuelve backspace más <code>egin{...}</code>. Diecisiete de dieciocho reemplazos fallaron y el que funcionó metió un <code>U+0008</code>. ⚠️ <strong>Una trampa nueva, encontrada al publicar la web hoy</strong> (<code>T7</code>): el alias <code>python</code> de Windows sale con <strong>código 49</strong> sin ejecutar nada. Estaba escrito mal en el <code>CLAUDE.md</code> y en la skill <code>/cierra</code>; corregido en los dos a <code>py -3</code>. La regla 4 del <code>CLAUDE.md</code> ahora apunta aquí, que es la separación de <code>DOC-1</code>: el manual imperativo arriba, el porqué con su anécdota abajo.</p>
+    <p class="artefacto">Artefacto: <code>docs/trampas_shell.md</code></p>
   </div>
 </li>
   </ul>
