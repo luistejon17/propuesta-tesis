@@ -116,11 +116,11 @@ window.MathJax={
 <header class="principal">
 <h1>Propuesta de tesis — control óptimo</h1>
 <p class="sub">Decidir y proponer un tema en control óptimo inverso, en 2–3 meses desde el 2026-07-25.</p>
-<p class="global"><strong>32</strong> de <strong>47</strong> tareas completadas en todo el proyecto.</p>
+<p class="global"><strong>33</strong> de <strong>50</strong> tareas completadas en todo el proyecto.</p>
 </header>
 <nav class="pestanas" role="tablist">
-<button data-slug="referencias" role="tab">referencias<span class="n">6/13</span></button>
-<button data-slug="asesor" role="tab">asesor<span class="n">4/4</span></button>
+<button data-slug="referencias" role="tab">referencias<span class="n">6/14</span></button>
+<button data-slug="asesor" role="tab">asesor<span class="n">5/6</span></button>
 <button data-slug="perfil" role="tab">perfil<span class="n">4/4</span></button>
 <button data-slug="transporte_optimo" role="tab">⚠️ transporte optimo<span class="n">0/3</span></button>
 <button data-slug="infra" role="tab">General<span class="n">12/16</span></button>
@@ -138,11 +138,27 @@ window.MathJax={
   <p class="contexto hecho">✅ <strong>Precisado el 2026-07-27, tras contrastar el audio.</strong> Lo que se asume es que <strong>se conocen las distintas partes del problema</strong>, y que solo hay que hacer la inversión. La frase <em>«sin asumir que tenemos siempre muestras»</em> significa lo contrario de lo que parece leída sola: <strong>no hace falta estimar nada</strong>, ni el núcleo de transición <span class="mate">$T$</span> ni nada sacado de observar al experto.</p>
   <p class="contexto alerta">🔴 <strong>Y el caso con solo muestras está DIFERIDO, no descartado</strong>: <em>«luego de resolver así se mira qué se puede hacer al tener solo muestras»</em>. La §4 del paper es <strong>trabajo futuro declarado</strong>, y como tal tiene sitio en la propuesta. No se estudia ahora, pero tampoco se tira.</p>
   <p class="contexto alerta">🔴 <strong>Y el asesor acotó también la profundidad con la que hay que leer su propio paper</strong> (recordado por el usuario el 2026-07-27): del paper con Leiva importa <strong>la idea general, no las técnicas</strong>, porque en el caso continuo las técnicas son otras. Eso rebaja cualquier tentación de estudiar el SMD o el aparato de MDPs finitos a fondo.</p>
+  <p class="contexto alerta">🔴 <strong>Y el 2026-08-03 el asesor dio un encargo concreto que reordena esta lista:</strong> <em>«creo que ese sea como el primer reto: justificar bien este teorema 4.2»</em>. Es <code>REF-13</code>, va primero, y <strong>es anterior a elegir dirección</strong>: se le fue a preguntar cuál de las cinco del §11 atacar y lo que dio fue el prerrequisito que está por debajo de todas. Eso significa que <strong><code>REF-8</code> ya no espera a <code>P22</code> para arrancar</strong>.</p>
   <p class="contexto"><strong>Las preguntas abiertas viven en dos sitios y no se mezclan:</strong> las que dependen de su criterio, en <code>asesor/preguntas_pendientes.md</code>; las que responde el trabajo, en <code>preguntas_de_investigacion.md</code>.</p>
-  <p class="contexto hecho">✅ <strong>Y en dos y no en cuatro, desde el 2026-07-28.</strong> Los diez huecos del §4 de la ficha de <code>REF-3</code> y las nueve rupturas del §5 de la de <code>REF-1</code> se solapaban casi uno a uno, porque miran el mismo problema desde el borrador y desde el paper. Se fundieron en <code>preguntas_de_investigacion.md</code>, que pasa de nueve entradas a diecisiete y trae tabla de trazabilidad. Las fichas conservan el análisis y remiten allí para el estado.</p>
-  <div class="barra"><div class="relleno" style="width:46%"></div></div>
-  <p class="cuenta">6 de 13 completadas</p>
+  <div class="barra"><div class="relleno" style="width:43%"></div></div>
+  <p class="cuenta">6 de 14 completadas</p>
   <ul class="tareas">
+<li class="tarea pendiente" data-hecha="0">
+  <div class="cabecera">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">REF-13</span>
+    <span class="titulo">Justificar el Teorema 4.2 del v2</span>
+  </div>
+  <div class="detalle">
+    <p class="alerta">🔴 <strong>Encargo explícito del asesor, 2026-08-03, y es la primera tarea del trabajo de tesis propiamente dicho.</strong> El Teorema 4.2 da existencia y unicidad, o sea sostiene el §4 entero, y él considera que en su propia nota no está bien justificado. <strong>Lo que hay que fijar, dicho por él en [07:37] y [12:48]:</strong></p>
+    <ul>
+      <li><strong>Quién es el espacio <span class="mate">$H$</span>.</strong> <em>«Ese <span class="mate">$H$</span> es parte de lo que hay que definir.»</em> En el v2 se usa súper general, con su norma y su dual.</li>
+      <li><strong>Dónde vive <span class="mate">$c$</span></strong>, que no se elige: sale del dual de donde vive <span class="mate">$\mathcal M$</span>. Es el hilo que repite tres veces en la reunión.</li>
+      <li><strong>Que <span class="mate">$\mathcal M$</span> sea acotado, convexo y compacto.</strong> Se usa y no se prueba.</li>
+    </ul>
+    <p class="alerta">🔴 <strong>Depende de <code>REF-7</code> y esa dependencia es dura</strong>, no de conveniencia: sin caracterizar <span class="mate">$\mathcal M$</span> no hay <span class="mate">$H$</span>, y sin <span class="mate">$H$</span> no hay teorema. ⚠️ Y arrastra la grieta que él mismo abrió en [04:37]: en discreto las políticas deterministas son <strong>vértices del poliedro</strong>, y en continuo <em>«no sé si esa es la intuición de vértice»</em>. La salida que nombra es la de los <strong>controles relajados</strong>, que es literatura de <code>REF-7</code>. ⚠️ <strong>Antes de atacarlo conviene cerrar la duda 1 de <code>dudas_de_audio.md</code></strong>: la frase que explica por qué el v2 evita el punto fijo está mal transcrita, y es justo el razonamiento que hay que reconstruir.</p>
+  </div>
+</li>
 <li class="tarea hecha" data-hecha="1">
   <div class="cabecera">
     <span class="casilla" aria-hidden="true"></span>
@@ -239,7 +255,7 @@ window.MathJax={
     <span class="titulo">Medidas de ocupación</span>
   </div>
   <div class="detalle">
-    <p><strong>Sube a prerrequisito duro.</strong> Deja de ser exploratorio por dos vías que coinciden: la ficha de REF-3 §4.4 (sin el análogo continuo de la Proposición 1 de Puterman, que es Kurtz–Stockbridge, la igualdad clave del borrador no está justificada) y el propio asesor, que sobre esta formulación dijo <em>«hay varios papers, hay libros como tal»</em> [00:00] y además <strong>dudó de si era la mejor forma, frente a plantearlo en políticas</strong>. 🔴 <strong>Deja de ser una búsqueda a ciegas (2026-07-26, de REF-3b).</strong> El CV de Junca trae un paper <strong>suyo</strong> con <strong>D. Henrion</strong> y M. Velasco, <em>Moment-SOS hierarchy and exit location of stochastic processes</em>, que es exactamente la maquinaria de medidas de ocupación sobre procesos estocásticos. Y otro con D. Ávila, <em>On reachability of Markov chains: a long-run average approach</em>, en la misma línea. <strong>Empezar por los suyos, no por el canon.</strong> ✅ <strong>Los dos conseguidos el 2026-07-27</strong> y a la espera de Mathpix, en <code>mathpix_inbox/para pasar a mathpix/</code>. Autoría corregida contra las portadas: son <strong>Henrion, Junca &amp; Velasco</strong> (arXiv 2101.06009, titulado <em>exit <strong>time</strong></em> en el preprint) y <strong>Ávila &amp; Junca</strong> (arXiv 1806.00052), no con Junca de primer autor como decía el CV. Después, el canon. ✅ <strong>Localizado con precisión (2026-07-26, de REF-5):</strong> <strong>Kurtz &amp; Stockbridge</strong>, <em>Existence of Markov controls and characterization of optimal Markov controls</em>, <strong>SIAM JCO 36(2):609–653, 1998</strong>. Prueba que el problema de control <strong>equivale a un programa lineal sobre un espacio de medidas</strong>, que es el análogo continuo de la Proposición 1 de Puterman. 🔴 <strong>Y es el único que no se ha podido conseguir (2026-07-27).</strong> De pago en SIAM y <strong>sin preprint abierto</strong>, por ser de 1998, anterior a que esa comunidad usara arXiv. No está ni en la página de Kurtz ni en la de Stockbridge. Vía realista: acceso institucional de Uniandes a <code>epubs.siam.org</code>, DOI <code>10.1137/S0363012995295516</code>. <strong>Bloquea el tercer hueco entero</strong>, que es el que no tiene libro. ⚠️ Y <strong>Hernández-Lerma &amp; Lasserre queda fuera</strong>: sus tres libros son de <strong>tiempo discreto</strong>, justo el lado del que se está saliendo. Cómodo de leer, pero en la dirección equivocada. Que Henrion aparezca aquí confirma que la escuela Lasserre era la pista correcta.</p>
+    <p class="alerta">🔴 <strong>Sube otra vez el 2026-08-03, y ya es el cuello de botella.</strong> Deja de competir con viscosidad por ese puesto: el asesor encargó <code>REF-13</code> (justificar el Teorema 4.2), y para eso hace falta saber <strong>quién es <span class="mate">$\mathcal M$</span></strong>, porque de ahí sale el espacio <span class="mate">$H$</span> por dualidad. Su frase, repetida tres veces: <em>«para entender qué tipo de espacio es en el que debe vivir [<span class="mate">$c$</span>], toca entender qué tipo de espacio es en el que vive <span class="mate">$\mathcal M$</span>»</em> [01:19]. Y añade la pregunta concreta que hay que resolver en esa literatura: en discreto las políticas deterministas son <strong>vértices del poliedro</strong>; en continuo <em>«no sé si esa es la intuición de vértice»</em> [04:37]. La vía que él nombra son los <strong>controles relajados</strong>. <strong>Sube a prerrequisito duro.</strong> Deja de ser exploratorio por dos vías que coinciden: la ficha de REF-3 §4.4 (sin el análogo continuo de la Proposición 1 de Puterman, que es Kurtz–Stockbridge, la igualdad clave del borrador no está justificada) y el propio asesor, que sobre esta formulación dijo <em>«hay varios papers, hay libros como tal»</em> [00:00] y además <strong>dudó de si era la mejor forma, frente a plantearlo en políticas</strong>. 🔴 <strong>Deja de ser una búsqueda a ciegas (2026-07-26, de REF-3b).</strong> El CV de Junca trae un paper <strong>suyo</strong> con <strong>D. Henrion</strong> y M. Velasco, <em>Moment-SOS hierarchy and exit location of stochastic processes</em>, que es exactamente la maquinaria de medidas de ocupación sobre procesos estocásticos. Y otro con D. Ávila, <em>On reachability of Markov chains: a long-run average approach</em>, en la misma línea. <strong>Empezar por los suyos, no por el canon.</strong> ✅ <strong>Los dos conseguidos el 2026-07-27</strong> y a la espera de Mathpix, en <code>mathpix_inbox/para pasar a mathpix/</code>. Autoría corregida contra las portadas: son <strong>Henrion, Junca &amp; Velasco</strong> (arXiv 2101.06009, titulado <em>exit <strong>time</strong></em> en el preprint) y <strong>Ávila &amp; Junca</strong> (arXiv 1806.00052), no con Junca de primer autor como decía el CV. Después, el canon. ✅ <strong>Localizado con precisión (2026-07-26, de REF-5):</strong> <strong>Kurtz &amp; Stockbridge</strong>, <em>Existence of Markov controls and characterization of optimal Markov controls</em>, <strong>SIAM JCO 36(2):609–653, 1998</strong>. Prueba que el problema de control <strong>equivale a un programa lineal sobre un espacio de medidas</strong>, que es el análogo continuo de la Proposición 1 de Puterman. 🔴 <strong>Y es el único que no se ha podido conseguir (2026-07-27).</strong> De pago en SIAM y <strong>sin preprint abierto</strong>, por ser de 1998, anterior a que esa comunidad usara arXiv. No está ni en la página de Kurtz ni en la de Stockbridge. Vía realista: acceso institucional de Uniandes a <code>epubs.siam.org</code>, DOI <code>10.1137/S0363012995295516</code>. <strong>Bloquea el tercer hueco entero</strong>, que es el que no tiene libro. ⚠️ Y <strong>Hernández-Lerma &amp; Lasserre queda fuera</strong>: sus tres libros son de <strong>tiempo discreto</strong>, justo el lado del que se está saliendo. Cómodo de leer, pero en la dirección equivocada. Que Henrion aparezca aquí confirma que la escuela Lasserre era la pista correcta.</p>
   </div>
 </li>
 <li class="tarea hecha" data-hecha="1">
@@ -314,8 +330,8 @@ window.MathJax={
 <section class="panel" id="panel-asesor" role="tabpanel">
   <h2>Conversaciones con el asesor</h2>
   <p class="contexto">Todo lo que sale de hablar con Mauricio Junca: grabaciones, transcripciones, resúmenes y las preguntas que quedan pendientes para la próxima. Es un subproyecto <strong>recurrente</strong>: no se cierra cuando se procesa una reunión, solo espera la siguiente.</p>
-  <div class="barra"><div class="relleno" style="width:100%"></div></div>
-  <p class="cuenta">4 de 4 completadas</p>
+  <div class="barra"><div class="relleno" style="width:83%"></div></div>
+  <p class="cuenta">5 de 6 completadas</p>
   <ul class="tareas">
 <li class="tarea hecha" data-hecha="1">
   <div class="cabecera">
@@ -349,6 +365,29 @@ window.MathJax={
   </div>
   <div class="detalle">
     <p>Repartido a <code>referencias</code>. <strong>Dos tareas nuevas</strong>, las dos por encargo explícito del asesor: <code>REF-9</code> (revisión de literatura, que él ya intentó sin encontrar nada) y <code>REF-10</code> (la ruta alternativa del principio del máximo y las FBSDE). <strong>Cuatro reencuadradas</strong>: <code>REF-4</code> recupera el transporte óptimo y baja el SMD; <code>REF-5</code> pasa de iniciativa a encargo y gana la pista de Touzi; <code>REF-6</code> baja de urgencia; <code>REF-7</code> sube a prerrequisito duro. El acotamiento del alcance (control inverso con todo conocido, sin oráculos ni muestreo) va en la cabecera del <code>TODO.md</code> de <code>referencias</code>, porque manda sobre todas sus tareas.</p>
+  </div>
+</li>
+<li class="tarea hecha" data-hecha="1">
+  <div class="cabecera">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">ASE-5</span>
+    <span class="titulo">Transcribir la reunión del 2026-08-03</span>
+    <span class="fecha">2026-08-03</span>
+  </div>
+  <div class="detalle">
+    <p>17:53 en dos tramos, con <code>large-v3</code>. Los tres archivos hechos, más <code>dudas_de_audio.md</code>. <strong>La atribución de turnos está SIN CONFIRMAR</strong>: a diferencia de la vez pasada, nadie ha validado ningún pasaje de prueba. 🔴 Lo grande: el asesor da <strong>un encargo concreto que no estaba en la agenda</strong>, <em>«el primer reto: justificar bien este teorema 4.2»</em>, con su lista de lo que hay que fijar (quién es <span class="mate">$H$</span>, dónde vive <span class="mate">$c$</span>, y <span class="mate">$\mathcal M$</span> acotado, convexo y compacto). Y responde <strong>media <code>P16</code></strong>: la función de valor no tiene por qué aparecer, depende de cómo se plantee el gap. 🔴 <strong>Y lo que NO pasó pesa igual</strong>: se pidió la decisión de las cinco direcciones y <em>«no se había llegado»</em>; <code>P21</code> no se mencionó nunca; la grabación se corta con un tercero entrando. ⚠️ <strong>Nueve dudas abiertas</strong>, y la 1 es grave: la frase que explica por qué el v2 evita el punto fijo está mal transcrita y <strong>no se ha reconstruido</strong>.</p>
+    <p><code>resumen.md</code>, <code>dudas_de_audio.md</code>. Nota de infraestructura: el venv de Whisper <strong>no existía en la Surface</strong> (ARM64, y no hay wheels <code>win_arm64</code> de <code>ctranslate2</code> ni de <code>torch</code>). Se montó con Python 3.13 x64 emulado en la misma ruta de siempre. Corrió a 2,2x tiempo real. Hizo falta <code>hf_xet</code>: sin él la descarga del modelo se queda clavada en cero.</p>
+    <p class="artefacto">Artefactos: <code>2026-08-03/transcripcion_cruda.md</code>, <code>transcripcion_limpia.md</code>,</p>
+  </div>
+</li>
+<li class="tarea pendiente" data-hecha="0">
+  <div class="cabecera">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">ASE-6</span>
+    <span class="titulo">Confirmar la atribución y las dudas de la reunión del 2026-08-03</span>
+  </div>
+  <div class="detalle">
+    <p><strong>Bloquea la fiabilidad de todo lo demás.</strong> Dos pasajes de prueba en <code>dudas_de_audio.md</code> §0, y nueve dudas numeradas. Las que más rinden: la <strong>1</strong> (la frase bisagra del v2), la <strong>2</strong> (si el argumento que evita el intercambio es suyo o de un tercero) y la <strong>9</strong>, que no es de audio sino para el usuario: <strong>¿siguió la reunión después de las 9:27?</strong> La <strong>6</strong> se resuelve sin escuchar nada, mirando el 3.1 de la nota.</p>
   </div>
 </li>
 <li class="tarea hecha" data-hecha="1">
