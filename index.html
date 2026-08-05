@@ -51,8 +51,6 @@ nav.pestanas button .n{opacity:.7; font-variant-numeric:tabular-nums; margin-lef
   border-radius:999px; transition:.15s;
 }
 .controles button.accion:hover{border-color:var(--acento); color:var(--tinta)}
-nav.pestanas button[data-completo="1"]{display:none}
-nav.pestanas.con-completos button[data-completo="1"]{display:inline-block; opacity:.75}
 
 .panel{display:none}
 .panel.activo{display:block}
@@ -140,28 +138,25 @@ window.MathJax={
 <p class="global"><strong>46</strong> de <strong>89</strong> tareas completadas en todo el proyecto.</p>
 </header>
 <nav class="pestanas" role="tablist">
-<button data-slug="preguntas_junca" data-completo="0" role="tab">Preguntas a Junca<span class="n">8/18</span></button>
-<button data-slug="preguntas_investigacion" data-completo="0" role="tab">Preguntas de investigación<span class="n">0/18</span></button>
-<button data-slug="referencias" data-completo="0" role="tab">referencias<span class="n">6/14</span></button>
-<button data-slug="asesor" data-completo="1" role="tab">asesor<span class="n">6/6</span></button>
-<button data-slug="reuniones" data-completo="1" role="tab">reuniones<span class="n">4/4</span></button>
-<button data-slug="correos" data-completo="1" role="tab">correos<span class="n">3/3</span></button>
-<button data-slug="perfil" data-completo="1" role="tab">perfil<span class="n">4/4</span></button>
-<button data-slug="transporte_optimo" data-completo="0" role="tab">⚠️ transporte optimo<span class="n">0/3</span></button>
-<button data-slug="infra" data-completo="0" role="tab">General<span class="n">15/19</span></button>
+<button data-slug="preguntas_junca" role="tab">Preguntas a Junca<span class="n">8/18</span></button>
+<button data-slug="preguntas_investigacion" role="tab">Preguntas de investigación<span class="n">0/18</span></button>
+<button data-slug="referencias" role="tab">referencias<span class="n">6/14</span></button>
+<button data-slug="transporte_optimo" role="tab">⚠️ transporte optimo<span class="n">0/3</span></button>
+<button data-slug="infra" role="tab">General<span class="n">15/19</span></button>
 </nav>
 <div class="controles">
 <label><input type="checkbox" id="ocultar"> Esconder las completadas</label>
-<label><input type="checkbox" id="completos"> Mostrar subproyectos terminados</label>
 <span class="separa"></span>
 <button type="button" id="desplegar" class="accion">Desplegar todo</button>
 </div>
 <section class="panel activo" id="panel-preguntas_junca" role="tabpanel">
   <h2>Preguntas para Mauricio</h2>
-  <p class="contexto">La cola viva de lo que hay que preguntarle <strong>a él</strong>. No es la lista de una reunión: sobrevive a todas, y una pregunta respondida no se borra, se marca. Saber qué se preguntó y cuándo es parte del historial.</p>
-  <p class="contexto alerta">🔴 <strong>Las preguntas las pone el usuario.</strong> El agente puede <strong>proponer</strong>, nunca añadir directamente: lo que se le ocurra va al grupo «Sin clasificar», y solo sube a la lista de verdad con permiso explícito. El motivo es que el tiempo del asesor es el recurso más escaso del proyecto, y una lista que crece sola acaba llena de cosas que se podían haber averiguado leyendo.</p>
-  <p class="contexto"><strong>La otra lista existe y no es esta:</strong> <code>preguntas_investigacion</code>, que son las que <strong>no</strong> responde Mauricio sino el trabajo. Una pregunta se cierra aquí con una respuesta suya; allí, con una referencia o una demostración.</p>
-  <p class="contexto">Clasificado el 2026-07-27 con el usuario, pregunta por pregunta. Las prioridades son <strong>propuesta del agente</strong> y se cambian sin ceremonia.</p>
+  <div class="contexto-oculto" hidden>
+    <p class="contexto">La cola viva de lo que hay que preguntarle <strong>a él</strong>. No es la lista de una reunión: sobrevive a todas, y una pregunta respondida no se borra, se marca. Saber qué se preguntó y cuándo es parte del historial.</p>
+    <p class="contexto alerta">🔴 <strong>Las preguntas las pone el usuario.</strong> El agente puede <strong>proponer</strong>, nunca añadir directamente: lo que se le ocurra va al grupo «Sin clasificar», y solo sube a la lista de verdad con permiso explícito. El motivo es que el tiempo del asesor es el recurso más escaso del proyecto, y una lista que crece sola acaba llena de cosas que se podían haber averiguado leyendo.</p>
+    <p class="contexto"><strong>La otra lista existe y no es esta:</strong> <code>preguntas_investigacion</code>, que son las que <strong>no</strong> responde Mauricio sino el trabajo. Una pregunta se cierra aquí con una respuesta suya; allí, con una referencia o una demostración.</p>
+    <p class="contexto">Clasificado el 2026-07-27 con el usuario, pregunta por pregunta. Las prioridades son <strong>propuesta del agente</strong> y se cambian sin ceremonia.</p>
+  </div>
   <div class="barra"><div class="relleno" style="width:44%"></div></div>
   <p class="cuenta">8 de 18 completadas</p>
   <h3>Prioridad alta</h3>
@@ -396,13 +391,15 @@ window.MathJax={
 </section>
 <section class="panel" id="panel-preguntas_investigacion" role="tabpanel">
   <h2>Preguntas objetivo de la investigación</h2>
-  <p class="contexto"><strong>Estas NO las responde Mauricio.</strong> Las responde el trabajo: fichar las referencias, estudiar el tracker que diseñe <code>REF-8</code>, y hacer la matemática.</p>
-  <p class="contexto">Abierta el 2026-07-27, al separar la cola de preguntas en dos. La otra mitad, lo que sí depende del criterio del asesor, es el subproyecto <strong><code>preguntas_junca</code></strong>, y <strong>esa tiene la regla de que solo el usuario añade</strong>. Esta no: aquí el agente puede proponer libremente, porque el coste de una pregunta de más es leer, no gastarle tiempo a nadie.</p>
-  <p class="contexto"><strong>Fundida el 2026-07-28 con los huecos de las fichas.</strong> Hasta ese día había tres sitios donde mirar: esta lista, el §4 de <code>fichas/junca_fixed_point_continuo.md</code> («qué deja abierto») y el §5 de <code>fichas/paper_junca_leiva.md</code> («qué se rompe al pasar al continuo»). Los dos últimos se solapaban casi uno a uno, porque miran el mismo problema desde el paper y desde el borrador. Ahora hay una sola lista y <strong>cada entrada dice de qué sección salió</strong>; las fichas conservan su análisis largo, que es donde está la matemática, y remiten aquí para el estado.</p>
-  <p class="contexto">Varias vienen además de la lista vieja de preguntas al asesor, reclasificadas por el usuario. Se conserva su identificador original entre paréntesis para no perder el rastro.</p>
-  <p class="contexto"><strong>Los identificadores son etiquetas, no orden.</strong> Dentro de cada bloque las preguntas van encadenadas por dependencia, no por número.</p>
-  <p class="contexto"><strong>Una pregunta de aquí se cierra con una referencia o con una demostración</strong>, no con una opinión. Cuando se cierre, se mueve a «Respondidas» con el artefacto que la resolvió.</p>
-  <p class="contexto">Las de <strong>prioridad alta</strong> están en el camino crítico: sin ellas no hay enunciado de tesis.</p>
+  <div class="contexto-oculto" hidden>
+    <p class="contexto"><strong>Estas NO las responde Mauricio.</strong> Las responde el trabajo: fichar las referencias, estudiar el tracker que diseñe <code>REF-8</code>, y hacer la matemática.</p>
+    <p class="contexto">Abierta el 2026-07-27, al separar la cola de preguntas en dos. La otra mitad, lo que sí depende del criterio del asesor, es el subproyecto <strong><code>preguntas_junca</code></strong>, y <strong>esa tiene la regla de que solo el usuario añade</strong>. Esta no: aquí el agente puede proponer libremente, porque el coste de una pregunta de más es leer, no gastarle tiempo a nadie.</p>
+    <p class="contexto"><strong>Fundida el 2026-07-28 con los huecos de las fichas.</strong> Hasta ese día había tres sitios donde mirar: esta lista, el §4 de <code>fichas/junca_fixed_point_continuo.md</code> («qué deja abierto») y el §5 de <code>fichas/paper_junca_leiva.md</code> («qué se rompe al pasar al continuo»). Los dos últimos se solapaban casi uno a uno, porque miran el mismo problema desde el paper y desde el borrador. Ahora hay una sola lista y <strong>cada entrada dice de qué sección salió</strong>; las fichas conservan su análisis largo, que es donde está la matemática, y remiten aquí para el estado.</p>
+    <p class="contexto">Varias vienen además de la lista vieja de preguntas al asesor, reclasificadas por el usuario. Se conserva su identificador original entre paréntesis para no perder el rastro.</p>
+    <p class="contexto"><strong>Los identificadores son etiquetas, no orden.</strong> Dentro de cada bloque las preguntas van encadenadas por dependencia, no por número.</p>
+    <p class="contexto"><strong>Una pregunta de aquí se cierra con una referencia o con una demostración</strong>, no con una opinión. Cuando se cierre, se mueve a «Respondidas» con el artefacto que la resolvió.</p>
+    <p class="contexto">Las de <strong>prioridad alta</strong> están en el camino crítico: sin ellas no hay enunciado de tesis.</p>
+  </div>
   <div class="barra"><div class="relleno" style="width:0%"></div></div>
   <p class="cuenta">0 de 18 completadas</p>
   <h3>Prioridad alta · Las dos mitades del trabajo</h3>
@@ -618,14 +615,16 @@ window.MathJax={
 </section>
 <section class="panel" id="panel-referencias" role="tabpanel">
   <h2>Fuentes y plan de estudio</h2>
-  <p class="contexto">Primero entender qué hay que hacer, con el paper de Junca–Leiva y los documentos que mandó el asesor. Solo después buscar con qué estudiarlo y construir el tracker. De aquí nacen los subproyectos <code>apuntes</code>, <code>explicaciones</code> y <code>propuesta</code>.</p>
-  <p class="contexto"><strong>Regla número uno: ninguna decisión sobre qué estudiar se toma antes de REF-1.</strong> Cumplida el 2026-07-26: REF-1 y REF-3 están fichadas, así que a partir de aquí sí se decide.</p>
-  <p class="contexto"><strong>El alcance quedó acotado en la reunión del 2026-07-23</strong>, y esto manda sobre todo lo de abajo: <em>«por ahora no es el objetivo llegar hasta el caso en el que no conocemos las cosas […] conocemos todo, simplemente tenemos que resolver el problema de control inverso, sin asumir que tenemos siempre muestras»</em>. Sale del alcance la §4 entera del paper (oráculos, estimadores de gradiente, SMD-RLfD y su cota de complejidad), que además era lo que peor sobrevivía al continuo.</p>
-  <p class="contexto hecho">✅ <strong>Precisado el 2026-07-27, tras contrastar el audio.</strong> Lo que se asume es que <strong>se conocen las distintas partes del problema</strong>, y que solo hay que hacer la inversión. La frase <em>«sin asumir que tenemos siempre muestras»</em> significa lo contrario de lo que parece leída sola: <strong>no hace falta estimar nada</strong>, ni el núcleo de transición <span class="mate">$T$</span> ni nada sacado de observar al experto.</p>
-  <p class="contexto alerta">🔴 <strong>Y el caso con solo muestras está DIFERIDO, no descartado</strong>: <em>«luego de resolver así se mira qué se puede hacer al tener solo muestras»</em>. La §4 del paper es <strong>trabajo futuro declarado</strong>, y como tal tiene sitio en la propuesta. No se estudia ahora, pero tampoco se tira.</p>
-  <p class="contexto alerta">🔴 <strong>Y el asesor acotó también la profundidad con la que hay que leer su propio paper</strong> (recordado por el usuario el 2026-07-27): del paper con Leiva importa <strong>la idea general, no las técnicas</strong>, porque en el caso continuo las técnicas son otras. Eso rebaja cualquier tentación de estudiar el SMD o el aparato de MDPs finitos a fondo.</p>
-  <p class="contexto alerta">🔴 <strong>Y el 2026-08-03 el asesor dio un encargo concreto que reordena esta lista:</strong> <em>«creo que ese sea como el primer reto: justificar bien este teorema 4.2»</em>. Es <code>REF-13</code>, va primero, y <strong>es anterior a elegir dirección</strong>: se le fue a preguntar cuál de las cinco del §11 atacar y lo que dio fue el prerrequisito que está por debajo de todas. Eso significa que <strong><code>REF-8</code> ya no espera a <code>P22</code> para arrancar</strong>.</p>
-  <p class="contexto"><strong>Las preguntas abiertas viven en dos sitios y no se mezclan:</strong> las que dependen de su criterio, en <code>preguntas_junca/TODO.md</code>; las que responde el trabajo, en <code>preguntas_investigacion/TODO.md</code>.</p>
+  <div class="contexto-oculto" hidden>
+    <p class="contexto">Primero entender qué hay que hacer, con el paper de Junca–Leiva y los documentos que mandó el asesor. Solo después buscar con qué estudiarlo y construir el tracker. De aquí nacen los subproyectos <code>apuntes</code>, <code>explicaciones</code> y <code>propuesta</code>.</p>
+    <p class="contexto"><strong>Regla número uno: ninguna decisión sobre qué estudiar se toma antes de REF-1.</strong> Cumplida el 2026-07-26: REF-1 y REF-3 están fichadas, así que a partir de aquí sí se decide.</p>
+    <p class="contexto"><strong>El alcance quedó acotado en la reunión del 2026-07-23</strong>, y esto manda sobre todo lo de abajo: <em>«por ahora no es el objetivo llegar hasta el caso en el que no conocemos las cosas […] conocemos todo, simplemente tenemos que resolver el problema de control inverso, sin asumir que tenemos siempre muestras»</em>. Sale del alcance la §4 entera del paper (oráculos, estimadores de gradiente, SMD-RLfD y su cota de complejidad), que además era lo que peor sobrevivía al continuo.</p>
+    <p class="contexto hecho">✅ <strong>Precisado el 2026-07-27, tras contrastar el audio.</strong> Lo que se asume es que <strong>se conocen las distintas partes del problema</strong>, y que solo hay que hacer la inversión. La frase <em>«sin asumir que tenemos siempre muestras»</em> significa lo contrario de lo que parece leída sola: <strong>no hace falta estimar nada</strong>, ni el núcleo de transición <span class="mate">$T$</span> ni nada sacado de observar al experto.</p>
+    <p class="contexto alerta">🔴 <strong>Y el caso con solo muestras está DIFERIDO, no descartado</strong>: <em>«luego de resolver así se mira qué se puede hacer al tener solo muestras»</em>. La §4 del paper es <strong>trabajo futuro declarado</strong>, y como tal tiene sitio en la propuesta. No se estudia ahora, pero tampoco se tira.</p>
+    <p class="contexto alerta">🔴 <strong>Y el asesor acotó también la profundidad con la que hay que leer su propio paper</strong> (recordado por el usuario el 2026-07-27): del paper con Leiva importa <strong>la idea general, no las técnicas</strong>, porque en el caso continuo las técnicas son otras. Eso rebaja cualquier tentación de estudiar el SMD o el aparato de MDPs finitos a fondo.</p>
+    <p class="contexto alerta">🔴 <strong>Y el 2026-08-03 el asesor dio un encargo concreto que reordena esta lista:</strong> <em>«creo que ese sea como el primer reto: justificar bien este teorema 4.2»</em>. Es <code>REF-13</code>, va primero, y <strong>es anterior a elegir dirección</strong>: se le fue a preguntar cuál de las cinco del §11 atacar y lo que dio fue el prerrequisito que está por debajo de todas. Eso significa que <strong><code>REF-8</code> ya no espera a <code>P22</code> para arrancar</strong>.</p>
+    <p class="contexto"><strong>Las preguntas abiertas viven en dos sitios y no se mezclan:</strong> las que dependen de su criterio, en <code>preguntas_junca/TODO.md</code>; las que responde el trabajo, en <code>preguntas_investigacion/TODO.md</code>.</p>
+  </div>
   <div class="barra"><div class="relleno" style="width:43%"></div></div>
   <p class="cuenta">6 de 14 completadas</p>
   <ul class="tareas">
@@ -832,263 +831,12 @@ window.MathJax={
 </li>
   </ul>
 </section>
-<section class="panel" id="panel-asesor" role="tabpanel">
-  <h2>Conversaciones con el asesor</h2>
-  <p class="contexto">Todo lo que sale de hablar con Mauricio Junca: grabaciones, transcripciones, resúmenes y las preguntas que quedan pendientes para la próxima. Es un subproyecto <strong>recurrente</strong>: no se cierra cuando se procesa una reunión, solo espera la siguiente.</p>
-  <div class="barra"><div class="relleno" style="width:100%"></div></div>
-  <p class="cuenta">6 de 6 completadas</p>
-  <ul class="tareas">
-<li class="tarea hecha abrible" data-hecha="1">
-  <button class="cabecera" type="button" aria-expanded="false">
-    <span class="casilla" aria-hidden="true"></span>
-    <span class="ident">ASE-1</span>
-    <span class="titulo">Montar el subproyecto y la carpeta <code>2026-07-23/</code></span>
-    <span class="flecha" aria-hidden="true"></span>
-  </button>
-  <div class="detalle" hidden>
-    <p>Estructura creada y los 5 audios volcados a <code>2026-07-23/audio/</code>. El <code>CLAUDE.md</code> del subproyecto fija el procedimiento para las reuniones futuras, que es el motivo de que exista.</p>
-  </div>
-</li>
-<li class="tarea hecha abrible" data-hecha="1">
-  <button class="cabecera" type="button" aria-expanded="false">
-    <span class="casilla" aria-hidden="true"></span>
-    <span class="ident">ASE-2</span>
-    <span class="titulo">Transcribir la reunión del 2026-07-23</span>
-    <span class="fecha">2026-07-26</span>
-    <span class="flecha" aria-hidden="true"></span>
-  </button>
-  <div class="detalle" hidden>
-    <p>20:14 en cinco tramos, con <code>large-v3</code> y reloj global continuo. Los tres archivos hechos. <strong>No hizo falta <code>pyannote</code></strong>: la atribución por contenido salió limpia salvo en el tramo administrativo de 00:52–01:46, que es el que menos importa y queda marcado como dudoso. Lo grande que salió: el asesor <strong>saca del alcance</strong> los oráculos, el muestreo y el SMD (<em>«conocemos todo, simplemente resolver el problema de control inverso»</em>), dice que su sistema de EDP <strong>puede salir distinto</strong>, y nombra una segunda ruta, <strong>FBSDE</strong>, que él no domina y Camilo sí.</p>
-    <p><code>resumen.md</code>. Script reutilizable: <code>transcribir.py</code>. ✅ <strong>Las dos dudas que quedaban, cerradas.</strong> El curso <strong>sí</strong> es de transporte óptimo, y <strong>no</strong> toca la tesis (<code>P11</code>, 2026-07-26). Y la atribución de 00:52–01:46 <strong>se deja como está sin investigarla</strong> (2026-07-27): el usuario zanja que lo de Andrés Medaglia no tiene nada que ver. Los turnos siguen marcados <code>?</code>, que es lo honesto. ⚠️ <strong>Lo que sí sigue abierto son cinco reconstrucciones marcadas</strong>, y una es grave: en <strong>[19:26] añadí una negación que no está en el audio</strong>. Sin ella la frase es matemáticamente al revés, pero eso es interpretar, no transcribir. Ubicación exacta para reescuchar y el resto de dudas, en <code>dudas_de_audio.md</code>.</p>
-    <p class="artefacto">Artefactos: <code>2026-07-23/transcripcion_cruda.md</code>, <code>transcripcion_limpia.md</code>,</p>
-  </div>
-</li>
-<li class="tarea hecha abrible" data-hecha="1">
-  <button class="cabecera" type="button" aria-expanded="false">
-    <span class="casilla" aria-hidden="true"></span>
-    <span class="ident">ASE-3</span>
-    <span class="titulo">Extraer de la transcripción lo que sea tarea o referencia</span>
-    <span class="fecha">2026-07-26</span>
-    <span class="flecha" aria-hidden="true"></span>
-  </button>
-  <div class="detalle" hidden>
-    <p>Repartido a <code>referencias</code>. <strong>Dos tareas nuevas</strong>, las dos por encargo explícito del asesor: <code>REF-9</code> (revisión de literatura, que él ya intentó sin encontrar nada) y <code>REF-10</code> (la ruta alternativa del principio del máximo y las FBSDE). <strong>Cuatro reencuadradas</strong>: <code>REF-4</code> recupera el transporte óptimo y baja el SMD; <code>REF-5</code> pasa de iniciativa a encargo y gana la pista de Touzi; <code>REF-6</code> baja de urgencia; <code>REF-7</code> sube a prerrequisito duro. El acotamiento del alcance (control inverso con todo conocido, sin oráculos ni muestreo) va en la cabecera del <code>TODO.md</code> de <code>referencias</code>, porque manda sobre todas sus tareas.</p>
-  </div>
-</li>
-<li class="tarea hecha abrible" data-hecha="1">
-  <button class="cabecera" type="button" aria-expanded="false">
-    <span class="casilla" aria-hidden="true"></span>
-    <span class="ident">ASE-5</span>
-    <span class="titulo">Transcribir la reunión del 2026-08-03</span>
-    <span class="fecha">2026-08-03</span>
-    <span class="flecha" aria-hidden="true"></span>
-  </button>
-  <div class="detalle" hidden>
-    <p>17:53 en dos tramos, con <code>large-v3</code>. Los tres archivos hechos, más <code>dudas_de_audio.md</code>. <strong>La atribución de turnos está SIN CONFIRMAR</strong>: a diferencia de la vez pasada, nadie ha validado ningún pasaje de prueba. 🔴 Lo grande: el asesor da <strong>un encargo concreto que no estaba en la agenda</strong>, <em>«el primer reto: justificar bien este teorema 4.2»</em>, con su lista de lo que hay que fijar (quién es <span class="mate">$H$</span>, dónde vive <span class="mate">$c$</span>, y <span class="mate">$\mathcal M$</span> acotado, convexo y compacto). Y responde <strong>media <code>P16</code></strong>: la función de valor no tiene por qué aparecer, depende de cómo se plantee el gap. 🔴 <strong>Y lo que NO pasó pesa igual</strong>: se pidió la decisión de las cinco direcciones y <em>«no se había llegado»</em>; <code>P21</code> no se mencionó nunca; la grabación se corta con un tercero entrando. ⚠️ <strong>Nueve dudas abiertas</strong>, y la 1 es grave: la frase que explica por qué el v2 evita el punto fijo está mal transcrita y <strong>no se ha reconstruido</strong>.</p>
-    <p><code>resumen.md</code>, <code>dudas_de_audio.md</code>. Nota de infraestructura: el venv de Whisper <strong>no existía en la Surface</strong> (ARM64, y no hay wheels <code>win_arm64</code> de <code>ctranslate2</code> ni de <code>torch</code>). Se montó con Python 3.13 x64 emulado en la misma ruta de siempre. Corrió a 2,2x tiempo real. Hizo falta <code>hf_xet</code>: sin él la descarga del modelo se queda clavada en cero.</p>
-    <p class="artefacto">Artefactos: <code>2026-08-03/transcripcion_cruda.md</code>, <code>transcripcion_limpia.md</code>,</p>
-  </div>
-</li>
-<li class="tarea hecha abrible" data-hecha="1">
-  <button class="cabecera" type="button" aria-expanded="false">
-    <span class="casilla" aria-hidden="true"></span>
-    <span class="ident">ASE-6</span>
-    <span class="titulo">Confirmar la atribución y las dudas de la reunión</span>
-    <span class="fecha">2026-08-03</span>
-    <span class="flecha" aria-hidden="true"></span>
-  </button>
-  <div class="detalle" hidden>
-    <p><strong>Las nueve preguntadas y cerradas el mismo día.</strong> ✅ La atribución de la limpia entera queda <strong>confirmada</strong> sobre sus dos pasajes de prueba. 🔴🔴 <strong>El hallazgo grande no era ninguna de las que yo priorizaba: cuando Mauricio habla en tercera persona se refiere a ChatGPT.</strong> Parte de la arquitectura del v2 salió de ahí, él lo sabe, y su <em>«todo eso asume todo este tipo de cosas que no sabemos»</em> [12:00] pasa de sonar a modestia a ser un diagnóstico. Es la razón de fondo de que <code>REF-13</code> sea verificar. ✅ <strong>Y dos deícticos resueltos que no estaban en el audio</strong>: <em>«este problema»</em> de [07:12] es la <strong>ecuación (23)</strong>, y <em>«esto»</em> de [13:51] es el <strong>§7.1</strong>, con el motivo del «curiosamente» de propina. ✅ La <strong>6</strong> se resolvió <strong>sin audio</strong>, contra el <code>.mmd</code>: el «3.1» es <em>«A technical point: the cost space matters»</em>, y de paso salió que el «4.2» es un teorema cuyas hipótesis <strong>corrigen</strong> las que yo había escrito de oído. ⬜ <strong>Tres quedan sin resolver</strong> (4:17, 8:12 y 16:41) y <strong>así se quedan</strong>. Rellenarlas por plausibilidad es el fallo que esta lista existe para evitar. Método, ya portado a la skill <code>procesa</code>: <strong>todas de corrido con <code>AskUserQuestion</code></strong>, en orden temporal, con la reconstrucción propia como opciones y el crudo en el <code>preview</code>.</p>
-  </div>
-</li>
-<li class="tarea hecha abrible" data-hecha="1">
-  <button class="cabecera" type="button" aria-expanded="false">
-    <span class="casilla" aria-hidden="true"></span>
-    <span class="ident">ASE-4</span>
-    <span class="titulo">Abrir <code>preguntas_pendientes.md</code></span>
-    <span class="fecha">2026-07-26</span>
-    <span class="flecha" aria-hidden="true"></span>
-  </button>
-  <div class="detalle" hidden>
-    <p>Quince preguntas en tres niveles. <strong>D1 sigue sin preguntarse</strong> y encabeza la lista: decide si el plan de estudio es ancho o estrecho. Las otras tres de prioridad alta salen de que el asesor dejó abierto más de lo que parecía: si el borrador es enunciado o trabajo en curso, si la ruta es HJB o FBSDE, y si la variable son medidas de ocupación o políticas, que dudó él mismo en el primer minuto.</p>
-    <p class="artefacto">Artefacto: <code>subproyectos/asesor/preguntas_pendientes.md</code></p>
-  </div>
-</li>
-  </ul>
-</section>
-<section class="panel" id="panel-reuniones" role="tabpanel">
-  <h2>Preparar cada reunión con el asesor</h2>
-  <p class="contexto">Hermano de <code>asesor</code> y con la frontera clara: aquel procesa el <strong>después</strong> de una reunión, este prepara el <strong>antes</strong>. Un capítulo por semana en un Overleaf propio, con las preguntas que se llevan, las lecturas que hay que hacer, y el contexto matemático que hace falta para poder seguir la conversación. <strong>Recurrente</strong>: no se cierra, solo espera la siguiente.</p>
-  <div class="barra"><div class="relleno" style="width:100%"></div></div>
-  <p class="cuenta">4 de 4 completadas</p>
-  <ul class="tareas">
-<li class="tarea hecha abrible" data-hecha="1">
-  <button class="cabecera" type="button" aria-expanded="false">
-    <span class="casilla" aria-hidden="true"></span>
-    <span class="ident">REU-1</span>
-    <span class="titulo">Montar el subproyecto y la skill <code>/reunion</code></span>
-    <span class="fecha">2026-07-29</span>
-    <span class="flecha" aria-hidden="true"></span>
-  </button>
-  <div class="detalle" hidden>
-    <p>Overleaf clonado en <code>overleaf/</code> y <strong>en <code>.gitignore</code></strong>: es un repo propio, con su token en el remote, y no se anida en este. 🔴 <strong>La decisión de diseño que más pesa: el contexto matemático NO es <code>/explica</code> en modo <code>review</code>.</strong> Ese modo exige cobertura completa, y aquí se quiere lo contrario: selectivo, sin demostraciones, y con la agenda decidiendo qué entra. Reutilizarlo tal cual habría producido un tratado que el usuario no tiene tiempo de leer. <strong>Frontera con <code>preguntas_junca/TODO.md</code>, para que no se dupliquen:</strong> la cola manda el <strong>estado</strong> (qué está abierto, con qué prioridad), el capítulo manda la <strong>redacción</strong> y cita el id. <strong>Paso 0 obligatorio</strong>: interrogar el estado de conocimiento y escribirlo con fecha en <code>estado_de_conocimiento.md</code>, acumulativo. Suponerlo produce un capítulo calibrado para otra persona.</p>
-    <p class="artefacto">Artefactos: <code>CLAUDE.md</code>, <code>.claude/skills/reunion/SKILL.md</code></p>
-  </div>
-</li>
-<li class="tarea hecha abrible" data-hecha="1">
-  <button class="cabecera" type="button" aria-expanded="false">
-    <span class="casilla" aria-hidden="true"></span>
-    <span class="ident">REU-2</span>
-    <span class="titulo">Capítulo de la reunión del 2026-08-03</span>
-    <span class="fecha">2026-07-29</span>
-    <span class="flecha" aria-hidden="true"></span>
-  </button>
-  <div class="detalle" hidden>
-    <p>La primera, y la escribe el <strong>v2 del documento de Junca</strong>, que llegó ese mismo día. Cuatro preguntas (<code>P16</code> reformulada, <code>P21</code>, <code>P17</code>, <code>P8-M</code>) y dos decisiones, más un contexto matemático de cero a la inclusión monótona. 🔴 <strong>El hallazgo que manda la reunión, y es lectura propia:</strong> el v2 construye toda su teoría sobre una <strong>igualdad de valores</strong> que no menciona <span class="mate">$V$</span>, y relega la HJB puntual al §6 bajo hipótesis de densidades. Si eso es deliberado, <strong>la viscosidad sale del camino crítico</strong> y con ella unas 70 páginas de Touzi. Va como pregunta, no como conclusión. <strong>Paso 0:</strong> el usuario declaró no haber leído <strong>ninguno</strong> de los tres documentos de Junca, solo los títulos. Las fichas las escribió el agente. Por eso el contexto se escribe asumiendo cero y ancla en lo que sí tiene escrito: B&amp;C, Baudoin, <code>fpe</code>, <code>apendice_operadores</code>. Nace <code>P22</code>, la decisión que desbloquea <code>REF-8</code>: cuál de las cinco direcciones del §11.</p>
-    <p class="artefacto">Artefactos: <code>overleaf/reuniones/2026-08-03/</code>, <code>estado_de_conocimiento.md</code></p>
-  </div>
-</li>
-<li class="tarea hecha abrible" data-hecha="1">
-  <button class="cabecera" type="button" aria-expanded="false">
-    <span class="casilla" aria-hidden="true"></span>
-    <span class="ident">REU-4</span>
-    <span class="titulo"><code>ESTILO_CONTEXTO.md</code>, el modo C, y reescribir el capítulo</span>
-    <span class="fecha">2026-07-30</span>
-    <span class="flecha" aria-hidden="true"></span>
-  </button>
-  <div class="detalle" hidden>
-    <p class="alerta">🔴 <strong>Diagnóstico del usuario, textual:</strong> <em>«estás sobregenerando texto, esta página debió ser solo decir que es E, A y Omega, en un párrafo definir los objetos centrales, no tienes que dar TODO el contexto, este doc es solo para que yo lo lea, son como unos apuntes explicativos»</em>. <strong>El modo C es modo T con cajas.</strong> Cuerpo telegráfico con <code>\bd</code>, <code>\bh</code>, <code>\bent</code> y <code>\display</code>, y <strong>una caja solo cuando su contenido no se deriva de la fuente</strong>: una trampa, un hueco del perfil, una lectura propia, un puente con lo que él ya escribió, o una decisión suya. Puede haber secciones sin ninguna caja. <strong>Prohibido explícitamente</strong>, porque salió todo en la primera versión: tabla de vocabulario al final, sección de «lo que no se cubre», anuncios del tipo «guarde esta caja», y cajas de media página. <strong>Macros portadas al <code>main.tex</code></strong> desde la plantilla real de los apuntes (<code>Apuntes_RW/src/</code>), adaptadas a una columna. Dos fallos de porte que hubo que arreglar: los bullets <strong>no llevan argumento</strong> (con argumento, <code>\bd $F$</code> le pasa solo el <code>$</code>), y <code>\display</code> va sobre <code>equation*</code> para que <code>\tag</code> funcione dentro. ✅ <strong>Capítulo del 3 de agosto reescrito entero: de 20 páginas a 12</strong>, sin perder matemática ni ninguna de las correcciones de esa conversación. <strong>La skill <code>/reunion</code> cambia en tres sitios</strong>: apunta a la guía nueva, hereda de <code>ESTILO_EXPLICACIONES.md</code> <strong>solo la voz</strong>, y su paso 4 pasa de decir <em>«NO se compila localmente, Overleaf compila»</em> a <strong>exigir compilar</strong>, que es la instrucción que dejó el documento roto una semana.</p>
-    <p class="artefacto">Artefacto: <code>subproyectos/perfil/estilo/ESTILO_CONTEXTO.md</code></p>
-  </div>
-</li>
-<li class="tarea hecha abrible" data-hecha="1">
-  <button class="cabecera" type="button" aria-expanded="false">
-    <span class="casilla" aria-hidden="true"></span>
-    <span class="ident">REU-3</span>
-    <span class="titulo">El contexto, en las dos notaciones</span>
-    <span class="fecha">2026-07-30</span>
-    <span class="flecha" aria-hidden="true"></span>
-  </button>
-  <div class="detalle" hidden>
-    <p>A petición del usuario: <strong>cada objeto escrito dos veces</strong>, en la notación estándar de la nota y debajo en gris en la de <strong>de Finetti</strong>, que es la de sus apuntes de Pollard §1.4 y la regla <code>R22</code> de su guía de estilo. Dieciséis líneas dobladas, con macro <code>\dfin</code> en el <code>main.tex</code>. <strong>Se dobla solo donde las dos notaciones difieren</strong>, o sea integrales, esperanzas, probabilidades y emparejamientos. Un <span class="mate">$\nabla V$</span> es idéntico en las dos y repetirlo sería ruido, no información. 🔴 <strong>Y no es cosmético, porque la nota entera es un emparejamiento medida-función.</strong> Tres cosas se vuelven visibles: que <span class="mate">$\eta(B)$</span> y <span class="mate">$\eta(c)$</span> son la misma operación, así que la linealización del costo deja de ser un truco; que <span class="mate">$\operatorname{Gap}_E$</span> <strong>es</strong> literalmente una función soporte <span class="mate">$\sigma_D(c)=\sup_{\mu\in D}\mu(c)$</span>, lo que conecta con Beck sin analogías; y que la fila <span class="mate">$i$</span> de la matriz <span class="mate">$Q^s$</span> del Taller 2 es un núcleo, <span class="mate">$Q^s(i,V)$</span>, con la misma forma que <span class="mate">$P_t(x,\varphi)$</span>. ⚠️ <strong>Y dos sitios donde la notación ENGAÑA, marcados en el texto</strong>: hace que <span class="mate">$Q^s(i,V)$</span> y <span class="mate">$\mathcal L^aV(x)$</span> parezcan lo mismo cuando el segundo es un operador con dominio, que es donde vive el problema de viscosidad; y hace invisible que <span class="mate">$\eta(c)$</span> solo está definido si <span class="mate">$c$</span> tiene valores puntuales, que es el §3.1 de la nota. 🔴 <strong>Hallazgo aparte, y es una lección: el documento NO compilaba.</strong> Dos errores fatales, un emoji <code>⚠️</code> que <code>pdflatex</code> no compone y <code>\mathscr</code> sin <code>mathrsfs</code>. Llevaban ahí desde <code>REU-2</code>, o sea que se entregó un <code>.tex</code> que nunca se había compilado. El usuario los arregló en Overleaf por su cuenta el mismo día, así que hubo que resolver una mezcla. <strong>Regla que queda:</strong> un <code>.tex</code> sin compilar no está entregado. Va a la skill <code>/reunion</code> como paso final obligatorio. De paso, cuatro negritas en Markdown que se habrían impreso con asteriscos. 🔴 <strong>Corregido el mismo día, y el error lo cazó el usuario.</strong> La primera versión escribía <span class="mate">$J_c(\pi)=\mathbb P^\pi_{\nu_0}\lambda^t_\rho c(X_t,a_t)$</span>, que <strong>traduce el símbolo sin desempacar el objeto</strong>: <span class="mate">$\mathbb P^\pi_{\nu_0}$</span> vive sobre <strong>trayectorias</strong> mientras que <span class="mate">$\lambda_\rho$</span> y <span class="mate">$\eta$</span> viven sobre conjuntos de dimensión finita, y ponerlas seguidas las hacía parecer homogéneas. Es el fallo típico de esta notación, y es peor aquí porque de Finetti existe justamente para quitar esa opacidad. <strong>Lo que entra ahora:</strong> la sección nueva «Por dónde entra la política», con el promedio del generador de sus (33) a (35) y el aviso de que se promedia <span class="mate">$\sigma\sigma^\top$</span> y no <span class="mate">$\sigma$</span>; la construcción explícita <span class="mate">$\mathbb P^\pi_{\nu_0}=\nu_0^x\mathbb P^\pi_x$</span>; y la forma limpia <span class="mate">$J_c(\pi)=m^{\pi,x}\pi^a_x c(x,a)$</span> con el puente <span class="mate">$m^\pi(B)=\lambda^t_\rho\mathbb P^\pi_{\nu_0}(B(X_t))$</span>. ✅ <strong>Y de paso se gana el argumento pedagógico que faltaba:</strong> el espacio de caminos aparece <strong>una sola vez</strong>, para construir <span class="mate">$\eta^\pi$</span>, y desaparece. En de Finetti se comprueba contando variables ligadas. ⚠️ <strong>Cambio de letra deliberado:</strong> el espacio de estados pasa a ser <span class="mate">$E$</span>, porque la nota lo llama <span class="mate">$\Omega$</span> y deja el espacio muestral sin nombre. Va señalado en una caja, que el lunes él escribe <span class="mate">$\Omega$</span>. <strong>Nace <code>P23</code></strong>, en «Sin clasificar»: la nota nunca define qué es una política admisible ni construye <span class="mate">$\mathbb E^\pi_{\nu_0}$</span>. 🔴 <strong>Y una segunda vuelta, también del usuario, que mejora la corrección.</strong> Objetó que su propia fórmula no integraba el <span class="mate">$\omega$</span>, y propuso meter la ley del proceso dentro. La respuesta buena es la contraria: <strong>el <span class="mate">$\omega$</span> sobra</strong>. Como <span class="mate">$c(X_t,a_t)$</span> mira el proceso en un instante y no es un funcional del camino, basta la marginal, o sea el núcleo de transición. Queda <span class="mate">$J_c(\pi)=\nu_0^x\lambda^t_\rho P^\pi_t(x,c^\pi)$</span> con <span class="mate">$c^\pi(y):=\pi_y(c(y,\cdot))$</span>, y <strong>el espacio de trayectorias no aparece nunca</strong>. Dos correcciones de su versión: <span class="mate">$\pi$</span> se aplica en el punto al que el proceso llegó, no en el de arranque, y <span class="mate">$P^\pi_t$</span> es el semigrupo del generador promediado. ✅ <strong>Y de ahí cae gratis la ecuación (36) de la nota</strong>, que hasta ahora se citaba sin justificar: <span class="mate">$\lambda^t_\rho P^\pi_t=(\rho-\mathcal L^\pi)^{-1}$</span> es <strong>el resolvente</strong>, así que <span class="mate">$m^\pi$</span> es el resolvente adjunto aplicado a <span class="mate">$\nu_0$</span>, y <span class="mate">$\rho m^\pi-(\mathcal L^\pi)^*m^\pi=\nu_0$</span> es esa identidad escrita al revés. La Fokker-Planck estacionaria deja de ser un ingrediente nuevo. Cuadra además la masa, <span class="mate">$m^\pi(E)=1/\rho$</span>. ⚠️ Ese resolvente es el <span class="mate">$J_\lambda$</span> de <strong>Hille-Yosida</strong>, hueco declarado. Aquí hace falta el objeto y no la teoría, pero queda anotado como puente por si se ataca la cuarta dirección del §11. <strong>Y cierra la duda de fondo del usuario:</strong> en esta escritura <strong>el proceso de acciones <span class="mate">$a_t$</span> no tiene que existir</strong>, solo el núcleo <span class="mate">$\pi_y$</span>. Que es exactamente lo que hace la formulación relajada de Kurtz y Stockbridge. 🔴 <strong>Tercera vuelta, y otra vez la objeción era buena.</strong> La caja decía que <span class="mate">$\pi$</span> entra «no entrando en la SDE», y <strong>eso es falso</strong>: <span class="mate">$\mathcal L^\pi$</span> sí es el generador de una SDE, <span class="mate">$dY_t=b^\pi(Y_t)dt+\varsigma^\pi(Y_t)dW_t$</span> con <span class="mate">$\varsigma^\pi(\varsigma^\pi)^\top=\Sigma^\pi$</span>. Lo único que hay que corregir de la intuición es que <strong><span class="mate">$\sigma$</span> no se promedia</strong>: se promedia <span class="mate">$\sigma\sigma^\top$</span> y después se saca raíz. Va con un ejemplo de una línea, <span class="mate">$A=\{-1,+1\}$</span> y <span class="mate">$\sigma(x,a)=a$</span>: promediar <span class="mate">$\sigma$</span> da un proceso <strong>quieto</strong>, promediar <span class="mate">$\sigma\sigma^\top$</span> da <strong>browniano</strong>. Y la razón, que <span class="mate">$\sigma$</span> no es observable del proceso porque <span class="mate">$\sigma O\,dW$</span> y <span class="mate">$\sigma\,dW$</span> tienen la misma ley. <strong>Por qué se nombra el generador, entonces:</strong> porque la raíz no es única, o sea que «la SDE de <span class="mate">$\pi$</span>» es una familia y todas dan la misma ley, la misma <span class="mate">$\eta^\pi$</span> y el mismo <span class="mate">$J_c$</span>. La ecuación es representación, el generador es el invariante. Y porque <span class="mate">$(\Sigma^\pi)^{1/2}$</span> puede no ser Lipschitz aunque <span class="mate">$\sigma$</span> lo sea, así que se cae a soluciones débiles y al problema de martingala. Teoría estándar, <strong>no está en la nota</strong>. <strong>El orden lógico, que es lo que da fuerza a <code>P23</code>:</strong> no hay un proceso «sortear la acción a cada instante» del que se calcule el generador, porque eso no está bien definido. Se define al revés. Una política aleatorizada es una manera de nombrar un generador.</p>
-  </div>
-</li>
-  </ul>
-</section>
-<section class="panel" id="panel-correos" role="tabpanel">
-  <h2>Redactar correos del proyecto</h2>
-  <p class="contexto">Los borradores que salen del trabajo del proyecto, sobre todo al asesor, y el registro de qué se mandó. <strong>Recurrente</strong>: no se cierra. La norma de estilo no vive aquí sino en <code>perfil/estilo/ESTILO_CORREO.md</code>, con las otras dos.</p>
-  <div class="barra"><div class="relleno" style="width:100%"></div></div>
-  <p class="cuenta">3 de 3 completadas</p>
-  <ul class="tareas">
-<li class="tarea hecha abrible" data-hecha="1">
-  <button class="cabecera" type="button" aria-expanded="false">
-    <span class="casilla" aria-hidden="true"></span>
-    <span class="ident">COR-1</span>
-    <span class="titulo">Montar el subproyecto y guardar el estilo de correo</span>
-    <span class="fecha">2026-07-29</span>
-    <span class="flecha" aria-hidden="true"></span>
-  </button>
-  <div class="detalle" hidden>
-    <p>Nace de un fallo: las reglas de estilo de correo del usuario se usaron en una conversación y <strong>no se guardaron en ninguna parte</strong>, que es justo lo que el subproyecto <code>perfil</code> existe para evitar. 🔴 <strong>La norma va a <code>perfil/estilo/ESTILO_CORREO.md</code>, no aquí.</strong> Es la tercera guía junto a <code>ESTILO.md</code> y <code>ESTILO_EXPLICACIONES.md</code>, y partir las normas de estilo en dos sitios es la duplicación que se evita desde <code>WEB-1</code>. Aquí quedan los borradores y <code>destinatarios.md</code>. ⚠️ <strong>Registro distinto del de <code>voz.md</code></strong>, que salió de los cuatro textos matemáticos y describe su prosa matemática. El correo es otra cosa y no se mezclan.</p>
-    <p class="artefacto">Artefactos: <code>perfil/estilo/ESTILO_CORREO.md</code>, <code>destinatarios.md</code></p>
-  </div>
-</li>
-<li class="tarea hecha abrible" data-hecha="1">
-  <button class="cabecera" type="button" aria-expanded="false">
-    <span class="casilla" aria-hidden="true"></span>
-    <span class="ident">COR-2</span>
-    <span class="titulo">Enviar a Junca el correo de los dos papers relacionados</span>
-    <span class="fecha">2026-08-01</span>
-    <span class="flecha" aria-hidden="true"></span>
-  </button>
-  <div class="detalle" hidden>
-    <p><strong>Enviado</strong>, confirmado por el usuario. A tiempo para que lo mire antes de la reunión del lunes 3, que era el motivo del plazo. Lo mandó él, que no hay conector de Outlook. ⚠️ <strong>Acabaron siendo cuatro enlaces y no dos</strong>, todos de arXiv: además de Pauwels–Henrion–Lasserre y Nakano fueron <strong>Wang, Zhang &amp; Ringh</strong> (2025, el más parecido al paper con Esteban) y el libro de <strong>problemas inversos para MFG</strong>. El título de la tarea se quedó con la versión vieja. 🔴 <strong>Queda esperando respuesta, y esa respuesta cierra <code>P21</code></strong>: si las <em>«cosas determinísticas»</em> que él dijo haber encontrado eran justo el de Pauwels–Henrion–Lasserre, del que es coautor su coautor Henrion.</p>
-    <p class="artefacto">Artefacto: <code>borradores/2026-07-29_junca_papers_relacionados.md</code></p>
-  </div>
-</li>
-<li class="tarea hecha abrible" data-hecha="1">
-  <button class="cabecera" type="button" aria-expanded="false">
-    <span class="casilla" aria-hidden="true"></span>
-    <span class="ident">COR-3</span>
-    <span class="titulo">Solicitar a la DSIT acceso al conector de Microsoft 365</span>
-    <span class="fecha">2026-08-03</span>
-    <span class="flecha" aria-hidden="true"></span>
-  </button>
-  <div class="detalle" hidden>
-    <p><strong>Enviado</strong>, confirmado por el usuario. Lo mandó él, que es la regla del subproyecto: aquí no hay conector de Outlook. ⚠️ <strong>Se marcó tarde.</strong> La solicitud se hizo el 2026-08-03 y la tarea siguió apareciendo abierta en la web hasta que el usuario lo notó al final del día. Es el fallo que <code>/cerrarchat</code> existe para evitar. <strong>Queda esperando respuesta.</strong> Si la conceden, el agente podrá leer el buzón institucional; si la deniegan, no bloquea nada, que por eso era prioridad baja. La aplicación <code>M365 MCP Client for Claude</code> ya está registrada en el tenant de Uniandes, pero restringida por asignación (<code>AADSTS50105</code>). O sea que el favor es «añádanme al grupo», no «aprueben algo nuevo». Argumento que ayuda: el <strong>complemento</strong> de Claude dentro de Outlook sí está permitido, así que hay precedente en el mismo tenant. ⚠️ Concede lectura del correo institucional. Es decisión del usuario. Prioridad baja: sirve para que el agente lea el buzón, que es mejora acumulativa y no bloquea nada. <strong>Borrador listo (2026-08-03), sin enviar.</strong> Destinatario confirmado contra la web de la Universidad: <code>servicioalclientedsit@uniandes.edu.co</code>, aunque el canal bueno para esto es el portal <code>missolicitudes</code>, que da número de ticket.</p>
-    <p class="artefacto">Artefacto: <code>borradores/2026-08-03_dsit_acceso_m365.md</code></p>
-  </div>
-</li>
-  </ul>
-</section>
-<section class="panel" id="panel-perfil" role="tabpanel">
-  <h2>Contexto sobre el usuario</h2>
-  <p class="contexto">Reunir y mantener en un solo sitio lo que hace falta saber sobre el usuario para darle buenas recomendaciones: qué matemáticas domina y a qué nivel, cómo le gusta aprender, y cómo escribe. En el proyecto anterior esto estaba disperso e improvisado; aquí es un subproyecto con reglas de mantenimiento.</p>
-  <div class="barra"><div class="relleno" style="width:100%"></div></div>
-  <p class="cuenta">4 de 4 completadas</p>
-  <ul class="tareas">
-<li class="tarea hecha abrible" data-hecha="1">
-  <button class="cabecera" type="button" aria-expanded="false">
-    <span class="casilla" aria-hidden="true"></span>
-    <span class="ident">PER-3</span>
-    <span class="titulo">Traer las guías de estilo y los trabajos propios</span>
-    <span class="flecha" aria-hidden="true"></span>
-  </button>
-  <div class="detalle" hidden>
-    <p><code>ESTILO.md</code> y <code>ESTILO_EXPLICACIONES.md</code> en <code>estilo/</code>; los 4 textos del usuario en <code>trabajos_propios/</code> (solo los fuentes de texto, los PDFs no). <strong>Deja deuda con SKI-2:</strong> toda skill que los referencie apunta ahora a una ruta muerta.</p>
-  </div>
-</li>
-<li class="tarea hecha abrible" data-hecha="1">
-  <button class="cabecera" type="button" aria-expanded="false">
-    <span class="casilla" aria-hidden="true"></span>
-    <span class="ident">PER-1</span>
-    <span class="titulo">Reconstruir <code>formacion.md</code></span>
-    <span class="fecha">2026-07-26</span>
-    <span class="flecha" aria-hidden="true"></span>
-  </button>
-  <div class="detalle" hidden>
-    <p class="alerta">🔴 <strong>SUS CONCLUSIONES ESTÁN REFUTADAS. Ver <code>PER-4</code> (2026-07-30).</strong> Se deja escrito porque el error importa más que el resultado: <strong>el índice del compendio no era evidencia de nada</strong>, porque el compendio lo generó una IA. Todo lo que sigue en esta tarjeta se leyó como conocimiento del usuario y <strong>no lo era</strong>. Reconstruido cruzando el <code>.txt</code> de junio, el estado del tracker y el <strong>índice real del compendio</strong>, que resultó ser la fuente que más informa. El «CERO» de junio en cálculo estocástico hoy son ~7 000 líneas escritas sobre Baudoin 1–6, más un módulo propio de Fokker–Planck. 🔴 <strong>Tres hallazgos que cambian <code>REF-4</code>:</strong> el apéndice de operadores desarrolla <strong>espacios de Sobolev y regularidad elíptica desde cero</strong>, que es la maquinaria de la ecuación del costo del borrador; Baudoin §4.7 y §4.8 son los semigrupos de <strong>Dirichlet y Neumann</strong>, o sea condiciones de frontera; y Bauschke &amp; Combettes es análisis convexo <strong>en espacios de Hilbert</strong>, justo el marco que el asesor nombró en la reunión. Lo que sigue en CERO y hay que estudiar de verdad: <strong>control óptimo y HJB, soluciones de viscosidad, y medidas de ocupación</strong>. Nada más.</p>
-    <p class="artefacto">Artefacto: <code>subproyectos/perfil/formacion.md</code></p>
-  </div>
-</li>
-<li class="tarea hecha abrible" data-hecha="1">
-  <button class="cabecera" type="button" aria-expanded="false">
-    <span class="casilla" aria-hidden="true"></span>
-    <span class="ident">PER-2</span>
-    <span class="titulo">Escribir <code>preferencias.md</code> y <code>voz.md</code></span>
-    <span class="fecha">2026-07-27</span>
-    <span class="flecha" aria-hidden="true"></span>
-  </button>
-  <div class="detalle" hidden>
-    <p>Escritos con lo que declaró el usuario ese día, no con lo que pareciera razonable. 🔴 <strong>Lo que más cambia las recomendaciones: la explicación se lee ANTES que la fuente.</strong> Deja de ser el producto de haber estudiado y pasa a ser la puerta de entrada, así que tiene que sostenerse sola y la fidelidad se vuelve más crítica, no menos. El nivel de rigor <strong>no es un ajuste global</strong>: son los modos de lectura del tracker, y la fuente de verdad es <code>referencias/modos_de_lectura.md</code>. Aquí no se duplica. Los ejemplos escalan en <strong>profundidad, no en cantidad</strong>: uno a fondo en <code>deep read</code>, varios breves en <code>skim</code>. Capacidad declarada: <strong>6–8 h diarias</strong>, unas 35 semanales, contra las 30 h/semana para las que estaba dimensionado el tracker viejo. ⚠️ <strong>«Qué le aburre» queda NO DECLARADO a propósito</strong>, y así está escrito. Preguntado, dijo que no sabe y que el criterio es que ayude a progresar. Rellenar esa lista con lo típico habría sido inventar perfil.</p>
-    <p class="artefacto">Artefactos: <code>subproyectos/perfil/preferencias.md</code>, <code>voz.md</code></p>
-  </div>
-</li>
-<li class="tarea hecha abrible" data-hecha="1">
-  <button class="cabecera" type="button" aria-expanded="false">
-    <span class="casilla" aria-hidden="true"></span>
-    <span class="ident">PER-4</span>
-    <span class="titulo">Rehacer <code>formacion.md</code> sobre evidencia real</span>
-    <span class="fecha">2026-07-30</span>
-    <span class="flecha" aria-hidden="true"></span>
-  </button>
-  <div class="detalle" hidden>
-    <p><strong>Anula <code>PER-1</code>.</strong> Doce repositorios de Overleaf escritos a mano por el usuario, clonados y extraídos a <code>apuntes/</code>, con su índice. Los clones no se versionan, que llevan el token de Overleaf dentro; los <code>.tex</code> sí. 🔴 <strong>Dos reglas nuevas, y las dos las impuso él corrigiendo:</strong></p>
-    <ul>
-      <li><strong>Solo cuenta lo que escribió de su puño.</strong> <code>4.brezis.tex</code> estaba dentro de un repo suyo y <strong>es generado y sin revisar</strong>. Apartado a <code>_generado_no_es_suyo/</code>, fuera del índice.</li>
-      <li><strong>Haber escrito unos apuntes no es dominar el tema.</strong> Tres niveles: <em>dominado</em> (curso o ejercicios), <em>leído y entendido</em> (el intersemestral, sin curso ni ejercicios), y <em>leído vagamente</em>, que se construye de cero.</li>
-    </ul>
-    <p class="aviso">⚠️ <strong>Nada entra a su perfil sin preguntárselo antes.</strong> Instrucción suya. <strong>Huecos que aparecen y no estaban:</strong> Fokker-Planck, espacios de Sobolev, Hille-Yosida, Baudoin cap. 6 y <strong>la correspondencia entre el generador de una difusión y su SDE</strong>, que es la que hace falta para leer al asesor. 🔴 <strong>Y un hueco que se cierra: el Taller 2 de Procesos Estocásticos que hizo con el propio Junca.</strong> Es parada óptima demostrada a mano (o sea <code>REF-6</code> ya recorrida) más control óptimo descontado de una cola M/M/s resuelto con la HJB <span class="mate">$\min_s\{(Q^sV)(i)+Ks+g(i)-\delta V(i)\}=0$</span>, iteración de valor contra iteración de política, citando a Puterman. <strong>«Control óptimo y HJB» deja de estar en CERO</strong>: lo que falta es que <span class="mate">$Q^s$</span> pase de matriz a operador diferencial, y ahí es donde nace el problema de viscosidad. <strong>Coste de haberlo hecho tarde:</strong> iba escrito en el contexto de la reunión del lunes, en la recomendación de <code>P22</code> y en <code>REF-4</code>. Los tres corregidos.</p>
-    <p class="artefacto">Artefactos: <code>formacion.md</code>, <code>apuntes/INDICE.md</code></p>
-  </div>
-</li>
-  </ul>
-</section>
 <section class="panel" id="panel-transporte_optimo" role="tabpanel">
   <h2>Curso tutorial con Junca</h2>
-  <p class="contexto aviso">⚠️ <strong>A priori NO relacionado con el objetivo del proyecto.</strong> Es un curso tutorial que el usuario ve con Mauricio Junca <strong>además</strong> de la tesis, martes y jueves. El propio Junca dijo que no creía que tuviera mucha relación con el tema de tesis. Está aquí porque comparte asesor y grabaciones, no porque sirva al objetivo. Nada de aquí entra al plan de estudio de la tesis sin una decisión explícita.</p>
-  <p class="contexto">Se parte de casi cero: la Semana 9 del proyecto viejo quedó entera sin leer y en el compendio no hay ni un capítulo de transporte óptimo.</p>
+  <div class="contexto-oculto" hidden>
+    <p class="contexto aviso">⚠️ <strong>A priori NO relacionado con el objetivo del proyecto.</strong> Es un curso tutorial que el usuario ve con Mauricio Junca <strong>además</strong> de la tesis, martes y jueves. El propio Junca dijo que no creía que tuviera mucha relación con el tema de tesis. Está aquí porque comparte asesor y grabaciones, no porque sirva al objetivo. Nada de aquí entra al plan de estudio de la tesis sin una decisión explícita.</p>
+    <p class="contexto">Se parte de casi cero: la Semana 9 del proyecto viejo quedó entera sin leer y en el compendio no hay ni un capítulo de transporte óptimo.</p>
+  </div>
   <div class="barra"><div class="relleno" style="width:0%"></div></div>
   <p class="cuenta">0 de 3 completadas</p>
   <ul class="tareas">
@@ -1129,7 +877,9 @@ window.MathJax={
 </section>
 <section class="panel" id="panel-infra" role="tabpanel">
   <h2>Infraestructura del proyecto</h2>
-  <p class="contexto">Todo lo que no es contenido: montaje, herramientas, la web de TODOs y la migración de skills. El plan completo, con dependencias y decisiones, vive en <code>docs/plan.md</code>.</p>
+  <div class="contexto-oculto" hidden>
+    <p class="contexto">Todo lo que no es contenido: montaje, herramientas, la web de TODOs y la migración de skills. El plan completo, con dependencias y decisiones, vive en <code>docs/plan.md</code>.</p>
+  </div>
   <div class="barra"><div class="relleno" style="width:79%"></div></div>
   <p class="cuenta">15 de 19 completadas</p>
   <h3>Fase 0 — Fontanería</h3>
@@ -1316,7 +1066,8 @@ window.MathJax={
     <ul>
       <li>La cabecera de una tarea con detalle es ahora un <strong>botón</strong>, con flecha y <code>aria-expanded</code>. El detalle nace con <code>hidden</code>.</li>
       <li><strong>Botón «Desplegar todo»</strong>, que se convierte en «Plegar todo» cuando ya está todo abierto. Opera solo sobre la pestaña visible.</li>
-      <li><strong>Los subproyectos al 100% se esconden</strong>, con casilla «Mostrar subproyectos terminados» para recuperarlos. Los recurrentes vuelven solos en cuanto entre una tarea nueva, así que no se pierde nada.</li>
+      <li><strong>Un subproyecto sin pendientes no se pinta</strong>, ni pestaña ni panel. Vuelve solo en cuanto entre una tarea, así que no se pierde nada. ⚠️ <strong>No se llaman «terminados»</strong>, corrección del usuario: ninguno ha terminado, los recurrentes no terminan nunca. Lo que pasa es que hoy no tienen nada que hacer. Y <strong>no hay interruptor para mostrarlos</strong>, que era la primera versión: un botón es una decisión más que tomar cada vez que se abre la página, y el objetivo era justo el contrario. El recuento global sigue contándolos, porque dice cuánto lleva el proyecto y no cuánto se ve.</li>
+      <li><strong>El párrafo de contexto del subproyecto deja de mostrarse.</strong> Se escribe igual en el HTML, con <code>hidden</code>, para poder leerlo desde el código y para que el <code>.md</code> siga siendo la fuente. Petición del usuario: <em>«quiero disminuir la sobreinformación para poder abrumarme menos, eso sirve para lo contrario»</em>. Eran cuatro párrafos por encima de la primera tarea.</li>
     </ul>
     <p class="aviso">⚠️ <strong>El arreglo, que era un fallo silencioso:</strong> el identificador solo casaba con la forma <code>LETRAS-números</code>, así que <code>P21</code>, <code>P16a</code> y <code>P8-M</code> <strong>no parseaban</strong>. Al mover las preguntas a subproyectos habrían desaparecido sin un solo aviso.</p>
     <p class="artefacto">Artefacto: <code>web/build_todo.py</code></p>
@@ -1389,9 +1140,7 @@ Generado el 2026-08-04 por <code>web/build_todo.py</code> a partir de los <code>
 <script>
 (function(){
   var CLAVE_PESTANA="propuesta_tesis_pestana",
-      CLAVE_OCULTAR="propuesta_tesis_ocultar",
-      CLAVE_COMPLETOS="propuesta_tesis_completos";
-  var nav=document.querySelector("nav.pestanas");
+      CLAVE_OCULTAR="propuesta_tesis_ocultar";
   var botones=document.querySelectorAll("nav.pestanas button");
   var paneles=document.querySelectorAll(".panel");
   function leer(k){try{return localStorage.getItem(k);}catch(e){return null;}}
@@ -1412,35 +1161,11 @@ Generado el 2026-08-04 por <code>web/build_todo.py</code> a partir de los <code>
     b.addEventListener("click",function(){activar(b.dataset.slug);});
   });
 
-  // --- subproyectos terminados: escondidos salvo que se pidan ------------
-  var verCompletos=document.getElementById("completos");
-  function primeraVisible(){
-    for(var i=0;i<botones.length;i++){
-      if(botones[i].offsetParent!==null) return botones[i].dataset.slug;
-    }
-    return botones.length?botones[0].dataset.slug:null;
-  }
-  function aplicarCompletos(){
-    nav.classList.toggle("con-completos",verCompletos.checked);
-    guardar(CLAVE_COMPLETOS,verCompletos.checked?"1":"0");
-    // Si la pestana abierta se acaba de esconder, saltar a una visible.
-    var activa=document.querySelector("nav.pestanas button.activa");
-    if(activa && activa.offsetParent===null){
-      var s=primeraVisible(); if(s) activar(s);
-    }
-  }
-  verCompletos.checked=(leer(CLAVE_COMPLETOS)==="1");
-  verCompletos.addEventListener("change",aplicarCompletos);
-  aplicarCompletos();
-
+  // Un subproyecto sin pendientes ya no se pinta, asi que la pestana guardada
+  // puede haber desaparecido desde la ultima visita. Se cae a la primera.
   var guardada=leer(CLAVE_PESTANA);
-  if(!guardada||!activar(guardada)){
-    var s=primeraVisible(); if(s) activar(s);
-  }
-  // Una pestana recordada que hoy este escondida no debe dejar la pagina en blanco.
-  var act=document.querySelector("nav.pestanas button.activa");
-  if(act && act.offsetParent===null){
-    var v=primeraVisible(); if(v) activar(v);
+  if((!guardada||!activar(guardada)) && botones.length){
+    activar(botones[0].dataset.slug);
   }
 
   // --- detalle plegado, y desplegar o plegar todo ------------------------

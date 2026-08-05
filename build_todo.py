@@ -337,12 +337,18 @@ def render_seccion(s, activa):
         % (" activo" if activa else "", s["slug"])
     )
     o.append('  <h2>%s</h2>' % inline(s["titulo"]))
-    for p in s["contexto"]:
-        c = clase_marca(p)
-        o.append(
-            '  <p class="contexto%s">%s</p>'
-            % (" " + c if c else "", inline(p))
-        )
+    # El contexto se escribe pero NO se muestra (decision del usuario,
+    # 2026-08-03): abrumaba mas de lo que orientaba. Se queda en el HTML para
+    # poder leerlo desde el codigo y para que el .md siga siendo la fuente.
+    if s["contexto"]:
+        o.append('  <div class="contexto-oculto" hidden>')
+        for p in s["contexto"]:
+            c = clase_marca(p)
+            o.append(
+                '    <p class="contexto%s">%s</p>'
+                % (" " + c if c else "", inline(p))
+            )
+        o.append("  </div>")
     o.append('  <div class="barra"><div class="relleno" style="width:%d%%"></div></div>' % pct)
     o.append(
         '  <p class="cuenta">%d de %d completadas</p>' % (hechas, total)
@@ -404,8 +410,6 @@ nav.pestanas button .n{opacity:.7; font-variant-numeric:tabular-nums; margin-lef
   border-radius:999px; transition:.15s;
 }
 .controles button.accion:hover{border-color:var(--acento); color:var(--tinta)}
-nav.pestanas button[data-completo="1"]{display:none}
-nav.pestanas.con-completos button[data-completo="1"]{display:inline-block; opacity:.75}
 
 .panel{display:none}
 .panel.activo{display:block}
@@ -479,9 +483,7 @@ footer code{font-size:.9em}
 GUION = """
 (function(){
   var CLAVE_PESTANA="propuesta_tesis_pestana",
-      CLAVE_OCULTAR="propuesta_tesis_ocultar",
-      CLAVE_COMPLETOS="propuesta_tesis_completos";
-  var nav=document.querySelector("nav.pestanas");
+      CLAVE_OCULTAR="propuesta_tesis_ocultar";
   var botones=document.querySelectorAll("nav.pestanas button");
   var paneles=document.querySelectorAll(".panel");
   function leer(k){try{return localStorage.getItem(k);}catch(e){return null;}}
@@ -502,35 +504,11 @@ GUION = """
     b.addEventListener("click",function(){activar(b.dataset.slug);});
   });
 
-  // --- subproyectos terminados: escondidos salvo que se pidan ------------
-  var verCompletos=document.getElementById("completos");
-  function primeraVisible(){
-    for(var i=0;i<botones.length;i++){
-      if(botones[i].offsetParent!==null) return botones[i].dataset.slug;
-    }
-    return botones.length?botones[0].dataset.slug:null;
-  }
-  function aplicarCompletos(){
-    nav.classList.toggle("con-completos",verCompletos.checked);
-    guardar(CLAVE_COMPLETOS,verCompletos.checked?"1":"0");
-    // Si la pestana abierta se acaba de esconder, saltar a una visible.
-    var activa=document.querySelector("nav.pestanas button.activa");
-    if(activa && activa.offsetParent===null){
-      var s=primeraVisible(); if(s) activar(s);
-    }
-  }
-  verCompletos.checked=(leer(CLAVE_COMPLETOS)==="1");
-  verCompletos.addEventListener("change",aplicarCompletos);
-  aplicarCompletos();
-
+  // Un subproyecto sin pendientes ya no se pinta, asi que la pestana guardada
+  // puede haber desaparecido desde la ultima visita. Se cae a la primera.
   var guardada=leer(CLAVE_PESTANA);
-  if(!guardada||!activar(guardada)){
-    var s=primeraVisible(); if(s) activar(s);
-  }
-  // Una pestana recordada que hoy este escondida no debe dejar la pagina en blanco.
-  var act=document.querySelector("nav.pestanas button.activa");
-  if(act && act.offsetParent===null){
-    var v=primeraVisible(); if(v) activar(v);
+  if((!guardada||!activar(guardada)) && botones.length){
+    activar(botones[0].dataset.slug);
   }
 
   // --- detalle plegado, y desplegar o plegar todo ------------------------
@@ -617,25 +595,37 @@ def construir():
 
     secciones.sort(key=clave)
 
+    # Un subproyecto SIN PENDIENTES no sale en la pagina. No es que haya
+    # terminado (los recurrentes no terminan nunca): es que hoy no tiene nada
+    # que hacer, y vuelve solo en cuanto entre una tarea. Decision del usuario
+    # el 2026-08-03, y por eso no hay boton para mostrarlos: un interruptor era
+    # una decision mas que tomar cada vez que se abre la pagina.
+    def sin_pendientes(s):
+        tareas = [t for g in s["grupos"] for t in g["tareas"]]
+        return bool(tareas) and all(t["hecha"] for t in tareas)
+
+    # El recuento global cuenta TODO, tambien lo que no se pinta: dice cuanto
+    # lleva el proyecto, no cuanto se ve.
+    gh = sum(
+        1 for s in secciones for g in s["grupos"] for t in g["tareas"] if t["hecha"]
+    )
+    gt = sum(len(g["tareas"]) for s in secciones for g in s["grupos"])
+
+    visibles = [s for s in secciones if not sin_pendientes(s)]
+    ocultas = [s["slug"] for s in secciones if sin_pendientes(s)]
+
     paneles, botones = [], []
-    gh, gt = 0, 0
-    for i, s in enumerate(secciones):
+    for i, s in enumerate(visibles):
         cuerpo, hechas, total = render_seccion(s, i == 0)
         paneles.append(cuerpo)
-        gh += hechas
-        gt += total
         etiqueta = ETIQUETAS.get(s["slug"], s["slug"].replace("_", " "))
         aviso = ""
         if any("⚠️" in p for p in s["contexto"]):
             aviso = "⚠️ "
-        # Un subproyecto sin nada pendiente se esconde por defecto. Los
-        # recurrentes (asesor, correos, reuniones) vuelven solos en cuanto
-        # entre una tarea nueva, asi que no se pierde nada.
-        completo = 1 if total and hechas == total else 0
         botones.append(
-            '<button data-slug="%s" data-completo="%d" role="tab">%s%s'
+            '<button data-slug="%s" role="tab">%s%s'
             '<span class="n">%d/%d</span></button>'
-            % (s["slug"], completo, aviso, html.escape(etiqueta), hechas, total)
+            % (s["slug"], aviso, html.escape(etiqueta), hechas, total)
         )
 
     hoy = date.today().isoformat()
@@ -677,10 +667,6 @@ def construir():
     o.append(
         '<label><input type="checkbox" id="ocultar"> Esconder las completadas</label>'
     )
-    o.append(
-        '<label><input type="checkbox" id="completos"> Mostrar subproyectos '
-        "terminados</label>"
-    )
     o.append('<span class="separa"></span>')
     o.append(
         '<button type="button" id="desplegar" class="accion">Desplegar todo</button>'
@@ -706,8 +692,9 @@ def construir():
     for s in secciones:
         h = sum(1 for g in s["grupos"] for t in g["tareas"] if t["hecha"])
         n = sum(len(g["tareas"]) for g in s["grupos"])
-        print("    %-20s %2d/%2d" % (s["slug"], h, n))
-    print("    %-20s %2d/%2d" % ("TOTAL", gh, gt))
+        nota = "  (sin pendientes, no sale)" if s["slug"] in ocultas else ""
+        print("    %-24s %2d/%2d%s" % (s["slug"], h, n, nota))
+    print("    %-24s %2d/%2d" % ("TOTAL", gh, gt))
     return 0
 
 
