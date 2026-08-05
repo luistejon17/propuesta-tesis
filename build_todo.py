@@ -36,15 +36,35 @@ RAIZ = Path(__file__).resolve().parent.parent
 SALIDA = RAIZ / "web" / "index.html"
 
 # Orden de las pestanas. Lo que no este aqui va al final, alfabetico.
-ORDEN = ["referencias", "asesor", "perfil", "transporte_optimo", "infra"]
+# Las dos de preguntas van delante a proposito: son las que se consultan de
+# pasada y desde el movil, no las que se leen sentado.
+ORDEN = [
+    "preguntas_junca",
+    "preguntas_investigacion",
+    "referencias",
+    "asesor",
+    "reuniones",
+    "correos",
+    "perfil",
+    "transporte_optimo",
+    "infra",
+]
 
-# La pestana general se renombra: en el .md el slug es tecnico, en la web no.
-ETIQUETAS = {"infra": "General"}
+# En el .md el slug es tecnico; en la web se lee.
+ETIQUETAS = {
+    "infra": "General",
+    "preguntas_junca": "Preguntas a Junca",
+    "preguntas_investigacion": "Preguntas de investigación",
+}
 
 RE_SECCION = re.compile(r"^##\s+\[([^\]]+)\]\s+(.*)$")
 RE_GRUPO = re.compile(r"^###\s+(.*)$")
+# El identificador admite las tres formas que usa el proyecto: con guion
+# (REF-13, I-3), sin el (P21, P16a) y con sufijo de letra (P8-M, P14-M).
 RE_TAREA = re.compile(
-    r"^-\s+\[([ xX])\]\s+\*{0,2}([A-Za-z]+-\d+[a-z]?)\*{0,2}\s*[—–-]\s*(.*)$"
+    r"^-\s+\[([ xX])\]\s+\*{0,2}"
+    r"([A-Za-z]+-?\d+[A-Za-z]?(?:-[A-Za-z]+)?)"
+    r"\*{0,2}\s*[—–-]\s*(.*)$"
 )
 RE_DETALLE = re.compile(r"^\s*>\s?(.*)$")
 RE_FECHA = re.compile(r"\s*\((\d{4}-\d{2}-\d{2})\)\s*$")
@@ -250,19 +270,36 @@ def parsear(ruta):
 # ---------------------------------------------------------------- render
 
 def render_tarea(t):
+    """Una tarea. Si tiene detalle, la cabecera es un boton que lo despliega.
+
+    El detalle va PLEGADO por defecto: la peticion original de la web era que el
+    titulo se leyera de un vistazo y el parrafo largo solo apareciera al pedirlo.
+    """
     estado = "hecha" if t["hecha"] else "pendiente"
+    tiene = bool(t["bloques"] or t["artefactos"])
+
     o = []
-    o.append('<li class="tarea %s" data-hecha="%d">' % (estado, int(t["hecha"])))
-    o.append('  <div class="cabecera">')
+    o.append(
+        '<li class="tarea %s%s" data-hecha="%d">'
+        % (estado, " abrible" if tiene else "", int(t["hecha"]))
+    )
+    if tiene:
+        o.append('  <button class="cabecera" type="button" aria-expanded="false">')
+    else:
+        o.append('  <div class="cabecera">')
     o.append('    <span class="casilla" aria-hidden="true"></span>')
     o.append('    <span class="ident">%s</span>' % html.escape(t["id"]))
     o.append('    <span class="titulo">%s</span>' % inline(t["titulo"]))
     if t["fecha"]:
         o.append('    <span class="fecha">%s</span>' % t["fecha"])
-    o.append("  </div>")
+    if tiene:
+        o.append('    <span class="flecha" aria-hidden="true"></span>')
+        o.append("  </button>")
+    else:
+        o.append("  </div>")
 
-    if t["bloques"] or t["artefactos"]:
-        o.append('  <div class="detalle">')
+    if tiene:
+        o.append('  <div class="detalle" hidden>')
         for tipo, contenido in t["bloques"]:
             if tipo == "p":
                 c = clase_marca(contenido)
@@ -357,8 +394,18 @@ nav.pestanas button:hover{border-color:var(--acento); color:var(--tinta)}
 nav.pestanas button.activa{background:var(--acento); border-color:var(--acento); color:#fff}
 nav.pestanas button .n{opacity:.7; font-variant-numeric:tabular-nums; margin-left:.35rem}
 
-.controles{display:flex; align-items:center; gap:.5rem; margin-bottom:1.5rem; font-size:.88rem; color:var(--suave)}
+.controles{display:flex; align-items:center; gap:.9rem; margin-bottom:1.5rem;
+  font-size:.88rem; color:var(--suave); flex-wrap:wrap}
 .controles label{display:flex; align-items:center; gap:.4rem; cursor:pointer}
+.controles .separa{flex:1 1 auto}
+.controles button.accion{
+  font:inherit; font-size:.84rem; cursor:pointer; padding:.35rem .8rem;
+  border:1px solid var(--linea); background:var(--papel); color:var(--suave);
+  border-radius:999px; transition:.15s;
+}
+.controles button.accion:hover{border-color:var(--acento); color:var(--tinta)}
+nav.pestanas button[data-completo="1"]{display:none}
+nav.pestanas.con-completos button[data-completo="1"]{display:inline-block; opacity:.75}
 
 .panel{display:none}
 .panel.activo{display:block}
@@ -378,6 +425,17 @@ li.tarea{background:var(--papel); border:1px solid var(--linea);
   border-radius:10px; padding:.85rem 1rem; margin-bottom:.6rem}
 li.tarea.hecha{opacity:.82}
 .cabecera{display:flex; align-items:baseline; gap:.55rem; flex-wrap:wrap}
+/* Con detalle, la cabecera es un boton. Se le quita todo el aspecto de boton
+   menos el cursor y el foco, que si hacen falta. */
+button.cabecera{width:100%; text-align:left; font:inherit; color:inherit;
+  background:none; border:0; padding:0; cursor:pointer}
+button.cabecera:focus-visible{outline:2px solid var(--acento); outline-offset:4px;
+  border-radius:4px}
+.flecha{flex:none; margin-left:auto; align-self:center; width:9px; height:9px;
+  border-right:2px solid var(--pend); border-bottom:2px solid var(--pend);
+  transform:rotate(45deg); transition:transform .15s; opacity:.8}
+button.cabecera:hover .flecha{border-color:var(--acento)}
+li.tarea.abierta .flecha{transform:rotate(-135deg)}
 .casilla{width:14px; height:14px; border-radius:4px; flex:none;
   border:2px solid var(--pend); align-self:center}
 li.tarea.hecha .casilla{background:var(--hecho); border-color:var(--hecho); position:relative}
@@ -420,9 +478,15 @@ footer code{font-size:.9em}
 
 GUION = """
 (function(){
-  var CLAVE_PESTANA="propuesta_tesis_pestana", CLAVE_OCULTAR="propuesta_tesis_ocultar";
+  var CLAVE_PESTANA="propuesta_tesis_pestana",
+      CLAVE_OCULTAR="propuesta_tesis_ocultar",
+      CLAVE_COMPLETOS="propuesta_tesis_completos";
+  var nav=document.querySelector("nav.pestanas");
   var botones=document.querySelectorAll("nav.pestanas button");
   var paneles=document.querySelectorAll(".panel");
+  function leer(k){try{return localStorage.getItem(k);}catch(e){return null;}}
+  function guardar(k,v){try{localStorage.setItem(k,v);}catch(e){}}
+
   function activar(slug){
     var hallado=false;
     paneles.forEach(function(p){
@@ -431,24 +495,88 @@ GUION = """
     });
     if(!hallado) return false;
     botones.forEach(function(b){b.classList.toggle("activa",b.dataset.slug===slug);});
-    try{localStorage.setItem(CLAVE_PESTANA,slug);}catch(e){}
+    guardar(CLAVE_PESTANA,slug);
     return true;
   }
   botones.forEach(function(b){
     b.addEventListener("click",function(){activar(b.dataset.slug);});
   });
-  var guardada=null;
-  try{guardada=localStorage.getItem(CLAVE_PESTANA);}catch(e){}
-  if(!guardada||!activar(guardada)){activar(botones[0].dataset.slug);}
 
+  // --- subproyectos terminados: escondidos salvo que se pidan ------------
+  var verCompletos=document.getElementById("completos");
+  function primeraVisible(){
+    for(var i=0;i<botones.length;i++){
+      if(botones[i].offsetParent!==null) return botones[i].dataset.slug;
+    }
+    return botones.length?botones[0].dataset.slug:null;
+  }
+  function aplicarCompletos(){
+    nav.classList.toggle("con-completos",verCompletos.checked);
+    guardar(CLAVE_COMPLETOS,verCompletos.checked?"1":"0");
+    // Si la pestana abierta se acaba de esconder, saltar a una visible.
+    var activa=document.querySelector("nav.pestanas button.activa");
+    if(activa && activa.offsetParent===null){
+      var s=primeraVisible(); if(s) activar(s);
+    }
+  }
+  verCompletos.checked=(leer(CLAVE_COMPLETOS)==="1");
+  verCompletos.addEventListener("change",aplicarCompletos);
+  aplicarCompletos();
+
+  var guardada=leer(CLAVE_PESTANA);
+  if(!guardada||!activar(guardada)){
+    var s=primeraVisible(); if(s) activar(s);
+  }
+  // Una pestana recordada que hoy este escondida no debe dejar la pagina en blanco.
+  var act=document.querySelector("nav.pestanas button.activa");
+  if(act && act.offsetParent===null){
+    var v=primeraVisible(); if(v) activar(v);
+  }
+
+  // --- detalle plegado, y desplegar o plegar todo ------------------------
+  function abrir(li,si){
+    li.classList.toggle("abierta",si);
+    var b=li.querySelector("button.cabecera");
+    var d=li.querySelector(".detalle");
+    if(b) b.setAttribute("aria-expanded",si?"true":"false");
+    if(d) d.hidden=!si;
+  }
+  document.querySelectorAll("li.tarea.abrible").forEach(function(li){
+    li.querySelector("button.cabecera").addEventListener("click",function(){
+      abrir(li,!li.classList.contains("abierta"));
+    });
+  });
+
+  var boton=document.getElementById("desplegar");
+  function visibles(){
+    var p=document.querySelector(".panel.activo");
+    return p?p.querySelectorAll("li.tarea.abrible"):[];
+  }
+  function rotular(){
+    var t=visibles(), n=0;
+    t.forEach(function(li){ if(li.classList.contains("abierta")) n++; });
+    boton.textContent=(t.length && n===t.length)?"Plegar todo":"Desplegar todo";
+  }
+  boton.addEventListener("click",function(){
+    var t=visibles(), n=0;
+    t.forEach(function(li){ if(li.classList.contains("abierta")) n++; });
+    var abrirTodo=!(t.length && n===t.length);
+    t.forEach(function(li){ abrir(li,abrirTodo); });
+    rotular();
+  });
+  botones.forEach(function(b){b.addEventListener("click",rotular);});
+  rotular();
+
+  // --- esconder las completadas -----------------------------------------
   var casilla=document.getElementById("ocultar");
   function aplicar(){
     document.querySelectorAll('li.tarea[data-hecha="1"]').forEach(function(t){
       t.style.display=casilla.checked?"none":"";
     });
-    try{localStorage.setItem(CLAVE_OCULTAR,casilla.checked?"1":"0");}catch(e){}
+    guardar(CLAVE_OCULTAR,casilla.checked?"1":"0");
+    rotular();
   }
-  try{casilla.checked=(localStorage.getItem(CLAVE_OCULTAR)==="1");}catch(e){}
+  casilla.checked=(leer(CLAVE_OCULTAR)==="1");
   casilla.addEventListener("change",aplicar);
   aplicar();
 })();
@@ -500,9 +628,14 @@ def construir():
         aviso = ""
         if any("⚠️" in p for p in s["contexto"]):
             aviso = "⚠️ "
+        # Un subproyecto sin nada pendiente se esconde por defecto. Los
+        # recurrentes (asesor, correos, reuniones) vuelven solos en cuanto
+        # entre una tarea nueva, asi que no se pierde nada.
+        completo = 1 if total and hechas == total else 0
         botones.append(
-            '<button data-slug="%s" role="tab">%s%s<span class="n">%d/%d</span></button>'
-            % (s["slug"], aviso, html.escape(etiqueta), hechas, total)
+            '<button data-slug="%s" data-completo="%d" role="tab">%s%s'
+            '<span class="n">%d/%d</span></button>'
+            % (s["slug"], completo, aviso, html.escape(etiqueta), hechas, total)
         )
 
     hoy = date.today().isoformat()
@@ -543,6 +676,14 @@ def construir():
     o.append('<div class="controles">')
     o.append(
         '<label><input type="checkbox" id="ocultar"> Esconder las completadas</label>'
+    )
+    o.append(
+        '<label><input type="checkbox" id="completos"> Mostrar subproyectos '
+        "terminados</label>"
+    )
+    o.append('<span class="separa"></span>')
+    o.append(
+        '<button type="button" id="desplegar" class="accion">Desplegar todo</button>'
     )
     o.append("</div>")
     o.extend(paneles)
