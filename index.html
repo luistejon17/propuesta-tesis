@@ -116,11 +116,11 @@ window.MathJax={
 <header class="principal">
 <h1>Propuesta de tesis — control óptimo</h1>
 <p class="sub">Decidir y proponer un tema en control óptimo inverso, en 2–3 meses desde el 2026-07-25.</p>
-<p class="global"><strong>33</strong> de <strong>50</strong> tareas completadas en todo el proyecto.</p>
+<p class="global"><strong>34</strong> de <strong>50</strong> tareas completadas en todo el proyecto.</p>
 </header>
 <nav class="pestanas" role="tablist">
 <button data-slug="referencias" role="tab">referencias<span class="n">6/14</span></button>
-<button data-slug="asesor" role="tab">asesor<span class="n">5/6</span></button>
+<button data-slug="asesor" role="tab">asesor<span class="n">6/6</span></button>
 <button data-slug="perfil" role="tab">perfil<span class="n">4/4</span></button>
 <button data-slug="transporte_optimo" role="tab">⚠️ transporte optimo<span class="n">0/3</span></button>
 <button data-slug="infra" role="tab">General<span class="n">12/16</span></button>
@@ -150,13 +150,18 @@ window.MathJax={
     <span class="titulo">Justificar el Teorema 4.2 del v2</span>
   </div>
   <div class="detalle">
-    <p class="alerta">🔴 <strong>Encargo explícito del asesor, 2026-08-03, y es la primera tarea del trabajo de tesis propiamente dicho.</strong> El Teorema 4.2 da existencia y unicidad, o sea sostiene el §4 entero, y él considera que en su propia nota no está bien justificado. <strong>Lo que hay que fijar, dicho por él en [07:37] y [12:48]:</strong></p>
+    <p class="alerta">🔴 <strong>Encargo explícito del asesor, 2026-08-03, y es la primera tarea del trabajo de tesis propiamente dicho.</strong> El Teorema 4.2 da existencia y unicidad, o sea sostiene el §4 entero, y él considera que en su propia nota no está bien justificado. ✅ <strong>Enunciado verificado contra el <code>.mmd</code> del v2 (2026-08-03).</strong> Lo que dijo de oído coincide casi palabra por palabra, con una corrección: el teorema pide <span class="mate">$\mathcal M$</span> <strong>no vacío, convexo y DÉBILMENTE compacto</strong>, no «acotado, convexo y compacto» como se oyó. &gt; <em>Theorem 4.2 (Reduced problem, saddle point, and fixed-point existence). &gt; Assume that <span class="mate">$\mathcal H$</span> is continuously embedded in <span class="mate">$C(\Omega\times A)$</span>, &gt; that <span class="mate">$\mathcal M\subset\mathcal H^*$</span> is nonempty, convex, and weakly &gt; compact, and that <span class="mate">$\widehat c\in\mathcal H$</span>. Then the reduced problem (23) &gt; has a unique minimizer <span class="mate">$\eta_A^*$</span>.</em> <strong>Lo que hay que fijar, entonces:</strong></p>
     <ul>
-      <li><strong>Quién es el espacio <span class="mate">$H$</span>.</strong> <em>«Ese <span class="mate">$H$</span> es parte de lo que hay que definir.»</em> En el v2 se usa súper general, con su norma y su dual.</li>
-      <li><strong>Dónde vive <span class="mate">$c$</span></strong>, que no se elige: sale del dual de donde vive <span class="mate">$\mathcal M$</span>. Es el hilo que repite tres veces en la reunión.</li>
-      <li><strong>Que <span class="mate">$\mathcal M$</span> sea acotado, convexo y compacto.</strong> Se usa y no se prueba.</li>
+      <li><strong>Quién es <span class="mate">$\mathcal H$</span></strong>, y en concreto si se embebe en <span class="mate">$C(\Omega\times A)$</span>. <em>«Ese <span class="mate">$H$</span> es parte de lo que hay que definir»</em> [12:48].</li>
+      <li><strong>Que <span class="mate">$\mathcal M$</span> sea no vacío, convexo y débilmente compacto</strong> en <span class="mate">$\mathcal H^*$</span>. Se usa y no se prueba.</li>
+      <li><strong>Que <span class="mate">$\widehat c\in\mathcal H$</span>.</strong></li>
     </ul>
-    <p class="alerta">🔴 <strong>Depende de <code>REF-7</code> y esa dependencia es dura</strong>, no de conveniencia: sin caracterizar <span class="mate">$\mathcal M$</span> no hay <span class="mate">$H$</span>, y sin <span class="mate">$H$</span> no hay teorema. ⚠️ Y arrastra la grieta que él mismo abrió en [04:37]: en discreto las políticas deterministas son <strong>vértices del poliedro</strong>, y en continuo <em>«no sé si esa es la intuición de vértice»</em>. La salida que nombra es la de los <strong>controles relajados</strong>, que es literatura de <code>REF-7</code>. ✅ <strong>Y arranca sin la hipoteca de la viscosidad</strong> (<code>P16b</code>, 2026-08-03): el asesor confirmó que en el nuevo planteamiento no se usa la ecuación con <span class="mate">$V$</span>. Este teorema va de <span class="mate">$H$</span> y de <span class="mate">$\mathcal M$</span>, no de regularidad de la función de valor, así que es coherente. ⚠️ <strong>Antes de atacarlo conviene cerrar la duda 1 de <code>dudas_de_audio.md</code></strong>: la frase que explica por qué el v2 evita el punto fijo está mal transcrita, y es justo el razonamiento que hay que reconstruir.</p>
+    <p class="alerta">🔴 <strong>Y hay una disyuntiva explícita en el §3.1 que es el corazón del asunto</strong>, y que el asesor señaló en el minuto 1 de la reunión. Su primer párrafo plantea dos regímenes <strong>incompatibles en general</strong>:</p>
+    <ul>
+      <li><strong>(i) Measure formulation.</strong> <span class="mate">$\mathcal H\hookrightarrow C(\Omega\times A)$</span>, por ejemplo <span class="mate">$H^s$</span> con <span class="mate">$s&gt;(d+m)/2$</span>, o un RKHS. Toda medida finita con signo cae en <span class="mate">$\mathcal H^*$</span>. <strong>Es el régimen que pide el Teorema 4.2.</strong></li>
+      <li><strong>(ii) Density formulation.</strong> Si las medidas de ocupación tienen densidades <span class="mate">$L^2$</span>, basta <span class="mate">$H^1$</span> con el emparejamiento <span class="mate">$L^2$</span>. Es <em>«the regime used in the PDE and numerical formulas below»</em>, o sea <strong>donde viven el §6 y los numéricos</strong>.</li>
+    </ul>
+    <p><strong>Justificar el 4.2 es, en el fondo, resolver esa tensión</strong>: el teorema vive en (i) y el resto del documento en (ii). 🔴 <strong>Depende de <code>REF-7</code> y esa dependencia es dura</strong>, no de conveniencia: sin caracterizar <span class="mate">$\mathcal M$</span> no hay <span class="mate">$H$</span>, y sin <span class="mate">$H$</span> no hay teorema. ⚠️ Y arrastra la grieta que él mismo abrió en [04:37]: en discreto las políticas deterministas son <strong>vértices del poliedro</strong>, y en continuo <em>«no sé si esa es la intuición de vértice»</em>. La salida que nombra es la de los <strong>controles relajados</strong>, que es literatura de <code>REF-7</code>. ✅ <strong>Y arranca sin la hipoteca de la viscosidad</strong> (<code>P16b</code>, 2026-08-03): el asesor confirmó que en el nuevo planteamiento no se usa la ecuación con <span class="mate">$V$</span>. Este teorema va de <span class="mate">$H$</span> y de <span class="mate">$\mathcal M$</span>, no de regularidad de la función de valor, así que es coherente. ✅ <strong>Ya no hace falta reescuchar nada para empezar</strong> (2026-08-03). El <em>«todo se reduce a decir que este problema tiene un único óptimo»</em> apunta a la <strong>ecuación (23)</strong>, confirmado por el usuario, y el porqué está escrito en el <strong>Remark 4.4</strong>: <em>«Theorem 4.2 bypasses this difficulty entirely. The natural object is the convex set of optimal occupation measures, not a particular policy selector.»</em> 🔴 <strong>Y hay que saber de dónde viene el teorema: en parte, de ChatGPT.</strong> Confirmado por el usuario el 2026-08-03. El propio asesor lo señala sin nombrarlo: <em>«esta prueba está bien, pero todo eso asume todo este tipo de cosas que no sabemos»</em> [12:00]. ⚠️ <strong>No es motivo para desconfiar del v2, es la razón de que esta tarea exista.</strong> Lo que pide el encargo es <strong>verificar</strong>, no extender, y conviene tratar las hipótesis del 4.2 como enunciados a comprobar uno a uno en vez de como resultados respaldados por años de derivación suya.</p>
   </div>
 </li>
 <li class="tarea hecha" data-hecha="1">
@@ -330,8 +335,8 @@ window.MathJax={
 <section class="panel" id="panel-asesor" role="tabpanel">
   <h2>Conversaciones con el asesor</h2>
   <p class="contexto">Todo lo que sale de hablar con Mauricio Junca: grabaciones, transcripciones, resúmenes y las preguntas que quedan pendientes para la próxima. Es un subproyecto <strong>recurrente</strong>: no se cierra cuando se procesa una reunión, solo espera la siguiente.</p>
-  <div class="barra"><div class="relleno" style="width:83%"></div></div>
-  <p class="cuenta">5 de 6 completadas</p>
+  <div class="barra"><div class="relleno" style="width:100%"></div></div>
+  <p class="cuenta">6 de 6 completadas</p>
   <ul class="tareas">
 <li class="tarea hecha" data-hecha="1">
   <div class="cabecera">
@@ -380,14 +385,15 @@ window.MathJax={
     <p class="artefacto">Artefactos: <code>2026-08-03/transcripcion_cruda.md</code>, <code>transcripcion_limpia.md</code>,</p>
   </div>
 </li>
-<li class="tarea pendiente" data-hecha="0">
+<li class="tarea hecha" data-hecha="1">
   <div class="cabecera">
     <span class="casilla" aria-hidden="true"></span>
     <span class="ident">ASE-6</span>
-    <span class="titulo">Confirmar la atribución y las dudas de la reunión del 2026-08-03</span>
+    <span class="titulo">Confirmar la atribución y las dudas de la reunión</span>
+    <span class="fecha">2026-08-03</span>
   </div>
   <div class="detalle">
-    <p><strong>Bloquea la fiabilidad de todo lo demás.</strong> Dos pasajes de prueba en <code>dudas_de_audio.md</code> §0, y nueve dudas numeradas. Las que más rinden: la <strong>1</strong> (la frase bisagra del v2) y la <strong>2</strong> (si el argumento que evita el intercambio es suyo o de un tercero). La <strong>6</strong> se resuelve sin escuchar nada, mirando el 3.1 de la nota. ✅ <strong>La 9 ya está cerrada</strong>: la reunión acabó donde acaba la grabación. Pero destapó lo de después, la conversación de pasillo que cierra <code>P16b</code> y saca la viscosidad del camino crítico. Ver <code>resumen.md</code> §5 bis. <strong>Se preguntan una por una y en orden temporal</strong> (instrucción del usuario, 2026-08-03), no todas de golpe.</p>
+    <p><strong>Las nueve preguntadas y cerradas el mismo día.</strong> ✅ La atribución de la limpia entera queda <strong>confirmada</strong> sobre sus dos pasajes de prueba. 🔴🔴 <strong>El hallazgo grande no era ninguna de las que yo priorizaba: cuando Mauricio habla en tercera persona se refiere a ChatGPT.</strong> Parte de la arquitectura del v2 salió de ahí, él lo sabe, y su <em>«todo eso asume todo este tipo de cosas que no sabemos»</em> [12:00] pasa de sonar a modestia a ser un diagnóstico. Es la razón de fondo de que <code>REF-13</code> sea verificar. ✅ <strong>Y dos deícticos resueltos que no estaban en el audio</strong>: <em>«este problema»</em> de [07:12] es la <strong>ecuación (23)</strong>, y <em>«esto»</em> de [13:51] es el <strong>§7.1</strong>, con el motivo del «curiosamente» de propina. ✅ La <strong>6</strong> se resolvió <strong>sin audio</strong>, contra el <code>.mmd</code>: el «3.1» es <em>«A technical point: the cost space matters»</em>, y de paso salió que el «4.2» es un teorema cuyas hipótesis <strong>corrigen</strong> las que yo había escrito de oído. ⬜ <strong>Tres quedan sin resolver</strong> (4:17, 8:12 y 16:41) y <strong>así se quedan</strong>. Rellenarlas por plausibilidad es el fallo que esta lista existe para evitar. Método, ya portado a la skill <code>procesa</code>: <strong>todas de corrido con <code>AskUserQuestion</code></strong>, en orden temporal, con la reconstrucción propia como opciones y el crudo en el <code>preview</code>.</p>
   </div>
 </li>
 <li class="tarea hecha" data-hecha="1">
