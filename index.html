@@ -135,13 +135,14 @@ window.MathJax={
 <header class="principal">
 <h1>Propuesta de tesis — control óptimo</h1>
 <p class="sub">Decidir y proponer un tema en control óptimo inverso, en 2–3 meses desde el 2026-07-25.</p>
-<p class="global"><strong>51</strong> de <strong>94</strong> tareas completadas en todo el proyecto.</p>
+<p class="global"><strong>52</strong> de <strong>97</strong> tareas completadas en todo el proyecto.</p>
 </header>
 <nav class="pestanas" role="tablist">
 <button data-slug="preguntas_junca" role="tab">Preguntas a Junca<span class="n">8/21</span></button>
 <button data-slug="preguntas_investigacion" role="tab">Preguntas de investigación<span class="n">2/21</span></button>
 <button data-slug="referencias" role="tab">referencias<span class="n">7/15</span></button>
 <button data-slug="infra" role="tab">General<span class="n">17/20</span></button>
+<button data-slug="explicaciones" role="tab">explicaciones<span class="n">1/3</span></button>
 </nav>
 <div class="controles">
 <label><input type="checkbox" id="ocultar"> Esconder las completadas</label>
@@ -1230,6 +1231,57 @@ window.MathJax={
   <div class="detalle" hidden>
     <p><strong>Diez trampas</strong>, cada una con su síntoma primero, su causa y su coste medido. Rescatadas del <code>CLAUDE.md</code> viejo, donde vivían diluidas entre instrucciones de un tema que ya no es este. 🔴 <strong>Lo que las une, y es la frase que resume el documento: ninguna produce un error. Todas producen un resultado plausible.</strong> Un <code>grep</code> que devuelve cero, un <code>sed</code> que no sustituye nada y deja el archivo escrito igual, un script que imprime «OK» tras corromper el <code>.tex</code>. <strong>La que más ha costado</strong> es el heredoc de Python (<code>T3</code>): sus escapes se parten en dos grupos, y <code>\b</code>, <code>\f</code>, <code>\n</code>, <code>\r</code>, <code>\t</code>, <code>\v</code> <strong>son válidos y se consumen en silencio</strong>, así que <code>&quot;\begin{align*}&quot;</code> se vuelve backspace más <code>egin{...}</code>. Diecisiete de dieciocho reemplazos fallaron y el que funcionó metió un <code>U+0008</code>. ⚠️ <strong>Una trampa nueva, encontrada al publicar la web hoy</strong> (<code>T7</code>): el alias <code>python</code> de Windows sale con <strong>código 49</strong> sin ejecutar nada. Estaba escrito mal en el <code>CLAUDE.md</code> y en la skill <code>/cierra</code>; corregido en los dos a <code>py -3</code>. La regla 4 del <code>CLAUDE.md</code> ahora apunta aquí, que es la separación de <code>DOC-1</code>: el manual imperativo arriba, el porqué con su anécdota abajo.</p>
     <p class="artefacto">Artefacto: <code>docs/trampas_shell.md</code></p>
+  </div>
+</li>
+  </ul>
+</section>
+<section class="panel" id="panel-explicaciones" role="tabpanel">
+  <h2>El libro que el usuario lee</h2>
+  <div class="contexto-oculto" hidden>
+    <p class="contexto">El compendio en español al que va a parar todo lo que entra al tracker. Nace el 2026-08-05 porque el usuario <strong>solo lee en Overleaf</strong>, así que un ítem del tracker no está hecho cuando se leyó la fuente, sino cuando existe su capítulo aquí. Cada <code>\part</code> es una <strong>semana real del semestre</strong>, y lo que decide qué entra es la entrega del <strong>2026-10-16</strong>: se estudia lo que hace falta para <strong>enunciar</strong> el problema, no para resolverlo.</p>
+  </div>
+  <div class="barra"><div class="relleno" style="width:33%"></div></div>
+  <p class="cuenta">1 de 3 completadas</p>
+  <ul class="tareas">
+<li class="tarea hecha abrible" data-hecha="1">
+  <button class="cabecera" type="button" aria-expanded="false">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">EXP-1</span>
+    <span class="titulo">Montar el subproyecto y limpiar el Overleaf heredado</span>
+    <span class="fecha">2026-08-05</span>
+    <span class="flecha" aria-hidden="true"></span>
+  </button>
+  <div class="detalle" hidden>
+    <p>El usuario pasó una <strong>copia del compendio viejo de ProxDM</strong> a propósito, para heredar la maquinaria y no rehacerla: el preámbulo de 790 líneas con el <strong>modo tableta</strong>, los tres interruptores de ahorro de páginas, la portada y la carátula de imprenta. <strong>Borrados los 33 capítulos de contenido</strong>, retitulada la portada, y el prefacio reescrito en lo que era falso: ya no habla de ProxDM, y sobre todo ya no dice que las semanas «conviene leerlas como etapas y no como un calendario», porque ahora es justo al revés. 🔴 <strong>Se hereda el aparato, no la estructura.</strong> La decisión del 2026-07-27 sigue en pie: la organización del compendio de ProxDM solo se consulta. ⚠️ <strong>Dos trampas del repo de Overleaf, anotadas para la próxima:</strong> su rama es <strong><code>main</code></strong>, no <code>master</code>, y <strong>no rastreaba artefactos de compilación</strong>, así que un <code>git add -A</code> a secas mete el <code>.aux</code>, el <code>.log</code> y el <code>.pdf</code> en el proyecto. Añadido un <code>.gitignore</code> que lo impide. Compila limpio: 6 páginas, <strong>cero Overfull y cero warnings</strong>.</p>
+    <p class="artefacto">Artefacto: <code>subproyectos/explicaciones/overleaf/</code></p>
+  </div>
+</li>
+<li class="tarea pendiente abrible" data-hecha="0">
+  <button class="cabecera" type="button" aria-expanded="false">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">EXP-2</span>
+    <span class="titulo">Semana 1: el espacio del costo (Folland §9.3)</span>
+    <span class="flecha" aria-hidden="true"></span>
+  </button>
+  <div class="detalle" hidden>
+    <p><strong>Objetivo de la semana: quién es <span class="mate">$\mathcal H$</span>.</strong> Modo <code>e:review</code>, y no necesita nada de Mathpix porque el <code>.mmd</code> ya estaba en <code>prerequisitos/folland_cap9/</code>. 🔴 <strong>Trae el teorema exacto que justifica el régimen (i) del §3.1 de Junca</strong>, que es el que su Teorema 4.2 exige: el <strong>9.17</strong>, encaje de Sobolev, <span class="mate">$s&gt;k+\frac n2\Rightarrow H_s\subset C_0^k$</span> con inclusión continua. Con <span class="mate">$k=0$</span> y <span class="mate">$n=d+m$</span> es literalmente su <span class="mate">$H^s$</span> con <span class="mate">$s&gt;(d+m)/2$</span>. Y la <strong>9.16</strong>, <span class="mate">$H_{-s}\cong(H_s)^*$</span>, que es por qué toda medida finita cae en <span class="mate">$\mathcal H^*$</span>. ⚠️ Al redactar hay que anclar en lo que sí domina (Fourier, Plancherel, <span class="mate">$L^p$</span>, del curso de Folland) y construir <span class="mate">$H_s$</span> desde ahí: <strong>los espacios de Sobolev no los domina</strong>, pese a que la sección esté en sus apuntes. Capítulo declarado en <code>overleaf/folland_sobolev.tex</code>, con su guion escrito.</p>
+  </div>
+</li>
+<li class="tarea pendiente abrible" data-hecha="0">
+  <button class="cabecera" type="button" aria-expanded="false">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">EXP-3</span>
+    <span class="titulo">Semana 2: quién es <span class="mate">$\mathcal M$</span> (Kurtz §§1, 2 y 6)</span>
+    <span class="flecha" aria-hidden="true"></span>
+  </button>
+  <div class="detalle" hidden>
+    <p><strong>Es la semana que sostiene <code>REF-13</code></strong>, o sea el encargo del asesor. Tres capítulos, los tres <code>e:deep</code>, sobre las 1740 líneas de Kurtz–Stockbridge. <strong>Criterio de cierre, uno solo:</strong> poder contestar <code>I-12</code> para el caso <strong>descontado</strong>, o dejar escrito exactamente qué falta para contestarla.</p>
+    <ul>
+      <li><strong>§1</strong> (línea 18), el problema de martingala controlado, de donde salen los <strong>controles relajados</strong> que el asesor nombró tres veces.</li>
+      <li><strong>§2</strong> (línea 115), el <strong>Teorema 2.2</strong> y sus hipótesis una por una, porque son las que habrá que verificar sobre el modelo de Junca. Con el §3 (Echeverría) en <code>review</code>.</li>
+      <li><strong>§6</strong> (línea 1326), las <strong>reformulaciones LP</strong>. Es <code>I-12</code> literal.</li>
+    </ul>
+    <p class="aviso">⚠️ <strong>La pregunta barata que va primero:</strong> Kurtz cubre <strong>cuatro criterios de costo</strong> y su §6 escribe <em>«compute the measure(s) <span class="mate">$\mu,\widehat\pi,\pi$</span>, or <span class="mate">$\mu_0$</span> and <span class="mate">$\mu_1$</span>»</em>. Junca usa <strong>descontado</strong>. Saber cuál es la suya ordena la lectura entera. <strong>Prerrequisito a demanda, no antes:</strong> Baudoin §§6.1, 6.3 y 6.4, el puente generador↔SDE, que ya está en <code>.mmd</code> y que él no maneja.</p>
   </div>
 </li>
   </ul>
