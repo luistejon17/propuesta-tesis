@@ -46,7 +46,6 @@ ORDEN = [
     "reuniones",
     "correos",
     "perfil",
-    "transporte_optimo",
     "infra",
 ]
 
