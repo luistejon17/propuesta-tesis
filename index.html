@@ -135,12 +135,12 @@ window.MathJax={
 <header class="principal">
 <h1>Propuesta de tesis — control óptimo</h1>
 <p class="sub">Decidir y proponer un tema en control óptimo inverso, en 2–3 meses desde el 2026-07-25.</p>
-<p class="global"><strong>52</strong> de <strong>97</strong> tareas completadas en todo el proyecto.</p>
+<p class="global"><strong>53</strong> de <strong>97</strong> tareas completadas en todo el proyecto.</p>
 </header>
 <nav class="pestanas" role="tablist">
 <button data-slug="preguntas_junca" role="tab">Preguntas a Junca<span class="n">8/21</span></button>
 <button data-slug="preguntas_investigacion" role="tab">Preguntas de investigación<span class="n">2/21</span></button>
-<button data-slug="referencias" role="tab">referencias<span class="n">7/15</span></button>
+<button data-slug="referencias" role="tab">referencias<span class="n">8/15</span></button>
 <button data-slug="infra" role="tab">General<span class="n">17/20</span></button>
 <button data-slug="explicaciones" role="tab">explicaciones<span class="n">1/3</span></button>
 </nav>
@@ -169,7 +169,13 @@ window.MathJax={
     <span class="flecha" aria-hidden="true"></span>
   </button>
   <div class="detalle" hidden>
-    <p>De las tres preguntas de su diapositiva <em>«Research questions»</em> (<em>well-posedness</em>, <em>numerics</em>, <em>estimation</em>), ¿confirma que la tesis ataca <strong>well-posedness</strong>? Y hablarlo a fondo, no solo confirmarlo. El usuario subraya: <em>«especialmente well-posedness hay que charlarlo»</em>. Por eliminación ya sale (sacó <em>estimation</em> del alcance en la reunión, y <em>numerics</em> ya tiene esquema en el borrador), pero la conversación no es la confirmación: es qué entiende <strong>él</strong> por buen planteamiento aquí, que es lo que fija el listón de la tesis. 🔴 <strong>No se preguntó el 2026-08-03</strong>: la reunión se acabó antes de llegar. <strong>Sube a la primera posición</strong>, porque <code>P16</code> ya está cerrada y esta es ahora la más rentable de las que quedan.</p>
+    <p>De las tres preguntas de su diapositiva <em>«Research questions»</em> (<em>well-posedness</em>, <em>numerics</em>, <em>estimation</em>), ¿confirma que la tesis ataca <strong>well-posedness</strong>? Y hablarlo a fondo, no solo confirmarlo. El usuario subraya: <em>«especialmente well-posedness hay que charlarlo»</em>. ✅ <strong>Y desde el 2026-08-05 se puede llevar con una propuesta concreta encima de la mesa, no en abstracto</strong> (<code>REF-11b</code>). Nakano define «bien planteado» para el inverso <strong>estocástico</strong> así, y está publicado en Automatica:</p>
+    <ul>
+      <li><strong>Hadamard, pero saltándose la existencia</strong> a propósito, porque asume que el control observado ya es óptimo para algún parámetro.</li>
+      <li><strong>Unicidad</strong> (su Teorema 3.3) y <strong>estabilidad</strong> (Teorema 3.5), esta última entendida como que si los controles convergen en <span class="mate">$L^2$</span> entonces los parámetros convergen.</li>
+      <li>Y con una condición de identificabilidad explícita: <strong>el control óptimo tiene que ser interior y no nulo con probabilidad positiva</strong>.</li>
+    </ul>
+    <p class="aviso">⚠️ Ojo al usarlo: él recupera <strong>un escalar</strong>, no una función, así que la pregunta útil es si esa definición le sirve a Junca <strong>cuando la incógnita vive en un espacio de Hilbert</strong>, donde la estabilidad exige elegir en qué norma. Por eliminación ya sale (sacó <em>estimation</em> del alcance en la reunión, y <em>numerics</em> ya tiene esquema en el borrador), pero la conversación no es la confirmación: es qué entiende <strong>él</strong> por buen planteamiento aquí, que es lo que fija el listón de la tesis. 🔴 <strong>No se preguntó el 2026-08-03</strong>: la reunión se acabó antes de llegar. <strong>Sube a la primera posición</strong>, porque <code>P16</code> ya está cerrada y esta es ahora la más rentable de las que quedan.</p>
   </div>
 </li>
 <li class="tarea pendiente abrible" data-hecha="0">
@@ -555,7 +561,7 @@ window.MathJax={
       <li><strong>La del problema INVERSO: demostrada, y bien.</strong> El §4.1 escribe explícitamente <em>«At this stage we do not assume that the infimum and supremum can be interchanged»</em>, elimina <span class="mate">$c$</span> a <span class="mate">$\eta$</span> fija, y obtiene la igualdad minimax (28) <strong>como consecuencia</strong> de construir el punto silla. La Observación 4.3 contrasta con la ruta de Sion, que era la que esta pregunta daba por necesaria, y explica por qué prefiere la suya: es constructiva. O sea que la vía de ataque que aquí se suponía ya no es la única ni la mejor.</li>
       <li><strong>La del problema DIRECTO: sigue abierta, y él la cuenta como pendiente.</strong> El §2.2 llama <em>formal</em> al dual (13), igual que el v1, y el §11 <strong>abre</strong> su lista pidiendo <em>«establish the forward occupation-measure LP and HJB duality under the precise boundary conditions and regularity assumptions»</em>.</li>
     </ul>
-    <p><strong>Lo que queda aquí es la segunda</strong>, que es la que enlaza con <code>I-6</code>.</p>
+    <p><strong>Lo que queda aquí es la segunda</strong>, que es la que enlaza con <code>I-6</code>. 🟢 <strong>Y esa segunda ya tiene PLANTILLA, del 2026-08-05 (<code>REF-11a</code>).</strong> El <strong>Lema 2.3</strong> de Pauwels–Henrion–Lasserre demuestra que <strong>no hay brecha de dualidad</strong> entre el LP sobre medidas de ocupación y su dual, que es la HJB relajada, y que el ínfimo del primal <strong>se alcanza</strong>. La demostración es corta y el mecanismo se puede copiar: el cono <span class="mate">$\{(\operatorname{div}f\mu+\mu_T,\langle\mu,1\rangle,\langle\mu,l_0\rangle)\}$</span> es <strong>cerrado en la topología débil</strong> por <strong>Banach–Alaoglu</strong>, y de ahí sale todo, incluida la equivalencia con la holgura complementaria. ⚠️ <strong>No se traslada gratis, y hay que decir por qué</strong>: ellos son <strong>deterministas</strong> (generador de primer orden, <span class="mate">$\operatorname{grad}v\cdot f$</span>) y de <strong>tiempo terminal libre</strong>; Junca es estocástico (segundo orden, <span class="mate">$\mathcal L^aV$</span>) y descontado a horizonte infinito. Lo que hay que rehacer es la cerradura del cono en ese otro escenario. ✅ <strong>Y el respaldo ya está estudiado:</strong> Banach–Alaoglu, topologías débiles y reflexividad son <strong>Brezis caps. 1–4, dominados con ejercicios</strong>.</p>
   </div>
 </li>
 <li class="tarea pendiente abrible" data-hecha="0">
@@ -583,7 +589,13 @@ window.MathJax={
     <span class="flecha" aria-hidden="true"></span>
   </button>
   <div class="detalle" hidden>
-    <p>Procedencia: de REF-14 §4, «lo que el v2 no prueba», punto 2. Lo que el v2 <strong>sí</strong> demuestra, y es contribución nueva suya: con <span class="mate">$q_\phi(x,a):=\rho\phi(x)-\mathcal L^a\phi(x)$</span>, toda <span class="mate">$\eta\in\mathcal M$</span> cumple <span class="mate">$\int q_\phi\,d\eta=\int_\Omega\phi\,d\nu_0$</span>, que <strong>no depende de la política</strong>; luego <span class="mate">$c$</span> y <span class="mate">$c+q_\phi$</span> generan los mismos optimizadores directos. <strong>Lo que no demuestra ni afirma:</strong> que no haya más ambigüedad, o sea que la clase identificable sea <strong>exactamente</strong> esa y no mayor. El documento salta de «estas transformaciones no cambian nada» a <em>«the identifiable object is therefore an equivalence class of costs modulo functions of the form (30)»</em>. 🔴 <strong>Importa para la propuesta, y por partida doble.</strong> Es el argumento limpio de <strong>por qué el previo no es un truco de regularización</strong> sino la respuesta a una no identificabilidad intrínseca, y eso es lo más citable del documento fuera del §4. Un argumento de novedad que descansa en una inclusión probada en un solo sentido es frágil si alguien pregunta. Análogo discreto conocido: el <em>potential-based reward shaping</em> de Ng, y ahí sí hay resultados de caracterización completa que conviene mirar.</p>
+    <p>Procedencia: de REF-14 §4, «lo que el v2 no prueba», punto 2. Lo que el v2 <strong>sí</strong> demuestra, y es contribución nueva suya: con <span class="mate">$q_\phi(x,a):=\rho\phi(x)-\mathcal L^a\phi(x)$</span>, toda <span class="mate">$\eta\in\mathcal M$</span> cumple <span class="mate">$\int q_\phi\,d\eta=\int_\Omega\phi\,d\nu_0$</span>, que <strong>no depende de la política</strong>; luego <span class="mate">$c$</span> y <span class="mate">$c+q_\phi$</span> generan los mismos optimizadores directos. <strong>Lo que no demuestra ni afirma:</strong> que no haya más ambigüedad, o sea que la clase identificable sea <strong>exactamente</strong> esa y no mayor. El documento salta de «estas transformaciones no cambian nada» a <em>«the identifiable object is therefore an equivalence class of costs modulo functions of the form (30)»</em>. 🔴 <strong>Importa para la propuesta, y por partida doble.</strong> Es el argumento limpio de <strong>por qué el previo no es un truco de regularización</strong> sino la respuesta a una no identificabilidad intrínseca, y eso es lo más citable del documento fuera del §4. Un argumento de novedad que descansa en una inclusión probada en un solo sentido es frágil si alguien pregunta. Análogo discreto conocido: el <em>potential-based reward shaping</em> de Ng, y ahí sí hay resultados de caracterización completa que conviene mirar. 🔴 <strong>SUBE a alta el 2026-08-05, y ya no es sospecha: hay evidencia en contra</strong> (<code>REF-11a</code>). El §3.2.1 de Pauwels–Henrion–Lasserre es el análogo determinista de este §5, y <strong>enumera tres familias de soluciones espurias, no una</strong>:</p>
+    <ul>
+      <li><strong>Variaciones totales</strong>, <span class="mate">$l=\operatorname{grad}g\cdot f$</span>, que están en el conjunto solución <strong>independientemente de los datos</strong>. Es literalmente <span class="mate">$q_\phi$</span> sin descuento y sin el término de segundo orden.</li>
+      <li class="alerta">🔴 <strong>Valores conservados</strong>: si <span class="mate">$g$</span> se anula en el soporte de <span class="mate">$\mu$</span>, entonces <span class="mate">$g^2$</span> también es solución. <strong>Esta familia no tiene análogo en el §5 de Junca</strong>, y no viene de la dinámica sino de la <strong>geometría del soporte de la ocupación</strong>. Avisan de que <em>«in practical examples there might be many such conserved values»</em>, por ejemplo si el estado vive en una subvariedad.</li>
+      <li><strong>Combinaciones cónicas convexas y límites uniformes</strong> de las anteriores, porque el conjunto de soluciones es un <strong>cono convexo cerrado</strong> (Teorema 3.2).</li>
+    </ul>
+    <p><strong>Consecuencia:</strong> la afirmación del §5 del v2, que el objeto identificable es la clase módulo <span class="mate">$q_\phi$</span>, <strong>es casi seguro incompleta</strong>. Lo que hay que hacer es buscar el análogo estocástico descontado de los valores conservados. ⚠️ Y su ejemplo del §5.2 lista cuatro familias que resuelven el mismo problema con <span class="mate">$\epsilon=0$</span>, o sea que el fenómeno es visible en dimensión uno.</p>
   </div>
 </li>
 <li class="tarea pendiente abrible" data-hecha="0">
@@ -737,8 +749,8 @@ window.MathJax={
     <p class="contexto alerta">🔴 <strong>Y el 2026-08-03 el asesor dio un encargo concreto que reordena esta lista:</strong> <em>«creo que ese sea como el primer reto: justificar bien este teorema 4.2»</em>. Es <code>REF-13</code>, va primero, y <strong>es anterior a elegir dirección</strong>: se le fue a preguntar cuál de las cinco del §11 atacar y lo que dio fue el prerrequisito que está por debajo de todas. Eso significa que <strong><code>REF-8</code> ya no espera a <code>P22</code> para arrancar</strong>.</p>
     <p class="contexto"><strong>Las preguntas abiertas viven en dos sitios y no se mezclan:</strong> las que dependen de su criterio, en <code>preguntas_junca/TODO.md</code>; las que responde el trabajo, en <code>preguntas_investigacion/TODO.md</code>.</p>
   </div>
-  <div class="barra"><div class="relleno" style="width:47%"></div></div>
-  <p class="cuenta">7 de 15 completadas</p>
+  <div class="barra"><div class="relleno" style="width:53%"></div></div>
+  <p class="cuenta">8 de 15 completadas</p>
   <ul class="tareas">
 <li class="tarea pendiente abrible" data-hecha="0">
   <button class="cabecera" type="button" aria-expanded="false">
@@ -900,15 +912,28 @@ window.MathJax={
     <p class="artefacto">Artefacto: <code>subproyectos/referencias/estado_del_arte.md</code></p>
   </div>
 </li>
-<li class="tarea pendiente abrible" data-hecha="0">
+<li class="tarea hecha abrible" data-hecha="1">
   <button class="cabecera" type="button" aria-expanded="false">
     <span class="casilla" aria-hidden="true"></span>
     <span class="ident">REF-11</span>
     <span class="titulo">Fichar los dos vecinos que encontró REF-9</span>
+    <span class="fecha">2026-08-05</span>
     <span class="flecha" aria-hidden="true"></span>
   </button>
   <div class="detalle" hidden>
-    <p>Por orden: <strong>Pauwels–Henrion–Lasserre 2016</strong> (<code>arXiv:1412.2277</code>), que es el urgente porque hay que confirmar si es determinista y <strong>cómo tratan la holgura complementaria sin exigir <span class="mate">$V\in C^2$</span></strong>, que es justo la grieta del borrador. Después <strong>Nakano 2023</strong>. Los dos hay que pedirlos por el circuito Mathpix.</p>
+    <p>Las dos preguntas urgentes con las que se abrió esta tarea <strong>están contestadas</strong>, y las dos respuestas sirven. 🔴 <strong>Pauwels–Henrion–Lasserre: NÚCLEO</strong>, y es el vecino más cercano por maquinaria. <strong>Sí es determinista</strong>, y ellos lo declaran como límite: <em>«we only deal with deterministic trajectories»</em>, así que <strong>el eje estocástico queda libre y lo declara libre el propio vecino</strong>. <strong>Y tratan la holgura complementaria sin exigir <span class="mate">$V\in C^2$</span> por una vía que no estaba en el mapa</strong>: no piden función de valor regular, piden una <strong>sucesión de certificados <span class="mate">$\mathcal C^1$</span> que verifiquen la optimalidad con precisión <span class="mate">$\epsilon$</span> arbitraria</strong>, y definen la solución como la intersección sobre todo <span class="mate">$\epsilon&gt;0$</span>. Ahora hay cuatro salidas documentadas a esa grieta, no dos.</p>
+    <ul>
+      <li><strong>Su Lema 2.3 es <code>I-14</code> con plantilla</strong>: dualidad fuerte sin brecha por Banach–Alaoglu, y el respaldo (Brezis 1–4) ya está dominado.</li>
+      <li><strong>Su §3.2.1 es evidencia contra <code>I-21</code></strong>: encuentra <strong>valores conservados</strong> además de las variaciones totales, o sea una familia de soluciones espurias que el §5 de Junca no contempla.</li>
+      <li class="hecho">✅ <strong>Y concluyen que hace falta un previo</strong>, <em>«requires the introduction of strong prior knowledge»</em>, que es exactamente lo que Junca aporta.</li>
+    </ul>
+    <p class="aviso">⚠️ <strong>Modo de lectura repartido:</strong> §2 y §3 se estudian; §4 y §5 se ojean, que son Moment-SOS y LMI, un mundo que este proyecto no va a usar. 🔴 <strong>Nakano: CONTEXTO, y estaba mal situado en el estado del arte.</strong> Figuraba como el vecino del eje estocástico que «demuestra buen planteamiento», y es cierto, pero <strong>lo que recupera es un solo escalar</strong>: el peso <span class="mate">$\theta$</span> del esfuerzo de control, con <span class="mate">$g$</span>, <span class="mate">$f$</span>, <span class="mate">$b$</span> y <span class="mate">$\sigma$</span> <strong>conocidas</strong>. Horizonte finito. Recuperar un número de una recta no es el problema de recuperar una función de un espacio de Sobolev. ✅ <strong>Y su conclusión es la mejor cita de la propuesta:</strong> declara como trabajo futuro <em>«the well-posedness when the function <span class="mate">$g$</span> or <span class="mate">$f$</span> is also unknown»</em>. El vecino estocástico <strong>declara nuestro problema como su trabajo futuro</strong>.</p>
+    <ul>
+      <li>Alimenta <code>P17</code>: da una definición operativa de «bien planteado» para el inverso estocástico, Hadamard sin existencia, con la condición de que el control óptimo sea interior y no nulo.</li>
+      <li>Su Ejemplo 3.1 es un contraejemplo mínimo de no identificabilidad, útil para motivar el previo.</li>
+    </ul>
+    <p><code>fichas/nakano_inverse_stochastic.md</code></p>
+    <p class="artefacto">Artefactos: <code>fichas/pauwels_henrion_lasserre_linear_conic.md</code> y</p>
   </div>
 </li>
 <li class="tarea pendiente abrible" data-hecha="0">
@@ -919,7 +944,7 @@ window.MathJax={
     <span class="flecha" aria-hidden="true"></span>
   </button>
   <div class="detalle" hidden>
-    <p><em>«Hay dos vertientes, dos escuelas: la escuela gringa con Bellman, y está la escuela [rusa?] con [Pontryagin?]»</em> [13:01]. La ruta del borrador es HJB, y <strong>es la que el asesor tiene más clara</strong>, pero dijo que hay que estar abierto. La otra lleva a sistemas acoplados hacia adelante y hacia atrás, y en estocástico a las <strong>Forward–Backward SDE</strong>. Dato operativo: <strong>Mauricio no ha estudiado FBSDE y Camilo sí</strong>. Antes de meterse, decidir con él si se explora o se descarta (va en <code>preguntas_junca/TODO.md</code>).</p>
+    <p><em>«Hay dos vertientes, dos escuelas: la escuela gringa con Bellman, y está la escuela [rusa?] con [Pontryagin?]»</em> [13:01]. La ruta del borrador es HJB, y <strong>es la que el asesor tiene más clara</strong>, pero dijo que hay que estar abierto. La otra lleva a sistemas acoplados hacia adelante y hacia atrás, y en estocástico a las <strong>Forward–Backward SDE</strong>. Dato operativo: <strong>Mauricio no ha estudiado FBSDE y Camilo sí</strong>. Antes de meterse, decidir con él si se explora o se descarta (va en <code>preguntas_junca/TODO.md</code>). ✅ <strong>Ya tiene punto de entrada localizado (2026-08-05, de <code>REF-11b</code>).</strong> Si se decide explorar, se entra por <strong>Nakano 2023</strong>, que recorre esa ruta para el problema inverso estocástico con principio del máximo y <strong>BSDE adjuntas de primer y segundo orden</strong>, citando a <strong>Yong &amp; Zhou</strong> como referencia de fondo. Está fichado y su <code>.mmd</code> está en <code>control/nakano_inverse_stochastic/</code>. ⚠️ <strong>Pero no se estudia antes de la decisión.</strong> Leer a Nakano exige BSDE, que es cero en el perfil, así que invertir ahí antes de que Junca diga si esta ruta se explora es gastar semanas en la puerta equivocada. La ficha se escribió sin ese aparato a propósito, y por eso se queda en <strong>contexto</strong>.</p>
   </div>
 </li>
 <li class="tarea pendiente abrible" data-hecha="0">
