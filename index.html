@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
 <title>Propuesta de tesis · TODO</title>
-<!-- GENERADO por web/build_todo.py el 2026-08-04. NO EDITAR A MANO: los TODO.md mandan, este archivo se reescribe. -->
+<!-- GENERADO por web/build_todo.py el 2026-08-05. NO EDITAR A MANO: los TODO.md mandan, este archivo se reescribe. -->
 <style>
 :root{
   --fondo:#fbfaf7; --papel:#fff; --tinta:#1c1a17; --suave:#6b6558;
@@ -135,12 +135,12 @@ window.MathJax={
 <header class="principal">
 <h1>Propuesta de tesis — control óptimo</h1>
 <p class="sub">Decidir y proponer un tema en control óptimo inverso, en 2–3 meses desde el 2026-07-25.</p>
-<p class="global"><strong>47</strong> de <strong>87</strong> tareas completadas en todo el proyecto.</p>
+<p class="global"><strong>50</strong> de <strong>94</strong> tareas completadas en todo el proyecto.</p>
 </header>
 <nav class="pestanas" role="tablist">
-<button data-slug="preguntas_junca" role="tab">Preguntas a Junca<span class="n">8/18</span></button>
-<button data-slug="preguntas_investigacion" role="tab">Preguntas de investigación<span class="n">0/18</span></button>
-<button data-slug="referencias" role="tab">referencias<span class="n">6/14</span></button>
+<button data-slug="preguntas_junca" role="tab">Preguntas a Junca<span class="n">8/21</span></button>
+<button data-slug="preguntas_investigacion" role="tab">Preguntas de investigación<span class="n">2/21</span></button>
+<button data-slug="referencias" role="tab">referencias<span class="n">7/15</span></button>
 <button data-slug="infra" role="tab">General<span class="n">16/20</span></button>
 </nav>
 <div class="controles">
@@ -156,8 +156,8 @@ window.MathJax={
     <p class="contexto"><strong>La otra lista existe y no es esta:</strong> <code>preguntas_investigacion</code>, que son las que <strong>no</strong> responde Mauricio sino el trabajo. Una pregunta se cierra aquí con una respuesta suya; allí, con una referencia o una demostración.</p>
     <p class="contexto">Clasificado el 2026-07-27 con el usuario, pregunta por pregunta. Las prioridades son <strong>propuesta del agente</strong> y se cambian sin ceremonia.</p>
   </div>
-  <div class="barra"><div class="relleno" style="width:44%"></div></div>
-  <p class="cuenta">8 de 18 completadas</p>
+  <div class="barra"><div class="relleno" style="width:38%"></div></div>
+  <p class="cuenta">8 de 21 completadas</p>
   <h3>Prioridad alta</h3>
   <ul class="tareas">
 <li class="tarea pendiente abrible" data-hecha="0">
@@ -284,6 +284,49 @@ window.MathJax={
     <p>En [13:01] dice que estudió <em>«la escuela de los principios máximos»</em> y acto seguido que Pontryagin lleva a otra cosa, lo que se contradice. Es una <strong>duda de transcripción</strong>, no de matemáticas. Puede que el usuario se acuerde y no haga falta gastarle una pregunta. Importa solo para saber a qué ruta puede acompañar de verdad. ✅ Medio resuelta al cerrar las dudas de audio del 2026-07-23: Whisper había oído bien y <strong>la contradicción era del agente</strong>. Él dice que estudió la escuela del principio del máximo, o sea la <strong>ruta B</strong>.</p>
   </div>
 </li>
+<li class="tarea pendiente abrible" data-hecha="0">
+  <button class="cabecera" type="button" aria-expanded="false">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">P25</span>
+    <span class="titulo">El §11 del v2 lista siete direcciones, no cinco. Las dos últimas, ¿siguen fuera de alcance?</span>
+    <span class="flecha" aria-hidden="true"></span>
+  </button>
+  <div class="detalle" hidden>
+    <p><strong>Propuesta del agente, 2026-08-05, al fichar el v2 (<code>REF-14</code>).</strong> Las direcciones del §11 vienen en <strong>dos bloques</strong>, y el segundo, de dos entradas, no estaba contado en ninguna parte del proyecto:</p>
+    <ul>
+      <li><em>«Replace the known expert occupation measure by an empirical estimate from trajectories and derive statistical error bounds»</em>, que es <code>I-17</code>.</li>
+      <li><em>«Explore structured costs, for example <span class="mate">$c(x,a)=q(x)+\ell(a)$</span> with known control penalty <span class="mate">$\ell$</span>, which may improve identifiability and numerical conditioning»</em>, que <strong>no está en ninguna lista todavía</strong>.</li>
+    </ul>
+    <p class="alerta">🔴 <strong>La primera choca de frente con el recorte del 2026-07-23</strong>, donde él sacó del alcance la estimación entera: <em>«conocemos todo, simplemente tenemos que resolver el problema de control inverso»</em>. Que la escriba como dirección propia no la devuelve al alcance, pero tampoco se puede suponer lo contrario. <strong>Por qué merece preguntarse y no deducirse:</strong> es exactamente el tipo de cosa que decide semanas de estudio, y el proyecto ya tiene la regla de que el alcance lo fija él. La segunda además es barata y podría ser buena: costos estructurados mejorarían <code>I-21</code>. ⚠️ Solapa con <code>P14-M</code>, que pregunta lo mismo sobre el trabajo futuro del <strong>paper discreto</strong>. Si se llevan las dos, van juntas.</p>
+  </div>
+</li>
+<li class="tarea pendiente abrible" data-hecha="0">
+  <button class="cabecera" type="button" aria-expanded="false">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">P26</span>
+    <span class="titulo">En el experimento del §9, ¿qué versión suave se usó, y por qué el experto y el aprendiz llevan temperaturas distintas?</span>
+    <span class="flecha" aria-hidden="true"></span>
+  </button>
+  <div class="detalle" hidden>
+    <p><strong>Propuesta del agente, 2026-08-05, al fichar el v2 (<code>REF-14</code>).</strong> Dos cosas que solo él sabe, porque son de su código:</p>
+    <ul>
+      <li><strong>Cuál de las dos.</strong> El §8.1 distingue <em>«a fully consistent entropic version [que] replaces the hard HJB minimum itself by the log-sum-exp soft minimum»</em> de usar Gibbs <em>«simply as a stabilization of the policy-selection step»</em>. <strong>Son dos objetos matemáticos distintos</strong>: el segundo deja la HJB dura, el primero cambia la ecuación y con ella el punto fijo entero. El §9 no dice cuál corre. Decide qué se estudia en <code>I-7</code>.</li>
+      <li><strong>Por qué <span class="mate">$\beta_E=20$</span> y <span class="mate">$\beta_A=15$</span>.</strong> Al ser distintas, el error de política no puede ir a cero ni con el costo recuperado exacto. Puede ser deliberado, y sería interesante: modelaría un <strong>experto subóptimo</strong>, que es la premisa del trabajo. O puede ser incidental. Cambia qué se puede afirmar del experimento, que es <code>I-19</code>.</li>
+    </ul>
+    <p><strong>Coste bajo</strong>: son dos preguntas factuales, no conceptuales. Buenas para pasillo o correo, no para gastar tiempo de reunión.</p>
+  </div>
+</li>
+<li class="tarea pendiente abrible" data-hecha="0">
+  <button class="cabecera" type="button" aria-expanded="false">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">P27</span>
+    <span class="titulo">¿Caracterizar la clase identificable completa del §5 es parte del trabajo, o le basta la inclusión?</span>
+    <span class="flecha" aria-hidden="true"></span>
+  </button>
+  <div class="detalle" hidden>
+    <p><strong>Propuesta del agente, 2026-08-05, al fichar el v2 (<code>REF-14</code>).</strong> El §5 prueba que <span class="mate">$c$</span> y <span class="mate">$c+q_\phi$</span> dan los mismos optimizadores, con <span class="mate">$q_\phi=\rho\phi-\mathcal L^a\phi$</span>, y concluye que el objeto identificable es <em>«an equivalence class of costs modulo functions of the form (30)»</em>. <strong>La inclusión recíproca no se prueba ni se afirma</strong>, o sea que podría haber más ambigüedad de la que esa clase captura. Es <code>I-21</code>. <strong>Por qué es pregunta suya y no solo trabajo:</strong> de este argumento cuelga la justificación de por qué el previo es necesario y no un truco, que es material de la propuesta. Saber si él lo considera cerrado, folclore conocido del <em>reward shaping</em>, o un hueco real, ahorra semanas en la dirección equivocada.</p>
+  </div>
+</li>
   </ul>
   <h3>Respondidas</h3>
   <ul class="tareas">
@@ -398,9 +441,10 @@ window.MathJax={
     <p class="contexto"><strong>Los identificadores son etiquetas, no orden.</strong> Dentro de cada bloque las preguntas van encadenadas por dependencia, no por número.</p>
     <p class="contexto"><strong>Una pregunta de aquí se cierra con una referencia o con una demostración</strong>, no con una opinión. Cuando se cierre, se mueve a «Respondidas» con el artefacto que la resolvió.</p>
     <p class="contexto">Las de <strong>prioridad alta</strong> están en el camino crítico: sin ellas no hay enunciado de tesis.</p>
+    <p class="contexto alerta">🔴 <strong>Revisadas contra el v2 del borrador el 2026-08-05</strong> (<code>REF-14</code>, <code>fichas/junca_fixed_point_continuo_v2.md</code>). El v2 pasó de cero teoremas a dos resultados demostrados, así que varias de estas preguntas cambian de estado y <strong>dos se cierran</strong>. Lo que hay que retener: el Teorema 4.2 del v2 da existencia y unicidad <strong>esquivando</strong> la continuidad del selector de políticas y la HJB, así que lo que antes era «demostrar el punto fijo» hoy es <strong>justificar sus hipótesis sobre <span class="mate">$\mathcal M$</span></strong>. Cada entrada tocada lo dice en su detalle.</p>
   </div>
-  <div class="barra"><div class="relleno" style="width:0%"></div></div>
-  <p class="cuenta">0 de 18 completadas</p>
+  <div class="barra"><div class="relleno" style="width:10%"></div></div>
+  <p class="cuenta">2 de 21 completadas</p>
   <h3>Prioridad alta · Las dos mitades del trabajo</h3>
   <ul class="tareas">
 <li class="tarea pendiente abrible" data-hecha="0">
@@ -422,7 +466,13 @@ window.MathJax={
     <span class="flecha" aria-hidden="true"></span>
   </button>
   <div class="detalle" hidden>
-    <p>Procedencia: de REF-3 §4.1. Es la mitad de <strong>demostrar</strong>, y la ficha lo dice sin rodeos: el borrador <em>«promete &quot;a fixed-point formulation&quot; y entrega exactamente la formulación. No hay existencia, no hay unicidad, no hay contractividad, no hay convergencia»</em>. 🔴 <strong>Ninguna de las dos mitades se puede atacar sin la otra</strong>: un teorema de punto fijo se demuestra sobre un enunciado, y el enunciado solo se sabe correcto si algo se puede demostrar sobre él. De ahí que <code>I-3</code> e <code>I-10</code> vayan juntas y no en secuencia. Todas las de abajo son hipótesis que Kakutani o Schauder van a pedir.</p>
+    <p>Procedencia: de REF-3 §4.1. Es la mitad de <strong>demostrar</strong>, y la ficha lo dice sin rodeos: el borrador <em>«promete &quot;a fixed-point formulation&quot; y entrega exactamente la formulación. No hay existencia, no hay unicidad, no hay contractividad, no hay convergencia»</em>. 🔴 <strong>Ninguna de las dos mitades se puede atacar sin la otra</strong>: un teorema de punto fijo se demuestra sobre un enunciado, y el enunciado solo se sabe correcto si algo se puede demostrar sobre él. De ahí que <code>I-3</code> e <code>I-10</code> vayan juntas y no en secuencia. Todas las de abajo son hipótesis que Kakutani o Schauder van a pedir. 🔴 <strong>MEDIO RESPONDIDA por el propio autor en el v2 (2026-08-05), y por una vía que nadie había previsto.</strong> El Teorema 4.2 da <strong>existencia y unicidad</strong>, y ni Kakutani ni Schauder aparecen: la ruta es análisis convexo puro. Se minimiza el problema reducido estrictamente convexo (23) sobre <span class="mate">$\mathcal M$</span> y con su minimizador se <strong>construye</strong> un punto silla, del que salen a la vez la dualidad minimax fuerte y la relación de punto fijo <span class="mate">$c\in\mathcal F(c)$</span>. <strong>Lo que sigue abierto de esta pregunta, y hay que decirlo con precisión:</strong></p>
+    <ul>
+      <li><strong>Contractividad: nada.</strong> No se menciona.</li>
+      <li><strong>Convergencia del esquema iterativo: nada</strong>, ni de Picard, ni con el amortiguamiento <span class="mate">$\theta$</span> del §8, ni del límite <span class="mate">$\beta\to\infty$</span>. El propio §11 pide desarrollar esquemas convergentes, o sea que él tampoco los tiene.</li>
+      <li><strong>Y la existencia es condicional</strong>: descansa entera en que <span class="mate">$\mathcal M$</span> sea no vacío, convexo y débilmente compacto, que es <code>I-12</code> y no se prueba.</li>
+    </ul>
+    <p class="aviso">⚠️ <strong>Reformulación de la pregunta, entonces:</strong> ya no es «¿hay teorema?» sino <strong>«¿son ciertas sus hipótesis, y qué falta para el esquema numérico?»</strong>. Lo primero es <code>REF-13</code>; lo segundo sigue aquí.</p>
   </div>
 </li>
   </ul>
@@ -436,18 +486,7 @@ window.MathJax={
     <span class="flecha" aria-hidden="true"></span>
   </button>
   <div class="detalle" hidden>
-    <p>Procedencia: era P5; de REF-3 §4.2 y REF-1 §5.1. El usuario, preguntado si esto era investigación y no consulta: <em>«claramente»</em>. 🔴 <strong>Es la grieta más profunda del borrador y el cuello de botella de todo el plan.</strong> Junca escribe <span class="mate">$\mathcal L^aV$</span> puntualmente, lo que presupone <span class="mate">$V\in C^2$</span>, y la HJB de control estocástico en general <strong>solo</strong> tiene solución de viscosidad. Si <span class="mate">$V$</span> es solo viscosa, hay que reinterpretar la desigualdad <span class="mate">$c+\mathcal L^aV-\rho V\ge0$</span>, la condición de soporte, y con ellas <strong>el conjunto inverso-factible entero</strong>. Con qué se ataca: <strong>Touzi 6–7</strong>, y <strong>Fleming &amp; Soner V</strong> para el fondo. Puerta de entrada barata a la caracterización variacional: <code>REF-6</code>.</p>
-  </div>
-</li>
-<li class="tarea pendiente abrible" data-hecha="0">
-  <button class="cabecera" type="button" aria-expanded="false">
-    <span class="casilla" aria-hidden="true"></span>
-    <span class="ident">I-11</span>
-    <span class="titulo">El mapa de punto fijo es <strong>multivaluado</strong>: <span class="mate">$\pi_A(c)\in\mathrm{Opt}(c)$</span> es una selección de un argmin que puede no ser único ni continuo en <span class="mate">$c$</span>. ¿Existe una selección medible y continua?</span>
-    <span class="flecha" aria-hidden="true"></span>
-  </button>
-  <div class="detalle" hidden>
-    <p>Procedencia: de REF-3 §4.3 y REF-1 §5.8. 🔴 <strong>Es exactamente la hipótesis que pide cualquier teorema de punto fijo</strong>, y el borrador escribe <em>«select an optimal apprentice policy»</em> y sigue. En el paper discreto el algoritmo esquiva el asunto promediando iterados, recurso que no sobrevive al continuo. <strong>Candidato a solución dentro del propio borrador:</strong> la política suave de Gibbs de su §6 regulariza justo esta patología. Ver <code>I-7</code>, que es esa lectura, y que de confirmarse convierte a <code>I-11</code> en un límite <span class="mate">$\beta\to\infty$</span> en vez de en un problema de selección. ⚠️ Que Gibbs regularice esto <strong>es lectura propia, no afirmación del borrador</strong>. Hay que verificarlo antes de apoyarse en ello. Misma patología, en otro contexto: <code>fichas/posible_proyecto.md</code> y <code>I-8</code>.</p>
+    <p>Procedencia: era P5; de REF-3 §4.2 y REF-1 §5.1. El usuario, preguntado si esto era investigación y no consulta: <em>«claramente»</em>. 🔴 <strong>Es la grieta más profunda del borrador y el cuello de botella de todo el plan.</strong> Junca escribe <span class="mate">$\mathcal L^aV$</span> puntualmente, lo que presupone <span class="mate">$V\in C^2$</span>, y la HJB de control estocástico en general <strong>solo</strong> tiene solución de viscosidad. Si <span class="mate">$V$</span> es solo viscosa, hay que reinterpretar la desigualdad <span class="mate">$c+\mathcal L^aV-\rho V\ge0$</span>, la condición de soporte, y con ellas <strong>el conjunto inverso-factible entero</strong>. Con qué se ataca: <strong>Touzi 6–7</strong>, y <strong>Fleming &amp; Soner V</strong> para el fondo. Puerta de entrada barata a la caracterización variacional: <code>REF-6</code>. 🟢 <strong>BAJA de urgencia el 2026-08-05, contra el v2, y el párrafo de arriba hay que leerlo con esta corrección encima.</strong> Dejó de ser el cuello de botella: <strong>el §4 del v2 no toca la HJB en ningún punto</strong>. Existencia, unicidad y punto fijo salen del análisis convexo sobre medidas de ocupación, así que la regularidad de <span class="mate">$V$</span> ya no puede tumbar el enunciado. Coincide con lo que el asesor confirmó en <code>P16b</code> el 2026-08-03: en el nuevo planteamiento no se usa la ecuación con <span class="mate">$V$</span>. ⚠️ <strong>No se cierra, y no debe cerrarse.</strong> La HJB sigue viva en el <strong>§6</strong> (el sistema de EDP, que es donde se escribe <span class="mate">$\mathcal L^aV$</span> puntualmente) y en el <strong>§8–§9</strong> (los numéricos, que resuelven una HJB por iteración). O sea que la grieta se desplazó del enunciado a la mitad computacional, que es justo la que <code>I-18</code> y <code>I-15</code> cubren. Sigue siendo prerrequisito de esas dos. <strong>Consecuencia operativa:</strong> estudiar viscosidad ahora ya no está en el camino crítico. <code>REF-7</code> sí.</p>
   </div>
 </li>
 <li class="tarea pendiente abrible" data-hecha="0">
@@ -458,7 +497,7 @@ window.MathJax={
     <span class="flecha" aria-hidden="true"></span>
   </button>
   <div class="detalle" hidden>
-    <p>Procedencia: de REF-3 §4.4 y REF-1 §5.3. En discreto es la Proposición 1 de Puterman y es gratis. En continuo es <strong>Kurtz–Stockbridge</strong>, y trae hipótesis que hay que verificar en cada modelo: compacidad débil-\<em>, tensión, buen comportamiento del generador. El borrador lo usa sin enunciarlo, y sin él la igualdad <span class="mate">$\max_{\eta\in\mathcal M}\{\int c\,d\eta_E-\int c\,d\eta\}=J_c(\pi_E)-\inf_\pi J_c(\pi)$</span> <strong>no está justificada</strong>. 🔴 <strong>Justifica <code>REF-7</code> por sí solo</strong>, y <code>REF-7</code> está bloqueado porque Kurtz–Stockbridge 1998 es el único hueco que no se ha podido conseguir. Es la dependencia externa más dura de esta lista. 🔴 <strong>SUBE el 2026-08-03, y ahora es la que sostiene el encargo del asesor.</strong> <code>REF-13</code> (justificar el Teorema 4.2) pide que <span class="mate">$\mathcal M$</span> sea <strong>no vacío, convexo y débilmente compacto</strong> en <span class="mate">$\mathcal H^*$</span>, así que esta pregunta deja de ser una verificación de fondo y pasa a ser <strong>la hipótesis que hay que probar</strong>. Y el propio asesor abrió la grieta en voz alta: en discreto las políticas deterministas son <strong>vértices del poliedro</strong>, y en continuo </em>«no sé si esa es la intuición de vértice […] seguramente es un conjunto convexo, pero la intuición de vértice, o de punto de frontera, ahí…»* [04:37]. La vía que nombra son los <strong>controles relajados</strong>, que menciona tres veces ([00:40], [03:47], [05:10]).</p>
+    <p>Procedencia: de REF-3 §4.4 y REF-1 §5.3. En discreto es la Proposición 1 de Puterman y es gratis. En continuo es <strong>Kurtz–Stockbridge</strong>, y trae hipótesis que hay que verificar en cada modelo: compacidad débil-\<em>, tensión, buen comportamiento del generador. El borrador lo usa sin enunciarlo, y sin él la igualdad <span class="mate">$\max_{\eta\in\mathcal M}\{\int c\,d\eta_E-\int c\,d\eta\}=J_c(\pi_E)-\inf_\pi J_c(\pi)$</span> <strong>no está justificada</strong>. 🔴 <strong>Justifica <code>REF-7</code> por sí solo</strong>, y <code>REF-7</code> está bloqueado porque Kurtz–Stockbridge 1998 es el único hueco que no se ha podido conseguir. Es la dependencia externa más dura de esta lista. 🔴 <strong>SUBE el 2026-08-03, y ahora es la que sostiene el encargo del asesor.</strong> <code>REF-13</code> (justificar el Teorema 4.2) pide que <span class="mate">$\mathcal M$</span> sea <strong>no vacío, convexo y débilmente compacto</strong> en <span class="mate">$\mathcal H^*$</span>, así que esta pregunta deja de ser una verificación de fondo y pasa a ser <strong>la hipótesis que hay que probar</strong>. Y el propio asesor abrió la grieta en voz alta: en discreto las políticas deterministas son <strong>vértices del poliedro</strong>, y en continuo </em>«no sé si esa es la intuición de vértice […] seguramente es un conjunto convexo, pero la intuición de vértice, o de punto de frontera, ahí…»<em> [04:37]. La vía que nombra son los <strong>controles relajados</strong>, que menciona tres veces ([00:40], [03:47], [05:10]). 🔴 <strong>Y SUBE OTRA VEZ el 2026-08-05, con el v2 leído: hoy es la pregunta más importante de esta lista.</strong> El §2.2 del v2 sigue definiendo <span class="mate">$\mathcal M$</span> como </em>«the nonnegative measures satisfying (11) together with any required boundary or integrability conditions»<em>, sin precisar cuáles. Pero ahora <strong>el Teorema 4.2 asume las tres propiedades y construye todo encima</strong>, así que esto dejó de ser una verificación de fondo: <strong>es el único punto donde el documento entero se puede caer.</strong> Todas las demás de esta lista tienen dónde apoyarse mientras esta no se resuelva; el teorema no. ⚠️ <strong>Lectura propia de la ficha <code>REF-14</code>, a verificar antes de usarla:</strong> la convexidad parece barata (restricción lineal más no negatividad); la compacidad débil no, y como <span class="mate">$\mathcal H^*$</span> es de Hilbert y por tanto reflexivo, débil y débil-\</em> coinciden, así que lo que hay que probar aparte es que <span class="mate">$\mathcal M$</span> sea <strong>cerrado</strong> en esa topología y que la no negatividad como medida sobreviva al límite.</p>
   </div>
 </li>
 <li class="tarea pendiente abrible" data-hecha="0">
@@ -480,7 +519,12 @@ window.MathJax={
     <span class="flecha" aria-hidden="true"></span>
   </button>
   <div class="detalle" hidden>
-    <p>Procedencia: de REF-3 §4.7 y REF-1 §5.2, la parte que queda abierta. Lo que el borrador <strong>sí</strong> resuelve, y es su aportación técnica: copiar <span class="mate">$\|c-\hat c\|_{L^2}^2$</span> da un Euler–Lagrange <span class="mate">$c=\hat c+\frac1\alpha(\eta_A-\eta_E)$</span> donde el segundo término es una <strong>medida singular</strong>, no una función, porque la ocupación de una política determinista se concentra sobre su grafo. Cambiando a la discrepancia de Sobolev aparece el suavizante <span class="mate">$(I-\kappa\Delta_{x,a})^{-1}$</span>, que convierte la medida en función. <strong>Lo que queda abierto:</strong> ese suavizante aplicado a una masa puntual da un potencial de Bessel cuya regularidad <strong>depende de la dimensión <span class="mate">$d+m$</span></strong>. Si <span class="mate">$\eta_A$</span> es singular y <span class="mate">$d+m$</span> es grande, no está claro que el resultado caiga en el espacio donde <span class="mate">$D(c,\hat c)$</span> es finito, y entonces <strong>el mapa de punto fijo no se aplicaría a sí mismo</strong>, que es la hipótesis mínima de <code>I-10</code>. ✅ <strong>Dejó de ser conjetura propia el 2026-07-26</strong>, al fichar <code>REF-2</code>: la presentación de UNIBO la trae como pregunta de investigación explícita del asesor, <em>«what Sobolev spaces are natural for <span class="mate">$c$</span>»</em>. ⚠️ Por eso mismo aparece <strong>también</strong> en la lista de él, dentro de <code>P17</code>. No es duplicación: allí se le pregunta si tiene una respuesta o una intuición, aquí se demuestra. Respaldo escrito que ya existe: el apéndice de operadores del compendio viejo desarrolla Sobolev y regularidad elíptica desde cero.</p>
+    <p>Procedencia: de REF-3 §4.7 y REF-1 §5.2, la parte que queda abierta. Lo que el borrador <strong>sí</strong> resuelve, y es su aportación técnica: copiar <span class="mate">$\|c-\hat c\|_{L^2}^2$</span> da un Euler–Lagrange <span class="mate">$c=\hat c+\frac1\alpha(\eta_A-\eta_E)$</span> donde el segundo término es una <strong>medida singular</strong>, no una función, porque la ocupación de una política determinista se concentra sobre su grafo. Cambiando a la discrepancia de Sobolev aparece el suavizante <span class="mate">$(I-\kappa\Delta_{x,a})^{-1}$</span>, que convierte la medida en función. <strong>Lo que queda abierto:</strong> ese suavizante aplicado a una masa puntual da un potencial de Bessel cuya regularidad <strong>depende de la dimensión <span class="mate">$d+m$</span></strong>. Si <span class="mate">$\eta_A$</span> es singular y <span class="mate">$d+m$</span> es grande, no está claro que el resultado caiga en el espacio donde <span class="mate">$D(c,\hat c)$</span> es finito, y entonces <strong>el mapa de punto fijo no se aplicaría a sí mismo</strong>, que es la hipótesis mínima de <code>I-10</code>. ✅ <strong>Dejó de ser conjetura propia el 2026-07-26</strong>, al fichar <code>REF-2</code>: la presentación de UNIBO la trae como pregunta de investigación explícita del asesor, <em>«what Sobolev spaces are natural for <span class="mate">$c$</span>»</em>. ⚠️ Por eso mismo aparece <strong>también</strong> en la lista de él, dentro de <code>P17</code>. No es duplicación: allí se le pregunta si tiene una respuesta o una intuición, aquí se demuestra. Respaldo escrito que ya existe: el apéndice de operadores del compendio viejo desarrolla Sobolev y regularidad elíptica desde cero. 🔴 <strong>Y en el v2 ya es sección suya, el §3.1 (2026-08-05).</strong> Deja de ser un hueco que detectamos nosotros y pasa a ser una <strong>disyuntiva que él plantea y no resuelve</strong>, entre dos regímenes que dice incompatibles en general:</p>
+    <ul>
+      <li>**(i) <em>Measure formulation</em>.<strong> <span class="mate">$\mathcal H\hookrightarrow C(\Omega\times A)$</span>, por ejemplo <span class="mate">$H^s$</span> con <span class="mate">$s&gt;(d+m)/2$</span> o un RKHS; entonces toda medida finita con signo cae en <span class="mate">$\mathcal H^*$</span>. </strong>Es el régimen que exige el Teorema 4.2.**</li>
+      <li>**(ii) <em>Density formulation</em>.** Si las ocupaciones tienen densidad <span class="mate">$L^2$</span>, basta <span class="mate">$H^1$</span> con emparejamiento <span class="mate">$L^2$</span>: <em>«the regime used in the PDE and numerical formulas below»</em>, o sea <strong>el §6, el §8 y el §9</strong>.</li>
+    </ul>
+    <p class="alerta">🔴 <strong>Esa tensión es el corazón de <code>REF-13</code>:</strong> el teorema vive en (i) y el resto del documento en (ii). Y el §11 la abre como dirección propia, <em>«characterize when occupation measures possess densities regular enough for the <span class="mate">$H^1$</span> PDE system, and otherwise work directly in <span class="mate">$\mathcal H^*$</span>»</em>. ✅ <strong>Lo que el v2 sí arregla, y era la mitad práctica de esta pregunta:</strong> la ecuación del costo se escribe ahora en <strong>forma débil</strong> (38), <em>«most safely interpreted weakly […] This avoids writing a distribution-valued right-hand side as an ordinary function»</em>. La objeción del potencial de Bessel sigue en pie para el régimen (ii), pero ya no es una errata del documento.</p>
   </div>
 </li>
 <li class="tarea pendiente abrible" data-hecha="0">
@@ -505,7 +549,40 @@ window.MathJax={
     <span class="flecha" aria-hidden="true"></span>
   </button>
   <div class="detalle" hidden>
-    <p>Procedencia: de REF-3 §4.5 y REF-1 §5.4. El paper discreto usa dualidad de LP finito, donde no hay brecha, y el borrador afirma que el dual del LP sobre medidas <em>«es precisamente la desigualdad HJB»</em> sin discutirlo. <strong>En dimensión infinita eso no es gratis</strong>: hace falta un teorema tipo Sion con compacidad que nadie ha verificado. Es prerrequisito de <code>I-4</code> y coartada de <code>I-10</code>: si hay brecha, el objeto sobre el que se busca el punto fijo no es el que se cree.</p>
+    <p>Procedencia: de REF-3 §4.5 y REF-1 §5.4. El paper discreto usa dualidad de LP finito, donde no hay brecha, y el borrador afirma que el dual del LP sobre medidas <em>«es precisamente la desigualdad HJB»</em> sin discutirlo. <strong>En dimensión infinita eso no es gratis</strong>: hace falta un teorema tipo Sion con compacidad que nadie ha verificado. Es prerrequisito de <code>I-4</code> y coartada de <code>I-10</code>: si hay brecha, el objeto sobre el que se busca el punto fijo no es el que se cree. 🟡 <strong>MEDIO CERRADA en el v2 (2026-08-05), y hay que separar dos dualidades que se confunden con facilidad.</strong></p>
+    <ul>
+      <li><strong>La del problema INVERSO: demostrada, y bien.</strong> El §4.1 escribe explícitamente <em>«At this stage we do not assume that the infimum and supremum can be interchanged»</em>, elimina <span class="mate">$c$</span> a <span class="mate">$\eta$</span> fija, y obtiene la igualdad minimax (28) <strong>como consecuencia</strong> de construir el punto silla. La Observación 4.3 contrasta con la ruta de Sion, que era la que esta pregunta daba por necesaria, y explica por qué prefiere la suya: es constructiva. O sea que la vía de ataque que aquí se suponía ya no es la única ni la mejor.</li>
+      <li><strong>La del problema DIRECTO: sigue abierta, y él la cuenta como pendiente.</strong> El §2.2 llama <em>formal</em> al dual (13), igual que el v1, y el §11 <strong>abre</strong> su lista pidiendo <em>«establish the forward occupation-measure LP and HJB duality under the precise boundary conditions and regularity assumptions»</em>.</li>
+    </ul>
+    <p><strong>Lo que queda aquí es la segunda</strong>, que es la que enlaza con <code>I-6</code>.</p>
+  </div>
+</li>
+<li class="tarea pendiente abrible" data-hecha="0">
+  <button class="cabecera" type="button" aria-expanded="false">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">I-20</span>
+    <span class="titulo"><strong>¿Es lícito Danskin aquí?</strong> El §7.1 del v2 deriva <span class="mate">$\partial\operatorname{Gap}_E(c)=\{\eta_E-\eta:\eta\in\operatorname{Opt}(c)\}$</span> invocándolo por su nombre, sin enunciado ni referencia.</span>
+    <span class="flecha" aria-hidden="true"></span>
+  </button>
+  <div class="detalle" hidden>
+    <p>Procedencia: de REF-14 §4, «lo que el v2 no prueba», punto 3. <strong>Por qué no es pedantería.</strong> De ese subdiferencial cuelga la inclusión monótona (44), que es la cuarta dirección del §11 y la que el perfil señala como la más accesible para el usuario. Si el paso no es lícito tal cual, la dirección entera se apoya en aire. <strong>Lo que hay que comprobar</strong>, y es donde suelen estar las hipótesis:</p>
+    <ul>
+      <li>Es <strong>dimensión infinita</strong>, y las versiones usuales de Danskin se enuncian sobre compactos en espacios más amables.</li>
+      <li><span class="mate">$\operatorname{Opt}(c)$</span> <strong>no es unitario</strong> en general, que es justo la gracia del planteamiento del v2. La fórmula con el conjunto entero pide la versión de máximo sobre un conjunto de optimizadores, no la clásica.</li>
+      <li>El propio documento se cubre a medias: escribe <em>«when the optimizer set is attained»</em>, o sea que ya sabe que hace falta algo.</li>
+    </ul>
+    <p class="aviso">⚠️ El v2 <strong>no tiene bibliografía</strong>, así que la referencia hay que buscarla fuera. Candidato natural: el aparato convexo de Bauschke &amp; Combettes, del que el usuario tiene apuntes propios, aunque paran antes de esto.</p>
+  </div>
+</li>
+<li class="tarea pendiente abrible" data-hecha="0">
+  <button class="cabecera" type="button" aria-expanded="false">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">I-21</span>
+    <span class="titulo"><strong>¿Es la clase identificable exactamente <span class="mate">$\{q_\phi\}$</span>?</strong> El §5 del v2 prueba una sola dirección del <em>reward shaping</em> continuo.</span>
+    <span class="flecha" aria-hidden="true"></span>
+  </button>
+  <div class="detalle" hidden>
+    <p>Procedencia: de REF-14 §4, «lo que el v2 no prueba», punto 2. Lo que el v2 <strong>sí</strong> demuestra, y es contribución nueva suya: con <span class="mate">$q_\phi(x,a):=\rho\phi(x)-\mathcal L^a\phi(x)$</span>, toda <span class="mate">$\eta\in\mathcal M$</span> cumple <span class="mate">$\int q_\phi\,d\eta=\int_\Omega\phi\,d\nu_0$</span>, que <strong>no depende de la política</strong>; luego <span class="mate">$c$</span> y <span class="mate">$c+q_\phi$</span> generan los mismos optimizadores directos. <strong>Lo que no demuestra ni afirma:</strong> que no haya más ambigüedad, o sea que la clase identificable sea <strong>exactamente</strong> esa y no mayor. El documento salta de «estas transformaciones no cambian nada» a <em>«the identifiable object is therefore an equivalence class of costs modulo functions of the form (30)»</em>. 🔴 <strong>Importa para la propuesta, y por partida doble.</strong> Es el argumento limpio de <strong>por qué el previo no es un truco de regularización</strong> sino la respuesta a una no identificabilidad intrínseca, y eso es lo más citable del documento fuera del §4. Un argumento de novedad que descansa en una inclusión probada en un solo sentido es frágil si alguien pregunta. Análogo discreto conocido: el <em>potential-based reward shaping</em> de Ng, y ahí sí hay resultados de caracterización completa que conviene mirar.</p>
   </div>
 </li>
 <li class="tarea pendiente abrible" data-hecha="0">
@@ -527,7 +604,7 @@ window.MathJax={
     <span class="flecha" aria-hidden="true"></span>
   </button>
   <div class="detalle" hidden>
-    <p>Procedencia: era P7. El borrador la mete <em>«por estabilidad numérica»</em> en su §6, pero de paso <strong>regulariza la patología de <code>I-11</code></strong>, que es justo lo que impide aplicar un teorema de punto fijo. Puede que el camino sea estudiar el mapa suavizado, y eso sería contribución propia. Sube a alta en cuanto <code>I-11</code> confirme que no hay selección continua por la vía directa.</p>
+    <p>Procedencia: era P7. El borrador la mete <em>«por estabilidad numérica»</em> en su §6, pero de paso <strong>regulariza la patología de <code>I-11</code></strong>, que es justo lo que impide aplicar un teorema de punto fijo. Puede que el camino sea estudiar el mapa suavizado, y eso sería contribución propia. Sube a alta en cuanto <code>I-11</code> confirme que no hay selección continua por la vía directa. ⚠️ <strong>Esa condición de ascenso ya no aplica (2026-08-05).</strong> <code>I-11</code> se cerró por la vía contraria: el v2 no busca selección continua, la esquiva. Así que <strong>Gibbs pierde su papel de parche</strong> de la patología del argmin, que era la razón por la que esta pregunta iba a subir. ✅ <strong>Pero la pregunta original sí la responde el v2, y la respuesta es &quot;las dos cosas, y son distintas&quot;</strong> (§8.1): <em>«A fully consistent entropic version replaces the hard HJB minimum itself by the log-sum-exp soft minimum. In computations, one may also use (49) simply as a stabilization of the policy-selection step and increase <span class="mate">$\beta$</span> gradually.»</em> 🔴 <strong>Lo que queda abierto, y es lo interesante:</strong> son <strong>dos objetos matemáticos diferentes</strong> y el documento no dice cuál usa en el §9. Suavizar solo el selector deja la HJB dura; suavizar el mínimo de la HJB cambia la ecuación, y entonces el punto fijo entero es otro. <strong>Decidir cuál se estudia, y si el límite <span class="mate">$\beta\to\infty$</span> recupera el problema original, es contribución propia.</strong> Enlaza con <code>I-18</code>. ⚠️ Y el §9 corre con <strong><span class="mate">$\beta_E=20$</span> para el experto y <span class="mate">$\beta_A=15$</span> para el aprendiz</strong>, o sea temperaturas distintas: ver <code>I-19</code>.</p>
   </div>
 </li>
 <li class="tarea pendiente abrible" data-hecha="0">
@@ -549,7 +626,7 @@ window.MathJax={
     <span class="flecha" aria-hidden="true"></span>
   </button>
   <div class="detalle" hidden>
-    <p>Procedencia: de REF-3 §4.10 y REF-1 §5.5. Tensión real que conviene nombrar en la propuesta: la línea discreta se vendía explícitamente como <em>«sin RL como subrutina en un bucle interno»</em>, que era su crítica a Ng–Russell, Ratliff y Ziebart. El esquema de la §6 del borrador <strong>resuelve una HJB completa en cada iteración</strong>. El cambio tiene motivo, y está documentado: la cota <span class="mate">$\mathcal O(\alpha^2|\mathcal S|^3|\mathcal A|^2/\epsilon^2)$</span> del SMD <strong>diverge</strong> al refinar la malla, y su geometría (juego <span class="mate">$\ell_\infty$</span>–<span class="mate">$\ell_1$</span>, paso entrópico sobre el símplex) no tiene análogo en un espacio de medidas. O sea que «discretizar y correr SMD» no es camino, y el punto fijo con resolvedores de EDP es una respuesta coherente. Pero eso es explicar el coste, no eliminarlo.</p>
+    <p>Procedencia: de REF-3 §4.10 y REF-1 §5.5. Tensión real que conviene nombrar en la propuesta: la línea discreta se vendía explícitamente como <em>«sin RL como subrutina en un bucle interno»</em>, que era su crítica a Ng–Russell, Ratliff y Ziebart. El esquema de la §6 del borrador <strong>resuelve una HJB completa en cada iteración</strong>. El cambio tiene motivo, y está documentado: la cota <span class="mate">$\mathcal O(\alpha^2|\mathcal S|^3|\mathcal A|^2/\epsilon^2)$</span> del SMD <strong>diverge</strong> al refinar la malla, y su geometría (juego <span class="mate">$\ell_\infty$</span>–<span class="mate">$\ell_1$</span>, paso entrópico sobre el símplex) no tiene análogo en un espacio de medidas. O sea que «discretizar y correr SMD» no es camino, y el punto fijo con resolvedores de EDP es una respuesta coherente. Pero eso es explicar el coste, no eliminarlo. ✅ <strong>Vía nueva y concreta, del §7.1 del v2 (2026-08-05).</strong> Por Danskin, <span class="mate">$\partial\operatorname{Gap}_E(c)=\{\eta_E-\eta:\eta\in\operatorname{Opt}(c)\}$</span>, así que el problema inverso equivale a la <strong>inclusión monótona</strong> <span class="mate">$0\in\alpha R(c-\hat c)+\partial\operatorname{Gap}_E(c)$</span> (44). Y el propio documento saca la consecuencia algorítmica: eso abre **proximal, <em>forward-backward</em> y primal-dual**, y el §11 pide <em>«develop convergent operator-splitting or primal-dual algorithms for the monotone inclusion (44), rather than relying only on Picard iteration»</em>. 🔴 <strong>O sea que el bucle interno tiene por fin una alternativa nombrada</strong>, y no es «buscar un análogo de un solo bucle» a ciegas. Esta es la cuarta dirección del §11, la que <code>perfil/formacion.md</code> §5 señala como la mejor de las cinco para el usuario, <strong>pero por poco</strong>: ancla el subdiferencial y el operador proximal de Beck, y <strong>no</strong> ancla operadores maximales monótonos ni resolvente. Antes de tomar esta vía hay que estudiar eso, y no está estudiado.</p>
   </div>
 </li>
 <li class="tarea pendiente abrible" data-hecha="0">
@@ -580,23 +657,12 @@ window.MathJax={
 <li class="tarea pendiente abrible" data-hecha="0">
   <button class="cabecera" type="button" aria-expanded="false">
     <span class="casilla" aria-hidden="true"></span>
-    <span class="ident">I-16</span>
-    <span class="titulo"><strong>Fijar la convención de normalización</strong> entre el paper y el borrador, antes de comparar cualquier constante.</span>
-    <span class="flecha" aria-hidden="true"></span>
-  </button>
-  <div class="detalle" hidden>
-    <p>Procedencia: de REF-3 §4.9 y REF-1 §5.9. Mecánico, pero silencioso si se olvida. El paper normaliza con <span class="mate">$(1-\gamma)$</span> para que <span class="mate">$\mu_\pi$</span> caiga en el símplex, y de ahí salen <span class="mate">$\|V\|_\infty\le1$</span> y la geometría de cajas. <strong>El borrador no normaliza</strong>: con <span class="mate">$\varphi\equiv1$</span> en la ecuación de balance sale <span class="mate">$\rho\,\eta(\Omega\times A)=1$</span>, o sea que <span class="mate">$\eta$</span> tiene masa <span class="mate">$1/\rho$</span> y quien es medida de probabilidad es <span class="mate">$\rho\eta$</span>. Con eso, la cota del Lema 3 pasa de <span class="mate">$\|V\|_\infty\le1$</span> a <span class="mate">$\|V\|_\infty\le\|c\|_\infty/\rho$</span>. Diccionario del descuento: <span class="mate">$\gamma\leftrightarrow e^{-\rho\Delta t}$</span> y <span class="mate">$(1-\gamma)\leftrightarrow\rho$</span>. Baja de prioridad, alta de coste si se descubre tarde: cualquier constante comparada entre los dos documentos antes de fijar esto está mal.</p>
-  </div>
-</li>
-<li class="tarea pendiente abrible" data-hecha="0">
-  <button class="cabecera" type="button" aria-expanded="false">
-    <span class="casilla" aria-hidden="true"></span>
     <span class="ident">I-17</span>
     <span class="titulo"><strong>¿De dónde sale <span class="mate">$\eta_E$</span>?</strong> Observar un experto es observar trayectorias de una difusión, y recuperar de ahí la densidad descontada <span class="mate">$m_E$</span> es estimación no paramétrica.</span>
     <span class="flecha" aria-hidden="true"></span>
   </button>
   <div class="detalle" hidden>
-    <p>Procedencia: de REF-3 §4.8 y REF-1 §5.6. En el paper discreto era un oráculo generativo; el borrador dice que <span class="mate">$\eta_E$</span> <em>«está disponible»</em> y no lo discute. Nadie lo ha planteado. 🔴 <strong>DIFERIDA por decisión de alcance, no descartada.</strong> El asesor acotó el problema a <em>«conocemos todo, simplemente resolver el problema de control inverso»</em>, y el usuario precisó el 2026-07-27 qué significa: <strong>no hay que estimar nada</strong>, ni el núcleo <span class="mate">$T$</span> ni nada sacado de observar al experto. Y añadió el plan: <em>«luego de resolver así se mira qué se puede hacer al tener solo muestras»</em>. Así que esto es <strong>trabajo futuro declarado</strong> y tiene sitio en la propuesta como tal. No se estudia ahora, y no se tira. Es la §4 entera del paper.</p>
+    <p>Procedencia: de REF-3 §4.8 y REF-1 §5.6. En el paper discreto era un oráculo generativo; el borrador dice que <span class="mate">$\eta_E$</span> <em>«está disponible»</em> y no lo discute. Nadie lo ha planteado. 🔴 <strong>DIFERIDA por decisión de alcance, no descartada.</strong> El asesor acotó el problema a <em>«conocemos todo, simplemente resolver el problema de control inverso»</em>, y el usuario precisó el 2026-07-27 qué significa: <strong>no hay que estimar nada</strong>, ni el núcleo <span class="mate">$T$</span> ni nada sacado de observar al experto. Y añadió el plan: <em>«luego de resolver así se mira qué se puede hacer al tener solo muestras»</em>. Así que esto es <strong>trabajo futuro declarado</strong> y tiene sitio en la propuesta como tal. No se estudia ahora, y no se tira. Es la §4 entera del paper. ✅ <strong>Y desde el v2 el «declarado» es literal, no interpretación nuestra (2026-08-05).</strong> El §11 lo lista con todas las letras: <em>«Replace the known expert occupation measure by an empirical estimate from trajectories and derive statistical error bounds.»</em> Citarlo así en la propuesta. ⚠️ <strong>Ojo con la tentación de reabrirla por eso.</strong> Que él la escriba como dirección no la devuelve al alcance: el recorte del 2026-07-23 sigue vigente y es suyo. Confirmarlo antes de moverla, no suponerlo. Es <code>P14-M</code>.</p>
   </div>
 </li>
 <li class="tarea pendiente abrible" data-hecha="0">
@@ -607,7 +673,53 @@ window.MathJax={
     <span class="flecha" aria-hidden="true"></span>
   </button>
   <div class="detalle" hidden>
-    <p>Procedencia: era P13. <em>«Ni él sabe nada»</em>, según el usuario. Se considera <strong>secundariamente</strong>: si al trabajar aparece algo que encaje ahí, se le da; si no, no se fuerza. Lo que ya se sabe está en <code>fichas/posible_proyecto.md</code>: es un formulario de financiación, no un tema, pero comparte la familia de problemas anidados y <strong>la misma patología del argmin multivaluado</strong> que bloquea el punto fijo, o sea <code>I-11</code>.</p>
+    <p>Procedencia: era P13. <em>«Ni él sabe nada»</em>, según el usuario. Se considera <strong>secundariamente</strong>: si al trabajar aparece algo que encaje ahí, se le da; si no, no se fuerza. Lo que ya se sabe está en <code>fichas/posible_proyecto.md</code>: es un formulario de financiación, no un tema, pero comparte la familia de problemas anidados y <strong>la misma patología del argmin multivaluado</strong> que bloquea el punto fijo, o sea <code>I-11</code>. ⚠️ Esa patología <strong>dejó de bloquear</strong> el 2026-08-05: ver <code>I-11</code>, cerrada. Lo que queda del paralelo es la familia de problemas anidados.</p>
+  </div>
+</li>
+<li class="tarea pendiente abrible" data-hecha="0">
+  <button class="cabecera" type="button" aria-expanded="false">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">I-19</span>
+    <span class="titulo"><strong>¿Qué valida exactamente el experimento del círculo?</strong> Antes de citarlo en la propuesta.</span>
+    <span class="flecha" aria-hidden="true"></span>
+  </button>
+  <div class="detalle" hidden>
+    <p>Procedencia: de REF-14 §4, «sobre el experimento del §9». El §9 del v2 es lo único que parece evidencia empírica, y conviene saber de qué. Tres cosas, y el autor solo avisa de la primera:</p>
+    <ul>
+      <li class="aviso">⚠️ <strong>El experto no es óptimo: es Gibbs con <span class="mate">$\beta_E=20$</span></strong>, y el aprendiz corre con <span class="mate">$\beta_A=15$</span>. <strong>Temperaturas distintas</strong>, así que el experimento no puede dar error de política cero ni con el costo recuperado exacto. Él avisa de que el gap reportado es <em>soft</em>, pero no de esto.</li>
+      <li><strong>Lo recuperado queda mucho más cerca del previo que de la verdad:</strong> <span class="mate">$\|c-\hat c\|=1.75\times10^{-2}$</span> contra <span class="mate">$\|c-c_{\text{true}}\|=8.35\times10^{-2}$</span>, casi cinco veces. Es coherente con <span class="mate">$\alpha=2$</span> y con la cota (29), y él no lo presenta de otro modo, pero significa que <strong>el experimento demuestra que el punto fijo converge, no que el costo verdadero se recupere</strong>.</li>
+      <li><strong>El toro esquiva <code>I-6</code>.</strong> Con frontera periódica no hay que elegir entre reflexión, absorción o <em>killing</em>. El experimento no dice nada sobre dominios acotados con frontera, que es el caso del planteamiento.</li>
+    </ul>
+    <p><strong>Cómo se cierra:</strong> decidiendo qué afirmación se le cuelga a este experimento en la propuesta. Prioridad baja hasta que haya propuesta que escribir, alta de coste si se cita de más delante del asesor.</p>
+  </div>
+</li>
+  </ul>
+  <h3>Respondidas</h3>
+  <ul class="tareas">
+<li class="tarea hecha abrible" data-hecha="1">
+  <button class="cabecera" type="button" aria-expanded="false">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">I-11</span>
+    <span class="titulo">El mapa de punto fijo es <strong>multivaluado</strong>: ¿existe una selección medible y continua?</span>
+    <span class="fecha">2026-08-05</span>
+    <span class="flecha" aria-hidden="true"></span>
+  </button>
+  <div class="detalle" hidden>
+    <p>Procedencia: de REF-3 §4.3 y REF-1 §5.8. 🔴 <strong>DISUELTA, no respondida, y la distinción importa.</strong> Nadie ha demostrado que exista una selección continua. Lo que el v2 demuestra es que <strong>no hace falta ninguna</strong>, y esa es la contribución central de la revisión. Observación 4.4, literal: <em>«A deterministic selector <span class="mate">$c\mapsto\pi_A(c)$</span> may jump when the Hamiltonian has multiple or nearly multiple minimizers. Theorem 4.2 bypasses this difficulty entirely. The natural object is the convex set of optimal occupation measures, not a particular policy selector.»</em> El §7 lo formaliza: la correspondencia <span class="mate">$\operatorname{Opt}(c)$</span> y el mapa multivaluado <span class="mate">$\mathcal F(c)$</span>, con el sistema de optimalidad equivalente a la <strong>inclusión</strong> <span class="mate">$c\in\mathcal F(c)$</span>, y <em>«the theorem does not require <span class="mate">$c\mapsto\operatorname{Opt}(c)$</span> to be single valued or continuous»</em>. ⚠️ <strong>Se cierra porque dejó de bloquear, y hay que citarla así.</strong> Si en algún momento se vuelve a necesitar una política concreta (por ejemplo para los numéricos, que sí seleccionan), la pregunta original reaparece: se reabre. <strong>Lo que arrastra:</strong> <code>I-7</code> pierde su motivo de ascenso, porque Gibbs ya no es el parche de esta patología. Y la lectura propia de que Gibbs la regularizaba, marcada entonces como «verificar antes de apoyarse», queda <strong>superada por una respuesta mejor</strong> sin haberse llegado a verificar.</p>
+    <p class="artefacto">Artefacto: <code>referencias/fichas/junca_fixed_point_continuo_v2.md</code> §4 (fila 4.3)</p>
+  </div>
+</li>
+<li class="tarea hecha abrible" data-hecha="1">
+  <button class="cabecera" type="button" aria-expanded="false">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">I-16</span>
+    <span class="titulo"><strong>Fijar la convención de normalización</strong> entre el paper y el borrador</span>
+    <span class="fecha">2026-08-05</span>
+    <span class="flecha" aria-hidden="true"></span>
+  </button>
+  <div class="detalle" hidden>
+    <p>Procedencia: de REF-3 §4.9 y REF-1 §5.9. <strong>Convención fijada, y confirmada por los propios números del autor.</strong> El paper normaliza con <span class="mate">$(1-\gamma)$</span> para que <span class="mate">$\mu_\pi$</span> caiga en el símplex, y de ahí salen <span class="mate">$\|V\|_\infty\le1$</span> y la geometría de cajas. <strong>El borrador no normaliza:</strong> con <span class="mate">$\varphi\equiv1$</span> en la ecuación de balance sale <span class="mate">$\rho\,\eta(\Omega\times A)=1$</span>, o sea que <span class="mate">$\eta$</span> tiene masa <span class="mate">$1/\rho$</span> y quien es medida de probabilidad es <span class="mate">$\rho\eta$</span>. Con eso la cota del Lema 3 pasa de <span class="mate">$\|V\|_\infty\le1$</span> a <span class="mate">$\|V\|_\infty\le\|c\|_\infty/\rho$</span>. ✅ <strong>Lo que la cierra:</strong> el §9 del v2 lo dice y lo verifica numéricamente, <em>«Since <span class="mate">$\rho=0.5$</span>, the total discounted occupation mass should be <span class="mate">$1/\rho=2$</span>»</em>, y la tabla de diagnósticos da 2.000000 para experto y aprendiz. La derivación de la ficha del v1 era correcta; deja de ser conjetura. Diccionario del descuento, para usar: <span class="mate">$\gamma\leftrightarrow e^{-\rho\Delta t}$</span> y <span class="mate">$(1-\gamma)\leftrightarrow\rho$</span>.</p>
+    <p class="artefacto">Artefacto: <code>referencias/fichas/junca_fixed_point_continuo_v2.md</code> §4 (fila 4.9)</p>
   </div>
 </li>
   </ul>
@@ -624,8 +736,8 @@ window.MathJax={
     <p class="contexto alerta">🔴 <strong>Y el 2026-08-03 el asesor dio un encargo concreto que reordena esta lista:</strong> <em>«creo que ese sea como el primer reto: justificar bien este teorema 4.2»</em>. Es <code>REF-13</code>, va primero, y <strong>es anterior a elegir dirección</strong>: se le fue a preguntar cuál de las cinco del §11 atacar y lo que dio fue el prerrequisito que está por debajo de todas. Eso significa que <strong><code>REF-8</code> ya no espera a <code>P22</code> para arrancar</strong>.</p>
     <p class="contexto"><strong>Las preguntas abiertas viven en dos sitios y no se mezclan:</strong> las que dependen de su criterio, en <code>preguntas_junca/TODO.md</code>; las que responde el trabajo, en <code>preguntas_investigacion/TODO.md</code>.</p>
   </div>
-  <div class="barra"><div class="relleno" style="width:43%"></div></div>
-  <p class="cuenta">6 de 14 completadas</p>
+  <div class="barra"><div class="relleno" style="width:47%"></div></div>
+  <p class="cuenta">7 de 15 completadas</p>
   <ul class="tareas">
 <li class="tarea pendiente abrible" data-hecha="0">
   <button class="cabecera" type="button" aria-expanded="false">
@@ -646,7 +758,20 @@ window.MathJax={
       <li><strong>(i) Measure formulation.</strong> <span class="mate">$\mathcal H\hookrightarrow C(\Omega\times A)$</span>, por ejemplo <span class="mate">$H^s$</span> con <span class="mate">$s&gt;(d+m)/2$</span>, o un RKHS. Toda medida finita con signo cae en <span class="mate">$\mathcal H^*$</span>. <strong>Es el régimen que pide el Teorema 4.2.</strong></li>
       <li><strong>(ii) Density formulation.</strong> Si las medidas de ocupación tienen densidades <span class="mate">$L^2$</span>, basta <span class="mate">$H^1$</span> con el emparejamiento <span class="mate">$L^2$</span>. Es <em>«the regime used in the PDE and numerical formulas below»</em>, o sea <strong>donde viven el §6 y los numéricos</strong>.</li>
     </ul>
-    <p><strong>Justificar el 4.2 es, en el fondo, resolver esa tensión</strong>: el teorema vive en (i) y el resto del documento en (ii). 🔴 <strong>Depende de <code>REF-7</code> y esa dependencia es dura</strong>, no de conveniencia: sin caracterizar <span class="mate">$\mathcal M$</span> no hay <span class="mate">$H$</span>, y sin <span class="mate">$H$</span> no hay teorema. ⚠️ Y arrastra la grieta que él mismo abrió en [04:37]: en discreto las políticas deterministas son <strong>vértices del poliedro</strong>, y en continuo <em>«no sé si esa es la intuición de vértice»</em>. La salida que nombra es la de los <strong>controles relajados</strong>, que es literatura de <code>REF-7</code>. ✅ <strong>Y arranca sin la hipoteca de la viscosidad</strong> (<code>P16b</code>, 2026-08-03): el asesor confirmó que en el nuevo planteamiento no se usa la ecuación con <span class="mate">$V$</span>. Este teorema va de <span class="mate">$H$</span> y de <span class="mate">$\mathcal M$</span>, no de regularidad de la función de valor, así que es coherente. ✅ <strong>Ya no hace falta reescuchar nada para empezar</strong> (2026-08-03). El <em>«todo se reduce a decir que este problema tiene un único óptimo»</em> apunta a la <strong>ecuación (23)</strong>, confirmado por el usuario, y el porqué está escrito en el <strong>Remark 4.4</strong>: <em>«Theorem 4.2 bypasses this difficulty entirely. The natural object is the convex set of optimal occupation measures, not a particular policy selector.»</em> 🔴 <strong>Y hay que saber de dónde viene el teorema: en parte, de ChatGPT.</strong> Confirmado por el usuario el 2026-08-03. El propio asesor lo señala sin nombrarlo: <em>«esta prueba está bien, pero todo eso asume todo este tipo de cosas que no sabemos»</em> [12:00]. ⚠️ <strong>No es motivo para desconfiar del v2, es la razón de que esta tarea exista.</strong> Lo que pide el encargo es <strong>verificar</strong>, no extender, y conviene tratar las hipótesis del 4.2 como enunciados a comprobar uno a uno en vez de como resultados respaldados por años de derivación suya.</p>
+    <p><strong>Justificar el 4.2 es, en el fondo, resolver esa tensión</strong>: el teorema vive en (i) y el resto del documento en (ii). 🔴 <strong>Depende de <code>REF-7</code> y esa dependencia es dura</strong>, no de conveniencia: sin caracterizar <span class="mate">$\mathcal M$</span> no hay <span class="mate">$H$</span>, y sin <span class="mate">$H$</span> no hay teorema. ⚠️ Y arrastra la grieta que él mismo abrió en [04:37]: en discreto las políticas deterministas son <strong>vértices del poliedro</strong>, y en continuo <em>«no sé si esa es la intuición de vértice»</em>. La salida que nombra es la de los <strong>controles relajados</strong>, que es literatura de <code>REF-7</code>. ✅ <strong>Y arranca sin la hipoteca de la viscosidad</strong> (<code>P16b</code>, 2026-08-03): el asesor confirmó que en el nuevo planteamiento no se usa la ecuación con <span class="mate">$V$</span>. Este teorema va de <span class="mate">$H$</span> y de <span class="mate">$\mathcal M$</span>, no de regularidad de la función de valor, así que es coherente. ✅ <strong>Ya no hace falta reescuchar nada para empezar</strong> (2026-08-03). El <em>«todo se reduce a decir que este problema tiene un único óptimo»</em> apunta a la <strong>ecuación (23)</strong>, confirmado por el usuario, y el porqué está escrito en el <strong>Remark 4.4</strong>: <em>«Theorem 4.2 bypasses this difficulty entirely. The natural object is the convex set of optimal occupation measures, not a particular policy selector.»</em> 🔴 <strong>Y hay que saber de dónde viene el teorema: en parte, de ChatGPT.</strong> Confirmado por el usuario el 2026-08-03. El propio asesor lo señala sin nombrarlo: <em>«esta prueba está bien, pero todo eso asume todo este tipo de cosas que no sabemos»</em> [12:00]. ⚠️ <strong>No es motivo para desconfiar del v2, es la razón de que esta tarea exista.</strong> Lo que pide el encargo es <strong>verificar</strong>, no extender, y conviene tratar las hipótesis del 4.2 como enunciados a comprobar uno a uno en vez de como resultados respaldados por años de derivación suya. ✅ <strong>Ya tiene mapa de entrada (2026-08-05, <code>REF-14</code>).</strong> El v2 está fichado, y el §4 de la ficha localiza el punto exacto: de las tres hipótesis, la convexidad de <span class="mate">$\mathcal M$</span> parece barata (restricción lineal más no negatividad); <strong>la compacidad débil es donde está el trabajo</strong>, y como <span class="mate">$\mathcal H^*$</span> es de Hilbert y por tanto reflexivo, débil y débil-\* coinciden, así que lo que hay que probar aparte es que <span class="mate">$\mathcal M$</span> sea <strong>cerrado</strong> en esa topología y que la no negatividad como medida sobreviva al límite. <strong>Lectura propia, marcada como tal en la ficha, y sin verificar.</strong> Y una advertencia de método que sale de la misma lectura: el v2 <strong>no tiene bibliografía</strong> y usa <strong>Danskin</strong> (§7.1) y <strong>Sion</strong> (Obs. 4.3) por su nombre, sin enunciado. Eso es <code>I-20</code>. Artefacto de apoyo: <code>subproyectos/referencias/fichas/junca_fixed_point_continuo_v2.md</code></p>
+  </div>
+</li>
+<li class="tarea hecha abrible" data-hecha="1">
+  <button class="cabecera" type="button" aria-expanded="false">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">REF-14</span>
+    <span class="titulo">Fichar el v2 del borrador continuo</span>
+    <span class="fecha">2026-08-05</span>
+    <span class="flecha" aria-hidden="true"></span>
+  </button>
+  <div class="detalle" hidden>
+    <p><strong>Tarea abierta y cerrada el mismo día.</strong> El v2 llevaba desde el 2026-07-30 usándose a trozos (la segunda pasada del estado del arte, y <code>REF-13</code> verificando contra él el enunciado del 4.2) <strong>sin que nadie lo hubiera fichado</strong>, o sea sin veredicto ni pasada sistemática. Son 625 líneas contra las 298 del v1. 🔴 <strong>El hallazgo que reordena la lista: el documento pasó de cero teoremas a dos resultados demostrados.</strong> La ficha del v1 decía <em>«no hay teorema de punto fijo […] esta es la tesis»</em>. El autor lo escribió. La tesis se movió a <strong>justificar sus hipótesis</strong>, que es exactamente <code>REF-13</code> y exactamente lo que el asesor encargó el 2026-08-03. Las dos cosas encajan, y ahora se ve por qué. <strong>Los diez huecos del v1, revisados uno a uno:</strong> tres cerrados o degradados (el mapa multivaluado, la viscosidad, la normalización), tres medio cerrados (el teorema, la dualidad, el espacio del costo) y cuatro intactos (<span class="mate">$\mathcal M$</span>, frontera, <span class="mate">$\eta_E$</span>, el bucle interno). La tabla está en el §4 de la ficha. 🟢 <strong>Y una consecuencia que ahorra semanas: la viscosidad deja de ser el cuello de botella.</strong> El §4 del v2 no toca la HJB en ningún punto, así que la regularidad de <span class="mate">$V$</span> ya no puede tumbar el enunciado; sobrevive solo en el §6 y en los numéricos. Coincide con <code>P16b</code>. <strong>Estudiar viscosidad sale del camino crítico; <code>REF-7</code> se queda solo en él.</strong> ⚠️ <strong>Lo que empeoró:</strong> <span class="mate">$\mathcal M$</span> pasó de igualdad injustificada a <strong>hipótesis que carga un teorema</strong>. El §2.2 sigue sin precisarlo y el 4.2 asume que es no vacío, convexo y débilmente compacto. Es el único punto por donde el documento entero se cae. <strong>Repartido:</strong> dos preguntas cerradas (<code>I-11</code>, <code>I-16</code>), siete actualizadas, tres nuevas (<code>I-19</code>, <code>I-20</code>, <code>I-21</code>) y tres propuestas al asesor sin aprobar (<code>P25</code>, <code>P26</code>, <code>P27</code>). Estado del arte sin cambios: ya lo cubría desde el 30.</p>
+    <p class="artefacto">Artefacto: <code>subproyectos/referencias/fichas/junca_fixed_point_continuo_v2.md</code></p>
   </div>
 </li>
 <li class="tarea hecha abrible" data-hecha="1">
@@ -709,7 +834,7 @@ window.MathJax={
     <span class="flecha" aria-hidden="true"></span>
   </button>
   <div class="detalle" hidden>
-    <p class="alerta">🔴 <strong>REABIERTA el 2026-07-30. Su premisa se cayó entera.</strong> Decía que siete de los diez prerrequisitos «ya están escritos en español por el propio usuario», y <strong>eso salió del compendio generado por IA</strong>, no de él. Al reconstruir el perfil sobre sus apuntes reales (<code>PER-4</code>) resulta que <strong>Fokker-Planck, los espacios de Sobolev, la regularidad elíptica y la correspondencia generador–SDE no los domina</strong>. No son repaso: son estudio. <strong>La Semana 0 se decide otra vez, y sale más larga.</strong> ✅ <strong>Lo que sí mejora, y compensa en parte:</strong> el Taller 2 con Junca cubre <strong>parada óptima</strong> (o sea <code>REF-6</code>) y <strong>control óptimo con HJB en estado discreto</strong>, dos de las tres cosas que esta tarea daba por nuevas. Lo genuinamente nuevo baja a <strong>viscosidad</strong> y <strong>medidas de ocupación</strong>, más el salto de estado discreto a continuo. ⚠️ Rehacerla exige saber qué dirección se ataca, o sea <code>P22</code> en la reunión del lunes. Antes de eso no se puede fijar. <strong>Lo de abajo se conserva tal cual, sin corregir, porque es el registro de qué se creyó y por qué.</strong></p>
+    <p class="alerta">🔴 <strong>REABIERTA el 2026-07-30. Su premisa se cayó entera.</strong> Decía que siete de los diez prerrequisitos «ya están escritos en español por el propio usuario», y <strong>eso salió del compendio generado por IA</strong>, no de él. Al reconstruir el perfil sobre sus apuntes reales (<code>PER-4</code>) resulta que <strong>Fokker-Planck, los espacios de Sobolev, la regularidad elíptica y la correspondencia generador–SDE no los domina</strong>. No son repaso: son estudio. <strong>La Semana 0 se decide otra vez, y sale más larga.</strong> ✅ <strong>Lo que sí mejora, y compensa en parte:</strong> el Taller 2 con Junca cubre <strong>parada óptima</strong> (o sea <code>REF-6</code>) y <strong>control óptimo con HJB en estado discreto</strong>, dos de las tres cosas que esta tarea daba por nuevas. Lo genuinamente nuevo baja a <strong>viscosidad</strong> y <strong>medidas de ocupación</strong>, más el salto de estado discreto a continuo. ⚠️ Rehacerla exige saber qué dirección se ataca, o sea <code>P22</code> en la reunión del lunes. Antes de eso no se puede fijar. 🟢 <strong>Y se acorta otra vez el 2026-08-05, al fichar el v2 (<code>REF-14</code>): la viscosidad sale del camino crítico.</strong> El §4 del v2 obtiene existencia, unicidad y punto fijo <strong>sin tocar la HJB</strong>, así que la regularidad de <span class="mate">$V$</span> ya no puede tumbar el enunciado; sigue haciendo falta para el §6 y para los numéricos, que es otra fase. De los tres huecos genuinamente nuevos que esta tarea identificó, <strong>queda uno solo en el camino crítico: medidas de ocupación</strong>. Eso cambia el orden de la Semana 0 y hay que rehacerlo con esto. <strong>Lo de abajo se conserva tal cual, sin corregir, porque es el registro de qué se creyó y por qué.</strong></p>
     <p class="alerta">🔴 <strong>La Semana 0 es un repaso corto, no un bloque de estudio.</strong> De los diez prerrequisitos del borrador, <strong>siete ya están escritos en español</strong> por el propio usuario y solo <strong>tres</strong> son nuevos. Eso invierte el supuesto del plan original, que reservaba semanas a reconstruir la base. <strong>Entra</strong> (repaso): generador y adjunto, Fokker–Planck, Sobolev y regularidad elíptica, el elíptico <code>(I−κΔ)⁻¹</code>, Dirichlet y Neumann, dualidad convexa en Hilbert, y SDE. <strong>No entra</strong>: la Semana 9 de transporte óptimo (es del curso, no de la tesis), el bloque viejo de difusión y score, el SMD y la §4 del paper (fuera de alcance por el asesor), y Hernández-Lerma &amp; Lasserre (discreto). <strong>Nuevo de verdad, tres cosas</strong>: control con HJB (Touzi 3, 5), viscosidad (Touzi 6, 7) y medidas de ocupación (Kurtz–Stockbridge). ⚠️ Numeración de Touzi corregida el 2026-07-27: estaba corrida en uno, por venir de sus apuntes del Fields y no del libro. 🔴 <strong>El cuello de botella es viscosidad</strong>, no la base: es lo único genuinamente nuevo, difícil y en el camino crítico. ⚠️ No es el plan de estudio, que es <code>REF-8</code> y sigue bloqueado por <strong>D1</strong>.</p>
     <p>Contexto original de la tarea, que se conserva: <strong>Después de REF-1, no antes.</strong> Se cruza lo que el paper demuestre que hace falta contra el inventario del <code>CLAUDE.md</code> de este subproyecto (131/160 hojas del tracker viejo, 39 capítulos del compendio, <code>.mmd</code> en <code>material_mathpix/</code>). Lo que sirva entra al tracker nuevo como Semana 0, con la ventaja de que parte de eso ya está explicado en español. <strong>Entradas nuevas de la reunión y de las fichas (2026-07-26):</strong></p>
     <ul>
@@ -1102,7 +1227,7 @@ window.MathJax={
   </ul>
 </section>
 <footer>
-Generado el 2026-08-04 por <code>web/build_todo.py</code> a partir de los <code>TODO.md</code>. Editar esta página a mano no sirve de nada: se reescribe en la siguiente ejecución.
+Generado el 2026-08-05 por <code>web/build_todo.py</code> a partir de los <code>TODO.md</code>. Editar esta página a mano no sirve de nada: se reescribe en la siguiente ejecución.
 </footer>
 </div>
 <script>
