@@ -135,13 +135,13 @@ window.MathJax={
 <header class="principal">
 <h1>Propuesta de tesis — control óptimo</h1>
 <p class="sub">Decidir y proponer un tema en control óptimo inverso, en 2–3 meses desde el 2026-07-25.</p>
-<p class="global"><strong>50</strong> de <strong>94</strong> tareas completadas en todo el proyecto.</p>
+<p class="global"><strong>51</strong> de <strong>94</strong> tareas completadas en todo el proyecto.</p>
 </header>
 <nav class="pestanas" role="tablist">
 <button data-slug="preguntas_junca" role="tab">Preguntas a Junca<span class="n">8/21</span></button>
 <button data-slug="preguntas_investigacion" role="tab">Preguntas de investigación<span class="n">2/21</span></button>
 <button data-slug="referencias" role="tab">referencias<span class="n">7/15</span></button>
-<button data-slug="infra" role="tab">General<span class="n">16/20</span></button>
+<button data-slug="infra" role="tab">General<span class="n">17/20</span></button>
 </nav>
 <div class="controles">
 <label><input type="checkbox" id="ocultar"> Esconder las completadas</label>
@@ -960,8 +960,8 @@ window.MathJax={
   <div class="contexto-oculto" hidden>
     <p class="contexto">Todo lo que no es contenido: montaje, herramientas, la web de TODOs y la migración de skills. El plan completo, con dependencias y decisiones, vive en <code>docs/plan.md</code>.</p>
   </div>
-  <div class="barra"><div class="relleno" style="width:80%"></div></div>
-  <p class="cuenta">16 de 20 completadas</p>
+  <div class="barra"><div class="relleno" style="width:85%"></div></div>
+  <p class="cuenta">17 de 20 completadas</p>
   <h3>Fase 0 — Fontanería</h3>
   <ul class="tareas">
 <li class="tarea hecha abrible" data-hecha="1">
@@ -1200,15 +1200,23 @@ window.MathJax={
   </ul>
   <h3>Fase 4 — Consolidación</h3>
   <ul class="tareas">
-<li class="tarea pendiente abrible" data-hecha="0">
+<li class="tarea hecha abrible" data-hecha="1">
   <button class="cabecera" type="button" aria-expanded="false">
     <span class="casilla" aria-hidden="true"></span>
     <span class="ident">DOC-1</span>
     <span class="titulo"><code>CLAUDE.md</code> definitivo, con la bitácora fuera</span>
+    <span class="fecha">2026-08-05</span>
     <span class="flecha" aria-hidden="true"></span>
   </button>
   <div class="detalle" hidden>
-    <p>El del proyecto viejo llegó a 947 líneas porque mezcló manual con bitácora forense. Aquí: <code>CLAUDE.md</code> corto e imperativo, <code>docs/lecciones.md</code> para el porqué de cada regla con su incidente.</p>
+    <p>El del proyecto viejo llegó a 947 líneas porque mezcló manual con bitácora forense. Aquí: <code>CLAUDE.md</code> corto e imperativo, <code>docs/lecciones.md</code> para el porqué de cada regla con su incidente. <strong>Fuera el rótulo STUB</strong>, que llevaba desde el 2026-07-25. El archivo abre ahora con una tabla de <strong>dónde vive qué</strong> (plan, lecciones, trampas, los <code>CLAUDE.md</code> de subproyecto, el índice de skills), que era lo que había que adivinar. <strong>Cinco lecciones nuevas</strong>, y <code>lecciones.md</code> pasa de 92 a 301 líneas: <code>L2</code> por qué no se leen PDFs, <code>L3</code> la bandeja de Mathpix, <code>L4</code> por qué el curso se mudó en vez de quedarse etiquetado, <code>L5</code> el perfil afirmando de más tres veces, y <code>L6</code> las skills que improvisan, con la secuela del flag heredado. ⚠️ <strong>El archivo NO encogió: 235 líneas antes, 239 después.</strong> Salieron las anécdotas y entraron reglas que faltaban, así que el saldo es neutro en tamaño y positivo en contenido. Lo que cambió es el carácter: hoy es imperativo con punteros, no relato. Si se busca un recorte de verdad, hay que quitar reglas, y eso es otra decisión. <strong>Tres huecos tapados, y los tres eran deuda real:</strong></p>
+    <ul>
+      <li><strong><code>preguntas_junca</code> y <code>preguntas_investigacion</code> no estaban en la tabla de subproyectos</strong>, pese a existir desde <code>WEB-5</code> el 2026-08-03. Con ellas entra la tabla de su asimetría, que es la regla que más se confunde.</li>
+      <li><strong>La regla 2 citaba <code>REF-1</code> como frontera</strong> y <code>REF-1</code> está cerrada desde el 2026-07-26, así que la regla se leía como cumplida y ya. Reescrita en general: no se decide antes de fichar la fuente que lo sostiene.</li>
+      <li><strong>El «faltan 16 de 41» del inventario era un número fijo sin fuente</strong>; <code>INVENTARIO.md</code> no lo dice en ninguna parte. Fuera el recuento, y el manual apunta a la lista viva.</li>
+    </ul>
+    <p><strong>Regla nueva, la 6:</strong> el perfil se afirma con evidencia. Existía de hecho desde <code>PER-4</code> pero solo vivía dentro de <code>formacion.md</code>, o sea que no la veía quien no fuera a ese archivo.</p>
+    <p class="artefacto">Artefacto: <code>CLAUDE.md</code> y <code>docs/lecciones.md</code></p>
   </div>
 </li>
 <li class="tarea hecha abrible" data-hecha="1">
