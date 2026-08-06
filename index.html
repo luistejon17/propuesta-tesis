@@ -135,14 +135,15 @@ window.MathJax={
 <header class="principal">
 <h1>Propuesta de tesis — control óptimo</h1>
 <p class="sub">Decidir y proponer un tema en control óptimo inverso, en 2–3 meses desde el 2026-07-25.</p>
-<p class="global"><strong>55</strong> de <strong>98</strong> tareas completadas en todo el proyecto.</p>
+<p class="global"><strong>59</strong> de <strong>108</strong> tareas completadas en todo el proyecto.</p>
 </header>
 <nav class="pestanas" role="tablist">
-<button data-slug="preguntas_junca" role="tab">Preguntas a Junca<span class="n">8/21</span></button>
-<button data-slug="preguntas_investigacion" role="tab">Preguntas de investigación<span class="n">2/21</span></button>
+<button data-slug="preguntas_junca" role="tab">Preguntas a Junca<span class="n">8/22</span></button>
+<button data-slug="preguntas_investigacion" role="tab">Preguntas de investigación<span class="n">2/23</span></button>
 <button data-slug="referencias" role="tab">referencias<span class="n">8/15</span></button>
 <button data-slug="infra" role="tab">General<span class="n">17/20</span></button>
 <button data-slug="explicaciones" role="tab">explicaciones<span class="n">3/4</span></button>
+<button data-slug="notas_junca" role="tab">notas junca<span class="n">4/7</span></button>
 </nav>
 <div class="controles">
 <label><input type="checkbox" id="ocultar"> Esconder las completadas</label>
@@ -157,8 +158,8 @@ window.MathJax={
     <p class="contexto"><strong>La otra lista existe y no es esta:</strong> <code>preguntas_investigacion</code>, que son las que <strong>no</strong> responde Mauricio sino el trabajo. Una pregunta se cierra aquí con una respuesta suya; allí, con una referencia o una demostración.</p>
     <p class="contexto">Clasificado el 2026-07-27 con el usuario, pregunta por pregunta. Las prioridades son <strong>propuesta del agente</strong> y se cambian sin ceremonia.</p>
   </div>
-  <div class="barra"><div class="relleno" style="width:38%"></div></div>
-  <p class="cuenta">8 de 21 completadas</p>
+  <div class="barra"><div class="relleno" style="width:36%"></div></div>
+  <p class="cuenta">8 de 22 completadas</p>
   <h3>Prioridad alta</h3>
   <ul class="tareas">
 <li class="tarea pendiente abrible" data-hecha="0">
@@ -253,6 +254,22 @@ window.MathJax={
   </ul>
   <h3>Sin clasificar, o sea propuestas del agente sin aprobar</h3>
   <ul class="tareas">
+<li class="tarea pendiente abrible" data-hecha="0">
+  <button class="cabecera" type="button" aria-expanded="false">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">P28</span>
+    <span class="titulo">Tu <span class="mate">$\Omega$</span> acotado y la hipótesis de Kurtz–Stockbridge no encajan. ¿Compactificamos o hacemos coercivo el costo?</span>
+    <span class="flecha" aria-hidden="true"></span>
+  </button>
+  <div class="detalle" hidden>
+    <p><strong>Propuesta del agente el 2026-08-06</strong>, escribiendo <code>NJU-3</code>. Es concreta, es sobre su documento, y tiene dos respuestas posibles y ninguna es obvia. El Teorema 6.3 de Kurtz–Stockbridge es el que dice que su <span class="mate">$\mathcal M$</span> es exactamente el conjunto de ocupaciones, que es lo que sostiene su §4. Pide que <strong>los subniveles del costo sean compactos</strong>, su condición (6.2). 🔴 <strong>Con <span class="mate">$c$</span> acotada, esa condición obliga a que <span class="mate">$\Omega\times A$</span> sea compacto</strong>, porque para <span class="mate">$\mathsf a&gt;\|c\|_\infty$</span> el subnivel es todo el espacio. Su §2 escribe <span class="mate">$\Omega\subset\mathbb R^d$</span> acotado, que no es compacto; su experimento del §9 usa el toro, que sí. <strong>Las dos salidas, y son distintas de verdad:</strong></p>
+    <ul>
+      <li><strong>Compactificar el estado</strong>: trabajar en <span class="mate">$\overline\Omega$</span> o en el toro, y entonces hay que decir qué pasa en la frontera, que es <code>I-6</code>.</li>
+      <li><strong>Costo coercivo</strong>: pedir que <span class="mate">$c\to\infty$</span> al acercarse a <span class="mate">$\partial\Omega$</span>, lo cual <strong>cambia el problema inverso</strong>, porque el previo <span class="mate">$\widehat c$</span> tendría que ser coercivo también.</li>
+    </ul>
+    <p class="aviso">⚠️ <strong>Por qué puede merecer una pregunta suya y no solo trabajo nuestro:</strong> la elección depende de qué aplicación tiene en la cabeza, y eso solo lo sabe él. Si el toro le vale, tres preguntas abiertas se cierran de golpe. Emparentada con <code>I-6</code> e <code>I-12</code>.</p>
+  </div>
+</li>
 <li class="tarea pendiente abrible" data-hecha="0">
   <button class="cabecera" type="button" aria-expanded="false">
     <span class="casilla" aria-hidden="true"></span>
@@ -450,8 +467,8 @@ window.MathJax={
     <p class="contexto">Las de <strong>prioridad alta</strong> están en el camino crítico: sin ellas no hay enunciado de tesis.</p>
     <p class="contexto alerta">🔴 <strong>Revisadas contra el v2 del borrador el 2026-08-05</strong> (<code>REF-14</code>, <code>fichas/junca_fixed_point_continuo_v2.md</code>). El v2 pasó de cero teoremas a dos resultados demostrados, así que varias de estas preguntas cambian de estado y <strong>dos se cierran</strong>. Lo que hay que retener: el Teorema 4.2 del v2 da existencia y unicidad <strong>esquivando</strong> la continuidad del selector de políticas y la HJB, así que lo que antes era «demostrar el punto fijo» hoy es <strong>justificar sus hipótesis sobre <span class="mate">$\mathcal M$</span></strong>. Cada entrada tocada lo dice en su detalle.</p>
   </div>
-  <div class="barra"><div class="relleno" style="width:10%"></div></div>
-  <p class="cuenta">2 de 21 completadas</p>
+  <div class="barra"><div class="relleno" style="width:9%"></div></div>
+  <p class="cuenta">2 de 23 completadas</p>
   <h3>Prioridad alta · Las dos mitades del trabajo</h3>
   <ul class="tareas">
 <li class="tarea pendiente abrible" data-hecha="0">
@@ -504,7 +521,14 @@ window.MathJax={
     <span class="flecha" aria-hidden="true"></span>
   </button>
   <div class="detalle" hidden>
-    <p>Procedencia: de REF-3 §4.4 y REF-1 §5.3. En discreto es la Proposición 1 de Puterman y es gratis. En continuo es <strong>Kurtz–Stockbridge</strong>, y trae hipótesis que hay que verificar en cada modelo: compacidad débil-\<em>, tensión, buen comportamiento del generador. El borrador lo usa sin enunciarlo, y sin él la igualdad <span class="mate">$\max_{\eta\in\mathcal M}\{\int c\,d\eta_E-\int c\,d\eta\}=J_c(\pi_E)-\inf_\pi J_c(\pi)$</span> <strong>no está justificada</strong>. 🔴 <strong>Justifica <code>REF-7</code> por sí solo.</strong> 🟢 <strong>DESBLOQUEADA el 2026-08-05: el usuario consiguió Kurtz–Stockbridge.</strong> Era la dependencia externa más dura de esta lista y llevaba semanas parada por ser de pago en SIAM y no tener preprint. Está en <code>material_pdf/control/kurtz1998.pdf</code> y en la bandeja para convertir. Y su resumen confirma que responde justo lo que aquí se pregunta: prueba que el problema de control <strong>equivale a un programa lineal sobre un espacio de medidas</strong>, partiendo del <strong>problema de martingala controlado</strong>, con una extensión del <strong>teorema de Echeverría</strong> para distribuciones estacionarias como corolario. Menciona además <strong>relaxed controls</strong>, que es la salida que el asesor nombró para la intuición de vértice. ⚠️ <strong>Ya no hay excusa de material, pero sigue habiendo trabajo:</strong> que Kurtz exista no traslada solo sus hipótesis a este modelo. Lo que hay que sacar de ahí es si <span class="mate">$\mathcal M$</span> tal como lo define el §2.2 del v2 cae bajo su caracterización, y con qué condiciones de frontera e integrabilidad. 🔴 <strong>SUBE el 2026-08-03, y ahora es la que sostiene el encargo del asesor.</strong> <code>REF-13</code> (justificar el Teorema 4.2) pide que <span class="mate">$\mathcal M$</span> sea <strong>no vacío, convexo y débilmente compacto</strong> en <span class="mate">$\mathcal H^*$</span>, así que esta pregunta deja de ser una verificación de fondo y pasa a ser <strong>la hipótesis que hay que probar</strong>. Y el propio asesor abrió la grieta en voz alta: en discreto las políticas deterministas son <strong>vértices del poliedro</strong>, y en continuo </em>«no sé si esa es la intuición de vértice […] seguramente es un conjunto convexo, pero la intuición de vértice, o de punto de frontera, ahí…»<em> [04:37]. La vía que nombra son los <strong>controles relajados</strong>, que menciona tres veces ([00:40], [03:47], [05:10]). 🔴 <strong>Y SUBE OTRA VEZ el 2026-08-05, con el v2 leído: hoy es la pregunta más importante de esta lista.</strong> El §2.2 del v2 sigue definiendo <span class="mate">$\mathcal M$</span> como </em>«the nonnegative measures satisfying (11) together with any required boundary or integrability conditions»<em>, sin precisar cuáles. Pero ahora <strong>el Teorema 4.2 asume las tres propiedades y construye todo encima</strong>, así que esto dejó de ser una verificación de fondo: <strong>es el único punto donde el documento entero se puede caer.</strong> Todas las demás de esta lista tienen dónde apoyarse mientras esta no se resuelva; el teorema no. ⚠️ <strong>Lectura propia de la ficha <code>REF-14</code>, a verificar antes de usarla:</strong> la convexidad parece barata (restricción lineal más no negatividad); la compacidad débil no, y como <span class="mate">$\mathcal H^*$</span> es de Hilbert y por tanto reflexivo, débil y débil-\</em> coinciden, así que lo que hay que probar aparte es que <span class="mate">$\mathcal M$</span> sea <strong>cerrado</strong> en esa topología y que la no negatividad como medida sobreviva al límite.</p>
+    <p>Procedencia: de REF-3 §4.4 y REF-1 §5.3. En discreto es la Proposición 1 de Puterman y es gratis. En continuo es <strong>Kurtz–Stockbridge</strong>, y trae hipótesis que hay que verificar en cada modelo: compacidad débil-\<em>, tensión, buen comportamiento del generador. El borrador lo usa sin enunciarlo, y sin él la igualdad <span class="mate">$\max_{\eta\in\mathcal M}\{\int c\,d\eta_E-\int c\,d\eta\}=J_c(\pi_E)-\inf_\pi J_c(\pi)$</span> <strong>no está justificada</strong>. 🔴 <strong>Justifica <code>REF-7</code> por sí solo.</strong> 🟢 <strong>DESBLOQUEADA el 2026-08-05: el usuario consiguió Kurtz–Stockbridge.</strong> Era la dependencia externa más dura de esta lista y llevaba semanas parada por ser de pago en SIAM y no tener preprint. Está en <code>material_pdf/control/kurtz1998.pdf</code> y en la bandeja para convertir. Y su resumen confirma que responde justo lo que aquí se pregunta: prueba que el problema de control <strong>equivale a un programa lineal sobre un espacio de medidas</strong>, partiendo del <strong>problema de martingala controlado</strong>, con una extensión del <strong>teorema de Echeverría</strong> para distribuciones estacionarias como corolario. Menciona además <strong>relaxed controls</strong>, que es la salida que el asesor nombró para la intuición de vértice. ⚠️ <strong>Ya no hay excusa de material, pero sigue habiendo trabajo:</strong> que Kurtz exista no traslada solo sus hipótesis a este modelo. Lo que hay que sacar de ahí es si <span class="mate">$\mathcal M$</span> tal como lo define el §2.2 del v2 cae bajo su caracterización, y con qué condiciones de frontera e integrabilidad. 🔴 <strong>SUBE el 2026-08-03, y ahora es la que sostiene el encargo del asesor.</strong> <code>REF-13</code> (justificar el Teorema 4.2) pide que <span class="mate">$\mathcal M$</span> sea <strong>no vacío, convexo y débilmente compacto</strong> en <span class="mate">$\mathcal H^*$</span>, así que esta pregunta deja de ser una verificación de fondo y pasa a ser <strong>la hipótesis que hay que probar</strong>. Y el propio asesor abrió la grieta en voz alta: en discreto las políticas deterministas son <strong>vértices del poliedro</strong>, y en continuo </em>«no sé si esa es la intuición de vértice […] seguramente es un conjunto convexo, pero la intuición de vértice, o de punto de frontera, ahí…»<em> [04:37]. La vía que nombra son los <strong>controles relajados</strong>, que menciona tres veces ([00:40], [03:47], [05:10]). 🔴 <strong>Y SUBE OTRA VEZ el 2026-08-05, con el v2 leído: hoy es la pregunta más importante de esta lista.</strong> El §2.2 del v2 sigue definiendo <span class="mate">$\mathcal M$</span> como </em>«the nonnegative measures satisfying (11) together with any required boundary or integrability conditions»<em>, sin precisar cuáles. Pero ahora <strong>el Teorema 4.2 asume las tres propiedades y construye todo encima</strong>, así que esto dejó de ser una verificación de fondo: <strong>es el único punto donde el documento entero se puede caer.</strong> Todas las demás de esta lista tienen dónde apoyarse mientras esta no se resuelva; el teorema no. ⚠️ <strong>Lectura propia de la ficha <code>REF-14</code>, a verificar antes de usarla:</strong> la convexidad parece barata (restricción lineal más no negatividad); la compacidad débil no, y como <span class="mate">$\mathcal H^*$</span> es de Hilbert y por tanto reflexivo, débil y débil-\</em> coinciden, así que lo que hay que probar aparte es que <span class="mate">$\mathcal M$</span> sea <strong>cerrado</strong> en esa topología y que la no negatividad como medida sobreviva al límite. ✅ <strong>CASI CERRADA el 2026-08-06, en <code>NJU-3</code>.</strong> Leído Kurtz–Stockbridge y archivado Bhatt–Borkar, que Mauricio pasó ese día y es el hermano del anterior. Lo que hay:</p>
+    <ul>
+      <li><strong>La respuesta es sí, y es un teorema con nombre</strong>: Kurtz–Stockbridge <strong>Teorema 6.3</strong> (caso descontado) y Bhatt–Borkar <strong>Teorema 2.2</strong>. El primero prueba la equivalencia con el LP, el segundo prueba que toda solución de la ecuación lineal <strong>es</strong> la ocupación de algún proceso.</li>
+      <li><strong>Sus dos ecuaciones son la misma que la (11) del v2</strong>, tras normalizar: con <span class="mate">$\eta=\widehat\pi/\rho$</span>, la restricción <span class="mate">$\widehat\pi(\mathcal L f+\rho[\nu_0(f)-f])=0$</span> se vuelve <span class="mate">$\eta(\rho f-\mathcal L f)=\nu_0(f)$</span>, y el objetivo <span class="mate">$\rho^{-1}\widehat\pi(c)$</span> se vuelve <span class="mate">$\eta(c)$</span>. <strong>Ninguna de las dos fuentes escribe esa traducción</strong>, y encaja con la masa <span class="mate">$1/\rho$</span> que cerró <code>I-16</code>.</li>
+      <li class="hecho">✅ <strong>Y la compacidad débil de <span class="mate">$\mathcal M$</span> en <span class="mate">$\mathcal H^*$</span> que pide el Teorema 4.2 sale gratis</strong>: si <span class="mate">$E\times A$</span> es compacto, <span class="mate">$\mathcal M$</span> es estrechamente compacto (Banach–Alaoglu más que las restricciones sean continuas), y el adjunto del encaje <span class="mate">$\mathcal H\hookrightarrow C(E\times A)$</span> lo transporta a <span class="mate">$\sigma(\mathcal H^*,\mathcal H)$</span>, que en un Hilbert <strong>es</strong> la débil. Lo que quedaba abierto en la lectura propia de arriba queda cerrado.</li>
+    </ul>
+    <p class="alerta">🔴 <strong>Lo que impide marcarla <code>[x]</code>, y es una sola cosa: la compacidad de <span class="mate">$E$</span>.</strong> La hipótesis (6.2) de Kurtz–Stockbridge pide subniveles compactos del costo, y <strong>con <span class="mate">$c$</span> acotada eso obliga a <span class="mate">$E\times A$</span> compacto</strong>. El toro del experimento del §9 cumple; el abierto acotado que el v2 escribe en su §2, no. O se compactifica, o se pide a <span class="mate">$c$</span> que crezca hacia la frontera, y <strong>el v2 no hace ninguna de las dos</strong>. 🔴 <strong>Y ahí se junta con <code>I-6</code></strong>: es la misma frontera. Ver <code>NJU-3</code>.</p>
+    <p class="artefacto">Artefacto: <code>subproyectos/notas_junca/overleaf/sec2.tex</code> §2.6–2.7</p>
   </div>
 </li>
 <li class="tarea pendiente abrible" data-hecha="0">
@@ -531,7 +555,30 @@ window.MathJax={
       <li>**(i) <em>Measure formulation</em>.<strong> <span class="mate">$\mathcal H\hookrightarrow C(\Omega\times A)$</span>, por ejemplo <span class="mate">$H^s$</span> con <span class="mate">$s&gt;(d+m)/2$</span> o un RKHS; entonces toda medida finita con signo cae en <span class="mate">$\mathcal H^*$</span>. </strong>Es el régimen que exige el Teorema 4.2.**</li>
       <li>**(ii) <em>Density formulation</em>.** Si las ocupaciones tienen densidad <span class="mate">$L^2$</span>, basta <span class="mate">$H^1$</span> con emparejamiento <span class="mate">$L^2$</span>: <em>«the regime used in the PDE and numerical formulas below»</em>, o sea <strong>el §6, el §8 y el §9</strong>.</li>
     </ul>
-    <p class="alerta">🔴 <strong>Esa tensión es el corazón de <code>REF-13</code>:</strong> el teorema vive en (i) y el resto del documento en (ii). Y el §11 la abre como dirección propia, <em>«characterize when occupation measures possess densities regular enough for the <span class="mate">$H^1$</span> PDE system, and otherwise work directly in <span class="mate">$\mathcal H^*$</span>»</em>. ✅ <strong>Lo que el v2 sí arregla, y era la mitad práctica de esta pregunta:</strong> la ecuación del costo se escribe ahora en <strong>forma débil</strong> (38), <em>«most safely interpreted weakly […] This avoids writing a distribution-valued right-hand side as an ordinary function»</em>. La objeción del potencial de Bessel sigue en pie para el régimen (ii), pero ya no es una errata del documento.</p>
+    <p class="alerta">🔴 <strong>Esa tensión es el corazón de <code>REF-13</code>:</strong> el teorema vive en (i) y el resto del documento en (ii). Y el §11 la abre como dirección propia, <em>«characterize when occupation measures possess densities regular enough for the <span class="mate">$H^1$</span> PDE system, and otherwise work directly in <span class="mate">$\mathcal H^*$</span>»</em>. ✅ <strong>Lo que el v2 sí arregla, y era la mitad práctica de esta pregunta:</strong> la ecuación del costo se escribe ahora en <strong>forma débil</strong> (38), <em>«most safely interpreted weakly […] This avoids writing a distribution-valued right-hand side as an ordinary function»</em>. La objeción del potencial de Bessel sigue en pie para el régimen (ii), pero ya no es una errata del documento. ✅ <strong>Y el 2026-08-06, en <code>NJU-3</code>, la disyuntiva deja de estar empatada.</strong> El régimen (i) no es una opción entre dos: es el que hace que <strong>tres hipótesis del Teorema 4.2 sean automáticas</strong>. Con <span class="mate">$\mathcal H\hookrightarrow C$</span> y la masa <span class="mate">$1/\rho$</span> del Corolario de <code>I-16</code>, sale <span class="mate">$\|\eta\|_{\mathcal H^*}\le C_\iota/\rho$</span> para toda <span class="mate">$\eta\in\mathcal M$</span>, y de ahí que <span class="mate">$\operatorname{Gap}$</span> sea <strong>finita y Lipschitz</strong> de constante <span class="mate">$2C_\iota/\rho$</span>. La coercividad sale sola de <span class="mate">$\operatorname{Gap}\ge0$</span>. O sea que <strong>la única hipótesis de verdad de la Proposición 4.1 del v2 es el encaje</strong>, y el régimen (ii) no la da. ⚠️ <strong>Y el umbral <span class="mate">$s&gt;(d+m)/2$</span> es agudo</strong>, no una comodidad de la prueba: Folland deja como ejercicio 33 el recíproco del Teorema 9.17. No se puede rebajar con un argumento más fino.</p>
+    <p class="artefacto">Artefacto: <code>subproyectos/notas_junca/overleaf/sec4.tex</code> §4.1</p>
+  </div>
+</li>
+<li class="tarea pendiente abrible" data-hecha="0">
+  <button class="cabecera" type="button" aria-expanded="false">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">I-22</span>
+    <span class="titulo"><strong>¿Tiene que ser isótropo el espacio del costo en <span class="mate">$(x,a)$</span>?</strong></span>
+    <span class="flecha" aria-hidden="true"></span>
+  </button>
+  <div class="detalle" hidden>
+    <p>Procedencia: nace el 2026-08-06 escribiendo <code>NJU-3</code>. Es lectura propia y no está tratada en ninguna fuente del proyecto. La penalización (17) del v2 usa <span class="mate">$\nabla_{x,a}$</span>, o sea trata el estado y la acción con <strong>la misma regularidad</strong>, y el umbral del encaje penaliza las dos dimensiones por igual: <span class="mate">$s&gt;(d+m)/2$</span>. No hay ninguna razón del problema para que sea así. En sus propios ejemplos el costo es mucho más regular en <span class="mate">$a$</span> que en <span class="mate">$x$</span>, y de hecho suele ser <strong>estructurado</strong>, <span class="mate">$c(x,a)=q(x)+\ell(a)$</span> con <span class="mate">$\ell$</span> conocido, que es una de las direcciones que él mismo lista en su §11. <strong>Qué se ganaría:</strong> un espacio anisótropo, con orden <span class="mate">$s_x$</span> en el estado y <span class="mate">$s_a$</span> en la acción, pediría <span class="mate">$s_x&gt;d/2$</span> y <span class="mate">$s_a&gt;m/2$</span> por separado en vez de un solo umbral sobre <span class="mate">$d+m$</span>. En dimensión alta eso es mucho. <strong>Qué haría falta para atacarla:</strong> espacios de Sobolev anisótropos, que no están en <code>material_mathpix/</code>. Depende de <code>NJU-5</code>. ⚠️ Y depende de <code>I-6</code>: sobre un dominio con frontera hay que fijar antes qué quiere decir <span class="mate">$H_s$</span> ahí.</p>
+  </div>
+</li>
+<li class="tarea pendiente abrible" data-hecha="0">
+  <button class="cabecera" type="button" aria-expanded="false">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">I-23</span>
+    <span class="titulo"><strong>¿Vale el dual del LP con <span class="mate">$\nu_0$</span> arbitraria, o solo con <span class="mate">$\nu_0=\delta_{x_0}$</span>?</strong></span>
+    <span class="flecha" aria-hidden="true"></span>
+  </button>
+  <div class="detalle" hidden>
+    <p>Procedencia: nace el 2026-08-06 escribiendo <code>NJU-3</code>, al comprobar que la (13) del v2 sí tiene teorema detrás. El «dual formal» del v2 <strong>no es formal</strong>: es el <strong>Teorema 4.3 de Bhatt–Borkar</strong>, que sale de su dualidad de programación lineal en dimensión infinita (§4.1, siguiendo a Anderson y Nash). 🔴 <strong>Pero está enunciado para <span class="mate">$\nu_0=\delta_{x_0}$</span></strong>, y el v2 usa <span class="mate">$\nu_0$</span> general. Con delta, el objetivo <span class="mate">$\nu_0(V)$</span> <strong>es</strong> la función de valor en un punto; con <span class="mate">$\nu_0$</span> general es su promedio, que es otro objeto. La extensión es plausible por linealidad pero <strong>[incierto]</strong>. <strong>Qué haría falta:</strong> leer el §4.1 de Bhatt–Borkar entero y ver si el par dual que montan admite <span class="mate">$\nu_0$</span> arbitraria. Va con <code>NJU-6</code>. ✅ <strong>Y de paso, lo que sí quedó claro y refuerza la lectura propia de la agenda del 2026-08-03:</strong> el supremo del dual va sobre <span class="mate">$\mathcal D(\mathcal L)$</span>, o sea sobre <strong>subsoluciones suaves</strong>, no sobre funciones cualesquiera. El dual no afirma que <span class="mate">$V$</span> resuelva la HJB: dice que <span class="mate">$V(x_0)$</span> es el supremo de los valores de las subsoluciones. Es la idea de Fleming y Vermes que Kurtz–Stockbridge citan en su introducción, y es <strong>el mecanismo por el que los dos lados del problema evitan la viscosidad</strong>.</p>
   </div>
 </li>
 <li class="tarea pendiente abrible" data-hecha="0">
@@ -606,7 +653,14 @@ window.MathJax={
     <span class="flecha" aria-hidden="true"></span>
   </button>
   <div class="detalle" hidden>
-    <p>Procedencia: era P6; de REF-3 §4.6 y REF-1 §5.7. El borrador pone <span class="mate">$\Omega\subset\mathbb R^d$</span> acotado y <strong>no dice nada</strong> de la frontera. Sin eso, ni la HJB ni Fokker–Planck están bien puestas, y la elección cambia las dos ecuaciones y el significado de <span class="mate">$m$</span>. Un MDP finito no tenía frontera, así que esto es deuda nueva del continuo. <strong>Puede resolverse eligiendo y justificando</strong>, no hace falta que lo diga él. Hay respaldo escrito: Baudoin §4.7 (Dirichlet) y §4.8 (Neumann). ✅ También es pregunta suya en <code>REF-2</code>: <em>«what type of boundary conditions?»</em>.</p>
+    <p>Procedencia: era P6; de REF-3 §4.6 y REF-1 §5.7. El borrador pone <span class="mate">$\Omega\subset\mathbb R^d$</span> acotado y <strong>no dice nada</strong> de la frontera. Sin eso, ni la HJB ni Fokker–Planck están bien puestas, y la elección cambia las dos ecuaciones y el significado de <span class="mate">$m$</span>. Un MDP finito no tenía frontera, así que esto es deuda nueva del continuo. <strong>Puede resolverse eligiendo y justificando</strong>, no hace falta que lo diga él. Hay respaldo escrito: Baudoin §4.7 (Dirichlet) y §4.8 (Neumann). ✅ También es pregunta suya en <code>REF-2</code>: <em>«what type of boundary conditions?»</em>. 🔴 <strong>SUBE el 2026-08-06, y por un motivo nuevo: es UNA pregunta, no tres.</strong> Al escribir <code>NJU-3</code> la misma frontera apareció en tres sitios que parecían independientes:</p>
+    <ul>
+      <li><strong>En el problema directo.</strong> <span class="mate">$\mathcal M$</span> se define por «(11) para toda <span class="mate">$\varphi$</span>», y el v2 no dice de qué conjunto. Sobre un dominio con frontera, <span class="mate">$C_c^\infty(E)$</span> y <span class="mate">$C_b^2(\overline E)$</span> <strong>dan conjuntos <span class="mate">$\mathcal M$</span> distintos</strong>, y la diferencia es exactamente el comportamiento en <span class="mate">$\partial E$</span>.</li>
+      <li><strong>En el espacio del costo.</strong> El <span class="mate">$H_s$</span> de Folland se define por el peso de Fourier, o sea sobre <span class="mate">$\mathbb R^n$</span> entero. Sobre un dominio acotado hay al menos <strong>tres definiciones no equivalentes</strong> en cuanto <span class="mate">$s&gt;1/2$</span>, que es siempre el caso porque el encaje pide <span class="mate">$s&gt;(d+m)/2$</span>.</li>
+      <li><strong>En el mapa de Riesz.</strong> <span class="mate">$R=I-\kappa\Delta$</span> solo vale si el término de frontera de la integración por partes se anula, o sea con periodicidad o con Neumann homogéneo. ⚠️ <strong>Y en el propio experimento del v2 hacen falta las dos</strong>: el estado es el toro pero la acción es <span class="mate">$[-2,2]$</span>, que sí tiene frontera. El v2 las presenta como alternativas.</li>
+    </ul>
+    <p class="hecho">✅ <strong>Sobre el toro las tres desaparecen a la vez</strong>, lo cual sugiere que el toro es el sitio donde enunciar el primer teorema limpio. Es lectura propia y es una recomendación, no un resultado. 🔴 <strong>Bloqueada por material</strong>: hacen falta los capítulos 8 y 9 de Brezis, y el <code>.mmd</code> que hay son sus capítulos 1 a 3. Ver <code>NJU-5</code>.</p>
+    <p class="artefacto">Artefacto: <code>subproyectos/notas_junca/overleaf/sec3.tex</code></p>
   </div>
 </li>
 <li class="tarea pendiente abrible" data-hecha="0">
@@ -1336,6 +1390,114 @@ window.MathJax={
     </ul>
     <p class="alerta">🔴 <strong>Al compilar para verificar esto, salió un bug real y previo:</strong> el <code>main.tex</code> de <code>EXP-1</code> conservaba el <code>\includeonly</code> de ProxDM y excluía en silencio TODO capítulo nuevo desde el día en que nació el subproyecto. Corregido en el mismo commit; ver la entrada de <code>EXP-1</code>. <strong>Regla que queda, añadida a <code>CLAUDE.md</code> de este subproyecto:</strong> el aparato se hereda sin mirar dos veces; la estructura semanal no se hereda nunca; el <strong>contenido matemático se revisa capítulo por capítulo</strong>, y entra si cubre exactamente lo que <code>semana_0.md</code> ya decidió que hacía falta.</p>
     <p class="artefacto">Artefactos: <code>overleaf/folland_sobolev.tex</code>, <code>overleaf/apendice_baudoin_6.tex</code></p>
+  </div>
+</li>
+  </ul>
+</section>
+<section class="panel" id="panel-notas_junca" role="tabpanel">
+  <h2>Reescribir la nota v2 del asesor</h2>
+  <div class="contexto-oculto" hidden>
+    <p class="contexto">La nota de Mauricio, <em>Continuous-Time Inverse Optimal Control with Prior Beliefs</em> (julio de 2026), reescrita en español y en modo <code>xe</code>, completando los detalles que deja sueltos con las fuentes que ya están fichadas. Overleaf propio. El hilo es uno: de cada objeto, en qué espacio vive, y qué cosas todavía no sabemos dónde viven.</p>
+  </div>
+  <div class="barra"><div class="relleno" style="width:57%"></div></div>
+  <p class="cuenta">4 de 7 completadas</p>
+  <ul class="tareas">
+<li class="tarea hecha abrible" data-hecha="1">
+  <button class="cabecera" type="button" aria-expanded="false">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">NJU-1</span>
+    <span class="titulo">Montar el subproyecto y el Overleaf</span>
+    <span class="fecha">2026-08-06</span>
+    <span class="flecha" aria-hidden="true"></span>
+  </button>
+  <div class="detalle" hidden>
+    <p>Nace de una conversación con Mauricio ese día, en la que además le pasó Bhatt &amp; Borkar. Clonado <code>6a74cf7b71ff9de06ae7153f</code>, que traía <strong>solo el <code>main.tex</code></strong> de la v2: un <code>article</code> con once secciones. Preámbulo copiado del Overleaf de <strong>reuniones</strong>, no del de explicaciones, porque es el que ya trae <code>\dfin{}</code> y las macros del modo T. Añadidos entornos numerados y dos cajas nuevas, <code>vive</code> y <code>abierto</code>. 🔴 <strong>Las secciones 5 a 11 se borraron del Overleaf</strong>, con permiso expreso: el <code>.tex</code> íntegro de la v2 está en el escritorio del usuario y ese es el respaldo. ⚠️ <strong>Dos trampas de compilación</strong>, las dos anotadas en el <code>CLAUDE.md</code>: <code>\jn{}</code> dentro de un display necesita <code>\mbox</code>, y <code>babel-spanish</code> pone los romanos en versalitas, que no existen en cursiva.</p>
+    <p class="artefacto">Artefacto: <code>subproyectos/notas_junca/CLAUDE.md</code></p>
+  </div>
+</li>
+<li class="tarea hecha abrible" data-hecha="1">
+  <button class="cabecera" type="button" aria-expanded="false">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">NJU-2</span>
+    <span class="titulo">Fijar el contrato de notación</span>
+    <span class="fecha">2026-08-06</span>
+    <span class="flecha" aria-hidden="true"></span>
+  </button>
+  <div class="detalle" hidden>
+    <p>Tres decisiones del usuario, todas suyas y todas en <code>notacion.tex</code>:</p>
+    <ul>
+      <li><strong><code>E</code> estados, <code>\Omega</code> espacio muestral.</strong> La nota llama <code>\Omega</code> al espacio de estados y eso no se hereda. Ya estaba fijado así en el Overleaf de reuniones y se mantiene.</li>
+      <li><strong>Cero superíndices que sean etiqueta</strong>: <code>P_{t,\pi,x}</code> y no <code>P_t^\pi(x,\cdot)</code>. Los que son operación (potencia, inverso, dual, adjunto, traspuesta, dimensión) se quedan arriba. <strong>El óptimo baja con <code>\star</code></strong>, lo que libera el <code>*</code> de arriba para el dual y el adjunto; en la nota los dos son el mismo símbolo y se confunden.</li>
+      <li><strong>El doble de de Finetti solo donde difiere</strong>, que es la regla que ya traía el Overleaf de reuniones.</li>
+    </ul>
+    <p class="aviso">⚠️ <strong>Y salió un choque que no se había visto:</strong> Kurtz–Stockbridge y Bhatt–Borkar llaman <strong><code>A</code> al generador controlado</strong>, y aquí <code>A</code> son las acciones. Toda importación suya se traduce, con tabla.</p>
+    <p class="artefacto">Artefacto: <code>subproyectos/notas_junca/overleaf/notacion.tex</code></p>
+  </div>
+</li>
+<li class="tarea hecha abrible" data-hecha="1">
+  <button class="cabecera" type="button" aria-expanded="false">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">NJU-3</span>
+    <span class="titulo">Reescribir las secciones 1 a 4 en modo <code>xe</code></span>
+    <span class="fecha">2026-08-06</span>
+    <span class="flecha" aria-hidden="true"></span>
+  </button>
+  <div class="detalle" hidden>
+    <p>26 páginas, compila limpio. Cinco cosas que la nota da por dichas y aquí quedan con nombre, teorema y hipótesis:</p>
+    <ul>
+      <li class="alerta">🔴 <strong>Que <code>M</code> sea exactamente el conjunto de ocupaciones es un teorema</strong>, no una definición: <strong>Kurtz–Stockbridge Teorema 6.3</strong> y <strong>Bhatt–Borkar Teorema 2.2</strong>. Y sus dos ecuaciones resultan ser <strong>la misma</strong> tras normalizar por <code>rho</code>, cosa que ninguno de los dos dice. Cierra la parte descontada de <code>I-12</code>.</li>
+      <li class="alerta">🔴 <strong>El «dual formal» no es formal:</strong> es <strong>Bhatt–Borkar Teorema 4.3</strong>, y su supremo va sobre <code>D(L)</code>, o sea sobre <strong>subsoluciones suaves</strong>. Es por ahí por donde el §4 entero evita la viscosidad, y refuerza la lectura propia que ya iba en la agenda del 2026-08-03.</li>
+      <li class="hecho">✅ <strong>Tres hipótesis del Teorema 4.2 de la nota son automáticas</strong> en el régimen (i): que <code>Gap</code> sea finita, que sea s.c.i. y que el objetivo sea coercivo. La única de verdad es el encaje.</li>
+      <li class="hecho">✅ <strong>La compacidad débil de <code>M</code> no es hipótesis del problema inverso</strong>: sale de que <code>E x A</code> sea compacto, vía Banach–Alaoglu y el adjunto del encaje. O sea que es una propiedad del problema <strong>directo</strong>.</li>
+      <li class="aviso">⚠️ <strong>Y la hipótesis (6.2) de Kurtz–Stockbridge, con costo acotado, obliga a <code>E</code> compacto.</strong> El toro de su experimento cumple; el abierto acotado que escribe en el §2 no.</li>
+    </ul>
+    <p class="artefacto">Artefactos: <code>overleaf/sec1.tex</code> … <code>overleaf/sec4.tex</code></p>
+  </div>
+</li>
+<li class="tarea hecha abrible" data-hecha="1">
+  <button class="cabecera" type="button" aria-expanded="false">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">NJU-4</span>
+    <span class="titulo">El censo de dónde vive cada cosa</span>
+    <span class="fecha">2026-08-06</span>
+    <span class="flecha" aria-hidden="true"></span>
+  </button>
+  <div class="detalle" hidden>
+    <p>Apéndice con la tabla de los diez objetos cerrados y las cuatro preguntas abiertas, más la <strong>declaración por escrito de qué se leyó de cada fuente y qué no</strong>, que es regla de fidelidad del proyecto. 🔴 <strong>El hallazgo es que las tres preguntas abiertas grandes son una sola</strong>, y es la frontera de <code>E x A</code>: qué funciones test definen <code>M</code>, cuál de las tres definiciones de <code>H_s</code> sobre un dominio acotado, y la compacidad débil de <code>M</code>. <strong>Sobre el toro las tres desaparecen a la vez.</strong></p>
+    <p class="artefacto">Artefacto: <code>subproyectos/notas_junca/overleaf/apendice_donde_vive.tex</code></p>
+  </div>
+</li>
+<li class="tarea pendiente abrible" data-hecha="0">
+  <button class="cabecera" type="button" aria-expanded="false">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">NJU-5</span>
+    <span class="titulo">Pedir los capítulos de Sobolev de Brezis</span>
+    <span class="flecha" aria-hidden="true"></span>
+  </button>
+  <div class="detalle" hidden>
+    <p>Es lo que bloquea el abierto 1 del censo. El <code>.mmd</code> de Brezis que hay en el proyecto son los <strong>capítulos 1 a 3</strong> (Hahn–Banach, acotación uniforme, topologías débiles), y no llegan a Sobolev. Hacen falta los <strong>capítulos 8 y 9</strong>, que son los de <code>H^1(\Omega)</code> frente a <code>H_0^1(\Omega)</code>, la traza y la extensión. ⚠️ Y <strong>el PDF de Brezis tampoco está</strong>: es el único hueco que de verdad pesa en <code>material_pdf/INVENTARIO.md</code>. Hay que conseguirlo antes.</p>
+  </div>
+</li>
+<li class="tarea pendiente abrible" data-hecha="0">
+  <button class="cabecera" type="button" aria-expanded="false">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">NJU-6</span>
+    <span class="titulo">Fichar Bhatt &amp; Borkar</span>
+    <span class="flecha" aria-hidden="true"></span>
+  </button>
+  <div class="detalle" hidden>
+    <p>Archivado el 2026-08-06 y ya usado en <code>NJU-3</code> para tres teoremas, pero <strong>sin ficha</strong>, que es lo que decide si es núcleo o contexto. Se leyeron sus §§1.2–1.3, 2.2 y 4; faltan la §3 (existencia de controles óptimos de Markov) y la §5 (problemas abiertos, que puede alimentar la propuesta). Va con la skill <code>/ficha</code>.</p>
+  </div>
+</li>
+<li class="tarea pendiente abrible" data-hecha="0">
+  <button class="cabecera" type="button" aria-expanded="false">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">NJU-7</span>
+    <span class="titulo">Decidir si las secciones 5 a 11 se reescriben</span>
+    <span class="flecha" aria-hidden="true"></span>
+  </button>
+  <div class="detalle" hidden>
+    <p>Este documento cubre 1 a 4 a propósito, que es donde está el Teorema 4.2. De ahí en adelante viene identificabilidad (§5), el sistema HJB–Fokker–Planck (§6), punto fijo multivaluado (§7), el esquema numérico (§8) y el círculo (§9). ⚠️ <strong>No se abre sin decidir para qué.</strong> El §7 alimenta la cuarta dirección de investigación, que es la recomendada; el §8 y el §9 son numéricos y puede que no entren en una propuesta de planteamiento.</p>
   </div>
 </li>
   </ul>
