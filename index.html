@@ -135,7 +135,7 @@ window.MathJax={
 <header class="principal">
 <h1>Propuesta de tesis — control óptimo</h1>
 <p class="sub">Decidir y proponer un tema en control óptimo inverso, en 2–3 meses desde el 2026-07-25.</p>
-<p class="global"><strong>61</strong> de <strong>109</strong> tareas completadas en todo el proyecto.</p>
+<p class="global"><strong>62</strong> de <strong>110</strong> tareas completadas en todo el proyecto.</p>
 </header>
 <nav class="pestanas" role="tablist">
 <button data-slug="preguntas_junca" role="tab">Preguntas a Junca<span class="n">8/22</span></button>
@@ -143,7 +143,7 @@ window.MathJax={
 <button data-slug="referencias" role="tab">referencias<span class="n">8/15</span></button>
 <button data-slug="infra" role="tab">General<span class="n">17/20</span></button>
 <button data-slug="explicaciones" role="tab">explicaciones<span class="n">3/4</span></button>
-<button data-slug="notas_junca" role="tab">notas junca<span class="n">5/8</span></button>
+<button data-slug="notas_junca" role="tab">notas junca<span class="n">6/9</span></button>
 </nav>
 <div class="controles">
 <label><input type="checkbox" id="ocultar"> Esconder las completadas</label>
@@ -662,7 +662,11 @@ window.MathJax={
       <li><strong>En el espacio del costo.</strong> El <span class="mate">$H_s$</span> de Folland se define por el peso de Fourier, o sea sobre <span class="mate">$\mathbb R^n$</span> entero. Sobre un dominio acotado hay al menos <strong>tres definiciones no equivalentes</strong> en cuanto <span class="mate">$s&gt;1/2$</span>, que es siempre el caso porque el encaje pide <span class="mate">$s&gt;(d+m)/2$</span>.</li>
       <li><strong>En el mapa de Riesz.</strong> <span class="mate">$R=I-\kappa\Delta$</span> solo vale si el término de frontera de la integración por partes se anula, o sea con periodicidad o con Neumann homogéneo. ⚠️ <strong>Y en el propio experimento del v2 hacen falta las dos</strong>: el estado es el toro pero la acción es <span class="mate">$[-2,2]$</span>, que sí tiene frontera. El v2 las presenta como alternativas.</li>
     </ul>
-    <p class="hecho">✅ <strong>Sobre el toro las tres desaparecen a la vez</strong>, lo cual sugiere que el toro es el sitio donde enunciar el primer teorema limpio. Es lectura propia y es una recomendación, no un resultado. 🔴 <strong>Bloqueada por material</strong>: hacen falta los capítulos 8 y 9 de Brezis, y el <code>.mmd</code> que hay son sus capítulos 1 a 3. Ver <code>NJU-5</code>.</p>
+    <p class="hecho">✅ <strong>Sobre el toro las tres desaparecen a la vez</strong>, lo cual sugiere que el toro es el sitio donde enunciar el primer teorema limpio. Es lectura propia y es una recomendación, no un resultado. ✅ <strong>DESBLOQUEADA y medio cerrada el mismo día</strong>, con el capítulo 9 de Brezis convertido. De los tres sitios, <strong>el segundo queda resuelto</strong>: 🔴 <strong>El espacio del costo es <span class="mate">$H^s(E\times A)$</span> intrínseco, con <span class="mate">$s&gt;(d+m)/2$</span> entero.</strong> Y las tres definiciones que parecían no coincidir eran en realidad dos: la de las restricciones y la intrínseca <strong>coinciden</strong> en cuanto hay operador de extensión (Brezis 9.7 más el Corolario 9.8 de densidad). La que sí difiere es <span class="mate">$H_0^s$</span>, y <strong>no es la que sirve</strong>: impondría <span class="mate">$c=0$</span> en la frontera, cosa que nada del problema justifica, y de hecho el costo del experimento del círculo vale <span class="mate">$2r\neq0$</span> en <span class="mate">$a=\pm2$</span>. ✅ <strong>Y el tercero también, con creces.</strong> El encaje sobre el dominio no solo vale (Cor. 9.13 y 9.15) sino que es <strong>compacto</strong>, encadenando con Rellich–Kondrachov (9.16). Por Schauder el adjunto es compacto, así que <span class="mate">$\mathcal M$</span> <strong>no es solo débilmente compacto en <span class="mate">$\mathcal H^*$</span>: es compacto en norma</strong>. El Teorema 4.2 del v2 pide menos de lo que hay. ✅ <strong>Y la condición de frontera del mapa de Riesz deja de ser una elección.</strong> No se impone: <strong>se recupera</strong>. La formulación débil del Ejemplo 4 de Brezis se prueba contra todo <span class="mate">$H^1(\Omega)$</span> y no contra <span class="mate">$H_0^1$</span>, y es eso lo que hace aparecer el término de frontera de Green y obliga a Neumann homogéneo. Es su Proposición 9.24, o sea Lax–Milgram. <strong>La frase del v2 era exactamente correcta y ahora tiene teorema.</strong> 🔴 <strong>Lo que sigue abierto, y ahora son dos cosas concretas:</strong></p>
+    <ul>
+      <li><strong>En el problema directo</strong>: contra qué conjunto de funciones test se define <span class="mate">$\mathcal M$</span>. Eso Brezis no lo arregla.</li>
+      <li><strong>La geometría del producto.</strong> <span class="mate">$E\times A$</span> tiene esquinas. Para cajas, cilindros y el toro está resuelto (Observación 9 de Brezis, extensión por reflexiones sucesivas, hecha justo para el cuadrado). <strong>[Incierto]</strong> para <span class="mate">$E$</span> suave por <span class="mate">$A$</span> caja, cuyo producto tiene <strong>aristas</strong>: haría falta teoría de dominios lipschitzianos, que no está en el proyecto.</li>
+    </ul>
     <p class="artefacto">Artefacto: <code>subproyectos/notas_junca/overleaf/sec3.tex</code></p>
   </div>
 </li>
@@ -1402,8 +1406,8 @@ window.MathJax={
   <div class="contexto-oculto" hidden>
     <p class="contexto">La nota de Mauricio, <em>Continuous-Time Inverse Optimal Control with Prior Beliefs</em> (julio de 2026), reescrita en español y en modo <code>xe</code>, completando los detalles que deja sueltos con las fuentes que ya están fichadas. Overleaf propio. El hilo es uno: de cada objeto, en qué espacio vive, y qué cosas todavía no sabemos dónde viven.</p>
   </div>
-  <div class="barra"><div class="relleno" style="width:62%"></div></div>
-  <p class="cuenta">5 de 8 completadas</p>
+  <div class="barra"><div class="relleno" style="width:67%"></div></div>
+  <p class="cuenta">6 de 9 completadas</p>
   <ul class="tareas">
 <li class="tarea hecha abrible" data-hecha="1">
   <button class="cabecera" type="button" aria-expanded="false">
@@ -1470,15 +1474,35 @@ window.MathJax={
     <p class="artefacto">Artefacto: <code>subproyectos/notas_junca/overleaf/apendice_donde_vive.tex</code></p>
   </div>
 </li>
-<li class="tarea pendiente abrible" data-hecha="0">
+<li class="tarea hecha abrible" data-hecha="1">
   <button class="cabecera" type="button" aria-expanded="false">
     <span class="casilla" aria-hidden="true"></span>
     <span class="ident">NJU-5</span>
-    <span class="titulo">Pasar por Mathpix el capítulo 9 de Brezis</span>
+    <span class="titulo">El capítulo 9 de Brezis, y con él el espacio del costo</span>
+    <span class="fecha">2026-08-06</span>
     <span class="flecha" aria-hidden="true"></span>
   </button>
   <div class="detalle" hidden>
-    <p>Es lo único que bloquea el abierto 1 del censo, o sea <code>I-6</code>. <strong>Ya está recortado y en la bandeja</strong>: <code>mathpix_inbox/Para pasar ya/</code>, <code>brezis_cap9_sobolev_dominios.pdf</code>, 61 páginas. <strong>Por qué el 9 y no el 8:</strong> el 9 es el de <span class="mate">$N$</span> dimensiones y trae lo que falta, <code>W^{1,p}(\Omega)</code> frente a <code>W_0^{1,p}(\Omega)</code> (§9.4), los operadores de extensión (§9.2), las desigualdades de Sobolev sobre dominios (§9.3) y la formulación variacional (§9.5), que es donde la condición de Neumann del mapa de Riesz aparece sola. El 8 es la versión en dimensión uno y quedó en la bandeja de «eventualmente», porque ayuda a entender pero no bloquea nada. ✅ <strong>Y basta el 9 porque basta con orden entero</strong> (<code>I-13</code>, 2026-08-06): el umbral solo pide <em>algún</em> <span class="mate">$s&gt;(d+m)/2$</span>, así que se toma entero y no hace falta teoría fraccionaria sobre dominios, que era lo caro. 🔴 <strong>El PDF de Brezis SÍ estaba</strong>, en <code>Escritorio/libros/Pregrado/Análisis Funcional/</code>, y el <code>INVENTARIO.md</code> llevaba semanas diciendo que era «el único hueco que importa». La recogida del 2026-07-30 solo miró los libros <strong>sueltos</strong> del escritorio, no los de las subcarpetas. Copiado ya a <code>material_pdf/prerequisitos/</code>. ⚠️ <strong>Regla que queda:</strong> antes de pedirle un libro al usuario, <strong>se busca en el disco</strong>. Esto se cerró en un minuto con un <code>find</code>.</p>
+    <p>Recortadas 61 páginas del PDF completo (páginas 269–329, sacadas de los marcadores), pasadas por Mathpix por el usuario el mismo día, y archivadas en <code>material_mathpix/prerequisitos/brezis_cap9_sobolev_dominios/</code>. 🔴 <strong>La respuesta a la pregunta del dominio: <span class="mate">$\mathcal H=H^s(E\times A)$</span> intrínseco, con <span class="mate">$s&gt;(d+m)/2$</span> entero.</strong> Cuatro piezas:</p>
+    <ul>
+      <li><strong>La tricotomía era una dicotomía.</strong> De las tres definiciones que no coincidían, <strong>dos sí coinciden</strong> en cuanto hay operador de extensión (Teorema 9.7 más Corolario 9.8, densidad de las restricciones de <span class="mate">$C_c^\infty(\mathbb R^n)$</span>).</li>
+      <li><strong>Y la tercera, <span class="mate">$H_0^s$</span>, no es la que sirve</strong>: impondría <span class="mate">$c=0$</span> en la frontera, y nada del problema lo justifica. El propio costo del círculo vale <span class="mate">$2r\neq0$</span> en <span class="mate">$a=\pm2$</span>.</li>
+      <li><strong>El encaje vale sobre el dominio</strong> (Corolarios 9.13 y 9.15) y además es <strong>compacto</strong>, encadenando con Rellich–Kondrachov (9.16).</li>
+      <li class="alerta">🔴 <strong>La condición de Neumann del mapa de Riesz no se impone: se recupera.</strong> La formulación débil del Ejemplo 4 se prueba contra todo <span class="mate">$H^1(\Omega)$</span> y <strong>no</strong> contra <span class="mate">$H_0^1$</span>, y es eso lo que hace aparecer el término de frontera de Green y obliga a Neumann. Es la Proposición 9.24, o sea Lax–Milgram. La frase de la nota, «Neumann es lo que aparece al hacer una variación libre de Sobolev», era exactamente correcta y ahora tiene teorema.</li>
+    </ul>
+    <p class="aviso">⚠️ <strong>Queda abierto</strong> contra qué funciones test se define <span class="mate">$\mathcal M$</span>, y la geometría del producto cuando <span class="mate">$E$</span> es suave y <span class="mate">$A$</span> una caja, porque ahí hay <strong>aristas</strong>. Cajas, cilindros y el toro sí están cubiertos, por la Observación 9, que hace la extensión por reflexiones sucesivas. 🔴 <strong>El PDF de Brezis SÍ estaba</strong>, en <code>Escritorio/libros/Pregrado/Análisis Funcional/</code>, y el <code>INVENTARIO.md</code> llevaba semanas diciendo que era «el único hueco que importa». La recogida del 2026-07-30 solo miró los libros <strong>sueltos</strong> del escritorio, no los de las subcarpetas. ⚠️ <strong>Regla que queda, ya en el <code>CLAUDE.md</code> raíz:</strong> antes de pedirle un libro al usuario, <strong>se busca en el disco</strong>, y si está, se recortan las páginas. Esto se cerró en un minuto con un <code>find</code>.</p>
+    <p class="artefacto">Artefacto: <code>overleaf/sec3.tex</code></p>
+  </div>
+</li>
+<li class="tarea pendiente abrible" data-hecha="0">
+  <button class="cabecera" type="button" aria-expanded="false">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">NJU-9</span>
+    <span class="titulo">Pedir §§9.6 a 9.8 de Brezis, si hace falta el §6 de la nota</span>
+    <span class="flecha" aria-hidden="true"></span>
+  </button>
+  <div class="detalle" hidden>
+    <p>No bloquea nada hoy, y por eso no va a «Para pasar ya». Del capítulo 9 se leyeron las §§9.1 a 9.5; faltan <strong>9.6 regularidad de soluciones débiles</strong>, 9.7 principio del máximo y 9.8 descomposición espectral. <strong>Cuándo hará falta:</strong> la 9.6 es la que dice cuándo la solución de la elíptica del sistema (37) es más regular que <span class="mate">$H^1$</span>, o sea alimenta la segunda dirección de investigación del §11 de la nota, <em>«characterize when occupation measures possess densities regular enough»</em>. Se abre si se decide reescribir el §6 (<code>NJU-7</code>).</p>
   </div>
 </li>
 <li class="tarea pendiente abrible" data-hecha="0">
