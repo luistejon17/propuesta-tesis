@@ -135,15 +135,15 @@ window.MathJax={
 <header class="principal">
 <h1>Propuesta de tesis — control óptimo</h1>
 <p class="sub">Decidir y proponer un tema en control óptimo inverso, en 2–3 meses desde el 2026-07-25.</p>
-<p class="global"><strong>59</strong> de <strong>108</strong> tareas completadas en todo el proyecto.</p>
+<p class="global"><strong>61</strong> de <strong>109</strong> tareas completadas en todo el proyecto.</p>
 </header>
 <nav class="pestanas" role="tablist">
 <button data-slug="preguntas_junca" role="tab">Preguntas a Junca<span class="n">8/22</span></button>
-<button data-slug="preguntas_investigacion" role="tab">Preguntas de investigación<span class="n">2/23</span></button>
+<button data-slug="preguntas_investigacion" role="tab">Preguntas de investigación<span class="n">3/23</span></button>
 <button data-slug="referencias" role="tab">referencias<span class="n">8/15</span></button>
 <button data-slug="infra" role="tab">General<span class="n">17/20</span></button>
 <button data-slug="explicaciones" role="tab">explicaciones<span class="n">3/4</span></button>
-<button data-slug="notas_junca" role="tab">notas junca<span class="n">4/7</span></button>
+<button data-slug="notas_junca" role="tab">notas junca<span class="n">5/8</span></button>
 </nav>
 <div class="controles">
 <label><input type="checkbox" id="ocultar"> Esconder las completadas</label>
@@ -467,8 +467,8 @@ window.MathJax={
     <p class="contexto">Las de <strong>prioridad alta</strong> están en el camino crítico: sin ellas no hay enunciado de tesis.</p>
     <p class="contexto alerta">🔴 <strong>Revisadas contra el v2 del borrador el 2026-08-05</strong> (<code>REF-14</code>, <code>fichas/junca_fixed_point_continuo_v2.md</code>). El v2 pasó de cero teoremas a dos resultados demostrados, así que varias de estas preguntas cambian de estado y <strong>dos se cierran</strong>. Lo que hay que retener: el Teorema 4.2 del v2 da existencia y unicidad <strong>esquivando</strong> la continuidad del selector de políticas y la HJB, así que lo que antes era «demostrar el punto fijo» hoy es <strong>justificar sus hipótesis sobre <span class="mate">$\mathcal M$</span></strong>. Cada entrada tocada lo dice en su detalle.</p>
   </div>
-  <div class="barra"><div class="relleno" style="width:9%"></div></div>
-  <p class="cuenta">2 de 23 completadas</p>
+  <div class="barra"><div class="relleno" style="width:13%"></div></div>
+  <p class="cuenta">3 de 23 completadas</p>
   <h3>Prioridad alta · Las dos mitades del trabajo</h3>
   <ul class="tareas">
 <li class="tarea pendiente abrible" data-hecha="0">
@@ -555,8 +555,8 @@ window.MathJax={
       <li>**(i) <em>Measure formulation</em>.<strong> <span class="mate">$\mathcal H\hookrightarrow C(\Omega\times A)$</span>, por ejemplo <span class="mate">$H^s$</span> con <span class="mate">$s&gt;(d+m)/2$</span> o un RKHS; entonces toda medida finita con signo cae en <span class="mate">$\mathcal H^*$</span>. </strong>Es el régimen que exige el Teorema 4.2.**</li>
       <li>**(ii) <em>Density formulation</em>.** Si las ocupaciones tienen densidad <span class="mate">$L^2$</span>, basta <span class="mate">$H^1$</span> con emparejamiento <span class="mate">$L^2$</span>: <em>«the regime used in the PDE and numerical formulas below»</em>, o sea <strong>el §6, el §8 y el §9</strong>.</li>
     </ul>
-    <p class="alerta">🔴 <strong>Esa tensión es el corazón de <code>REF-13</code>:</strong> el teorema vive en (i) y el resto del documento en (ii). Y el §11 la abre como dirección propia, <em>«characterize when occupation measures possess densities regular enough for the <span class="mate">$H^1$</span> PDE system, and otherwise work directly in <span class="mate">$\mathcal H^*$</span>»</em>. ✅ <strong>Lo que el v2 sí arregla, y era la mitad práctica de esta pregunta:</strong> la ecuación del costo se escribe ahora en <strong>forma débil</strong> (38), <em>«most safely interpreted weakly […] This avoids writing a distribution-valued right-hand side as an ordinary function»</em>. La objeción del potencial de Bessel sigue en pie para el régimen (ii), pero ya no es una errata del documento. ✅ <strong>Y el 2026-08-06, en <code>NJU-3</code>, la disyuntiva deja de estar empatada.</strong> El régimen (i) no es una opción entre dos: es el que hace que <strong>tres hipótesis del Teorema 4.2 sean automáticas</strong>. Con <span class="mate">$\mathcal H\hookrightarrow C$</span> y la masa <span class="mate">$1/\rho$</span> del Corolario de <code>I-16</code>, sale <span class="mate">$\|\eta\|_{\mathcal H^*}\le C_\iota/\rho$</span> para toda <span class="mate">$\eta\in\mathcal M$</span>, y de ahí que <span class="mate">$\operatorname{Gap}$</span> sea <strong>finita y Lipschitz</strong> de constante <span class="mate">$2C_\iota/\rho$</span>. La coercividad sale sola de <span class="mate">$\operatorname{Gap}\ge0$</span>. O sea que <strong>la única hipótesis de verdad de la Proposición 4.1 del v2 es el encaje</strong>, y el régimen (ii) no la da. ⚠️ <strong>Y el umbral <span class="mate">$s&gt;(d+m)/2$</span> es agudo</strong>, no una comodidad de la prueba: Folland deja como ejercicio 33 el recíproco del Teorema 9.17. No se puede rebajar con un argumento más fino.</p>
-    <p class="artefacto">Artefacto: <code>subproyectos/notas_junca/overleaf/sec4.tex</code> §4.1</p>
+    <p class="alerta">🔴 <strong>Esa tensión es el corazón de <code>REF-13</code>:</strong> el teorema vive en (i) y el resto del documento en (ii). Y el §11 la abre como dirección propia, <em>«characterize when occupation measures possess densities regular enough for the <span class="mate">$H^1$</span> PDE system, and otherwise work directly in <span class="mate">$\mathcal H^*$</span>»</em>. ✅ <strong>Lo que el v2 sí arregla, y era la mitad práctica de esta pregunta:</strong> la ecuación del costo se escribe ahora en <strong>forma débil</strong> (38), <em>«most safely interpreted weakly […] This avoids writing a distribution-valued right-hand side as an ordinary function»</em>. La objeción del potencial de Bessel sigue en pie para el régimen (ii), pero ya no es una errata del documento. ✅ <strong>Y el 2026-08-06, en <code>NJU-3</code>, la disyuntiva deja de estar empatada.</strong> El régimen (i) no es una opción entre dos: es el que hace que <strong>tres hipótesis del Teorema 4.2 sean automáticas</strong>. Con <span class="mate">$\mathcal H\hookrightarrow C$</span> y la masa <span class="mate">$1/\rho$</span> del Corolario de <code>I-16</code>, sale <span class="mate">$\|\eta\|_{\mathcal H^*}\le C_\iota/\rho$</span> para toda <span class="mate">$\eta\in\mathcal M$</span>, y de ahí que <span class="mate">$\operatorname{Gap}$</span> sea <strong>finita y Lipschitz</strong> de constante <span class="mate">$2C_\iota/\rho$</span>. La coercividad sale sola de <span class="mate">$\operatorname{Gap}\ge0$</span>. O sea que <strong>la única hipótesis de verdad de la Proposición 4.1 del v2 es el encaje</strong>, y el régimen (ii) no la da. ⚠️ <strong>Y el umbral <span class="mate">$s&gt;(d+m)/2$</span> es agudo</strong>, no una comodidad de la prueba: Folland deja como ejercicio 33 el recíproco del Teorema 9.17. No se puede rebajar con un argumento más fino. 🔴 <strong>Y de ahí sale lo más duro de todo, el mismo día: <span class="mate">$\mathcal H=H^1$</span> NUNCA está en el régimen (i).</strong> El encaje <span class="mate">$H^1\hookrightarrow C$</span> pediría <span class="mate">$d+m&lt;2$</span>, y <span class="mate">$d+m\ge2$</span> siempre. <strong>Ni siquiera vale en su experimento del círculo</strong>, donde <span class="mate">$d=m=1$</span> y <span class="mate">$n=2$</span> cae justo en el caso frontera, que falla porque el umbral es agudo. O sea que la penalización (17) del v2 vive en el régimen (ii) <strong>también en su propio ejemplo numérico</strong>, mientras que su Teorema 4.2 necesita el (i). ⚠️ <strong>Consecuencia concreta sobre el operador, y hay que llevarla:</strong> el menor orden entero admisible con <span class="mate">$n=2$</span> es <span class="mate">$s=2$</span>, y con él el mapa de Riesz <strong>deja de ser <span class="mate">$I-\kappa\Delta$</span> y pasa a ser de orden cuatro</strong>. La ecuación elíptica del sistema (37), y con ella el solver del §8, <strong>cambian de naturaleza</strong> al moverse al régimen donde el teorema es cierto. ✅ <strong>Lo bueno: basta con <span class="mate">$s$</span> entero</strong>, porque el umbral solo pide <em>algún</em> <span class="mate">$s&gt;n/2$</span>. Eso mantiene todo en <span class="mate">$W^{s,2}$</span> de orden entero y <strong>evita la teoría fraccionaria sobre dominios</strong>, que era lo que hacía caro <code>I-6</code>.</p>
+    <p class="artefacto">Artefacto: <code>subproyectos/notas_junca/overleaf/sec3.tex</code> y <code>sec4.tex</code> §4.1</p>
   </div>
 </li>
 <li class="tarea pendiente abrible" data-hecha="0">
@@ -570,15 +570,18 @@ window.MathJax={
     <p>Procedencia: nace el 2026-08-06 escribiendo <code>NJU-3</code>. Es lectura propia y no está tratada en ninguna fuente del proyecto. La penalización (17) del v2 usa <span class="mate">$\nabla_{x,a}$</span>, o sea trata el estado y la acción con <strong>la misma regularidad</strong>, y el umbral del encaje penaliza las dos dimensiones por igual: <span class="mate">$s&gt;(d+m)/2$</span>. No hay ninguna razón del problema para que sea así. En sus propios ejemplos el costo es mucho más regular en <span class="mate">$a$</span> que en <span class="mate">$x$</span>, y de hecho suele ser <strong>estructurado</strong>, <span class="mate">$c(x,a)=q(x)+\ell(a)$</span> con <span class="mate">$\ell$</span> conocido, que es una de las direcciones que él mismo lista en su §11. <strong>Qué se ganaría:</strong> un espacio anisótropo, con orden <span class="mate">$s_x$</span> en el estado y <span class="mate">$s_a$</span> en la acción, pediría <span class="mate">$s_x&gt;d/2$</span> y <span class="mate">$s_a&gt;m/2$</span> por separado en vez de un solo umbral sobre <span class="mate">$d+m$</span>. En dimensión alta eso es mucho. <strong>Qué haría falta para atacarla:</strong> espacios de Sobolev anisótropos, que no están en <code>material_mathpix/</code>. Depende de <code>NJU-5</code>. ⚠️ Y depende de <code>I-6</code>: sobre un dominio con frontera hay que fijar antes qué quiere decir <span class="mate">$H_s$</span> ahí.</p>
   </div>
 </li>
-<li class="tarea pendiente abrible" data-hecha="0">
+<li class="tarea hecha abrible" data-hecha="1">
   <button class="cabecera" type="button" aria-expanded="false">
     <span class="casilla" aria-hidden="true"></span>
     <span class="ident">I-23</span>
     <span class="titulo"><strong>¿Vale el dual del LP con <span class="mate">$\nu_0$</span> arbitraria, o solo con <span class="mate">$\nu_0=\delta_{x_0}$</span>?</strong></span>
+    <span class="fecha">2026-08-06</span>
     <span class="flecha" aria-hidden="true"></span>
   </button>
   <div class="detalle" hidden>
-    <p>Procedencia: nace el 2026-08-06 escribiendo <code>NJU-3</code>, al comprobar que la (13) del v2 sí tiene teorema detrás. El «dual formal» del v2 <strong>no es formal</strong>: es el <strong>Teorema 4.3 de Bhatt–Borkar</strong>, que sale de su dualidad de programación lineal en dimensión infinita (§4.1, siguiendo a Anderson y Nash). 🔴 <strong>Pero está enunciado para <span class="mate">$\nu_0=\delta_{x_0}$</span></strong>, y el v2 usa <span class="mate">$\nu_0$</span> general. Con delta, el objetivo <span class="mate">$\nu_0(V)$</span> <strong>es</strong> la función de valor en un punto; con <span class="mate">$\nu_0$</span> general es su promedio, que es otro objeto. La extensión es plausible por linealidad pero <strong>[incierto]</strong>. <strong>Qué haría falta:</strong> leer el §4.1 de Bhatt–Borkar entero y ver si el par dual que montan admite <span class="mate">$\nu_0$</span> arbitraria. Va con <code>NJU-6</code>. ✅ <strong>Y de paso, lo que sí quedó claro y refuerza la lectura propia de la agenda del 2026-08-03:</strong> el supremo del dual va sobre <span class="mate">$\mathcal D(\mathcal L)$</span>, o sea sobre <strong>subsoluciones suaves</strong>, no sobre funciones cualesquiera. El dual no afirma que <span class="mate">$V$</span> resuelva la HJB: dice que <span class="mate">$V(x_0)$</span> es el supremo de los valores de las subsoluciones. Es la idea de Fleming y Vermes que Kurtz–Stockbridge citan en su introducción, y es <strong>el mecanismo por el que los dos lados del problema evitan la viscosidad</strong>.</p>
+    <p>Procedencia: nace el 2026-08-06 escribiendo <code>NJU-3</code>, al comprobar que la (13) del v2 sí tiene teorema detrás. El «dual formal» del v2 <strong>no es formal</strong>: es el <strong>Teorema 4.3 de Bhatt–Borkar</strong>, que sale de su dualidad de programación lineal en dimensión infinita (§4.1, siguiendo a Anderson y Nash). 🔴 <strong>Estaba enunciado para <span class="mate">$\nu_0=\delta_{x_0}$</span></strong>, y el v2 usa <span class="mate">$\nu_0$</span> general, así que se abrió como duda. ✅ <strong>RESPONDIDA el mismo día, y la respuesta es sí.</strong> Se abrió y se cerró en una tarde porque <strong>el material ya estaba</strong>: bastaba leer su §4.3 entero en vez de solo el enunciado del Teorema 4.3. En su montaje, <span class="mate">$W=\mathcal D(\mathcal L)$</span> con la norma <span class="mate">$\|f\|=\sup|f|+\sup|\mathcal Lf|$</span>, y <span class="mate">$Z=W^*$</span>. El primal es <span class="mate">$\min\mu(c)$</span> sujeto a <span class="mate">$F\mu=b$</span>, y <strong><span class="mate">$b$</span> es un elemento cualquiera de <span class="mate">$\mathcal D(\mathcal L)^*$</span></strong>: el teorema de dualidad que invocan (su 4.1, de Anderson y Nash) no le pide nada más. Ellos eligen <span class="mate">$b=\delta_{x_0}$</span> por comodidad. Con <span class="mate">$b=\nu_0$</span> la restricción primal es literalmente el balance débil y el objetivo dual es <span class="mate">$\nu_0(f)$</span>, o sea <strong>la (13) del v2 exacta</strong>. Y toda <span class="mate">$\nu_0\in\mathcal P(E)$</span> vale, porque <span class="mate">$|\nu_0(f)|\le\|f\|_\infty\le\|f\|$</span>. ⚠️ <strong>Y salió un aviso de normalización que hay que llevar:</strong> su §2.2 trabaja con <span class="mate">$\mu$</span> <strong>probabilidad</strong> y su §4.3 con <span class="mate">$\mu$</span> <strong>medida con signo sin normalizar</strong>. Las dos son correctas y difieren en un factor <span class="mate">$\rho$</span>. <strong>La del §4.3 es la convención del v2</strong>, la de masa <span class="mate">$1/\rho$</span> que cerró <code>I-16</code>. Al citar a Bhatt–Borkar hay que decir cuál de las dos.</p>
+    <p class="hecho">✅ <strong>Y de paso, lo que sí quedó claro y refuerza la lectura propia de la agenda del 2026-08-03:</strong> el supremo del dual va sobre <span class="mate">$\mathcal D(\mathcal L)$</span>, o sea sobre <strong>subsoluciones suaves</strong>, no sobre funciones cualesquiera. El dual no afirma que <span class="mate">$V$</span> resuelva la HJB: dice que <span class="mate">$V(x_0)$</span> es el supremo de los valores de las subsoluciones. Es la idea de Fleming y Vermes que Kurtz–Stockbridge citan en su introducción, y es <strong>el mecanismo por el que los dos lados del problema evitan la viscosidad</strong>.</p>
+    <p class="artefacto">Artefacto: <code>subproyectos/notas_junca/overleaf/sec2.tex</code>, Prop. 2.17</p>
   </div>
 </li>
 <li class="tarea pendiente abrible" data-hecha="0">
@@ -1399,8 +1402,8 @@ window.MathJax={
   <div class="contexto-oculto" hidden>
     <p class="contexto">La nota de Mauricio, <em>Continuous-Time Inverse Optimal Control with Prior Beliefs</em> (julio de 2026), reescrita en español y en modo <code>xe</code>, completando los detalles que deja sueltos con las fuentes que ya están fichadas. Overleaf propio. El hilo es uno: de cada objeto, en qué espacio vive, y qué cosas todavía no sabemos dónde viven.</p>
   </div>
-  <div class="barra"><div class="relleno" style="width:57%"></div></div>
-  <p class="cuenta">4 de 7 completadas</p>
+  <div class="barra"><div class="relleno" style="width:62%"></div></div>
+  <p class="cuenta">5 de 8 completadas</p>
   <ul class="tareas">
 <li class="tarea hecha abrible" data-hecha="1">
   <button class="cabecera" type="button" aria-expanded="false">
@@ -1471,11 +1474,11 @@ window.MathJax={
   <button class="cabecera" type="button" aria-expanded="false">
     <span class="casilla" aria-hidden="true"></span>
     <span class="ident">NJU-5</span>
-    <span class="titulo">Pedir los capítulos de Sobolev de Brezis</span>
+    <span class="titulo">Pasar por Mathpix el capítulo 9 de Brezis</span>
     <span class="flecha" aria-hidden="true"></span>
   </button>
   <div class="detalle" hidden>
-    <p>Es lo que bloquea el abierto 1 del censo. El <code>.mmd</code> de Brezis que hay en el proyecto son los <strong>capítulos 1 a 3</strong> (Hahn–Banach, acotación uniforme, topologías débiles), y no llegan a Sobolev. Hacen falta los <strong>capítulos 8 y 9</strong>, que son los de <code>H^1(\Omega)</code> frente a <code>H_0^1(\Omega)</code>, la traza y la extensión. ⚠️ Y <strong>el PDF de Brezis tampoco está</strong>: es el único hueco que de verdad pesa en <code>material_pdf/INVENTARIO.md</code>. Hay que conseguirlo antes.</p>
+    <p>Es lo único que bloquea el abierto 1 del censo, o sea <code>I-6</code>. <strong>Ya está recortado y en la bandeja</strong>: <code>mathpix_inbox/Para pasar ya/</code>, <code>brezis_cap9_sobolev_dominios.pdf</code>, 61 páginas. <strong>Por qué el 9 y no el 8:</strong> el 9 es el de <span class="mate">$N$</span> dimensiones y trae lo que falta, <code>W^{1,p}(\Omega)</code> frente a <code>W_0^{1,p}(\Omega)</code> (§9.4), los operadores de extensión (§9.2), las desigualdades de Sobolev sobre dominios (§9.3) y la formulación variacional (§9.5), que es donde la condición de Neumann del mapa de Riesz aparece sola. El 8 es la versión en dimensión uno y quedó en la bandeja de «eventualmente», porque ayuda a entender pero no bloquea nada. ✅ <strong>Y basta el 9 porque basta con orden entero</strong> (<code>I-13</code>, 2026-08-06): el umbral solo pide <em>algún</em> <span class="mate">$s&gt;(d+m)/2$</span>, así que se toma entero y no hace falta teoría fraccionaria sobre dominios, que era lo caro. 🔴 <strong>El PDF de Brezis SÍ estaba</strong>, en <code>Escritorio/libros/Pregrado/Análisis Funcional/</code>, y el <code>INVENTARIO.md</code> llevaba semanas diciendo que era «el único hueco que importa». La recogida del 2026-07-30 solo miró los libros <strong>sueltos</strong> del escritorio, no los de las subcarpetas. Copiado ya a <code>material_pdf/prerequisitos/</code>. ⚠️ <strong>Regla que queda:</strong> antes de pedirle un libro al usuario, <strong>se busca en el disco</strong>. Esto se cerró en un minuto con un <code>find</code>.</p>
   </div>
 </li>
 <li class="tarea pendiente abrible" data-hecha="0">
@@ -1486,7 +1489,20 @@ window.MathJax={
     <span class="flecha" aria-hidden="true"></span>
   </button>
   <div class="detalle" hidden>
-    <p>Archivado el 2026-08-06 y ya usado en <code>NJU-3</code> para tres teoremas, pero <strong>sin ficha</strong>, que es lo que decide si es núcleo o contexto. Se leyeron sus §§1.2–1.3, 2.2 y 4; faltan la §3 (existencia de controles óptimos de Markov) y la §5 (problemas abiertos, que puede alimentar la propuesta). Va con la skill <code>/ficha</code>.</p>
+    <p>Archivado el 2026-08-06 y ya usado en <code>NJU-3</code> para tres teoremas, pero <strong>sin ficha</strong>, que es lo que decide si es núcleo o contexto. Leídas sus §§1.2–1.3, 2.2 y <strong>la §4 entera</strong>; faltan la §3 (existencia de controles óptimos de Markov) y la §5 (problemas abiertos, que puede alimentar la propuesta). Va con la skill <code>/ficha</code>.</p>
+  </div>
+</li>
+<li class="tarea hecha abrible" data-hecha="1">
+  <button class="cabecera" type="button" aria-expanded="false">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">NJU-8</span>
+    <span class="titulo">Cerrar el dual con <span class="mate">$\nu_0$</span> general, y medir el choque de <span class="mate">$H^1$</span></span>
+    <span class="fecha">2026-08-06</span>
+    <span class="flecha" aria-hidden="true"></span>
+  </button>
+  <div class="detalle" hidden>
+    <p>Dos cosas que en <code>NJU-4</code> se habían marcado abiertas y <strong>no lo estaban</strong>: una porque el material ya estaba y solo faltaba leerlo, y otra porque salía de una cuenta de dos líneas. ✅ <strong><code>I-23</code> cerrada.</strong> El dual (13) vale con <span class="mate">$\nu_0$</span> cualquiera, no solo con delta. En el §4.3 de Bhatt–Borkar el dato <span class="mate">$b$</span> es un elemento cualquiera de <code>D(L)*</code> y solo eligen delta por comodidad. ⚠️ De paso aparece que su §2.2 normaliza y su §4.3 no: <strong>al citarlos hay que decir cuál</strong>, porque difieren en un factor <span class="mate">$\rho$</span> y la del §4.3 es la convención de la nota. 🔴 <strong>Y lo gordo: <span class="mate">$H^1$</span> nunca cumple el régimen (i)</strong>, porque el encaje pediría <span class="mate">$d+m&lt;2$</span>. Ni siquiera en el experimento del círculo, donde <span class="mate">$n=2$</span> cae en el caso frontera. Con <span class="mate">$s=2$</span>, que es el menor entero admisible, el mapa de Riesz <strong>pasa a ser de orden cuatro</strong>, así que la ecuación elíptica del sistema (37) y el solver del §8 cambian de naturaleza al moverse al régimen donde el Teorema 4.2 es cierto.</p>
+    <p class="artefacto">Artefactos: <code>overleaf/sec2.tex</code> Prop. 2.17, <code>overleaf/sec3.tex</code> Prop. 3.9</p>
   </div>
 </li>
 <li class="tarea pendiente abrible" data-hecha="0">
