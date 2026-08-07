@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
 <title>Propuesta de tesis · TODO</title>
-<!-- GENERADO por web/build_todo.py el 2026-08-06. NO EDITAR A MANO: los TODO.md mandan, este archivo se reescribe. -->
+<!-- GENERADO por web/build_todo.py el 2026-08-07. NO EDITAR A MANO: los TODO.md mandan, este archivo se reescribe. -->
 <style>
 :root{
   --fondo:#fbfaf7; --papel:#fff; --tinta:#1c1a17; --suave:#6b6558;
@@ -135,7 +135,7 @@ window.MathJax={
 <header class="principal">
 <h1>Propuesta de tesis — control óptimo</h1>
 <p class="sub">Decidir y proponer un tema en control óptimo inverso, en 2–3 meses desde el 2026-07-25.</p>
-<p class="global"><strong>62</strong> de <strong>110</strong> tareas completadas en todo el proyecto.</p>
+<p class="global"><strong>63</strong> de <strong>111</strong> tareas completadas en todo el proyecto.</p>
 </header>
 <nav class="pestanas" role="tablist">
 <button data-slug="preguntas_junca" role="tab">Preguntas a Junca<span class="n">8/22</span></button>
@@ -143,7 +143,7 @@ window.MathJax={
 <button data-slug="referencias" role="tab">referencias<span class="n">8/15</span></button>
 <button data-slug="infra" role="tab">General<span class="n">17/20</span></button>
 <button data-slug="explicaciones" role="tab">explicaciones<span class="n">3/4</span></button>
-<button data-slug="notas_junca" role="tab">notas junca<span class="n">6/9</span></button>
+<button data-slug="notas_junca" role="tab">notas junca<span class="n">7/10</span></button>
 </nav>
 <div class="controles">
 <label><input type="checkbox" id="ocultar"> Esconder las completadas</label>
@@ -1406,8 +1406,8 @@ window.MathJax={
   <div class="contexto-oculto" hidden>
     <p class="contexto">La nota de Mauricio, <em>Continuous-Time Inverse Optimal Control with Prior Beliefs</em> (julio de 2026), reescrita en español y en modo <code>xe</code>, completando los detalles que deja sueltos con las fuentes que ya están fichadas. Overleaf propio. El hilo es uno: de cada objeto, en qué espacio vive, y qué cosas todavía no sabemos dónde viven.</p>
   </div>
-  <div class="barra"><div class="relleno" style="width:67%"></div></div>
-  <p class="cuenta">6 de 9 completadas</p>
+  <div class="barra"><div class="relleno" style="width:70%"></div></div>
+  <p class="cuenta">7 de 10 completadas</p>
   <ul class="tareas">
 <li class="tarea hecha abrible" data-hecha="1">
   <button class="cabecera" type="button" aria-expanded="false">
@@ -1494,6 +1494,19 @@ window.MathJax={
     <p class="artefacto">Artefacto: <code>overleaf/sec3.tex</code></p>
   </div>
 </li>
+<li class="tarea hecha abrible" data-hecha="1">
+  <button class="cabecera" type="button" aria-expanded="false">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">NJU-10</span>
+    <span class="titulo">Auditar las líneas de de Finetti: había una que no lo era</span>
+    <span class="fecha">2026-08-07</span>
+    <span class="flecha" aria-hidden="true"></span>
+  </button>
+  <div class="detalle" hidden>
+    <p class="alerta">🔴 <strong>Lo caza el usuario mirando el PDF</strong>, y el diagnóstico es exacto: <em>«pones una E y notación DeFinetti, eso no existe; supongo que te dio pereza definir qué medida o medidas realmente se están integrando»</em>. La ocupación discreta del §1 llevaba <span class="mate">$\mu_\pi(f)=\mathbb E_\pi[\sum_t\gamma^tf(S_t,A_t)]$</span> marcado como de Finetti, y <strong>la <span class="mate">$\mathbb E$</span> es justamente la integral que la notación viene a nombrar</strong>. ✅ <strong>Arreglado nombrando las cuatro medidas</strong>: la ley inicial <span class="mate">$\nu_0$</span>, el descuento <span class="mate">$\lambda_\gamma$</span>, el núcleo de transición <span class="mate">$P_{t,\pi,s}$</span> y la política <span class="mate">$\pi_r$</span>. Queda <span class="mate">$\mu_\pi(f)=\nu_0^s\lambda_\gamma^tP_{t,\pi,s}(f_\pi)$</span>, que es <strong>letra por letra la misma línea del caso continuo</strong>, con <span class="mate">$\lambda_\gamma$</span> en vez de <span class="mate">$\lambda_\rho$</span> y la fila de la matriz en vez del núcleo del semigrupo. Ese paralelismo era todo el contenido del §1 y estaba desperdiciado. ✅ <strong>Y se paga solo:</strong> la masa <span class="mate">$1/(1-\gamma)$</span> deja de ser una cuenta y pasa a ser una observación, porque <strong>las tres medidas de probabilidad se evaporan al evaluar en <span class="mate">$f\equiv1$</span> y sobrevive la única que no lo es</strong>, que es el descuento. Lo mismo explica el <span class="mate">$1/\rho$</span> del continuo. ⚠️ <strong>Auditadas las 21 líneas grises del documento.</strong> Había una segunda a medias: la martingala relajada conservaba un <span class="mate">$\int_0^t\!\cdots ds$</span>. Ahora es <span class="mate">$\lambda_{[0,t]}^{\,s}$</span>, y de paso queda dicha la familia entera: <span class="mate">$\lambda$</span> Lebesgue, <span class="mate">$\lambda_\rho=e^{-\rho t}\lambda$</span>, y <span class="mate">$\lambda_\gamma$</span> su análogo discreto. <strong>Regla que queda</strong>, en <code>perfil/estilo/ESTILO.md</code> §R22 y en el <code>CLAUDE.md</code> de aquí: <strong>traducir a de Finetti obliga a nombrar todas las medidas</strong>. Si al terminar queda una <span class="mate">$\mathbb E$</span>, una <span class="mate">$\int$</span> o un <span class="mate">$\sum$</span> sobre el proceso, la traducción está a medias.</p>
+    <p class="artefacto">Artefacto: <code>overleaf/sec1.tex</code></p>
+  </div>
+</li>
 <li class="tarea pendiente abrible" data-hecha="0">
   <button class="cabecera" type="button" aria-expanded="false">
     <span class="casilla" aria-hidden="true"></span>
@@ -1543,7 +1556,7 @@ window.MathJax={
   </ul>
 </section>
 <footer>
-Generado el 2026-08-06 por <code>web/build_todo.py</code> a partir de los <code>TODO.md</code>. Editar esta página a mano no sirve de nada: se reescribe en la siguiente ejecución.
+Generado el 2026-08-07 por <code>web/build_todo.py</code> a partir de los <code>TODO.md</code>. Editar esta página a mano no sirve de nada: se reescribe en la siguiente ejecución.
 </footer>
 </div>
 <script>
