@@ -135,14 +135,15 @@ window.MathJax={
 <header class="principal">
 <h1>Propuesta de tesis — control óptimo</h1>
 <p class="sub">Decidir y proponer un tema en control óptimo inverso, en 2–3 meses desde el 2026-07-25.</p>
-<p class="global"><strong>69</strong> de <strong>114</strong> tareas completadas en todo el proyecto.</p>
+<p class="global"><strong>71</strong> de <strong>118</strong> tareas completadas en todo el proyecto.</p>
 </header>
 <nav class="pestanas" role="tablist">
 <button data-slug="preguntas_junca" role="tab">Preguntas a Junca<span class="n">8/22</span></button>
 <button data-slug="preguntas_investigacion" role="tab">Preguntas de investigación<span class="n">7/23</span></button>
 <button data-slug="referencias" role="tab">referencias<span class="n">8/15</span></button>
-<button data-slug="infra" role="tab">General<span class="n">17/20</span></button>
-<button data-slug="explicaciones" role="tab">explicaciones<span class="n">3/4</span></button>
+<button data-slug="reuniones" role="tab">reuniones<span class="n">5/6</span></button>
+<button data-slug="infra" role="tab">General<span class="n">18/21</span></button>
+<button data-slug="explicaciones" role="tab">explicaciones<span class="n">3/5</span></button>
 <button data-slug="notas_junca" role="tab">notas junca<span class="n">9/13</span></button>
 </nav>
 <div class="controles">
@@ -1054,13 +1055,98 @@ window.MathJax={
 </li>
   </ul>
 </section>
+<section class="panel" id="panel-reuniones" role="tabpanel">
+  <h2>Preparar cada reunión con el asesor</h2>
+  <div class="contexto-oculto" hidden>
+    <p class="contexto">Hermano de <code>asesor</code> y con la frontera clara: aquel procesa el <strong>después</strong> de una reunión, este prepara el <strong>antes</strong>. Un capítulo por semana en un Overleaf propio, con las preguntas que se llevan, las lecturas que hay que hacer, y el contexto matemático que hace falta para poder seguir la conversación. <strong>Recurrente</strong>: no se cierra, solo espera la siguiente.</p>
+  </div>
+  <div class="barra"><div class="relleno" style="width:83%"></div></div>
+  <p class="cuenta">5 de 6 completadas</p>
+  <ul class="tareas">
+<li class="tarea hecha abrible" data-hecha="1">
+  <button class="cabecera" type="button" aria-expanded="false">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">REU-1</span>
+    <span class="titulo">Montar el subproyecto y la skill <code>/reunion</code></span>
+    <span class="fecha">2026-07-29</span>
+    <span class="flecha" aria-hidden="true"></span>
+  </button>
+  <div class="detalle" hidden>
+    <p>Overleaf clonado en <code>overleaf/</code> y <strong>en <code>.gitignore</code></strong>: es un repo propio, con su token en el remote, y no se anida en este. 🔴 <strong>La decisión de diseño que más pesa: el contexto matemático NO es <code>/explica</code> en modo <code>review</code>.</strong> Ese modo exige cobertura completa, y aquí se quiere lo contrario: selectivo, sin demostraciones, y con la agenda decidiendo qué entra. Reutilizarlo tal cual habría producido un tratado que el usuario no tiene tiempo de leer. <strong>Frontera con <code>preguntas_junca/TODO.md</code>, para que no se dupliquen:</strong> la cola manda el <strong>estado</strong> (qué está abierto, con qué prioridad), el capítulo manda la <strong>redacción</strong> y cita el id. <strong>Paso 0 obligatorio</strong>: interrogar el estado de conocimiento y escribirlo con fecha en <code>estado_de_conocimiento.md</code>, acumulativo. Suponerlo produce un capítulo calibrado para otra persona.</p>
+    <p class="artefacto">Artefactos: <code>CLAUDE.md</code>, <code>.claude/skills/reunion/SKILL.md</code></p>
+  </div>
+</li>
+<li class="tarea hecha abrible" data-hecha="1">
+  <button class="cabecera" type="button" aria-expanded="false">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">REU-2</span>
+    <span class="titulo">Capítulo de la reunión del 2026-08-03</span>
+    <span class="fecha">2026-07-29</span>
+    <span class="flecha" aria-hidden="true"></span>
+  </button>
+  <div class="detalle" hidden>
+    <p>La primera, y la escribe el <strong>v2 del documento de Junca</strong>, que llegó ese mismo día. Cuatro preguntas (<code>P16</code> reformulada, <code>P21</code>, <code>P17</code>, <code>P8-M</code>) y dos decisiones, más un contexto matemático de cero a la inclusión monótona. 🔴 <strong>El hallazgo que manda la reunión, y es lectura propia:</strong> el v2 construye toda su teoría sobre una <strong>igualdad de valores</strong> que no menciona <span class="mate">$V$</span>, y relega la HJB puntual al §6 bajo hipótesis de densidades. Si eso es deliberado, <strong>la viscosidad sale del camino crítico</strong> y con ella unas 70 páginas de Touzi. Va como pregunta, no como conclusión. <strong>Paso 0:</strong> el usuario declaró no haber leído <strong>ninguno</strong> de los tres documentos de Junca, solo los títulos. Las fichas las escribió el agente. Por eso el contexto se escribe asumiendo cero y ancla en lo que sí tiene escrito: B&amp;C, Baudoin, <code>fpe</code>, <code>apendice_operadores</code>. Nace <code>P22</code>, la decisión que desbloquea <code>REF-8</code>: cuál de las cinco direcciones del §11.</p>
+    <p class="artefacto">Artefactos: <code>overleaf/reuniones/2026-08-03/</code>, <code>estado_de_conocimiento.md</code></p>
+  </div>
+</li>
+<li class="tarea hecha abrible" data-hecha="1">
+  <button class="cabecera" type="button" aria-expanded="false">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">REU-4</span>
+    <span class="titulo"><code>ESTILO_CONTEXTO.md</code>, el modo C, y reescribir el capítulo</span>
+    <span class="fecha">2026-07-30</span>
+    <span class="flecha" aria-hidden="true"></span>
+  </button>
+  <div class="detalle" hidden>
+    <p class="alerta">🔴 <strong>Diagnóstico del usuario, textual:</strong> <em>«estás sobregenerando texto, esta página debió ser solo decir que es E, A y Omega, en un párrafo definir los objetos centrales, no tienes que dar TODO el contexto, este doc es solo para que yo lo lea, son como unos apuntes explicativos»</em>. <strong>El modo C es modo T con cajas.</strong> Cuerpo telegráfico con <code>\bd</code>, <code>\bh</code>, <code>\bent</code> y <code>\display</code>, y <strong>una caja solo cuando su contenido no se deriva de la fuente</strong>: una trampa, un hueco del perfil, una lectura propia, un puente con lo que él ya escribió, o una decisión suya. Puede haber secciones sin ninguna caja. <strong>Prohibido explícitamente</strong>, porque salió todo en la primera versión: tabla de vocabulario al final, sección de «lo que no se cubre», anuncios del tipo «guarde esta caja», y cajas de media página. <strong>Macros portadas al <code>main.tex</code></strong> desde la plantilla real de los apuntes (<code>Apuntes_RW/src/</code>), adaptadas a una columna. Dos fallos de porte que hubo que arreglar: los bullets <strong>no llevan argumento</strong> (con argumento, <code>\bd $F$</code> le pasa solo el <code>$</code>), y <code>\display</code> va sobre <code>equation*</code> para que <code>\tag</code> funcione dentro. ✅ <strong>Capítulo del 3 de agosto reescrito entero: de 20 páginas a 12</strong>, sin perder matemática ni ninguna de las correcciones de esa conversación. <strong>La skill <code>/reunion</code> cambia en tres sitios</strong>: apunta a la guía nueva, hereda de <code>ESTILO_EXPLICACIONES.md</code> <strong>solo la voz</strong>, y su paso 4 pasa de decir <em>«NO se compila localmente, Overleaf compila»</em> a <strong>exigir compilar</strong>, que es la instrucción que dejó el documento roto una semana.</p>
+    <p class="artefacto">Artefacto: <code>subproyectos/perfil/estilo/ESTILO_CONTEXTO.md</code></p>
+  </div>
+</li>
+<li class="tarea hecha abrible" data-hecha="1">
+  <button class="cabecera" type="button" aria-expanded="false">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">REU-3</span>
+    <span class="titulo">El contexto, en las dos notaciones</span>
+    <span class="fecha">2026-07-30</span>
+    <span class="flecha" aria-hidden="true"></span>
+  </button>
+  <div class="detalle" hidden>
+    <p>A petición del usuario: <strong>cada objeto escrito dos veces</strong>, en la notación estándar de la nota y debajo en gris en la de <strong>de Finetti</strong>, que es la de sus apuntes de Pollard §1.4 y la regla <code>R22</code> de su guía de estilo. Dieciséis líneas dobladas, con macro <code>\dfin</code> en el <code>main.tex</code>. <strong>Se dobla solo donde las dos notaciones difieren</strong>, o sea integrales, esperanzas, probabilidades y emparejamientos. Un <span class="mate">$\nabla V$</span> es idéntico en las dos y repetirlo sería ruido, no información. 🔴 <strong>Y no es cosmético, porque la nota entera es un emparejamiento medida-función.</strong> Tres cosas se vuelven visibles: que <span class="mate">$\eta(B)$</span> y <span class="mate">$\eta(c)$</span> son la misma operación, así que la linealización del costo deja de ser un truco; que <span class="mate">$\operatorname{Gap}_E$</span> <strong>es</strong> literalmente una función soporte <span class="mate">$\sigma_D(c)=\sup_{\mu\in D}\mu(c)$</span>, lo que conecta con Beck sin analogías; y que la fila <span class="mate">$i$</span> de la matriz <span class="mate">$Q^s$</span> del Taller 2 es un núcleo, <span class="mate">$Q^s(i,V)$</span>, con la misma forma que <span class="mate">$P_t(x,\varphi)$</span>. ⚠️ <strong>Y dos sitios donde la notación ENGAÑA, marcados en el texto</strong>: hace que <span class="mate">$Q^s(i,V)$</span> y <span class="mate">$\mathcal L^aV(x)$</span> parezcan lo mismo cuando el segundo es un operador con dominio, que es donde vive el problema de viscosidad; y hace invisible que <span class="mate">$\eta(c)$</span> solo está definido si <span class="mate">$c$</span> tiene valores puntuales, que es el §3.1 de la nota. 🔴 <strong>Hallazgo aparte, y es una lección: el documento NO compilaba.</strong> Dos errores fatales, un emoji <code>⚠️</code> que <code>pdflatex</code> no compone y <code>\mathscr</code> sin <code>mathrsfs</code>. Llevaban ahí desde <code>REU-2</code>, o sea que se entregó un <code>.tex</code> que nunca se había compilado. El usuario los arregló en Overleaf por su cuenta el mismo día, así que hubo que resolver una mezcla. <strong>Regla que queda:</strong> un <code>.tex</code> sin compilar no está entregado. Va a la skill <code>/reunion</code> como paso final obligatorio. De paso, cuatro negritas en Markdown que se habrían impreso con asteriscos. 🔴 <strong>Corregido el mismo día, y el error lo cazó el usuario.</strong> La primera versión escribía <span class="mate">$J_c(\pi)=\mathbb P^\pi_{\nu_0}\lambda^t_\rho c(X_t,a_t)$</span>, que <strong>traduce el símbolo sin desempacar el objeto</strong>: <span class="mate">$\mathbb P^\pi_{\nu_0}$</span> vive sobre <strong>trayectorias</strong> mientras que <span class="mate">$\lambda_\rho$</span> y <span class="mate">$\eta$</span> viven sobre conjuntos de dimensión finita, y ponerlas seguidas las hacía parecer homogéneas. Es el fallo típico de esta notación, y es peor aquí porque de Finetti existe justamente para quitar esa opacidad. <strong>Lo que entra ahora:</strong> la sección nueva «Por dónde entra la política», con el promedio del generador de sus (33) a (35) y el aviso de que se promedia <span class="mate">$\sigma\sigma^\top$</span> y no <span class="mate">$\sigma$</span>; la construcción explícita <span class="mate">$\mathbb P^\pi_{\nu_0}=\nu_0^x\mathbb P^\pi_x$</span>; y la forma limpia <span class="mate">$J_c(\pi)=m^{\pi,x}\pi^a_x c(x,a)$</span> con el puente <span class="mate">$m^\pi(B)=\lambda^t_\rho\mathbb P^\pi_{\nu_0}(B(X_t))$</span>. ✅ <strong>Y de paso se gana el argumento pedagógico que faltaba:</strong> el espacio de caminos aparece <strong>una sola vez</strong>, para construir <span class="mate">$\eta^\pi$</span>, y desaparece. En de Finetti se comprueba contando variables ligadas. ⚠️ <strong>Cambio de letra deliberado:</strong> el espacio de estados pasa a ser <span class="mate">$E$</span>, porque la nota lo llama <span class="mate">$\Omega$</span> y deja el espacio muestral sin nombre. Va señalado en una caja, que el lunes él escribe <span class="mate">$\Omega$</span>. <strong>Nace <code>P23</code></strong>, en «Sin clasificar»: la nota nunca define qué es una política admisible ni construye <span class="mate">$\mathbb E^\pi_{\nu_0}$</span>. 🔴 <strong>Y una segunda vuelta, también del usuario, que mejora la corrección.</strong> Objetó que su propia fórmula no integraba el <span class="mate">$\omega$</span>, y propuso meter la ley del proceso dentro. La respuesta buena es la contraria: <strong>el <span class="mate">$\omega$</span> sobra</strong>. Como <span class="mate">$c(X_t,a_t)$</span> mira el proceso en un instante y no es un funcional del camino, basta la marginal, o sea el núcleo de transición. Queda <span class="mate">$J_c(\pi)=\nu_0^x\lambda^t_\rho P^\pi_t(x,c^\pi)$</span> con <span class="mate">$c^\pi(y):=\pi_y(c(y,\cdot))$</span>, y <strong>el espacio de trayectorias no aparece nunca</strong>. Dos correcciones de su versión: <span class="mate">$\pi$</span> se aplica en el punto al que el proceso llegó, no en el de arranque, y <span class="mate">$P^\pi_t$</span> es el semigrupo del generador promediado. ✅ <strong>Y de ahí cae gratis la ecuación (36) de la nota</strong>, que hasta ahora se citaba sin justificar: <span class="mate">$\lambda^t_\rho P^\pi_t=(\rho-\mathcal L^\pi)^{-1}$</span> es <strong>el resolvente</strong>, así que <span class="mate">$m^\pi$</span> es el resolvente adjunto aplicado a <span class="mate">$\nu_0$</span>, y <span class="mate">$\rho m^\pi-(\mathcal L^\pi)^*m^\pi=\nu_0$</span> es esa identidad escrita al revés. La Fokker-Planck estacionaria deja de ser un ingrediente nuevo. Cuadra además la masa, <span class="mate">$m^\pi(E)=1/\rho$</span>. ⚠️ Ese resolvente es el <span class="mate">$J_\lambda$</span> de <strong>Hille-Yosida</strong>, hueco declarado. Aquí hace falta el objeto y no la teoría, pero queda anotado como puente por si se ataca la cuarta dirección del §11. <strong>Y cierra la duda de fondo del usuario:</strong> en esta escritura <strong>el proceso de acciones <span class="mate">$a_t$</span> no tiene que existir</strong>, solo el núcleo <span class="mate">$\pi_y$</span>. Que es exactamente lo que hace la formulación relajada de Kurtz y Stockbridge. 🔴 <strong>Tercera vuelta, y otra vez la objeción era buena.</strong> La caja decía que <span class="mate">$\pi$</span> entra «no entrando en la SDE», y <strong>eso es falso</strong>: <span class="mate">$\mathcal L^\pi$</span> sí es el generador de una SDE, <span class="mate">$dY_t=b^\pi(Y_t)dt+\varsigma^\pi(Y_t)dW_t$</span> con <span class="mate">$\varsigma^\pi(\varsigma^\pi)^\top=\Sigma^\pi$</span>. Lo único que hay que corregir de la intuición es que <strong><span class="mate">$\sigma$</span> no se promedia</strong>: se promedia <span class="mate">$\sigma\sigma^\top$</span> y después se saca raíz. Va con un ejemplo de una línea, <span class="mate">$A=\{-1,+1\}$</span> y <span class="mate">$\sigma(x,a)=a$</span>: promediar <span class="mate">$\sigma$</span> da un proceso <strong>quieto</strong>, promediar <span class="mate">$\sigma\sigma^\top$</span> da <strong>browniano</strong>. Y la razón, que <span class="mate">$\sigma$</span> no es observable del proceso porque <span class="mate">$\sigma O\,dW$</span> y <span class="mate">$\sigma\,dW$</span> tienen la misma ley. <strong>Por qué se nombra el generador, entonces:</strong> porque la raíz no es única, o sea que «la SDE de <span class="mate">$\pi$</span>» es una familia y todas dan la misma ley, la misma <span class="mate">$\eta^\pi$</span> y el mismo <span class="mate">$J_c$</span>. La ecuación es representación, el generador es el invariante. Y porque <span class="mate">$(\Sigma^\pi)^{1/2}$</span> puede no ser Lipschitz aunque <span class="mate">$\sigma$</span> lo sea, así que se cae a soluciones débiles y al problema de martingala. Teoría estándar, <strong>no está en la nota</strong>. <strong>El orden lógico, que es lo que da fuerza a <code>P23</code>:</strong> no hay un proceso «sortear la acción a cada instante» del que se calcule el generador, porque eso no está bien definido. Se define al revés. Una política aleatorizada es una manera de nombrar un generador.</p>
+  </div>
+</li>
+<li class="tarea hecha abrible" data-hecha="1">
+  <button class="cabecera" type="button" aria-expanded="false">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">REU-5</span>
+    <span class="titulo">Capítulo de la reunión del 2026-08-10</span>
+    <span class="fecha">2026-08-09</span>
+    <span class="flecha" aria-hidden="true"></span>
+  </button>
+  <div class="detalle" hidden>
+    <p>Informe, no agenda de dudas: qué se avanzó en los tres objetivos que dio Junca, qué preguntas de investigación quedaron respondidas, y qué preguntar mañana. 🔴 <strong>Es el destino de todo lo que la nota técnica no puede llevar.</strong> Regla nueva del usuario: el PDF matemático es solo matemática, y las justificaciones y el estado de las preguntas van aquí (<code>docs/estilo_libro.md</code> §9). Cinco preguntas, y las tres primeras deciden trabajo: <code>P8-M</code> numérico contra regularidad; <code>I-18</code> cuál de las dos formulaciones se discretiza; y <code>P28</code>, la frontera, que decide contra qué funciones test se prueba el balance y por tanto <strong>qué conjunto es <span class="mate">$\mathcal M$</span></strong>. Compila en 15 páginas, cero errores.</p>
+    <p class="artefacto">Artefacto: <code>subproyectos/reuniones/overleaf/reuniones/2026-08-10/agenda.tex</code></p>
+  </div>
+</li>
+<li class="tarea pendiente abrible" data-hecha="0">
+  <button class="cabecera" type="button" aria-expanded="false">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">REU-6</span>
+    <span class="titulo"><code>\displayfin</code> no se usa en este Overleaf, así que el modo no funciona</span>
+    <span class="flecha" aria-hidden="true"></span>
+  </button>
+  <div class="detalle" hidden>
+    <p>Hallazgo del 2026-08-09 auditando la migración de estilo. La plantilla tiene los tres modos y las tres macros, pero el <strong>contenido</strong> usa <code>\displayfin</code> <strong>cero veces</strong>, así que <code>\notaDeFinetti</code> no puede reemplazar ningún display y el modo no hace nada. En <code>notas_junca</code> ya está arreglado (<code>NJU-11</code>): el guard de <code>\dfin</code> pasa a <code>=2</code> y se añadió <code>\eqfin</code> para displays <strong>numerados</strong>, que <code>\displayfin</code> no cubre. Aquí falta portar las dos cosas y autorar los displays.</p>
+  </div>
+</li>
+  </ul>
+</section>
 <section class="panel" id="panel-infra" role="tabpanel">
   <h2>Infraestructura del proyecto</h2>
   <div class="contexto-oculto" hidden>
     <p class="contexto">Todo lo que no es contenido: montaje, herramientas, la web de TODOs y la migración de skills. El plan completo, con dependencias y decisiones, vive en <code>docs/plan.md</code>.</p>
   </div>
-  <div class="barra"><div class="relleno" style="width:85%"></div></div>
-  <p class="cuenta">17 de 20 completadas</p>
+  <div class="barra"><div class="relleno" style="width:86%"></div></div>
+  <p class="cuenta">18 de 21 completadas</p>
   <h3>Fase 0 — Fontanería</h3>
   <ul class="tareas">
 <li class="tarea hecha abrible" data-hecha="1">
@@ -1132,15 +1218,28 @@ window.MathJax={
     <p><code>gh 2.96.0</code> por <code>winget</code>, cuenta <code>luistejon17</code>, protocolo HTTPS. ⚠️ <strong>Trampa que costó tres intentos:</strong> tras instalar, <code>gh</code> no se reconoce en ninguna terminal ya abierta, y <strong>tampoco en una ventana que lance el agente</strong>, porque hereda el <code>PATH</code> del proceso padre, que arrancó antes de la instalación. Ni siquiera basta con abrir una ventana nueva desde aquí. Lo que sí funciona: un <code>.ps1</code> que <strong>reconstruya el <code>PATH</code> desde el registro</strong> (<code>[Environment]::GetEnvironmentVariable(&quot;Path&quot;,&quot;Machine&quot;)</code>) y llame al <code>.exe</code> por ruta completa. Y <code>gh auth login</code> es interactivo de verdad, así que lo corre el usuario en una ventana propia; desde aquí solo se puede lanzar la ventana.</p>
   </div>
 </li>
-<li class="tarea pendiente abrible" data-hecha="0">
+<li class="tarea hecha abrible" data-hecha="1">
   <button class="cabecera" type="button" aria-expanded="false">
     <span class="casilla" aria-hidden="true"></span>
     <span class="ident">INF-7</span>
     <span class="titulo">Organizar el escritorio</span>
+    <span class="fecha">2026-08-09</span>
     <span class="flecha" aria-hidden="true"></span>
   </button>
   <div class="detalle" hidden>
-    <p>Pendiente general abierto por el usuario el 2026-07-27. El detonante: metió en <code>Escritorio/libros_control_optimo/</code> los libros que le mandó <strong>Camilo Hernández</strong>, y <strong>casi ninguno es de control óptimo</strong>. Lo que hay ahí de más: Karatzas &amp; Shreve, Revuz &amp; Yor, Protter y Jacod–Shiryaev son <strong>cálculo estocástico</strong>, no control, y en su mayoría cubren lo que el usuario ya tiene escrito sobre Baudoin. ⚠️ <strong>Touzi está duplicado</strong>, en dos escaneos distintos. 🔴 **Salvo uno: Stroock &amp; Varadhan, <em>Multidimensional Diffusion Processes</em>, sí importa.<strong> Es el libro del </strong>problema de martingala<strong>, que es exactamente sobre lo que Kurtz–Stockbridge construye la equivalencia entre control y LP sobre medidas. Va a <code>REF-7</code>, no a la pila de sobras. Al ordenar, separar por función y no por quién los mandó. ✅ </strong>Medio hecha el 2026-07-30.<strong> <code>material/</code> se parte en dos, que no eran lo mismo y estaban revueltas: </strong><code>material_mathpix/</code><strong> con los <code>.mmd</code>, que se versiona porque es texto y es lo que se lee aquí, y </strong><code>material_pdf/</code><strong> con los libros enteros, que </strong>no<strong> se versiona porque pesa y tiene derechos. La regla que queda: </strong>cada <code>.mmd</code> con su libro completo al lado<strong>, y la lista de lo que falta en <code>material_pdf/INVENTARIO.md</code>. </strong>Trece libros recogidos del escritorio<strong> y ordenados por área. Aparecieron sueltos y sin identificar el </strong>Baudoin<strong>, el </strong>Chewi<strong> y el </strong>Särkkä–Solin<strong>, que tachan tres huecos del inventario. Los PDFs de apuntes se quedan en el escritorio, por instrucción del usuario, y el </strong>Wellner<strong> deja copia allí. ⚠️ <code>Optimización_convexa.pdf</code> resultó ser </strong>apuntes de Junca<strong> para su curso de optimización convexa, que el usuario </strong>verá el próximo semestre con él<strong>. O sea que es material de referencia, </strong>no formación suya<strong>, y por eso no entra a <code>perfil/formacion.md</code>. Nace además <code>temporal/</code>, para lo que el usuario tenga que coger a mano. ✅ </strong>Otro trozo el 2026-08-04:<strong> <code>mathpix_inbox/</code> deja de estar suelta en el escritorio y se mete </strong>dentro del proyecto<strong>. El motivo apareció ese mismo día: nació <code>Escritorio/Tutorial_OT/</code>, que tiene la suya, y una bandeja fuera del proyecto se comparte sin querer entre proyectos. Se fueron también los tres <code>.zip</code> de transporte óptimo y el programa del curso, que ahora viven en <code>Tutorial_OT/</code>. </strong>Lo que falta para cerrar:** el resto del escritorio, que son los apuntes y lo que no es libro.</p>
+    <p>Pendiente general abierto por el usuario el 2026-07-27. El detonante: metió en <code>Escritorio/libros_control_optimo/</code> los libros que le mandó <strong>Camilo Hernández</strong>, y <strong>casi ninguno es de control óptimo</strong>. Lo que hay ahí de más: Karatzas &amp; Shreve, Revuz &amp; Yor, Protter y Jacod–Shiryaev son <strong>cálculo estocástico</strong>, no control, y en su mayoría cubren lo que el usuario ya tiene escrito sobre Baudoin. ⚠️ <strong>Touzi está duplicado</strong>, en dos escaneos distintos. 🔴 **Salvo uno: Stroock &amp; Varadhan, <em>Multidimensional Diffusion Processes</em>, sí importa.<strong> Es el libro del </strong>problema de martingala<strong>, que es exactamente sobre lo que Kurtz–Stockbridge construye la equivalencia entre control y LP sobre medidas. Va a <code>REF-7</code>, no a la pila de sobras. Al ordenar, separar por función y no por quién los mandó. ✅ </strong>Cerrado el 2026-08-09.<strong> El usuario dejó en una carpeta <code>borrar/</code> lo que quería fuera, y se verificó </strong>por hash<strong> que cada archivo tuviera copia en el proyecto antes de eliminarlo. Se borraron 16. 🔴 </strong>Y el diagnóstico de arriba estaba incompleto<strong>: los cuatro de cálculo estocástico no estaban «de más», estaban </strong>sin archivar<strong>. Karatzas–Shreve, Revuz–Yor, Protter y Jacod–Shiryaev no tenían copia en ninguna parte, así que se salvaron a <code>material_pdf/estocastico/</code> antes de borrar. La recogida del 2026-07-30 no los vio porque solo miró los sueltos, no las subcarpetas. ⚠️ </strong>Tres documentos de texto tampoco estaban y se salvaron:<strong> <code>niveles.pdf</code>, que es una nota técnica sobre los niveles A y C de la aleatorización de políticas y </strong>no tiene <code>.tex</code> conocido**; <code>migracion_estilo_guias.md</code>, que diez comentarios de los tres Overleaf citaban por su ruta del escritorio; y el <code>LEEME</code> con el orden de lectura.</p>
+    <p class="artefacto">Artefacto: <code>material_pdf/INVENTARIO.md</code></p>
+  </div>
+</li>
+<li class="tarea pendiente abrible" data-hecha="0">
+  <button class="cabecera" type="button" aria-expanded="false">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">INF-8</span>
+    <span class="titulo">Darle sitio al cuarto Overleaf, el de los apuntes cortos</span>
+    <span class="flecha" aria-hidden="true"></span>
+  </button>
+  <div class="detalle" hidden>
+    <p>El usuario abrió <code>6a78fdbe8640285a59f7c673</code> para escribir a mano, en una página, lo que la nota traducida decía en diez. Sirvió: de ahí salió la revisión del 2026-08-09 y cuatro correcciones de notación. ⚠️ <strong>No tiene subproyecto ni <code>CLAUDE.md</code></strong>, y el manual sigue diciendo que los Overleaf son <strong>tres</strong>. Hoy está clonado solo en el scratchpad de la sesión, que se pierde al cerrarla. Arrastra además una plantilla de taller: 19 PNG sin usar y una cabecera que imprime «Apunticos (MATE 3127)» y «Bogotá D.C., 03/12/2024». <strong>Decidir si nace subproyecto o se absorbe</strong>, no dejarlo huérfano. ✅ <strong>Medio hecha el 2026-07-30.</strong> <code>material/</code> se parte en dos, que no eran lo mismo y estaban revueltas: <strong><code>material_mathpix/</code></strong> con los <code>.mmd</code>, que se versiona porque es texto y es lo que se lee aquí, y <strong><code>material_pdf/</code></strong> con los libros enteros, que <strong>no</strong> se versiona porque pesa y tiene derechos. La regla que queda: <strong>cada <code>.mmd</code> con su libro completo al lado</strong>, y la lista de lo que falta en <code>material_pdf/INVENTARIO.md</code>. <strong>Trece libros recogidos del escritorio</strong> y ordenados por área. Aparecieron sueltos y sin identificar el <strong>Baudoin</strong>, el <strong>Chewi</strong> y el <strong>Särkkä–Solin</strong>, que tachan tres huecos del inventario. Los PDFs de apuntes se quedan en el escritorio, por instrucción del usuario, y el <strong>Wellner</strong> deja copia allí. ⚠️ <code>Optimización_convexa.pdf</code> resultó ser <strong>apuntes de Junca</strong> para su curso de optimización convexa, que el usuario <strong>verá el próximo semestre con él</strong>. O sea que es material de referencia, <strong>no formación suya</strong>, y por eso no entra a <code>perfil/formacion.md</code>. Nace además <code>temporal/</code>, para lo que el usuario tenga que coger a mano. ✅ <strong>Otro trozo el 2026-08-04:</strong> <code>mathpix_inbox/</code> deja de estar suelta en el escritorio y se mete <strong>dentro del proyecto</strong>. El motivo apareció ese mismo día: nació <code>Escritorio/Tutorial_OT/</code>, que tiene la suya, y una bandeja fuera del proyecto se comparte sin querer entre proyectos. Se fueron también los tres <code>.zip</code> de transporte óptimo y el programa del curso, que ahora viven en <code>Tutorial_OT/</code>. <strong>Lo que falta para cerrar:</strong> el resto del escritorio, que son los apuntes y lo que no es libro.</p>
   </div>
 </li>
 <li class="tarea hecha abrible" data-hecha="1">
@@ -1338,8 +1437,8 @@ window.MathJax={
   <div class="contexto-oculto" hidden>
     <p class="contexto">El compendio en español al que va a parar todo lo que entra al tracker. Nace el 2026-08-05 porque el usuario <strong>solo lee en Overleaf</strong>, así que un ítem del tracker no está hecho cuando se leyó la fuente, sino cuando existe su capítulo aquí. Cada <code>\part</code> es una <strong>semana real del semestre</strong>, y lo que decide qué entra es la entrega del <strong>2026-10-16</strong>: se estudia lo que hace falta para <strong>enunciar</strong> el problema, no para resolverlo.</p>
   </div>
-  <div class="barra"><div class="relleno" style="width:75%"></div></div>
-  <p class="cuenta">3 de 4 completadas</p>
+  <div class="barra"><div class="relleno" style="width:60%"></div></div>
+  <p class="cuenta">3 de 5 completadas</p>
   <ul class="tareas">
 <li class="tarea hecha abrible" data-hecha="1">
   <button class="cabecera" type="button" aria-expanded="false">
@@ -1409,6 +1508,17 @@ window.MathJax={
     </ul>
     <p class="alerta">🔴 <strong>Al compilar para verificar esto, salió un bug real y previo:</strong> el <code>main.tex</code> de <code>EXP-1</code> conservaba el <code>\includeonly</code> de ProxDM y excluía en silencio TODO capítulo nuevo desde el día en que nació el subproyecto. Corregido en el mismo commit; ver la entrada de <code>EXP-1</code>. <strong>Regla que queda, añadida a <code>CLAUDE.md</code> de este subproyecto:</strong> el aparato se hereda sin mirar dos veces; la estructura semanal no se hereda nunca; el <strong>contenido matemático se revisa capítulo por capítulo</strong>, y entra si cubre exactamente lo que <code>semana_0.md</code> ya decidió que hacía falta.</p>
     <p class="artefacto">Artefactos: <code>overleaf/folland_sobolev.tex</code>, <code>overleaf/apendice_baudoin_6.tex</code></p>
+  </div>
+</li>
+<li class="tarea pendiente abrible" data-hecha="0">
+  <button class="cabecera" type="button" aria-expanded="false">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">EXP-6</span>
+    <span class="titulo"><code>\displayfin</code> casi no se usa, así que el modo de notación no funciona</span>
+    <span class="flecha" aria-hidden="true"></span>
+  </button>
+  <div class="detalle" hidden>
+    <p>Hallazgo del 2026-08-09 auditando la migración de estilo en los tres Overleaf. La plantilla trae los tres modos, pero el contenido usa <code>\displayfin</code> <strong>una sola vez</strong>, así que <code>\notaDeFinetti</code> deja el display estándar escrito literal y solo añade el gris: modo 1 y modo 2 salen iguales. Portar de <code>notas_junca</code> (<code>NJU-11</code>) las dos piezas: el guard de <code>\dfin</code> en <code>=2</code>, y <code>\eqfin{label}{std}{dF}</code> para displays <strong>numerados</strong>, que <code>\displayfin</code> no cubre porque emite <code>\[...\]</code>. ⚠️ La migración está aplicada en la <strong>plantilla</strong> de los tres proyectos y sin aplicar en el <strong>contenido</strong> de los tres.</p>
   </div>
 </li>
   </ul>
