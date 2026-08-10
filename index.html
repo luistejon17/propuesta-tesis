@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
 <title>Propuesta de tesis · TODO</title>
-<!-- GENERADO por web/build_todo.py el 2026-08-09. NO EDITAR A MANO: los TODO.md mandan, este archivo se reescribe. -->
+<!-- GENERADO por web/build_todo.py el 2026-08-10. NO EDITAR A MANO: los TODO.md mandan, este archivo se reescribe. -->
 <style>
 :root{
   --fondo:#fbfaf7; --papel:#fff; --tinta:#1c1a17; --suave:#6b6558;
@@ -135,7 +135,7 @@ window.MathJax={
 <header class="principal">
 <h1>Propuesta de tesis — control óptimo</h1>
 <p class="sub">Decidir y proponer un tema en control óptimo inverso, en 2–3 meses desde el 2026-07-25.</p>
-<p class="global"><strong>71</strong> de <strong>118</strong> tareas completadas en todo el proyecto.</p>
+<p class="global"><strong>74</strong> de <strong>122</strong> tareas completadas en todo el proyecto.</p>
 </header>
 <nav class="pestanas" role="tablist">
 <button data-slug="preguntas_junca" role="tab">Preguntas a Junca<span class="n">8/22</span></button>
@@ -144,7 +144,7 @@ window.MathJax={
 <button data-slug="reuniones" role="tab">reuniones<span class="n">5/6</span></button>
 <button data-slug="infra" role="tab">General<span class="n">18/21</span></button>
 <button data-slug="explicaciones" role="tab">explicaciones<span class="n">3/5</span></button>
-<button data-slug="notas_junca" role="tab">notas junca<span class="n">9/13</span></button>
+<button data-slug="notas_junca" role="tab">notas junca<span class="n">12/17</span></button>
 </nav>
 <div class="controles">
 <label><input type="checkbox" id="ocultar"> Esconder las completadas</label>
@@ -1528,8 +1528,8 @@ window.MathJax={
   <div class="contexto-oculto" hidden>
     <p class="contexto">La nota de Mauricio, <em>Continuous-Time Inverse Optimal Control with Prior Beliefs</em> (julio de 2026), reescrita en español y en modo <code>xe</code>, completando los detalles que deja sueltos con las fuentes que ya están fichadas. Overleaf propio. El hilo es uno: de cada objeto, en qué espacio vive, y qué cosas todavía no sabemos dónde viven.</p>
   </div>
-  <div class="barra"><div class="relleno" style="width:69%"></div></div>
-  <p class="cuenta">9 de 13 completadas</p>
+  <div class="barra"><div class="relleno" style="width:71%"></div></div>
+  <p class="cuenta">12 de 17 completadas</p>
   <ul class="tareas">
 <li class="tarea hecha abrible" data-hecha="1">
   <button class="cabecera" type="button" aria-expanded="false">
@@ -1719,10 +1719,86 @@ window.MathJax={
     <p>Objetivo 3 de los que dio él: discretizar usando el MDP como referencia, resolver el problema cuadrático, y resolver el sistema de EDP. Del primero ya está el puente: el §5 nuevo cierra con la correspondencia con el modelo finito y con las tres cosas que <strong>no</strong> sobreviven (generador acotado, densidades siempre, políticas deterministas como vértices). ⚠️ <strong>Lo que falta es lo que él señaló como no hecho:</strong> discretizar la formulación de <strong>optimización</strong>, no el sistema de EDP. Es <code>I-18</code>.</p>
   </div>
 </li>
+<li class="tarea hecha abrible" data-hecha="1">
+  <button class="cabecera" type="button" aria-expanded="false">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">NJU-13</span>
+    <span class="titulo">Purgar la sobrexplicación del documento entero</span>
+    <span class="fecha">2026-08-10</span>
+    <span class="flecha" aria-hidden="true"></span>
+  </button>
+  <div class="detalle" hidden>
+    <p>Lo cazó él en la maqueta de la web, y valía igual para el PDF. Tres patrones, y <strong>ninguno era un error de matemáticas</strong>:</p>
+    <ul>
+      <li><strong>«es esto, no esto».</strong> «el subíndice es evaluación parcial, y no una familia indexada», «no repara ese salto, lo evita», «satisfecha por la medida, no por una política». Palabras suyas: <em>«caer en el típico ai slop»</em>. Se escribe la lectura buena en símbolos y se calla la mala.</li>
+      <li><strong>Narrar una corrección pasada.</strong> El párrafo de que escribir <span class="mate">$\P^\pi_{\nu_0}$</span> «sería un abuso» estaba ahí porque él había pedido quitar ese subíndice semanas antes: <em>«cuando se pide una corrección, solo se está pidiendo modificar lo que está mal»</em>.</li>
+      <li><strong>Prosa donde va matemática.</strong> El generador se define en una línea: <span class="mate">$\dom(\gen{})\s C_b(E)$</span>, rango en <span class="mate">$C_b(E\times A)$</span>, <span class="mate">$\gen{}\varphi:(x,a)\mapsto\gen{a}\varphi(x)$</span>. Eran cuatro líneas de texto.</li>
+    </ul>
+    <p class="hecho">✅ 14 pasajes reescritos en las cuatro secciones y en el apéndice.</p>
+    <p class="artefacto">Artefacto: <code>subproyectos/notas_junca/overleaf/</code></p>
+  </div>
+</li>
+<li class="tarea hecha abrible" data-hecha="1">
+  <button class="cabecera" type="button" aria-expanded="false">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">NJU-14</span>
+    <span class="titulo">El Overleaf pasa a bilingüe, con estilo distinto en cada idioma</span>
+    <span class="fecha">2026-08-10</span>
+    <span class="flecha" aria-hidden="true"></span>
+  </button>
+  <div class="detalle" hidden>
+    <p class="alerta">🔴 <strong>No es traducir.</strong> El español es telegráfico y en su estilo (<code>Si &lt;hipótesis&gt; $\rt$ &lt;conclusión&gt;</code>, <code>\s</code>, <code>tq</code>, notación mezclada con prosa); el inglés es la cadena de enunciados de Folland. Son dos redacciones de la misma matemática.</p>
+    <ul>
+      <li><code>en/</code> y <code>es/</code>, cinco archivos cada uno, <strong>con las mismas <code>\label</code></strong>, que es lo que permite emparejarlos en la web.</li>
+      <li>Interruptor <code>\EStrue</code> / <code>\ESfalse</code> <strong>antes de <code>\usepackage{babel}</code></strong>, que ahí es donde se decide el idioma. Cambia también los nombres de los entornos, los títulos de las cajas, el título y el resumen.</li>
+      <li>Los <strong>nombres de macro se quedan en español</strong> en los dos, para poder mover una sección entre los tres Overleaf sin tocar nada.</li>
+    </ul>
+    <p class="hecho">✅ Cuatro combinaciones compiladas: español 13 pp en <code>\notaEstandar</code>, 13 en <code>\notaDeFinetti</code>, 14 en <code>\notaAmbas</code>; inglés 14 en <code>\notaAmbas</code>. Cero errores y cero referencias rotas. ⚠️ <strong>Para mandárselo a Mauricio: <code>\ESfalse</code> + <code>\notaEstandar</code>.</strong></p>
+    <p class="artefacto">Artefacto: <code>subproyectos/notas_junca/overleaf/main.tex</code></p>
+  </div>
+</li>
+<li class="tarea hecha abrible" data-hecha="1">
+  <button class="cabecera" type="button" aria-expanded="false">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">NJU-15</span>
+    <span class="titulo"><code>build_notas.py</code>: el Overleaf genera la nota como página interactiva</span>
+    <span class="fecha">2026-08-10</span>
+    <span class="flecha" aria-hidden="true"></span>
+  </button>
+  <div class="detalle" hidden>
+    <p>Mismo contrato que <code>web/build_todo.py</code>: <strong>el <code>.tex</code> manda y el HTML se genera</strong>. Lo que la página añade sobre el PDF:</p>
+    <ul>
+      <li><strong>Interruptor de idioma</strong> (español por defecto) y <strong>de notación</strong>. En papel las dos notaciones tienen que caber a la vez, y por eso existe <code>\notaAmbas</code>; en pantalla se elige, así que la web <strong>no tiene modo «ambas»</strong> y en el LaTeX sí se queda.</li>
+      <li><strong>Demostraciones plegables</strong>, las 19, atadas a su enunciado por el <code>\ref</code> del título en el apéndice.</li>
+      <li><strong>Definición al pasar el ratón</strong> en 13 objetos, marcados con <code>\term{clave}{visible}</code>, que en el PDF imprime el segundo argumento y nada más. El texto vive en <code>glosario.txt</code>, con la regla de los cuadros escrita arriba del archivo.</li>
+    </ul>
+    <p class="alerta">🔴 <strong>Los números salen de <code>main.aux</code></strong>, no de recontarlos en Python. El script compila cada idioma aparte y lee sus <code>\newlabel</code>.</p>
+    <ul>
+      <li>La matemática va en <strong>MathML</strong> por <code>latex2mathml</code>. De paso arregla el paréntesis gigante que él vio en la maqueta: era MathML escrito a mano, donde <code>&lt;mo&gt;(&lt;/mo&gt;</code> estira hasta la altura de la fila.</li>
+    </ul>
+    <p class="aviso">⚠️ <strong><code>notas.html</code> no se versiona</strong>: son 421 KB derivados que cambian enteros en cada build. La fuente es el Overleaf, que tiene su propio git.</p>
+    <p class="artefacto">Artefacto: <code>subproyectos/notas_junca/build_notas.py</code></p>
+  </div>
+</li>
+<li class="tarea pendiente abrible" data-hecha="0">
+  <button class="cabecera" type="button" aria-expanded="false">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">NJU-16</span>
+    <span class="titulo">Decidir si la nota interactiva se queda y dónde vive</span>
+    <span class="flecha" aria-hidden="true"></span>
+  </button>
+  <div class="detalle" hidden>
+    <p>Hoy es un artifact privado, y ahí puede quedarse. Las dos cosas a decidir:</p>
+    <ul>
+      <li class="alerta">🔴 <strong>Al repo público NO puede ir.</strong> <code>propuesta-tesis</code> tiene seis archivos contados y esto es la reelaboración del borrador <strong>sin publicar</strong> de Mauricio.</li>
+      <li>La regla del <code>CLAUDE.md</code> dice que <strong>solo lee en Overleaf</strong>. Esto abre un cuarto sitio, y si se queda hay que reescribir la regla en vez de dejarla mentir.</li>
+    </ul>
+  </div>
+</li>
   </ul>
 </section>
 <footer>
-Generado el 2026-08-09 por <code>web/build_todo.py</code> a partir de los <code>TODO.md</code>. Editar esta página a mano no sirve de nada: se reescribe en la siguiente ejecución.
+Generado el 2026-08-10 por <code>web/build_todo.py</code> a partir de los <code>TODO.md</code>. Editar esta página a mano no sirve de nada: se reescribe en la siguiente ejecución.
 </footer>
 </div>
 <script>
