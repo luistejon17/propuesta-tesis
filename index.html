@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
 <title>Propuesta de tesis · TODO</title>
-<!-- GENERADO por web/build_todo.py el 2026-08-10. NO EDITAR A MANO: los TODO.md mandan, este archivo se reescribe. -->
+<!-- GENERADO por web/build_todo.py el 2026-08-11. NO EDITAR A MANO: los TODO.md mandan, este archivo se reescribe. -->
 <style>
 :root{
   --fondo:#fbfaf7; --papel:#fff; --tinta:#1c1a17; --suave:#6b6558;
@@ -135,7 +135,7 @@ window.MathJax={
 <header class="principal">
 <h1>Propuesta de tesis — control óptimo</h1>
 <p class="sub">Decidir y proponer un tema en control óptimo inverso, en 2–3 meses desde el 2026-07-25.</p>
-<p class="global"><strong>74</strong> de <strong>122</strong> tareas completadas en todo el proyecto.</p>
+<p class="global"><strong>75</strong> de <strong>123</strong> tareas completadas en todo el proyecto.</p>
 </header>
 <nav class="pestanas" role="tablist">
 <button data-slug="preguntas_junca" role="tab">Preguntas a Junca<span class="n">8/22</span></button>
@@ -144,7 +144,7 @@ window.MathJax={
 <button data-slug="reuniones" role="tab">reuniones<span class="n">5/6</span></button>
 <button data-slug="infra" role="tab">General<span class="n">18/21</span></button>
 <button data-slug="explicaciones" role="tab">explicaciones<span class="n">3/5</span></button>
-<button data-slug="notas_junca" role="tab">notas junca<span class="n">12/17</span></button>
+<button data-slug="notas_junca" role="tab">notas junca<span class="n">13/18</span></button>
 </nav>
 <div class="controles">
 <label><input type="checkbox" id="ocultar"> Esconder las completadas</label>
@@ -1528,8 +1528,8 @@ window.MathJax={
   <div class="contexto-oculto" hidden>
     <p class="contexto">La nota de Mauricio, <em>Continuous-Time Inverse Optimal Control with Prior Beliefs</em> (julio de 2026), reescrita en español y en modo <code>xe</code>, completando los detalles que deja sueltos con las fuentes que ya están fichadas. Overleaf propio. El hilo es uno: de cada objeto, en qué espacio vive, y qué cosas todavía no sabemos dónde viven.</p>
   </div>
-  <div class="barra"><div class="relleno" style="width:71%"></div></div>
-  <p class="cuenta">12 de 17 completadas</p>
+  <div class="barra"><div class="relleno" style="width:72%"></div></div>
+  <p class="cuenta">13 de 18 completadas</p>
   <ul class="tareas">
 <li class="tarea hecha abrible" data-hecha="1">
   <button class="cabecera" type="button" aria-expanded="false">
@@ -1795,10 +1795,28 @@ window.MathJax={
     </ul>
   </div>
 </li>
+<li class="tarea hecha abrible" data-hecha="1">
+  <button class="cabecera" type="button" aria-expanded="false">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">NJU-17</span>
+    <span class="titulo">Índice lateral y controles de lectura en la nota interactiva</span>
+    <span class="fecha">2026-08-10</span>
+    <span class="flecha" aria-hidden="true"></span>
+  </button>
+  <div class="detalle" hidden>
+    <ul>
+      <li><strong>Índice hasta el nivel de enunciado</strong>, no solo de sección. Pedido suyo, y tiene razón: el cuerpo del documento son enunciados encadenados, así que un índice de cuatro secciones deja fuera casi todo lo navegable. Salen las 4 secciones, las 8 subsecciones y los <strong>28 enunciados</strong>, con resaltado de dónde va el lector (<code>IntersectionObserver</code>) y cajón deslizante por debajo de 1180 px.</li>
+      <li><strong>Letra</strong> (serif / palo / Latin Modern) y <strong>cuerpo</strong> (13–26 px), que se recuerdan entre visitas. Todo con fuentes de sistema: el CSP de un artifact bloquea cualquier CDN y una <code>.woff2</code> en data URI serían cientos de KB. La matemática se queda en serif matemática aunque el cuerpo sea de palo.</li>
+      <li class="aviso">⚠️ <strong>Todo lo de dentro de <code>main</code> pasó de <code>rem</code> a <code>em</code></strong>, y la columna a <code>41em</code>. Con <code>rem</code> la medida no sigue al cuerpo y el texto grande acaba a 40 caracteres por línea.</li>
+    </ul>
+    <p class="alerta">🔴 <strong>Y salió un fallo de verdad, que ya estaba en la versión anterior:</strong> los dos idiomas comparten DOM y comparten las <code>\label</code>, así que había <strong>88 ids duplicados</strong>. <code>getElementById</code> y <code>#ancla</code> devuelven siempre el primero, o sea el español: en inglés, «Show proof» abría la prueba del documento oculto y no pasaba nada, y un <code>\eqref</code> saltaba a un elemento no renderizado. <strong>Ninguna de las dos cosas da error en consola.</strong> Arreglado prefijando cada ancla con el idioma (<code>ancla()</code> en <code>build_notas.py</code>); verificado: 204 ids, cero duplicados, cero enlaces rotos, y los 12 del glosario también.</p>
+    <p class="artefacto">Artefacto: <code>subproyectos/notas_junca/plantilla.html</code></p>
+  </div>
+</li>
   </ul>
 </section>
 <footer>
-Generado el 2026-08-10 por <code>web/build_todo.py</code> a partir de los <code>TODO.md</code>. Editar esta página a mano no sirve de nada: se reescribe en la siguiente ejecución.
+Generado el 2026-08-11 por <code>web/build_todo.py</code> a partir de los <code>TODO.md</code>. Editar esta página a mano no sirve de nada: se reescribe en la siguiente ejecución.
 </footer>
 </div>
 <script>
