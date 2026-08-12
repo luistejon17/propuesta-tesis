@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
 <title>Propuesta de tesis · TODO</title>
-<!-- GENERADO por web/build_todo.py el 2026-08-11. NO EDITAR A MANO: los TODO.md mandan, este archivo se reescribe. -->
+<!-- GENERADO por web/build_todo.py el 2026-08-12. NO EDITAR A MANO: los TODO.md mandan, este archivo se reescribe. -->
 <style>
 :root{
   --fondo:#fbfaf7; --papel:#fff; --tinta:#1c1a17; --suave:#6b6558;
@@ -135,16 +135,17 @@ window.MathJax={
 <header class="principal">
 <h1>Propuesta de tesis — control óptimo</h1>
 <p class="sub">Decidir y proponer un tema en control óptimo inverso, en 2–3 meses desde el 2026-07-25.</p>
-<p class="global"><strong>75</strong> de <strong>123</strong> tareas completadas en todo el proyecto.</p>
+<p class="global"><strong>76</strong> de <strong>125</strong> tareas completadas en todo el proyecto.</p>
 </header>
 <nav class="pestanas" role="tablist">
 <button data-slug="preguntas_junca" role="tab">Preguntas a Junca<span class="n">8/22</span></button>
 <button data-slug="preguntas_investigacion" role="tab">Preguntas de investigación<span class="n">7/23</span></button>
 <button data-slug="referencias" role="tab">referencias<span class="n">8/15</span></button>
+<button data-slug="asesor" role="tab">asesor<span class="n">6/7</span></button>
 <button data-slug="reuniones" role="tab">reuniones<span class="n">5/6</span></button>
 <button data-slug="infra" role="tab">General<span class="n">18/21</span></button>
 <button data-slug="explicaciones" role="tab">explicaciones<span class="n">3/5</span></button>
-<button data-slug="notas_junca" role="tab">notas junca<span class="n">13/18</span></button>
+<button data-slug="notas_junca" role="tab">notas junca<span class="n">14/19</span></button>
 </nav>
 <div class="controles">
 <label><input type="checkbox" id="ocultar"> Esconder las completadas</label>
@@ -1055,6 +1056,109 @@ window.MathJax={
 </li>
   </ul>
 </section>
+<section class="panel" id="panel-asesor" role="tabpanel">
+  <h2>Conversaciones con el asesor</h2>
+  <div class="contexto-oculto" hidden>
+    <p class="contexto">Todo lo que sale de hablar con Mauricio Junca: grabaciones, transcripciones, resúmenes y las preguntas que quedan pendientes para la próxima. Es un subproyecto <strong>recurrente</strong>: no se cierra cuando se procesa una reunión, solo espera la siguiente.</p>
+  </div>
+  <div class="barra"><div class="relleno" style="width:86%"></div></div>
+  <p class="cuenta">6 de 7 completadas</p>
+  <ul class="tareas">
+<li class="tarea hecha abrible" data-hecha="1">
+  <button class="cabecera" type="button" aria-expanded="false">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">ASE-1</span>
+    <span class="titulo">Montar el subproyecto y la carpeta <code>2026-07-23/</code></span>
+    <span class="flecha" aria-hidden="true"></span>
+  </button>
+  <div class="detalle" hidden>
+    <p>Estructura creada y los 5 audios volcados a <code>2026-07-23/audio/</code>. El <code>CLAUDE.md</code> del subproyecto fija el procedimiento para las reuniones futuras, que es el motivo de que exista.</p>
+  </div>
+</li>
+<li class="tarea hecha abrible" data-hecha="1">
+  <button class="cabecera" type="button" aria-expanded="false">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">ASE-2</span>
+    <span class="titulo">Transcribir la reunión del 2026-07-23</span>
+    <span class="fecha">2026-07-26</span>
+    <span class="flecha" aria-hidden="true"></span>
+  </button>
+  <div class="detalle" hidden>
+    <p>20:14 en cinco tramos, con <code>large-v3</code> y reloj global continuo. Los tres archivos hechos. <strong>No hizo falta <code>pyannote</code></strong>: la atribución por contenido salió limpia salvo en el tramo administrativo de 00:52–01:46, que es el que menos importa y queda marcado como dudoso. Lo grande que salió: el asesor <strong>saca del alcance</strong> los oráculos, el muestreo y el SMD (<em>«conocemos todo, simplemente resolver el problema de control inverso»</em>), dice que su sistema de EDP <strong>puede salir distinto</strong>, y nombra una segunda ruta, <strong>FBSDE</strong>, que él no domina y Camilo sí.</p>
+    <p><code>resumen.md</code>. Script reutilizable: <code>transcribir.py</code>. ✅ <strong>Las dos dudas que quedaban, cerradas.</strong> El curso <strong>sí</strong> es de transporte óptimo, y <strong>no</strong> toca la tesis (<code>P11</code>, 2026-07-26). Y la atribución de 00:52–01:46 <strong>se deja como está sin investigarla</strong> (2026-07-27): el usuario zanja que lo de Andrés Medaglia no tiene nada que ver. Los turnos siguen marcados <code>?</code>, que es lo honesto. ⚠️ <strong>Lo que sí sigue abierto son cinco reconstrucciones marcadas</strong>, y una es grave: en <strong>[19:26] añadí una negación que no está en el audio</strong>. Sin ella la frase es matemáticamente al revés, pero eso es interpretar, no transcribir. Ubicación exacta para reescuchar y el resto de dudas, en <code>dudas_de_audio.md</code>.</p>
+    <p class="artefacto">Artefactos: <code>2026-07-23/transcripcion_cruda.md</code>, <code>transcripcion_limpia.md</code>,</p>
+  </div>
+</li>
+<li class="tarea hecha abrible" data-hecha="1">
+  <button class="cabecera" type="button" aria-expanded="false">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">ASE-3</span>
+    <span class="titulo">Extraer de la transcripción lo que sea tarea o referencia</span>
+    <span class="fecha">2026-07-26</span>
+    <span class="flecha" aria-hidden="true"></span>
+  </button>
+  <div class="detalle" hidden>
+    <p>Repartido a <code>referencias</code>. <strong>Dos tareas nuevas</strong>, las dos por encargo explícito del asesor: <code>REF-9</code> (revisión de literatura, que él ya intentó sin encontrar nada) y <code>REF-10</code> (la ruta alternativa del principio del máximo y las FBSDE). <strong>Cuatro reencuadradas</strong>: <code>REF-4</code> recupera el transporte óptimo y baja el SMD; <code>REF-5</code> pasa de iniciativa a encargo y gana la pista de Touzi; <code>REF-6</code> baja de urgencia; <code>REF-7</code> sube a prerrequisito duro. El acotamiento del alcance (control inverso con todo conocido, sin oráculos ni muestreo) va en la cabecera del <code>TODO.md</code> de <code>referencias</code>, porque manda sobre todas sus tareas.</p>
+  </div>
+</li>
+<li class="tarea hecha abrible" data-hecha="1">
+  <button class="cabecera" type="button" aria-expanded="false">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">ASE-5</span>
+    <span class="titulo">Transcribir la reunión del 2026-08-03</span>
+    <span class="fecha">2026-08-03</span>
+    <span class="flecha" aria-hidden="true"></span>
+  </button>
+  <div class="detalle" hidden>
+    <p>17:53 en dos tramos, con <code>large-v3</code>. Los tres archivos hechos, más <code>dudas_de_audio.md</code>. <strong>La atribución de turnos está SIN CONFIRMAR</strong>: a diferencia de la vez pasada, nadie ha validado ningún pasaje de prueba. 🔴 Lo grande: el asesor da <strong>un encargo concreto que no estaba en la agenda</strong>, <em>«el primer reto: justificar bien este teorema 4.2»</em>, con su lista de lo que hay que fijar (quién es <span class="mate">$H$</span>, dónde vive <span class="mate">$c$</span>, y <span class="mate">$\mathcal M$</span> acotado, convexo y compacto). Y responde <strong>media <code>P16</code></strong>: la función de valor no tiene por qué aparecer, depende de cómo se plantee el gap. 🔴 <strong>Y lo que NO pasó pesa igual</strong>: se pidió la decisión de las cinco direcciones y <em>«no se había llegado»</em>; <code>P21</code> no se mencionó nunca; la grabación se corta con un tercero entrando. ⚠️ <strong>Nueve dudas abiertas</strong>, y la 1 es grave: la frase que explica por qué el v2 evita el punto fijo está mal transcrita y <strong>no se ha reconstruido</strong>.</p>
+    <p><code>resumen.md</code>, <code>dudas_de_audio.md</code>. Nota de infraestructura: el venv de Whisper <strong>no existía en la Surface</strong> (ARM64, y no hay wheels <code>win_arm64</code> de <code>ctranslate2</code> ni de <code>torch</code>). Se montó con Python 3.13 x64 emulado en la misma ruta de siempre. Corrió a 2,2x tiempo real. Hizo falta <code>hf_xet</code>: sin él la descarga del modelo se queda clavada en cero.</p>
+    <p class="artefacto">Artefactos: <code>2026-08-03/transcripcion_cruda.md</code>, <code>transcripcion_limpia.md</code>,</p>
+  </div>
+</li>
+<li class="tarea hecha abrible" data-hecha="1">
+  <button class="cabecera" type="button" aria-expanded="false">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">ASE-6</span>
+    <span class="titulo">Confirmar la atribución y las dudas de la reunión</span>
+    <span class="fecha">2026-08-03</span>
+    <span class="flecha" aria-hidden="true"></span>
+  </button>
+  <div class="detalle" hidden>
+    <p><strong>Las nueve preguntadas y cerradas el mismo día.</strong> ✅ La atribución de la limpia entera queda <strong>confirmada</strong> sobre sus dos pasajes de prueba. 🔴🔴 <strong>El hallazgo grande no era ninguna de las que yo priorizaba: cuando Mauricio habla en tercera persona se refiere a ChatGPT.</strong> Parte de la arquitectura del v2 salió de ahí, él lo sabe, y su <em>«todo eso asume todo este tipo de cosas que no sabemos»</em> [12:00] pasa de sonar a modestia a ser un diagnóstico. Es la razón de fondo de que <code>REF-13</code> sea verificar. ✅ <strong>Y dos deícticos resueltos que no estaban en el audio</strong>: <em>«este problema»</em> de [07:12] es la <strong>ecuación (23)</strong>, y <em>«esto»</em> de [13:51] es el <strong>§7.1</strong>, con el motivo del «curiosamente» de propina. ✅ La <strong>6</strong> se resolvió <strong>sin audio</strong>, contra el <code>.mmd</code>: el «3.1» es <em>«A technical point: the cost space matters»</em>, y de paso salió que el «4.2» es un teorema cuyas hipótesis <strong>corrigen</strong> las que yo había escrito de oído. ⬜ <strong>Tres quedan sin resolver</strong> (4:17, 8:12 y 16:41) y <strong>así se quedan</strong>. Rellenarlas por plausibilidad es el fallo que esta lista existe para evitar. Método, ya portado a la skill <code>procesa</code>: <strong>todas de corrido con <code>AskUserQuestion</code></strong>, en orden temporal, con la reconstrucción propia como opciones y el crudo en el <code>preview</code>.</p>
+  </div>
+</li>
+<li class="tarea hecha abrible" data-hecha="1">
+  <button class="cabecera" type="button" aria-expanded="false">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">ASE-4</span>
+    <span class="titulo">Abrir <code>preguntas_pendientes.md</code></span>
+    <span class="fecha">2026-07-26</span>
+    <span class="flecha" aria-hidden="true"></span>
+  </button>
+  <div class="detalle" hidden>
+    <p>Quince preguntas en tres niveles. <strong>D1 sigue sin preguntarse</strong> y encabeza la lista: decide si el plan de estudio es ancho o estrecho. Las otras tres de prioridad alta salen de que el asesor dejó abierto más de lo que parecía: si el borrador es enunciado o trabajo en curso, si la ruta es HJB o FBSDE, y si la variable son medidas de ocupación o políticas, que dudó él mismo en el primer minuto.</p>
+    <p class="artefacto">Artefacto: <code>subproyectos/asesor/preguntas_pendientes.md</code></p>
+  </div>
+</li>
+<li class="tarea pendiente abrible" data-hecha="0">
+  <button class="cabecera" type="button" aria-expanded="false">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">ASE-4</span>
+    <span class="titulo">Procesar la reunión del 2026-08-10, si ocurrió</span>
+    <span class="flecha" aria-hidden="true"></span>
+  </button>
+  <div class="detalle" hidden>
+    <p class="aviso">⚠️ <strong>Sale de la auditoría de cierre del 2026-08-12, no de la conversación.</strong> <code>REU-5</code> dejó escrita y compilada la agenda de esa reunión el 2026-08-09, pero <strong>no existe <code>subproyectos/asesor/2026-08-10/</code></strong> y <code>asesor/TODO.md</code> no tenía nada abierto, así que nadie estaba siguiéndola. Han pasado dos días. 🔴 <strong>Primero hay que confirmar con él si la reunión se dio</strong>, y si hay audio. No se da por hecha: la agenda prueba que estaba convocada, no que ocurriera.</p>
+    <ul>
+      <li>Si hay audio <span class="mate">$\rightarrow$</span> <code>/procesa 2026-08-10</code>, que ya reparte lo accionable a los <code>TODO.md</code> y a las dos colas de preguntas.</li>
+      <li>Si no lo hay pero la reunión se dio, se recoge de memoria suya y <strong>se marca como recuerdo del usuario, con la fecha</strong>, que es lo que pide la regla de fidelidad.</li>
+      <li>Si no se dio, se cierra esta tarea diciendo eso y se reprograma.</li>
+    </ul>
+    <p class="artefacto">Artefacto: <code>subproyectos/reuniones/overleaf/reuniones/2026-08-10/agenda.tex</code></p>
+  </div>
+</li>
+  </ul>
+</section>
 <section class="panel" id="panel-reuniones" role="tabpanel">
   <h2>Preparar cada reunión con el asesor</h2>
   <div class="contexto-oculto" hidden>
@@ -1528,8 +1632,8 @@ window.MathJax={
   <div class="contexto-oculto" hidden>
     <p class="contexto">La nota de Mauricio, <em>Continuous-Time Inverse Optimal Control with Prior Beliefs</em> (julio de 2026), reescrita en español y en modo <code>xe</code>, completando los detalles que deja sueltos con las fuentes que ya están fichadas. Overleaf propio. El hilo es uno: de cada objeto, en qué espacio vive, y qué cosas todavía no sabemos dónde viven.</p>
   </div>
-  <div class="barra"><div class="relleno" style="width:72%"></div></div>
-  <p class="cuenta">13 de 18 completadas</p>
+  <div class="barra"><div class="relleno" style="width:74%"></div></div>
+  <p class="cuenta">14 de 19 completadas</p>
   <ul class="tareas">
 <li class="tarea hecha abrible" data-hecha="1">
   <button class="cabecera" type="button" aria-expanded="false">
@@ -1800,7 +1904,7 @@ window.MathJax={
     <span class="casilla" aria-hidden="true"></span>
     <span class="ident">NJU-17</span>
     <span class="titulo">Índice lateral y controles de lectura en la nota interactiva</span>
-    <span class="fecha">2026-08-10</span>
+    <span class="fecha">2026-08-11</span>
     <span class="flecha" aria-hidden="true"></span>
   </button>
   <div class="detalle" hidden>
@@ -1809,14 +1913,27 @@ window.MathJax={
       <li><strong>Letra</strong> (serif / palo / Latin Modern) y <strong>cuerpo</strong> (13–26 px), que se recuerdan entre visitas. Todo con fuentes de sistema: el CSP de un artifact bloquea cualquier CDN y una <code>.woff2</code> en data URI serían cientos de KB. La matemática se queda en serif matemática aunque el cuerpo sea de palo.</li>
       <li class="aviso">⚠️ <strong>Todo lo de dentro de <code>main</code> pasó de <code>rem</code> a <code>em</code></strong>, y la columna a <code>41em</code>. Con <code>rem</code> la medida no sigue al cuerpo y el texto grande acaba a 40 caracteres por línea.</li>
     </ul>
-    <p class="alerta">🔴 <strong>Y salió un fallo de verdad, que ya estaba en la versión anterior:</strong> los dos idiomas comparten DOM y comparten las <code>\label</code>, así que había <strong>88 ids duplicados</strong>. <code>getElementById</code> y <code>#ancla</code> devuelven siempre el primero, o sea el español: en inglés, «Show proof» abría la prueba del documento oculto y no pasaba nada, y un <code>\eqref</code> saltaba a un elemento no renderizado. <strong>Ninguna de las dos cosas da error en consola.</strong> Arreglado prefijando cada ancla con el idioma (<code>ancla()</code> en <code>build_notas.py</code>); verificado: 204 ids, cero duplicados, cero enlaces rotos, y los 12 del glosario también.</p>
+    <p class="alerta">🔴 <strong>Y salió un fallo de verdad, que ya estaba en la versión anterior:</strong> los dos idiomas comparten DOM y comparten las <code>\label</code>, así que había <strong>95 ids duplicados</strong>, 76 de <code>\label</code> y 19 de demostración (contados, no estimados: la primera cifra que di, 88, era de mirar la lista por encima). <code>getElementById</code> y <code>#ancla</code> devuelven siempre el primero, o sea el español: en inglés, «Show proof» abría la prueba del documento oculto y no pasaba nada, y un <code>\eqref</code> saltaba a un elemento no renderizado. <strong>Ninguna de las dos cosas da error en consola.</strong> Arreglado prefijando cada ancla con el idioma (<code>ancla()</code> en <code>build_notas.py</code>); verificado: 204 ids, cero duplicados, cero enlaces rotos, y los 12 del glosario también.</p>
     <p class="artefacto">Artefacto: <code>subproyectos/notas_junca/plantilla.html</code></p>
+  </div>
+</li>
+<li class="tarea hecha abrible" data-hecha="1">
+  <button class="cabecera" type="button" aria-expanded="false">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">NJU-18</span>
+    <span class="titulo">Empotrar Latin Modern, que el botón «LaTeX» no hacía nada</span>
+    <span class="fecha">2026-08-12</span>
+    <span class="flecha" aria-hidden="true"></span>
+  </button>
+  <div class="detalle" hidden>
+    <p class="alerta">🔴 <strong>Afirmación mía que resultó falsa.</strong> Le dije que la opción «LaTeX» le funcionaría porque <em>«la tienes instalada por MiKTeX»</em>. Comprobado en el registro de Windows: <strong>cero entradas</strong> que casen «Latin Modern» ni en <code>HKLM</code> ni en <code>HKCU</code>. MiKTeX la deja donde la encuentra TeX y <strong>no la registra como fuente del sistema</strong>, así que la cadena CSS caía a Cambria en silencio y el botón parecía funcionar sin cambiar nada. ✅ Las tres caras de texto (<code>lmroman10</code> regular, cursiva y negrita) van <strong>empotradas como data URI</strong> desde <code>build_notas.py</code>, 445 KB en base64. La página pasa de 433 a 878 KB, que para una página local sobra. Si los <code>.otf</code> no están, el script avisa y <strong>esconde el botón</strong> en vez de mentir. ⚠️ <strong>Solo el texto.</strong> <code>lm-math</code> no está instalado, así que las fórmulas siguen en Cambria Math y el conjunto no es idéntico al PDF. Está dicho en el <code>title</code> del botón. Para cerrarlo del todo haría falta <code>miktex packages install lm-math</code> y empotrar <code>latinmodern-math.otf</code>.</p>
+    <p class="artefacto">Artefacto: <code>subproyectos/notas_junca/build_notas.py</code></p>
   </div>
 </li>
   </ul>
 </section>
 <footer>
-Generado el 2026-08-11 por <code>web/build_todo.py</code> a partir de los <code>TODO.md</code>. Editar esta página a mano no sirve de nada: se reescribe en la siguiente ejecución.
+Generado el 2026-08-12 por <code>web/build_todo.py</code> a partir de los <code>TODO.md</code>. Editar esta página a mano no sirve de nada: se reescribe en la siguiente ejecución.
 </footer>
 </div>
 <script>
