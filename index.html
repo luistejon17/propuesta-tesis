@@ -135,7 +135,7 @@ window.MathJax={
 <header class="principal">
 <h1>Propuesta de tesis — control óptimo</h1>
 <p class="sub">Decidir y proponer un tema en control óptimo inverso, en 2–3 meses desde el 2026-07-25.</p>
-<p class="global"><strong>79</strong> de <strong>127</strong> tareas completadas en todo el proyecto.</p>
+<p class="global"><strong>80</strong> de <strong>128</strong> tareas completadas en todo el proyecto.</p>
 </header>
 <nav class="pestanas" role="tablist">
 <button data-slug="preguntas_junca" role="tab">Preguntas a Junca<span class="n">8/22</span></button>
@@ -145,7 +145,7 @@ window.MathJax={
 <button data-slug="reuniones" role="tab">reuniones<span class="n">5/6</span></button>
 <button data-slug="infra" role="tab">General<span class="n">18/21</span></button>
 <button data-slug="explicaciones" role="tab">explicaciones<span class="n">3/5</span></button>
-<button data-slug="notas_junca" role="tab">notas junca<span class="n">16/20</span></button>
+<button data-slug="notas_junca" role="tab">notas junca<span class="n">17/21</span></button>
 </nav>
 <div class="controles">
 <label><input type="checkbox" id="ocultar"> Esconder las completadas</label>
@@ -1639,8 +1639,8 @@ window.MathJax={
   <div class="contexto-oculto" hidden>
     <p class="contexto">La nota de Mauricio, <em>Continuous-Time Inverse Optimal Control with Prior Beliefs</em> (julio de 2026), reescrita en español y en modo <code>xe</code>, completando los detalles que deja sueltos con las fuentes que ya están fichadas. Overleaf propio. El hilo es uno: de cada objeto, en qué espacio vive, y qué cosas todavía no sabemos dónde viven.</p>
   </div>
-  <div class="barra"><div class="relleno" style="width:80%"></div></div>
-  <p class="cuenta">16 de 20 completadas</p>
+  <div class="barra"><div class="relleno" style="width:81%"></div></div>
+  <p class="cuenta">17 de 21 completadas</p>
   <ul class="tareas">
 <li class="tarea hecha abrible" data-hecha="1">
   <button class="cabecera" type="button" aria-expanded="false">
@@ -1889,6 +1889,22 @@ window.MathJax={
     </ul>
     <p class="aviso">⚠️ <strong><code>notas.html</code> no se versiona</strong>: son 421 KB derivados que cambian enteros en cada build. La fuente es el Overleaf, que tiene su propio git.</p>
     <p class="artefacto">Artefacto: <code>subproyectos/notas_junca/build_notas.py</code></p>
+  </div>
+</li>
+<li class="tarea hecha abrible" data-hecha="1">
+  <button class="cabecera" type="button" aria-expanded="false">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">NJU-20</span>
+    <span class="titulo">La nota web se muda a <code>Notas_web</code> y el generador de aquí se retira</span>
+    <span class="fecha">2026-08-16</span>
+    <span class="flecha" aria-hidden="true"></span>
+  </button>
+  <div class="detalle" hidden>
+    <p class="alerta">🔴 <strong>Rectifica a <code>NJU-16</code>.</strong> <em>«Me arrepentí de decir que la nota se queda como artefacto de Claude»</em>: estos artefactos los está haciendo para varios proyectos y ya existe <code>Escritorio/Notas_web/</code>, el sitio único que los reúne. Allá es la nota <code>control-inverso</code>. ✅ <strong>Retirados de aquí <code>build_notas.py</code>, <code>plantilla.html</code> y <code>web/</code>.</strong> Regla de allá, y es la buena: <em>«ningún proyecto de notas escribe su propio generador»</em>. Lo que este proyecto aporta es el <code>.tex</code> y <code>glosario.txt</code>, que <code>Notas_web</code> lee donde están. ⚠️ <strong>Tres cosas hubo que construir allá porque no existían</strong>, y las tres quedaron genéricas para las demás notas: selector de <strong>idioma</strong>, <strong>numeración sin compilar</strong> (allá no se llama a <code>pdflatex</code> a propósito) y los <strong>cuadros emergentes</strong> de <code>\term{}</code>. 🔴 <strong>Y esto la vuelve pública</strong>, porque <code>Notas_web</code> publica su <code>sitio/</code> a un repo abierto. Se le avisó y decidió publicarla igual. El resto de este proyecto sigue privado y local.</p>
+    <ul>
+      <li><strong>El TOC estaba mal</strong> en el artifact: listaba cada definición y cada proposición. El de <code>Notas_web</code> es el del PDF, que es lo correcto.</li>
+    </ul>
+    <p class="artefacto">Artefacto: <code>Escritorio/Notas_web/notas.json</code></p>
   </div>
 </li>
 <li class="tarea hecha abrible" data-hecha="1">
