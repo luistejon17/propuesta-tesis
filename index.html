@@ -135,7 +135,7 @@ window.MathJax={
 <header class="principal">
 <h1>Propuesta de tesis — control óptimo</h1>
 <p class="sub">Decidir y proponer un tema en control óptimo inverso, en 2–3 meses desde el 2026-07-25.</p>
-<p class="global"><strong>85</strong> de <strong>135</strong> tareas completadas en todo el proyecto.</p>
+<p class="global"><strong>87</strong> de <strong>139</strong> tareas completadas en todo el proyecto.</p>
 </header>
 <nav class="pestanas" role="tablist">
 <button data-slug="preguntas_junca" role="tab">Preguntas a Junca<span class="n">8/22</span></button>
@@ -145,7 +145,7 @@ window.MathJax={
 <button data-slug="reuniones" role="tab">reuniones<span class="n">5/6</span></button>
 <button data-slug="infra" role="tab">General<span class="n">18/21</span></button>
 <button data-slug="explicaciones" role="tab">explicaciones<span class="n">3/5</span></button>
-<button data-slug="notas_junca" role="tab">notas junca<span class="n">22/28</span></button>
+<button data-slug="notas_junca" role="tab">notas junca<span class="n">24/32</span></button>
 </nav>
 <div class="controles">
 <label><input type="checkbox" id="ocultar"> Esconder las completadas</label>
@@ -1639,8 +1639,8 @@ window.MathJax={
   <div class="contexto-oculto" hidden>
     <p class="contexto">La nota de Mauricio, <em>Continuous-Time Inverse Optimal Control with Prior Beliefs</em> (julio de 2026), reescrita en español y en modo <code>xe</code>, completando los detalles que deja sueltos con las fuentes que ya están fichadas. Overleaf propio. El hilo es uno: de cada objeto, en qué espacio vive, y qué cosas todavía no sabemos dónde viven.</p>
   </div>
-  <div class="barra"><div class="relleno" style="width:79%"></div></div>
-  <p class="cuenta">22 de 28 completadas</p>
+  <div class="barra"><div class="relleno" style="width:75%"></div></div>
+  <p class="cuenta">24 de 32 completadas</p>
   <ul class="tareas">
 <li class="tarea hecha abrible" data-hecha="1">
   <button class="cabecera" type="button" aria-expanded="false">
@@ -2008,6 +2008,60 @@ window.MathJax={
     <p>El apéndice usa que un problema de martingala <strong>bien puesto</strong> da un proceso de Markov con función de transición. Es estándar y es Ethier--Kurtz cap. 4, pero <strong>el libro no está en <code>material_mathpix/</code></strong> y la regla de fidelidad prohíbe citar de memoria un número de teorema. 🔴 <strong>Primero se busca en el disco</strong> (<code>Escritorio/libros/</code>, <code>libros_control_optimo/</code>), que es el circuito del <code>CLAUDE.md</code> y ya apareció así el Brezis. Si está, se recortan las páginas del cap. 4 a <code>mathpix_inbox/Para pasar ya/</code>.</p>
     <ul>
       <li>Kurtz--Stockbridge lo cita como <code>[9]</code> y usa su Thm. 4.4.1 para la unicidad, así que el localizador está cerca de ahí.</li>
+    </ul>
+  </div>
+</li>
+<li class="tarea hecha abrible" data-hecha="1">
+  <button class="cabecera" type="button" aria-expanded="false">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">NJU-26</span>
+    <span class="titulo">La prueba de 1.5 suponía trayectorias continuas</span>
+    <span class="fecha">2026-08-17</span>
+    <span class="flecha" aria-hidden="true"></span>
+  </button>
+  <div class="detalle" hidden>
+    <p>Pregunta suya: <em>«no queda claro qué hipótesis tenemos sobre L, ¿es una difusión? ¿por qué sabemos que la semimartingala es continua?»</em>. 🔴 <strong>No lo sabíamos.</strong> La Def. 1.1 vive en un espacio polaco y sus soluciones son <strong>càdlàg</strong>; la continuidad solo la da la difusión \eqref{eq:sde}, y <code>prop:balance</code> está enunciada para el generador abstracto. Segundo fallo en la misma línea: integrando acotado contra martingala da martingala <strong>local</strong>, cuya esperanza no se anula sin integrabilidad extra. ✅ Reescrita con el argumento de <strong>Bhatt--Borkar §2.2</strong>, que es determinista: esperanzas en la martingala, por <span class="mate">$\rho e^{-\rho t}$</span>, y Fubini. Cero cálculo estocástico, cero regularidad de trayectorias. ✅ Y las hipótesis quedan por escrito: las de \eqref{eq:gen-operador}, <span class="mate">$\varphi\in\dom(\gen{})$</span> acotada con <span class="mate">$\gen{}\varphi$</span> acotada. Nada de difusión.</p>
+  </div>
+</li>
+<li class="tarea hecha abrible" data-hecha="1">
+  <button class="cabecera" type="button" aria-expanded="false">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">NJU-27</span>
+    <span class="titulo">El previo no elegía nada: pasa a caja abierta</span>
+    <span class="fecha">2026-08-17</span>
+    <span class="flecha" aria-hidden="true"></span>
+  </button>
+  <div class="detalle" hidden>
+    <p><em>«&quot;el previo elige un representante de la clase&quot; se me hace una hipótesis fuerte, no tengo ni idea qué estamos asumiendo sobre el previo... por el momento lo lógico es no afirmar nada»</em>. Tenía razón: <strong>no hay ni una hipótesis sobre <span class="mate">$\ch$</span> en todo el documento</strong>, y la frase afirmaba una propiedad de un objeto sin propiedades. ✅ Caja <code>abierto</code> con sus dos preguntas literales, y con lo que sí está probado: los datos determinan la <strong>clase</strong>, no el representante.</p>
+    <ul>
+      <li>Decir que el previo lo elige pediría dos cosas que no están: que <span class="mate">$\{q_\phi\}\s\Hs$</span>, cuando <span class="mate">$\dom(\gen{})\s C_b(E)$</span> no dice nada de derivadas; y que <span class="mate">$\{q_\phi\}$</span> sea <strong>cerrado</strong>, cuando <span class="mate">$\phi\mapsto\rho\phi-\gen{}\phi$</span> no es acotado.</li>
+    </ul>
+  </div>
+</li>
+<li class="tarea pendiente abrible" data-hecha="0">
+  <button class="cabecera" type="button" aria-expanded="false">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">NJU-28</span>
+    <span class="titulo">Aplicar la nota técnica del dominio al §2.1</span>
+    <span class="flecha" aria-hidden="true"></span>
+  </button>
+  <div class="detalle" hidden>
+    <p>La nota está escrita y compilada; <strong>el Overleaf no se ha tocado</strong>, por instrucción suya. Seis cambios, en orden de urgencia, en <code>dominio_y_riesz_es.pdf</code> §6. 🔴 <strong>El único que corrige algo falso es (H2)</strong>: la penalización (17) es la norma de <span class="mate">$H^1$</span> y el régimen (i) pide <span class="mate">$s&gt;(d+m)/2$</span>, y la Prop. 2.6 del propio documento demuestra que <span class="mate">$H^1$</span> <strong>nunca</strong> sirve con <span class="mate">$n\ge2$</span>. <span class="mate">$R$</span> tiene que ser de orden <span class="mate">$2s\ge4$</span>, y eso arrastra (35) y el sistema (34). ⚠️ <strong>Y hay una decisión suya pendiente</strong>, la 5: el dominio. <span class="mate">$\Tor^d\times Q$</span> conserva las restricciones sobre las acciones y cierra (H1), (H3) y (H4); <span class="mate">$\Tor^n$</span> cierra también (H2) pero borra <span class="mate">$\partial A$</span>.</p>
+    <p class="artefacto">Artefacto: <code>material_pdf/notas_tecnicas/dominio_y_riesz_es.pdf</code></p>
+  </div>
+</li>
+<li class="tarea pendiente abrible" data-hecha="0">
+  <button class="cabecera" type="button" aria-expanded="false">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">NJU-29</span>
+    <span class="titulo">Fichar Adams o Agmon para el caso mixto de dominios</span>
+    <span class="flecha" aria-hidden="true"></span>
+  </button>
+  <div class="detalle" hidden>
+    <p>Lo único de los cuatro huecos que <strong>ninguna fuente del proyecto cierra</strong>: <span class="mate">$E$</span> suave por <span class="mate">$A$</span> caja tiene aristas <strong>curvas</strong>, así que ni las cartas locales del Thm. 9.7 de Brezis ni las reflexiones de su Obs. 9 valen. Pide teoría de dominios lipschitzianos.</p>
+    <ul>
+      <li>Brezis remite a <strong>Adams</strong> y a <strong>Agmon</strong> en los comentarios del cap. 9.</li>
+      <li class="alerta">🔴 <strong>Primero se busca en el disco.</strong> Y si se elige el toro o el cilindro (NJU-28), esta tarea <strong>desaparece</strong>: no se ficha nada hasta que esa decisión esté tomada.</li>
     </ul>
   </div>
 </li>
