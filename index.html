@@ -135,7 +135,7 @@ window.MathJax={
 <header class="principal">
 <h1>Propuesta de tesis — control óptimo</h1>
 <p class="sub">Decidir y proponer un tema en control óptimo inverso, en 2–3 meses desde el 2026-07-25.</p>
-<p class="global"><strong>87</strong> de <strong>139</strong> tareas completadas en todo el proyecto.</p>
+<p class="global"><strong>88</strong> de <strong>139</strong> tareas completadas en todo el proyecto.</p>
 </header>
 <nav class="pestanas" role="tablist">
 <button data-slug="preguntas_junca" role="tab">Preguntas a Junca<span class="n">8/22</span></button>
@@ -145,7 +145,7 @@ window.MathJax={
 <button data-slug="reuniones" role="tab">reuniones<span class="n">5/6</span></button>
 <button data-slug="infra" role="tab">General<span class="n">18/21</span></button>
 <button data-slug="explicaciones" role="tab">explicaciones<span class="n">3/5</span></button>
-<button data-slug="notas_junca" role="tab">notas junca<span class="n">24/32</span></button>
+<button data-slug="notas_junca" role="tab">notas junca<span class="n">25/32</span></button>
 </nav>
 <div class="controles">
 <label><input type="checkbox" id="ocultar"> Esconder las completadas</label>
@@ -1639,8 +1639,8 @@ window.MathJax={
   <div class="contexto-oculto" hidden>
     <p class="contexto">La nota de Mauricio, <em>Continuous-Time Inverse Optimal Control with Prior Beliefs</em> (julio de 2026), reescrita en español y en modo <code>xe</code>, completando los detalles que deja sueltos con las fuentes que ya están fichadas. Overleaf propio. El hilo es uno: de cada objeto, en qué espacio vive, y qué cosas todavía no sabemos dónde viven.</p>
   </div>
-  <div class="barra"><div class="relleno" style="width:75%"></div></div>
-  <p class="cuenta">24 de 32 completadas</p>
+  <div class="barra"><div class="relleno" style="width:78%"></div></div>
+  <p class="cuenta">25 de 32 completadas</p>
   <ul class="tareas">
 <li class="tarea hecha abrible" data-hecha="1">
   <button class="cabecera" type="button" aria-expanded="false">
@@ -2038,18 +2038,20 @@ window.MathJax={
     </ul>
   </div>
 </li>
-<li class="tarea pendiente abrible" data-hecha="0">
+<li class="tarea hecha abrible" data-hecha="1">
   <button class="cabecera" type="button" aria-expanded="false">
     <span class="casilla" aria-hidden="true"></span>
     <span class="ident">NJU-28</span>
     <span class="titulo">Aplicar la nota técnica del dominio al §2.1</span>
+    <span class="fecha">2026-08-17</span>
     <span class="flecha" aria-hidden="true"></span>
   </button>
   <div class="detalle" hidden>
-    <p>La nota está escrita y compilada; <strong>el Overleaf no se ha tocado</strong>, por instrucción suya. Seis cambios, en orden de urgencia, en <code>dominio_y_riesz_es.pdf</code> §6. 🔴 <strong>El único que corrige algo falso es (H2)</strong>: la penalización (17) es la norma de <span class="mate">$H^1$</span> y el régimen (i) pide <span class="mate">$s&gt;(d+m)/2$</span>, y la Prop. 2.6 del propio documento demuestra que <span class="mate">$H^1$</span> <strong>nunca</strong> sirve con <span class="mate">$n\ge2$</span>. <span class="mate">$R$</span> tiene que ser de orden <span class="mate">$2s\ge4$</span>, y eso arrastra (35) y el sistema (34). ✅ <strong>El dominio ya está elegido</strong>, y lo fija una condición suya del 2026-08-17: hay que poder modelar <em>una partícula en un conjunto de <span class="mate">$\R^d$</span>, estado la posición y acción la dirección</em>. Sale <span class="mate">$E\s\R^d$</span> acotado (<span class="mate">$C^1$</span> o caja) y <span class="mate">$A=\Sf^{d-1}$</span>, con reflexión normal en <span class="mate">$\partial E$</span>. 🔴 <strong>Y esa condición cierra (H4) sola</strong>, que era el único hueco sin fuente: las aristas salían de que <strong>los dos</strong> factores tuvieran frontera, y <span class="mate">$\Sf^{d-1}$</span> no tiene. El producto hereda la regularidad de <span class="mate">$E$</span> y ya. ⚠️ <strong>El toro era la generalización equivocada.</strong> Lo que hacía funcionar a <span class="mate">$\Tor^n$</span> era ser compacto y sin frontera, no ser un toro; la serie de Fourier es la base propia de su laplaciano. La §5 de la nota se reescribió entera por esto.</p>
+    <p>Redactado <strong>primero en inglés</strong> (estilo Folland) y traducido después, que es la instrucción suya de ese día. <strong>13 → 14 páginas</strong>, en los dos idiomas, sin referencias indefinidas. ✅ <strong>Hipótesis en el §1</strong>, que es donde tocan: <span class="mate">$E$</span> dominio acotado con propiedad de extensión, <span class="mate">$A$</span> variedad compacta <strong>sin frontera</strong>, difusión reflejada en <span class="mate">$\partial E$</span>. Un solo supuesto cierra dos huecos de temas distintos: fija <span class="mate">$\dom(\gen{})$</span> (<code>obs:test</code>) y anula los términos de frontera de <code>prop:fp-debil</code>, que su prueba descartaba «bajo las condiciones del modelo». ✅ <strong><code>def:espacio</code> nueva, con la norma exacta.</strong> Intrínseca en <span class="mate">$E$</span>, luego no impone condición de frontera; espectral en <span class="mate">$A$</span>, luego <span class="mate">$s_a$</span> real. ✅ <strong><code>prop:delta</code> nueva</strong>: el umbral se factoriza porque <span class="mate">$\delta=\delta_x\otimes\delta_a$</span>, así que <span class="mate">$s_x&gt;d/2$</span> y <span class="mate">$s_a&gt;m/2$</span> por separado. ✅ <strong><code>prop:riesz</code> al orden que le toca</strong>, <span class="mate">$2s_x$</span> en <span class="mate">$x$</span> y <span class="mate">$2s_a$</span> en <span class="mate">$a$</span>. 🔴 <strong>Y el barrido de vestigios era la mitad del trabajo</strong>: (38) se escribía con el gradiente de <span class="mate">$H^1$</span>, <code>prop:compacidad-M</code> citaba el dominio <span class="mate">$C^1$</span>, y <strong>los cuatro cuadros del glosario</strong> (<span class="mate">$E$</span>, <span class="mate">$A$</span>, <code>Hs</code>, <code>R</code>) seguían describiendo lo viejo. Instrucción suya: no basta con actualizar los enunciados de los que se venía hablando.</p>
     <ul>
-      <li>Séptimo cambio, nuevo: regularidad mixta <span class="mate">$s_x$</span> entero sobre <span class="mate">$E$</span> y <span class="mate">$s_a$</span> libre sobre la esfera. Baja <span class="mate">$R$</span> de orden 6 a 4 con <span class="mate">$d=3$</span> y cierra la caja abierta 3 del censo.</li>
+      <li><code>cor:umbral</code> pasa a la inyección sobre <span class="mate">$E$</span> por iteración de Brezis Cor. 9.14, que gasta solo la extensión de orden <strong>uno</strong>.</li>
     </ul>
+    <p class="alerta">🔴 <strong>El cambio que corregía algo falso era (H2)</strong>: la penalización (17) era la norma de <span class="mate">$H^1$</span> y el régimen (i) pide más, y la Prop. 2.7 del propio documento demuestra que <span class="mate">$H^1$</span> <strong>nunca</strong> sirve con <span class="mate">$n\ge2$</span>. ⚠️ <strong>El toro era la generalización equivocada.</strong> Lo que hacía funcionar a <span class="mate">$\mathbb T^n$</span> era ser compacto y sin frontera, no ser un toro. Por eso (D2) pide variedad cerrada y no periodicidad, y así el estado angular entra sin tratarse aparte. 🔴 <strong>La condición de la partícula cierra (H4) sola</strong>: las aristas salían de que <strong>los dos</strong> factores tuvieran frontera, y la esfera de direcciones no tiene. Adams y Agmon dejan de hacer falta.</p>
     <p class="artefacto">Artefacto: <code>material_pdf/notas_tecnicas/dominio_y_riesz_es.pdf</code></p>
   </div>
 </li>
