@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
 <title>Propuesta de tesis · TODO</title>
-<!-- GENERADO por web/build_todo.py el 2026-08-16. NO EDITAR A MANO: los TODO.md mandan, este archivo se reescribe. -->
+<!-- GENERADO por web/build_todo.py el 2026-08-17. NO EDITAR A MANO: los TODO.md mandan, este archivo se reescribe. -->
 <style>
 :root{
   --fondo:#fbfaf7; --papel:#fff; --tinta:#1c1a17; --suave:#6b6558;
@@ -135,7 +135,7 @@ window.MathJax={
 <header class="principal">
 <h1>Propuesta de tesis — control óptimo</h1>
 <p class="sub">Decidir y proponer un tema en control óptimo inverso, en 2–3 meses desde el 2026-07-25.</p>
-<p class="global"><strong>80</strong> de <strong>128</strong> tareas completadas en todo el proyecto.</p>
+<p class="global"><strong>82</strong> de <strong>131</strong> tareas completadas en todo el proyecto.</p>
 </header>
 <nav class="pestanas" role="tablist">
 <button data-slug="preguntas_junca" role="tab">Preguntas a Junca<span class="n">8/22</span></button>
@@ -145,7 +145,7 @@ window.MathJax={
 <button data-slug="reuniones" role="tab">reuniones<span class="n">5/6</span></button>
 <button data-slug="infra" role="tab">General<span class="n">18/21</span></button>
 <button data-slug="explicaciones" role="tab">explicaciones<span class="n">3/5</span></button>
-<button data-slug="notas_junca" role="tab">notas junca<span class="n">17/21</span></button>
+<button data-slug="notas_junca" role="tab">notas junca<span class="n">19/24</span></button>
 </nav>
 <div class="controles">
 <label><input type="checkbox" id="ocultar"> Esconder las completadas</label>
@@ -1639,8 +1639,8 @@ window.MathJax={
   <div class="contexto-oculto" hidden>
     <p class="contexto">La nota de Mauricio, <em>Continuous-Time Inverse Optimal Control with Prior Beliefs</em> (julio de 2026), reescrita en español y en modo <code>xe</code>, completando los detalles que deja sueltos con las fuentes que ya están fichadas. Overleaf propio. El hilo es uno: de cada objeto, en qué espacio vive, y qué cosas todavía no sabemos dónde viven.</p>
   </div>
-  <div class="barra"><div class="relleno" style="width:81%"></div></div>
-  <p class="cuenta">17 de 21 completadas</p>
+  <div class="barra"><div class="relleno" style="width:79%"></div></div>
+  <p class="cuenta">19 de 24 completadas</p>
   <ul class="tareas">
 <li class="tarea hecha abrible" data-hecha="1">
   <button class="cabecera" type="button" aria-expanded="false">
@@ -1973,10 +1973,64 @@ window.MathJax={
     <p class="artefacto">Artefacto: <code>subproyectos/notas_junca/build_notas.py</code></p>
   </div>
 </li>
+<li class="tarea hecha abrible" data-hecha="1">
+  <button class="cabecera" type="button" aria-expanded="false">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">NJU-21</span>
+    <span class="titulo">Cada cita con su localizador exacto, contrastada con la fuente</span>
+    <span class="fecha">2026-08-17</span>
+    <span class="flecha" aria-hidden="true"></span>
+  </button>
+  <div class="detalle" hidden>
+    <p>Instrucción suya: <em>«en el texto en gris que dice [Borkar] tienes que añadir qué proposición o página del libro dice esto»</em>. Las 20 citas de los dos idiomas se fueron a buscar al <code>.mmd</code> una por una:</p>
+    <ul>
+      <li><code>def:relajada</code> → <strong>Bhatt--Borkar, Def. 1.2</strong>, y no la 1.1, que es el problema <strong>estricto</strong>.</li>
+      <li><code>def:ocupacion</code> → <strong>(1.6)</strong>, que además está normalizada por <span class="mate">$\rho$</span>, justo lo que el texto ya discutía.</li>
+      <li><code>prop:balance</code> → <strong>(2.13) y Thm. 2.2</strong> (la ida y el recíproco).</li>
+      <li>La normalización y <code>Thm. 6.3</code> → <strong>Kurtz--Stockbridge, Thm. 6.3</strong>, cuyo (6.5) es literalmente <span class="mate">$\alpha^{-1}\int c\,d\widehat\pi$</span>.</li>
+      <li><code>obs:test</code> → <strong>Kurtz--Stockbridge, Ej. 3.4</strong>, que es el generador de difusión con dominio <span class="mate">$C_c^2$</span>.</li>
+      <li>La condición de rango → <strong>Baudoin, Cor. 4.41</strong>, no el Thm. 4.38.</li>
+      <li><code>thm:encaje</code> → <strong>Folland, Thm. 9.17</strong>; y la optimalidad del umbral → <strong>Prop. 9.16 y §9.3</strong>, que es donde calcula que <span class="mate">$\delta\in H_s$</span> sii <span class="mate">$s&lt;-n/2$</span>. Esa cita <strong>no existía</strong>.</li>
+      <li>Y <strong><code>Borkar</code> pasa a <code>Bhatt--Borkar</code></strong>: a secas es ambiguo, porque el paper cita también a Borkar (1989).</li>
+    </ul>
+    <p class="alerta">🔴 <strong>Una no se sostiene y queda marcada <code>[incierto]</code>:</strong> que el buen planteamiento del problema de martingala dé la propiedad de Markov se atribuía a Baudoin, y <strong>Baudoin no menciona el problema de martingala en ningún capítulo fichado</strong>. La referencia estándar es Ethier--Kurtz cap. 4, que no está en <code>material_mathpix/</code>. Es <code>NJU-22</code>. ⚠️ <strong>Esto deroga la regla 11 de <code>estilo_libro.md</code></strong>, que pedía una sola palabra. Reescrita, con las dos instrucciones y su fecha.</p>
+    <p class="artefacto">Artefacto: <code>docs/estilo_libro.md</code> §11</p>
+  </div>
+</li>
+<li class="tarea pendiente abrible" data-hecha="0">
+  <button class="cabecera" type="button" aria-expanded="false">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">NJU-22</span>
+    <span class="titulo">Conseguir Ethier--Kurtz para cerrar la cita marcada incierta</span>
+    <span class="flecha" aria-hidden="true"></span>
+  </button>
+  <div class="detalle" hidden>
+    <p>El apéndice usa que un problema de martingala <strong>bien puesto</strong> da un proceso de Markov con función de transición. Es estándar y es Ethier--Kurtz cap. 4, pero <strong>el libro no está en <code>material_mathpix/</code></strong> y la regla de fidelidad prohíbe citar de memoria un número de teorema. 🔴 <strong>Primero se busca en el disco</strong> (<code>Escritorio/libros/</code>, <code>libros_control_optimo/</code>), que es el circuito del <code>CLAUDE.md</code> y ya apareció así el Brezis. Si está, se recortan las páginas del cap. 4 a <code>mathpix_inbox/Para pasar ya/</code>.</p>
+    <ul>
+      <li>Kurtz--Stockbridge lo cita como <code>[9]</code> y usa su Thm. 4.4.1 para la unicidad, así que el localizador está cerca de ahí.</li>
+    </ul>
+  </div>
+</li>
+<li class="tarea hecha abrible" data-hecha="1">
+  <button class="cabecera" type="button" aria-expanded="false">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">NJU-23</span>
+    <span class="titulo">Bitácora de lo que él corrige a mano en los Overleaf</span>
+    <span class="fecha">2026-08-17</span>
+    <span class="flecha" aria-hidden="true"></span>
+  </button>
+  <div class="detalle" hidden>
+    <p>Pregunta suya: <em>«había una bitácora de ediciones que hago yo en el overleaf, no?»</em>. <strong>No la había.</strong> 🔴 <strong>Y era un canal ciego.</strong> Sus commits «Update on Overleaf» llegan sin comentario y <strong>se integraban sin leerlos</strong>: se rebasaba encima y se seguía. <code>estilo_libro.md</code> solo recogía lo que corrige en el chat. ✅ <code>docs/correcciones_overleaf.md</code>, con el procedimiento (<code>git fetch</code> y leer sus commits <strong>antes</strong> de empujar, y en los tres Overleaf) y el registro abierto.</p>
+    <ul>
+      <li>Repasadas sus siete ediciones: cinco son cambios de modo y una es la subida inicial. La única de estilo es la del 2026-08-17, que mete el <code>$\rt$</code> <strong>dentro</strong> del display en <code>prop:shaping</code>. Comprobado en los dos idiomas: era el único caso del documento.</li>
+    </ul>
+    <p class="artefacto">Artefacto: <code>docs/correcciones_overleaf.md</code></p>
+  </div>
+</li>
   </ul>
 </section>
 <footer>
-Generado el 2026-08-16 por <code>web/build_todo.py</code> a partir de los <code>TODO.md</code>. Editar esta página a mano no sirve de nada: se reescribe en la siguiente ejecución.
+Generado el 2026-08-17 por <code>web/build_todo.py</code> a partir de los <code>TODO.md</code>. Editar esta página a mano no sirve de nada: se reescribe en la siguiente ejecución.
 </footer>
 </div>
 <script>
