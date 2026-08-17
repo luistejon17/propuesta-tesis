@@ -135,7 +135,7 @@ window.MathJax={
 <header class="principal">
 <h1>Propuesta de tesis — control óptimo</h1>
 <p class="sub">Decidir y proponer un tema en control óptimo inverso, en 2–3 meses desde el 2026-07-25.</p>
-<p class="global"><strong>82</strong> de <strong>131</strong> tareas completadas en todo el proyecto.</p>
+<p class="global"><strong>83</strong> de <strong>133</strong> tareas completadas en todo el proyecto.</p>
 </header>
 <nav class="pestanas" role="tablist">
 <button data-slug="preguntas_junca" role="tab">Preguntas a Junca<span class="n">8/22</span></button>
@@ -145,7 +145,7 @@ window.MathJax={
 <button data-slug="reuniones" role="tab">reuniones<span class="n">5/6</span></button>
 <button data-slug="infra" role="tab">General<span class="n">18/21</span></button>
 <button data-slug="explicaciones" role="tab">explicaciones<span class="n">3/5</span></button>
-<button data-slug="notas_junca" role="tab">notas junca<span class="n">19/24</span></button>
+<button data-slug="notas_junca" role="tab">notas junca<span class="n">20/26</span></button>
 </nav>
 <div class="controles">
 <label><input type="checkbox" id="ocultar"> Esconder las completadas</label>
@@ -1639,8 +1639,8 @@ window.MathJax={
   <div class="contexto-oculto" hidden>
     <p class="contexto">La nota de Mauricio, <em>Continuous-Time Inverse Optimal Control with Prior Beliefs</em> (julio de 2026), reescrita en español y en modo <code>xe</code>, completando los detalles que deja sueltos con las fuentes que ya están fichadas. Overleaf propio. El hilo es uno: de cada objeto, en qué espacio vive, y qué cosas todavía no sabemos dónde viven.</p>
   </div>
-  <div class="barra"><div class="relleno" style="width:79%"></div></div>
-  <p class="cuenta">19 de 24 completadas</p>
+  <div class="barra"><div class="relleno" style="width:77%"></div></div>
+  <p class="cuenta">20 de 26 completadas</p>
   <ul class="tareas">
 <li class="tarea hecha abrible" data-hecha="1">
   <button class="cabecera" type="button" aria-expanded="false">
@@ -2009,6 +2009,33 @@ window.MathJax={
     <ul>
       <li>Kurtz--Stockbridge lo cita como <code>[9]</code> y usa su Thm. 4.4.1 para la unicidad, así que el localizador está cerca de ahí.</li>
     </ul>
+  </div>
+</li>
+<li class="tarea hecha abrible" data-hecha="1">
+  <button class="cabecera" type="button" aria-expanded="false">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">NJU-24</span>
+    <span class="titulo">La Prop. 1.2 no es de Borkar: atribuía la recíproca</span>
+    <span class="fecha">2026-08-17</span>
+    <span class="flecha" aria-hidden="true"></span>
+  </button>
+  <div class="detalle" hidden>
+    <p>Lo caza él: <em>«Borkar da condiciones para que la política sea markoviana, pero no dice que si la política es markoviana entonces el óptimo se puede calcular así»</em>. Tenía razón, y contra el <code>.mmd</code>: Bhatt--Borkar §2.1 es el problema <strong>ergódico</strong>, y su Cor. 2.1 dice que el control relajado <em>puede tomarse</em> markoviano. <code>prop:semigrupo</code> dice lo contrario. 🔴 <strong>El localizador exacto camufla el error en vez de evitarlo.</strong> <code>NJU-21</code> puso los números y comprobó que existieran; no comprobó que probaran el enunciado. Es una regla nueva, no un descuido de aquella. ✅ <code>prop:semigrupo</code> pasa a <code>\fuente{\remarcar{Lectura propia}}</code> (su demostración ya estaba en el apéndice), y Borkar se mueve a la prosa de antes, donde sí aplica: §3.2 vía Cor. 2.2, y <strong>solo para el filtro no lineal</strong>; las demás familias las dan por análogas sin escribirlo. ✅ Segunda instancia de lo mismo, salida al recontrastar: Baudoin Cor. 4.41 da semigrupo de <strong>contracción</strong>, no de Feller--Dynkin. El salto que falta es Hille--Yosida--Ray y queda <code>[incierto]</code>, apuntando al mismo Ethier--Kurtz de <code>NJU-22</code>. ✅ Censo corregido: §2.1 hasta el Cor. 2.1 y §3.2 sí se leyeron.</p>
+    <ul>
+      <li>Repasados los otros seis <code>\fuente{}</code> contra su <code>.mmd</code>: Def. 1.2, (1.6), (2.13)+Thm. 2.2, Kurtz--Stockbridge Thm. 6.3 y Ej. 3.4, y Folland Thm. 9.17 prueban lo que se les atribuye. Solo se afinó Folland §9.3, que colisiona con su Prop. 9.3.</li>
+    </ul>
+    <p class="artefacto">Artefacto: <code>docs/estilo_libro.md</code> §11</p>
+  </div>
+</li>
+<li class="tarea pendiente abrible" data-hecha="0">
+  <button class="cabecera" type="button" aria-expanded="false">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">NJU-25</span>
+    <span class="titulo">El censo no está en el PDF, y la regla de fidelidad lo exige</span>
+    <span class="flecha" aria-hidden="true"></span>
+  </button>
+  <div class="detalle" hidden>
+    <p><code>apendice_donde_vive.tex</code> declara qué se leyó de cada fuente, que es lo que pide la regla 3 del <code>CLAUDE.md</code> raíz. <strong><code>main.tex</code> no lo hace <code>\input</code></strong>, así que ni sale en el PDF ni en la web: la declaración de alcance no está entregada. ⚠️ <strong>No basta con añadir el <code>\input</code>.</strong> Su tabla apunta a diez <code>\label</code> que no existen (<code>prop:ks-condiciones</code>, <code>thm:folland-encaje</code>, <code>cor:dos-no-tres</code>…), restos de una versión con más secciones. Hay que decidir cuáles son enunciados que faltan y cuáles referencias muertas.</p>
   </div>
 </li>
 <li class="tarea hecha abrible" data-hecha="1">
