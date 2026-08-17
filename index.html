@@ -135,7 +135,7 @@ window.MathJax={
 <header class="principal">
 <h1>Propuesta de tesis — control óptimo</h1>
 <p class="sub">Decidir y proponer un tema en control óptimo inverso, en 2–3 meses desde el 2026-07-25.</p>
-<p class="global"><strong>83</strong> de <strong>133</strong> tareas completadas en todo el proyecto.</p>
+<p class="global"><strong>85</strong> de <strong>135</strong> tareas completadas en todo el proyecto.</p>
 </header>
 <nav class="pestanas" role="tablist">
 <button data-slug="preguntas_junca" role="tab">Preguntas a Junca<span class="n">8/22</span></button>
@@ -145,7 +145,7 @@ window.MathJax={
 <button data-slug="reuniones" role="tab">reuniones<span class="n">5/6</span></button>
 <button data-slug="infra" role="tab">General<span class="n">18/21</span></button>
 <button data-slug="explicaciones" role="tab">explicaciones<span class="n">3/5</span></button>
-<button data-slug="notas_junca" role="tab">notas junca<span class="n">20/26</span></button>
+<button data-slug="notas_junca" role="tab">notas junca<span class="n">22/28</span></button>
 </nav>
 <div class="controles">
 <label><input type="checkbox" id="ocultar"> Esconder las completadas</label>
@@ -1639,8 +1639,8 @@ window.MathJax={
   <div class="contexto-oculto" hidden>
     <p class="contexto">La nota de Mauricio, <em>Continuous-Time Inverse Optimal Control with Prior Beliefs</em> (julio de 2026), reescrita en español y en modo <code>xe</code>, completando los detalles que deja sueltos con las fuentes que ya están fichadas. Overleaf propio. El hilo es uno: de cada objeto, en qué espacio vive, y qué cosas todavía no sabemos dónde viven.</p>
   </div>
-  <div class="barra"><div class="relleno" style="width:77%"></div></div>
-  <p class="cuenta">20 de 26 completadas</p>
+  <div class="barra"><div class="relleno" style="width:79%"></div></div>
+  <p class="cuenta">22 de 28 completadas</p>
   <ul class="tareas">
 <li class="tarea hecha abrible" data-hecha="1">
   <button class="cabecera" type="button" aria-expanded="false">
@@ -2052,6 +2052,42 @@ window.MathJax={
       <li>Repasadas sus siete ediciones: cinco son cambios de modo y una es la subida inicial. La única de estilo es la del 2026-08-17, que mete el <code>$\rt$</code> <strong>dentro</strong> del display en <code>prop:shaping</code>. Comprobado en los dos idiomas: era el único caso del documento.</li>
     </ul>
     <p class="artefacto">Artefacto: <code>docs/correcciones_overleaf.md</code></p>
+  </div>
+</li>
+<li class="tarea hecha abrible" data-hecha="1">
+  <button class="cabecera" type="button" aria-expanded="false">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">NJU-26</span>
+    <span class="titulo">Nota técnica de prerrequisitos del §2.1, el espacio de costos</span>
+    <span class="fecha">2026-08-17</span>
+    <span class="flecha" aria-hidden="true"></span>
+  </button>
+  <div class="detalle" hidden>
+    <p>Pide él, leyendo el §2.1: no entiende qué es un espacio de Sobolev, por qué la norma se define así, si depende de <span class="mate">$s$</span>, ni qué es <span class="mate">$C_\iota$</span>. 🔴 <strong>Y pide explícitamente que NO se explique dentro de <code>notas_junca</code>.</strong> La nota de Mauricio se queda como está: los prerrequisitos van fuera, en <code>notas_tecnicas/</code>, que es donde manda la regla 7.3 del <code>CLAUDE.md</code> raíz. ✅ Dos <code>.tex</code>, inglés primero y español traducido, siete páginas cada uno, compilados sin warnings. Estilo Folland, que hasta hoy no estaba escrito en ninguna parte: se leyó el <code>.mmd</code> del capítulo 9 y salió <code>docs/estilo_folland.md</code>, con las diez características y su línea de evidencia.</p>
+    <ul>
+      <li><strong>Lo que responde y no estaba dicho:</strong> la norma <strong>sí</strong> depende de <span class="mate">$s$</span>, y no por equivalencia sino porque <span class="mate">$H_s\subsetneq H_t$</span> para <span class="mate">$t&lt;s$</span>; la ecuación (17) de la nota <strong>no</strong> es una norma de esa familia, es la de <span class="mate">$H^1$</span> con peso <span class="mate">$\kappa$</span>, así que <code>\|·\|_H</code> carga dos normas distintas en el mismo §2.1; <span class="mate">$C_\iota$</span> es la norma de operador de la inyección, acotada por <span class="mate">$[\pi^{n/2}\Gamma(s-n/2)/\Gamma(s)]^{1/2}$</span> <strong>[cuenta propia]</strong>.</li>
+    </ul>
+    <p class="aviso">⚠️ <strong>Solapa con el capítulo de Sobolev del libro de explicaciones</strong>, que cubre el mismo Folland en modo <code>e:review</code>. No se duplica: aquel es discursivo y con pruebas esbozadas, este es formal y con las pruebas escritas, y añade el dominio (Brezis), <span class="mate">$C_\iota$</span> explícito y el mapa de Riesz. Declarado en la observación de alcance de la nota.</p>
+    <p><code>material_pdf/notas_tecnicas/espacio_costos_{en,es}.pdf</code></p>
+    <p class="artefacto">Artefacto: <code>notas_tecnicas/espacio_costos_{en,es}.tex</code>,</p>
+  </div>
+</li>
+<li class="tarea hecha abrible" data-hecha="1">
+  <button class="cabecera" type="button" aria-expanded="false">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">NJU-27</span>
+    <span class="titulo">«Encaje» pasa a «inyección» en la versión española</span>
+    <span class="fecha">2026-08-17</span>
+    <span class="flecha" aria-hidden="true"></span>
+  </button>
+  <div class="detalle" hidden>
+    <p>Reparo suyo: <em>«yo no diría encaje, diría sumersión o inyección, encaje creo que está bien pero me suena raro»</em>.</p>
+    <ul>
+      <li><strong>Inyección</strong> es la palabra de Brezis (<em>continuous injection</em>, <em>compact injection</em>) y es la que queda.</li>
+      <li><strong>Sumersión</strong> nombra otra cosa, la aplicación diferenciable con diferencial sobreyectiva, y no se usa.</li>
+      <li><strong>Encaje</strong> no estaba mal, y es lo que dicen sus propios apuntes de Folland (<code>analisis_folland/9.tex</code>, «Teorema de encaje de Sobolev»).</li>
+    </ul>
+    <p class="alerta">🔴 <strong>Las <code>\label</code> no se tocan.</strong> Siguen siendo <code>thm:encaje</code>, <code>cor:encaje-compacto</code>, <code>thm:brezis-encaje</code>: son las mismas en los dos idiomas y es lo que empareja el LaTeX con la web. Solo cambia la prosa. Cinco archivos, compilado y empujado a Overleaf. El inglés no se toca: <em>embedding</em> está bien.</p>
   </div>
 </li>
   </ul>
