@@ -135,17 +135,17 @@ window.MathJax={
 <header class="principal">
 <h1>Propuesta de tesis — control óptimo</h1>
 <p class="sub">Decidir y proponer un tema en control óptimo inverso, en 2–3 meses desde el 2026-07-25.</p>
-<p class="global"><strong>90</strong> de <strong>146</strong> tareas completadas en todo el proyecto.</p>
+<p class="global"><strong>91</strong> de <strong>149</strong> tareas completadas en todo el proyecto.</p>
 </header>
 <nav class="pestanas" role="tablist">
 <button data-slug="preguntas_junca" role="tab">Preguntas a Junca<span class="n">8/25</span></button>
-<button data-slug="preguntas_investigacion" role="tab">Preguntas de investigación<span class="n">7/23</span></button>
+<button data-slug="preguntas_investigacion" role="tab">Preguntas de investigación<span class="n">7/24</span></button>
 <button data-slug="referencias" role="tab">referencias<span class="n">8/15</span></button>
 <button data-slug="asesor" role="tab">asesor<span class="n">7/8</span></button>
 <button data-slug="reuniones" role="tab">reuniones<span class="n">5/6</span></button>
 <button data-slug="infra" role="tab">General<span class="n">18/21</span></button>
 <button data-slug="explicaciones" role="tab">explicaciones<span class="n">3/5</span></button>
-<button data-slug="notas_junca" role="tab">notas junca<span class="n">27/36</span></button>
+<button data-slug="notas_junca" role="tab">notas junca<span class="n">28/38</span></button>
 </nav>
 <div class="controles">
 <label><input type="checkbox" id="ocultar"> Esconder las completadas</label>
@@ -285,7 +285,7 @@ window.MathJax={
       <li>Bhatt–Borkar §3.2 la deducen citando <strong>Borkar (1989), Lema 3.7</strong>, que no tenemos.</li>
       <li>La alternativa es una condición de Lyapunov sobre <span class="mate">$b$</span> y <span class="mate">$\sigma$</span>, que habría que escribir. <strong>Él sabrá si hay una estándar para este modelo.</strong></li>
     </ul>
-    <p>Cierra la mitad que queda de <code>P28</code>.</p>
+    <p>Cierra la mitad que queda de <code>P28</code>. ✅ <strong>2026-08-17: la Lyapunov ya está escrita</strong> (<code>NJU-34</code>, Prop. 5.6). Si <span class="mate">$\mathcal L^a v\le C-\gamma v$</span> para <span class="mate">$v=w^{1+\varepsilon}$</span>, la propia identidad de balance da <span class="mate">$\int v\,d\eta$</span> acotada, y eso es la tensión. <strong>Lo que sigue siendo pregunta suya:</strong> <span class="mate">$v\notin\mathscr D(\mathcal L)$</span> cuando el dominio es <span class="mate">$C_0^2$</span>, así que hay que extender la identidad a funciones test no acotadas. ¿Hay una referencia estándar, o se trunca a mano?</p>
   </div>
 </li>
 <li class="tarea pendiente abrible" data-hecha="0">
@@ -300,7 +300,7 @@ window.MathJax={
     <ul>
       <li>La salida sería separar <span class="mate">$c=\widehat c+c_1$</span> con solo <span class="mate">$c_1\in\mathcal H$</span> y <span class="mate">$\widehat c$</span> libre, pero <strong>eso cambia la hipótesis de su Teorema 4.2</strong>, que pide <span class="mate">$\widehat c\in\mathcal H$</span>.</li>
     </ul>
-    <p class="aviso">⚠️ Es pregunta suya y no trabajo nuestro porque depende de qué quiere que signifique el previo.</p>
+    <p class="aviso">⚠️ Es pregunta suya y no trabajo nuestro porque depende de qué quiere que signifique el previo. ✅ <strong>2026-08-17: la pega técnica se cae, y la pregunta mejora.</strong> No hay que sacar <span class="mate">$\widehat c$</span> del espacio: basta agrandar el espacio a <span class="mate">$\mathcal H=H^s\oplus\mathbb R w$</span> con <span class="mate">$w$</span> inf-compacta (<code>NJU-34</code>), que es el espacio del núcleo <span class="mate">$k_0+w\otimes w$</span>. Ahí el previo crece, sigue en <span class="mate">$\mathcal H$</span>, y la hipótesis de su Teorema 4.2 no se toca. 🔴 <strong>La pregunta pasa a ser cuál <span class="mate">$w$</span></strong>, y esa sí es enteramente suya: <span class="mate">$w$</span> dice a qué velocidad se encarece estar lejos y, por la misma cuenta, cuánta masa se le permite escapar al proceso. Son la misma decisión escrita dos veces, y depende del modelo que tenga en la cabeza.</p>
   </div>
 </li>
 <li class="tarea pendiente abrible" data-hecha="0">
@@ -317,7 +317,11 @@ window.MathJax={
       <li>Un método conforme necesita entonces elementos <span class="mate">$C^1$</span> (Argyris, Hsieh–Clough–Tocher) o formulación mixta; los <span class="mate">$P_1$</span> de Lagrange <strong>no están en <span class="mate">$H^2$</span></strong> y no sirven.</li>
       <li>Y el condicionamiento pasa de <span class="mate">$h^{-2}$</span> a <span class="mate">$h^{-4}$</span>.</li>
     </ul>
-    <p class="aviso">⚠️ <strong>Puede que él ya lo supiera y por eso escribiera <span class="mate">$H^1$</span></strong>, aceptando que el régimen de densidades bastaba. Merece preguntarse antes de dar por hecho que es un error suyo.</p>
+    <p class="aviso">⚠️ <strong>Puede que él ya lo supiera y por eso escribiera <span class="mate">$H^1$</span></strong>, aceptando que el régimen de densidades bastaba. Merece preguntarse antes de dar por hecho que es un error suyo. 🔴 <strong>2026-08-17: el diagnóstico numérico de arriba era pesimista y se retira.</strong> Su (24) nunca pide resolver <span class="mate">$Rc=\eta$</span>: ahí <span class="mate">$R^{-1}$</span> actúa sobre una <strong>medida</strong>, y sobre una medida <span class="mate">$R^{-1}$</span> es la convolución con el núcleo de Bessel <span class="mate">$G$</span> (<code>NJU-34</code>, Cor. 2.2). Con <span class="mate">$\eta_{A,\star}$</span> en <span class="mate">$N$</span> átomos, <span class="mate">$c_\star=\widehat c+\frac1\alpha\sum_i\omega_i G(\cdot-z_i)$</span> se evalúa sin malla. Elementos <span class="mate">$C^1$</span> y <span class="mate">$h^{-4}$</span> no hacen falta.</p>
+    <ul>
+      <li>Lo que el orden <span class="mate">$2s$</span> sí mide es <strong>la suavidad de <span class="mate">$c_\star$</span></strong>, que es modelado y no coste.</li>
+      <li>Queda en pie la parte de la pregunta que importa: si su §8 discretiza el sistema de EDP en vez del problema de optimización, ahí sí aparece el orden. Emparentada con <code>I-18</code>.</li>
+    </ul>
   </div>
 </li>
 <li class="tarea pendiente abrible" data-hecha="0">
@@ -517,8 +521,8 @@ window.MathJax={
     <p class="contexto">Las de <strong>prioridad alta</strong> están en el camino crítico: sin ellas no hay enunciado de tesis.</p>
     <p class="contexto alerta">🔴 <strong>Revisadas contra el v2 del borrador el 2026-08-05</strong> (<code>REF-14</code>, <code>fichas/junca_fixed_point_continuo_v2.md</code>). El v2 pasó de cero teoremas a dos resultados demostrados, así que varias de estas preguntas cambian de estado y <strong>dos se cierran</strong>. Lo que hay que retener: el Teorema 4.2 del v2 da existencia y unicidad <strong>esquivando</strong> la continuidad del selector de políticas y la HJB, así que lo que antes era «demostrar el punto fijo» hoy es <strong>justificar sus hipótesis sobre <span class="mate">$\mathcal M$</span></strong>. Cada entrada tocada lo dice en su detalle.</p>
   </div>
-  <div class="barra"><div class="relleno" style="width:30%"></div></div>
-  <p class="cuenta">7 de 23 completadas</p>
+  <div class="barra"><div class="relleno" style="width:29%"></div></div>
+  <p class="cuenta">7 de 24 completadas</p>
   <h3>Prioridad alta · Las dos mitades del trabajo</h3>
   <ul class="tareas">
 <li class="tarea pendiente abrible" data-hecha="0">
@@ -827,6 +831,20 @@ window.MathJax={
       <li><strong>El toro esquiva <code>I-6</code>.</strong> Con frontera periódica no hay que elegir entre reflexión, absorción o <em>killing</em>. El experimento no dice nada sobre dominios acotados con frontera, que es el caso del planteamiento.</li>
     </ul>
     <p><strong>Cómo se cierra:</strong> decidiendo qué afirmación se le cuelga a este experimento en la propuesta. Prioridad baja hasta que haya propuesta que escribir, alta de coste si se cita de más delante del asesor.</p>
+  </div>
+</li>
+<li class="tarea pendiente abrible" data-hecha="0">
+  <button class="cabecera" type="button" aria-expanded="false">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">I-20</span>
+    <span class="titulo"><strong>El problema reducido es una MMD. ¿Está ya en la literatura de imitación?</strong></span>
+    <span class="flecha" aria-hidden="true"></span>
+  </button>
+  <div class="detalle" hidden>
+    <p>Sale de <code>NJU-34</code>. El representante de Riesz de <span class="mate">$\eta$</span> es <span class="mate">$\mu_\eta=\int k(\cdot,z)\,d\eta$</span>, luego <span class="mate">$\|\eta-\eta_E\|_{\mathcal H^*}$</span> es la <strong>discrepancia media máxima</strong> entre la ocupación del aprendiz y la del experto, y su (23) es <span class="mate">$\min_{\eta\in\mathcal M}\{(\widehat c)(\eta-\eta_E)+\frac1{2\alpha} \mathrm{MMD}^2(\eta,\eta_E)\}$</span>. <strong>Por qué importa y no es cosmética:</strong> emparejar ocupaciones por una MMD es un método conocido en imitación en tiempo discreto. Si el análogo continuo ya existe, hay que saberlo antes de proponerlo; y si no existe, <strong>la aportación del trabajo se puede enunciar en una frase</strong>. <strong>Cómo se cierra:</strong> con una referencia, no con una opinión. Primer paso, fichar el paper de la MMD (<code>NJU-35</code>) y mirar a quién cita a su vez.</p>
+    <ul>
+      <li class="aviso">⚠️ <strong>Y hay una condición que nadie ha enunciado:</strong> que <span class="mate">$\mathrm{MMD}$</span> sea una distancia y no una seminorma pide que el núcleo sea ISPD, que es de lo que depende la unicidad de <span class="mate">$\eta_{A,\star}$</span> del Teorema 4.2. Para el núcleo de Bessel está demostrado (<code>NJU-34</code>, Prop. 3.1).</li>
+    </ul>
   </div>
 </li>
   </ul>
@@ -1687,8 +1705,8 @@ window.MathJax={
   <div class="contexto-oculto" hidden>
     <p class="contexto">La nota de Mauricio, <em>Continuous-Time Inverse Optimal Control with Prior Beliefs</em> (julio de 2026), reescrita en español y en modo <code>xe</code>, completando los detalles que deja sueltos con las fuentes que ya están fichadas. Overleaf propio. El hilo es uno: de cada objeto, en qué espacio vive, y qué cosas todavía no sabemos dónde viven.</p>
   </div>
-  <div class="barra"><div class="relleno" style="width:75%"></div></div>
-  <p class="cuenta">27 de 36 completadas</p>
+  <div class="barra"><div class="relleno" style="width:74%"></div></div>
+  <p class="cuenta">28 de 38 completadas</p>
   <ul class="tareas">
 <li class="tarea hecha abrible" data-hecha="1">
   <button class="cabecera" type="button" aria-expanded="false">
@@ -2145,6 +2163,47 @@ window.MathJax={
     <ul>
       <li>Bhatt--Borkar §3.2 la deducen citando <strong>Borkar (1989), Lema 3.7</strong>, que no está fichado. Alternativa sin fuente nueva: una condición de Lyapunov sobre <span class="mate">$b$</span> y <span class="mate">$\sigma$</span>, que habría que escribir.</li>
       <li class="aviso">⚠️ <strong>Y hay una consecuencia de modelado sin resolver</strong>: si <span class="mate">$\ch\in\Hs$</span> entonces el previo también se anula en el infinito. Si se quiere un costo que crezca, hay que separar <span class="mate">$c=\ch+c_1$</span> con solo <span class="mate">$c_1\in\Hs$</span>, y eso cambia la hipótesis del <code>thm:silla</code>.</li>
+    </ul>
+    <p class="hecho">✅ <strong><code>NJU-34</code> propone la salida y las dos pegas de arriba caen con ella</strong>: con <span class="mate">$\Hs=H^s\oplus\R w$</span> el costo y el previo pueden crecer, y la tensión pasa a ser una cota de momento que sale de la propia identidad de balance. <strong>Falta para cerrar:</strong> el hueco declarado de la Obs. 5.7 de esa nota (<span class="mate">$w^{1+\varepsilon}\notin\dom(\gen{})=C_0^2$</span>, hay que truncar) y la decisión de él sobre si se aplica al Overleaf.</p>
+  </div>
+</li>
+<li class="tarea hecha abrible" data-hecha="1">
+  <button class="cabecera" type="button" aria-expanded="false">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">NJU-34</span>
+    <span class="titulo">¿Un RKHS evita Sobolev? No: <span class="mate">$H^s$</span> <strong>ya es</strong> uno</span>
+    <span class="fecha">2026-08-17</span>
+    <span class="flecha" aria-hidden="true"></span>
+  </button>
+  <div class="detalle" hidden>
+    <p>Pregunta suya, con cuatro comprobaciones pedidas. La respuesta cambia el encuadre en vez de cambiar el espacio. 🔴 <strong><span class="mate">$H^s(\R^n)$</span> es el espacio con núcleo reproductor del potencial de Bessel</strong>, <span class="mate">$\widehat G=(1+\kappa|\xi|^2)^{-s}$</span>, y el umbral <span class="mate">$s&gt;n/2$</span> es exactamente la condición de que ese núcleo exista. Los tres enunciados del §2.1 sobre el umbral son la misma integral.</p>
+    <ul>
+      <li><strong>Compatibilidad (1).</strong> Se verificó contra el <code>.mmd</code>: Bhatt--Borkar piden <span class="mate">$k$</span> <strong>continua</strong> con valores en <span class="mate">$[0,\infty]$</span>; Kurtz--Stockbridge piden boreliana acotada inferiormente <strong>más (6.1) y (6.2)</strong>, y su Teo. 6.3 exige las dos. Ninguno pide costo acotado.</li>
+      <li><strong>Los teoremas de §3 y §4 (2).</strong> Se auditaron uno a uno: usan cuatro propiedades del núcleo y <strong>ninguna es la estructura de Sobolev</strong>.</li>
+      <li><strong>Hipótesis sobre <span class="mate">$E$</span> y <span class="mate">$A$</span> (3).</strong> Ninguna. El marco pide un conjunto; la topología entra solo para la continuidad.</li>
+      <li><strong>Lo que no se me estaba ocurriendo (4).</strong> Tres cosas: que la unicidad de <span class="mate">$\eta_{A,\star}$</span> pide un núcleo <strong>ISPD</strong> y eso nadie lo había enunciado; que <span class="mate">$\|\eta-\eta_E\|_{\Hd}$</span> <strong>es una MMD</strong>, con lo que (23) es minimizar una MMD al experto; y que <span class="mate">$R^{-1}$</span> sobre una medida es la <strong>convolución con <span class="mate">$G$</span></strong>, así que (24) no pide resolver ninguna EDP.</li>
+    </ul>
+    <p class="aviso">⚠️ <strong>Eso último corrige el pronóstico numérico de <code>dominio_y_riesz_es</code></strong>, que temía elementos finitos <span class="mate">$C^1$</span> y condicionamiento <span class="mate">$h^{-2s}$</span>. El orden <span class="mate">$2s$</span> mide la suavidad de <span class="mate">$c_\star$</span>, no un coste de cómputo.</p>
+    <ul>
+      <li><strong>La propuesta:</strong> <span class="mate">$\Hs=H^s(E\times A)\oplus\R w$</span> con <span class="mate">$w$</span> inf-compacta, que es el núcleo <span class="mate">$k_0+w\otimes w$</span>. Con <span class="mate">$\lambda=0$</span> se recupera el espacio de hoy, luego nada escrito cambia de valor de verdad.</li>
+      <li>Y una hipótesis, la cota de momento, entrega <strong>a la vez</strong> la tensión y la coercividad, que hoy son dos problemas desconectados.</li>
+    </ul>
+    <p class="alerta">🔴 <strong>No se tocó el Overleaf</strong>: él pidió investigar y una nota, no aplicar. El §7 de la nota lista los cinco cambios si decide aplicarla.</p>
+    <p><code>material_pdf/notas_tecnicas/nucleo_y_peso_es.pdf</code></p>
+    <p class="artefacto">Artefacto: <code>notas_tecnicas/nucleo_y_peso_es.tex</code>,</p>
+  </div>
+</li>
+<li class="tarea pendiente abrible" data-hecha="0">
+  <button class="cabecera" type="button" aria-expanded="false">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">NJU-35</span>
+    <span class="titulo">Fichar el paper de la MMD, que estaba en su propio disco</span>
+    <span class="flecha" aria-hidden="true"></span>
+  </button>
+  <div class="detalle" hidden>
+    <p>Gretton, Borgwardt, Rasch, Schölkopf y Smola, <em>A kernel method for the two-sample problem</em> (2008). Apareció en <code>Escritorio/Cosas de suma importancia v2/Tesis (Pregrado)/Kernels/</code>, o sea que es material <strong>suyo, de su tesis de pregrado</strong>. ✅ Recortadas las páginas 1--10 (portada, introducción y la sección de la MMD entera, cortando antes de «Background Material») a <code>mathpix_inbox/Para pasar ya/gretton_mmd_secciones_1_2.pdf</code>. <strong>Falta para cerrar:</strong> que él lo pase por Mathpix, extraerlo a <code>material_mathpix/control/</code>, copiar el PDF entero a <code>material_pdf/</code> y tachar en <code>INVENTARIO.md</code>. Hasta entonces la nota técnica <strong>demuestra</strong> lo que usa en vez de citarlo, y la atribución de la MMD va marcada.</p>
+    <ul>
+      <li>En la misma carpeta hay <code>Review_Kernel-Based_Method.pdf</code>, 11 páginas, sin identificar todavía.</li>
     </ul>
   </div>
 </li>
