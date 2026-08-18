@@ -135,7 +135,7 @@ window.MathJax={
 <header class="principal">
 <h1>Propuesta de tesis — control óptimo</h1>
 <p class="sub">Decidir y proponer un tema en control óptimo inverso, en 2–3 meses desde el 2026-07-25.</p>
-<p class="global"><strong>91</strong> de <strong>149</strong> tareas completadas en todo el proyecto.</p>
+<p class="global"><strong>92</strong> de <strong>149</strong> tareas completadas en todo el proyecto.</p>
 </header>
 <nav class="pestanas" role="tablist">
 <button data-slug="preguntas_junca" role="tab">Preguntas a Junca<span class="n">8/25</span></button>
@@ -145,7 +145,7 @@ window.MathJax={
 <button data-slug="reuniones" role="tab">reuniones<span class="n">5/6</span></button>
 <button data-slug="infra" role="tab">General<span class="n">18/21</span></button>
 <button data-slug="explicaciones" role="tab">explicaciones<span class="n">3/5</span></button>
-<button data-slug="notas_junca" role="tab">notas junca<span class="n">28/38</span></button>
+<button data-slug="notas_junca" role="tab">notas junca<span class="n">29/38</span></button>
 </nav>
 <div class="controles">
 <label><input type="checkbox" id="ocultar"> Esconder las completadas</label>
@@ -1705,8 +1705,8 @@ window.MathJax={
   <div class="contexto-oculto" hidden>
     <p class="contexto">La nota de Mauricio, <em>Continuous-Time Inverse Optimal Control with Prior Beliefs</em> (julio de 2026), reescrita en español y en modo <code>xe</code>, completando los detalles que deja sueltos con las fuentes que ya están fichadas. Overleaf propio. El hilo es uno: de cada objeto, en qué espacio vive, y qué cosas todavía no sabemos dónde viven.</p>
   </div>
-  <div class="barra"><div class="relleno" style="width:74%"></div></div>
-  <p class="cuenta">28 de 38 completadas</p>
+  <div class="barra"><div class="relleno" style="width:76%"></div></div>
+  <p class="cuenta">29 de 38 completadas</p>
   <ul class="tareas">
 <li class="tarea hecha abrible" data-hecha="1">
   <button class="cabecera" type="button" aria-expanded="false">
@@ -2188,23 +2188,33 @@ window.MathJax={
       <li><strong>La propuesta:</strong> <span class="mate">$\Hs=H^s(E\times A)\oplus\R w$</span> con <span class="mate">$w$</span> inf-compacta, que es el núcleo <span class="mate">$k_0+w\otimes w$</span>. Con <span class="mate">$\lambda=0$</span> se recupera el espacio de hoy, luego nada escrito cambia de valor de verdad.</li>
       <li>Y una hipótesis, la cota de momento, entrega <strong>a la vez</strong> la tensión y la coercividad, que hoy son dos problemas desconectados.</li>
     </ul>
-    <p class="alerta">🔴 <strong>No se tocó el Overleaf</strong>: él pidió investigar y una nota, no aplicar. El §7 de la nota lista los cinco cambios si decide aplicarla.</p>
+    <p class="alerta">🔴 <strong>No se tocó el Overleaf</strong>: él pidió investigar y una nota, no aplicar. El §8 de la nota lista los cambios si decide aplicarla. ⚠️ <strong>Primera entrega incompleta, y la corrigió él:</strong> <em>«lo que quería que investigaras era si había otro RKHS más natural que tuviera alguna ventaja»</em>. La primera versión daba el marco y el peso, pero <strong>no comparaba núcleos</strong>, que era la pregunta. Añadido el §6.</p>
+    <ul>
+      <li><strong>Todos los núcleos candidatos son <span class="mate">$F(-\Delta)^{-1}$</span> para una misma <span class="mate">$\Delta$</span></strong>, el laplaciano de <span class="mate">$E\times A$</span>, y la condición de que el núcleo exista es una de traza. Escrito así, el §2.1 pierde de golpe el teorema de inyección, el cálculo de la delta y la ley de Weyl.</li>
+      <li class="alerta">🔴 <strong>El umbral <span class="mate">$s&gt;n/2$</span> es un accidente de que <span class="mate">$F$</span> sea polinómica</strong>: es lo justo para ganarle a Weyl. Con <span class="mate">$F=e^{t\lambda}$</span>, o sea el núcleo del calor, converge siempre y <strong>la dimensión desaparece del enunciado</strong>.</li>
+      <li>Y ahí <span class="mate">$\Delta$</span> es acotado de <span class="mate">$\Hs_{t&#x27;}$</span> en <span class="mate">$\Hs_{t}$</span> para todo <span class="mate">$t&#x27;&gt;t$</span>, cosa que la escala de Sobolev no tiene, lo que resuelve <strong>la mitad</strong> del abierto del previo (la contención, no la clausura).</li>
+      <li class="aviso">⚠️ <strong>Aun así la recomendación es quedarse en la polinómica.</strong> El espacio del calor son funciones analíticas y su norma penaliza no serlo: quita una molestia de enunciado a cambio de una hipótesis de modelado mucho más fuerte, y empeora (K4).</li>
+      <li><strong>El núcleo del calor de <span class="mate">$E\times A$</span> factoriza, pero no es el producto tensorial que él descartó</strong>: aquello tenía dos índices independientes <span class="mate">$s_x$</span> y <span class="mate">$s_a$</span>; esto es una función de un solo operador con un solo <span class="mate">$t$</span>.</li>
+    </ul>
     <p><code>material_pdf/notas_tecnicas/nucleo_y_peso_es.pdf</code></p>
     <p class="artefacto">Artefacto: <code>notas_tecnicas/nucleo_y_peso_es.tex</code>,</p>
   </div>
 </li>
-<li class="tarea pendiente abrible" data-hecha="0">
+<li class="tarea hecha abrible" data-hecha="1">
   <button class="cabecera" type="button" aria-expanded="false">
     <span class="casilla" aria-hidden="true"></span>
     <span class="ident">NJU-35</span>
-    <span class="titulo">Fichar el paper de la MMD, que estaba en su propio disco</span>
+    <span class="titulo">Fichado el paper de la MMD, que estaba en su propio disco</span>
+    <span class="fecha">2026-08-17</span>
     <span class="flecha" aria-hidden="true"></span>
   </button>
   <div class="detalle" hidden>
-    <p>Gretton, Borgwardt, Rasch, Schölkopf y Smola, <em>A kernel method for the two-sample problem</em> (2008). Apareció en <code>Escritorio/Cosas de suma importancia v2/Tesis (Pregrado)/Kernels/</code>, o sea que es material <strong>suyo, de su tesis de pregrado</strong>. ✅ Recortadas las páginas 1--10 (portada, introducción y la sección de la MMD entera, cortando antes de «Background Material») a <code>mathpix_inbox/Para pasar ya/gretton_mmd_secciones_1_2.pdf</code>. <strong>Falta para cerrar:</strong> que él lo pase por Mathpix, extraerlo a <code>material_mathpix/control/</code>, copiar el PDF entero a <code>material_pdf/</code> y tachar en <code>INVENTARIO.md</code>. Hasta entonces la nota técnica <strong>demuestra</strong> lo que usa en vez de citarlo, y la atribución de la MMD va marcada.</p>
+    <p>Gretton, Borgwardt, Rasch, Schölkopf y Smola, <em>A kernel method for the two-sample problem</em> (2008). Apareció en <code>Escritorio/Cosas de suma importancia v2/Tesis (Pregrado)/Kernels/</code>, o sea que es material <strong>suyo, de su tesis de pregrado</strong>. Recortadas las páginas 1--10, convertidas por él, archivado y bandeja vaciada. ⚠️ <strong>Se fichó por su §2, no por el test de hipótesis</strong>, que es el envoltorio: ahí están el <em>mean embedding</em> <span class="mate">$\mu_p=\mathbf E_p[\phi(x)]$</span> (Lema 4) y la caracterización de cuándo la MMD separa medidas (Teoremas 3 y 7), que son las hipótesis (K3) y (K4) de <code>NJU-34</code>. 🔴 <strong>Y trae un aviso que no teníamos:</strong> su noción de <em>universal</em> está definida <strong>sobre un espacio métrico compacto</strong>, y su Teorema 3 la usa. Con <span class="mate">$E=\R^d$</span> el espacio no es compacto y ese teorema no aplica tal cual. Para el núcleo de Bessel hay salida por la vía espectral (<span class="mate">$\widehat G&gt;0$</span> en todo punto), que no pide compacidad; es la que se usa.</p>
     <ul>
-      <li>En la misma carpeta hay <code>Review_Kernel-Based_Method.pdf</code>, 11 páginas, sin identificar todavía.</li>
+      <li>Queda sin identificar <code>Review_Kernel-Based_Method.pdf</code>, 11 páginas, en la misma carpeta suya.</li>
     </ul>
+    <p><code>material_pdf/prerequisitos/gretton_mmd_two_sample.pdf</code></p>
+    <p class="artefacto">Artefacto: <code>material_mathpix/prerequisitos/gretton_mmd/</code>,</p>
   </div>
 </li>
 <li class="tarea pendiente abrible" data-hecha="0">
