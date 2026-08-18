@@ -135,7 +135,7 @@ window.MathJax={
 <header class="principal">
 <h1>Propuesta de tesis — control óptimo</h1>
 <p class="sub">Decidir y proponer un tema en control óptimo inverso, en 2–3 meses desde el 2026-07-25.</p>
-<p class="global"><strong>89</strong> de <strong>141</strong> tareas completadas en todo el proyecto.</p>
+<p class="global"><strong>90</strong> de <strong>143</strong> tareas completadas en todo el proyecto.</p>
 </header>
 <nav class="pestanas" role="tablist">
 <button data-slug="preguntas_junca" role="tab">Preguntas a Junca<span class="n">8/22</span></button>
@@ -145,7 +145,7 @@ window.MathJax={
 <button data-slug="reuniones" role="tab">reuniones<span class="n">5/6</span></button>
 <button data-slug="infra" role="tab">General<span class="n">18/21</span></button>
 <button data-slug="explicaciones" role="tab">explicaciones<span class="n">3/5</span></button>
-<button data-slug="notas_junca" role="tab">notas junca<span class="n">26/34</span></button>
+<button data-slug="notas_junca" role="tab">notas junca<span class="n">27/36</span></button>
 </nav>
 <div class="controles">
 <label><input type="checkbox" id="ocultar"> Esconder las completadas</label>
@@ -1639,8 +1639,8 @@ window.MathJax={
   <div class="contexto-oculto" hidden>
     <p class="contexto">La nota de Mauricio, <em>Continuous-Time Inverse Optimal Control with Prior Beliefs</em> (julio de 2026), reescrita en español y en modo <code>xe</code>, completando los detalles que deja sueltos con las fuentes que ya están fichadas. Overleaf propio. El hilo es uno: de cada objeto, en qué espacio vive, y qué cosas todavía no sabemos dónde viven.</p>
   </div>
-  <div class="barra"><div class="relleno" style="width:76%"></div></div>
-  <p class="cuenta">26 de 34 completadas</p>
+  <div class="barra"><div class="relleno" style="width:75%"></div></div>
+  <p class="cuenta">27 de 36 completadas</p>
   <ul class="tareas">
 <li class="tarea hecha abrible" data-hecha="1">
   <button class="cabecera" type="button" aria-expanded="false">
@@ -2070,6 +2070,36 @@ window.MathJax={
     </ul>
   </div>
 </li>
+<li class="tarea hecha abrible" data-hecha="1">
+  <button class="cabecera" type="button" aria-expanded="false">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">NJU-32</span>
+    <span class="titulo"><span class="mate">$E=\R^d$</span>, y la versión con dominio acotado se congela</span>
+    <span class="fecha">2026-08-17</span>
+    <span class="flecha" aria-hidden="true"></span>
+  </button>
+  <div class="detalle" hidden>
+    <p><em>«en este momento no me quiero enredar con tanta geometría»</em>. Con <span class="mate">$E=\R^d$</span> <strong>los cuatro huecos de la nota técnica se caen de golpe</strong>: sin operador de extensión, sin aristas, sin las tres definiciones de <span class="mate">$H^s$</span> y sin condiciones naturales de frontera en <span class="mate">$R$</span>. ✅ Y <span class="mate">$s_x$</span> deja de tener que ser entero: las dos escalas pasan a ser espectrales, Fourier en <span class="mate">$\R^d$</span> y <span class="mate">$\Delta_A$</span> en <span class="mate">$A$</span>, luego <span class="mate">$R$</span> es un multiplicador puro. <span class="mate">$A$</span> se queda como variedad compacta sin frontera. 🔴 <strong>Pero la compacidad de <span class="mate">$\M$</span> empeora, y va escrita en <code>obs:tension</code>:</strong> era gratis sobre un <span class="mate">$E\times A$</span> compacto y ahora es <strong>hipótesis de tensión</strong>. La inyección deja de ser compacta, luego se pierde la compacidad en norma; y el Thm. 6.3 de Kurtz--Stockbridge deja de aplicar con costo acotado, porque su (6.2) pide subniveles compactos. En <span class="mate">$\R^d$</span> es el Thm. 2.2 de Bhatt--Borkar el que sostiene <code>prop:balance</code>. ✅ La versión anterior queda en <code>subproyectos/notas_junca/versiones/dominio_acotado/</code>, con su <code>LEEME.md</code> y los dos PDF en <code>material_pdf/notas_junca_versiones/</code>.</p>
+    <ul>
+      <li>15 → 14 páginas.</li>
+    </ul>
+  </div>
+</li>
+<li class="tarea pendiente abrible" data-hecha="0">
+  <button class="cabecera" type="button" aria-expanded="false">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">NJU-33</span>
+    <span class="titulo">Cerrar la tensión de <span class="mate">$\M$</span> con una fuente</span>
+    <span class="flecha" aria-hidden="true"></span>
+  </button>
+  <div class="detalle" hidden>
+    <p>Lo único que <span class="mate">$E=\R^d$</span> deja peor que antes, y hoy es hipótesis pelada. Bhatt--Borkar §3.2 la deducen de la tensión de las leyes solución citando <strong>Borkar (1989), Lema 3.7</strong>, que no está fichado.</p>
+    <ul>
+      <li>Alternativa sin fuente nueva: una condición de Lyapunov sobre <span class="mate">$b$</span> y <span class="mate">$\sigma$</span> que dé tensión directamente. Habría que escribirla.</li>
+      <li class="aviso">⚠️ Si sale cara, la salida es volver a <code>versiones/dominio_acotado/</code>, donde era gratis.</li>
+    </ul>
+  </div>
+</li>
 <li class="tarea pendiente abrible" data-hecha="0">
   <button class="cabecera" type="button" aria-expanded="false">
     <span class="casilla" aria-hidden="true"></span>
@@ -2078,10 +2108,7 @@ window.MathJax={
     <span class="flecha" aria-hidden="true"></span>
   </button>
   <div class="detalle" hidden>
-    <p>Los dos pasos que <code>obs:reflexion-incierta</code> marca <code>[incierto]</code>, y los dos son estándar: que la difusión reflejada resuelva el problema de martingala para <span class="mate">$\dom(\gen{})$</span> (descomposición de Skorokhod, donde el tiempo local entra por <span class="mate">$\partial_n\varphi\,dL_t$</span> y desaparece), y su <strong>existencia desde cada punto</strong>, que es la Condición 3 de Bhatt--Borkar. 🔴 <strong>Primero se busca en el disco</strong>, que es el circuito del <code>CLAUDE.md</code>.</p>
-    <ul>
-      <li>Sin esto, <code>prop:condiciones</code> verifica las condiciones sobre el generador pero no que exista el proceso que las usa.</li>
-    </ul>
+    <p>⏸️ <strong>En pausa desde <code>NJU-32</code></strong>: solo hace falta si se vuelve a la versión de <code>versiones/dominio_acotado/</code>. Con <span class="mate">$E=\R^d$</span> no hay reflexión que justificar. Los dos pasos serían: que la difusión reflejada resuelva el problema de martingala para <span class="mate">$\dom(\gen{})$</span> (Skorokhod, donde el tiempo local entra por <span class="mate">$\partial_n\varphi\,dL_t$</span> y desaparece), y su <strong>existencia desde cada punto</strong>, que es la Condición 3 de Bhatt--Borkar.</p>
   </div>
 </li>
 <li class="tarea pendiente abrible" data-hecha="0">
