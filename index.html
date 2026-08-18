@@ -135,7 +135,7 @@ window.MathJax={
 <header class="principal">
 <h1>Propuesta de tesis — control óptimo</h1>
 <p class="sub">Decidir y proponer un tema en control óptimo inverso, en 2–3 meses desde el 2026-07-25.</p>
-<p class="global"><strong>88</strong> de <strong>139</strong> tareas completadas en todo el proyecto.</p>
+<p class="global"><strong>89</strong> de <strong>141</strong> tareas completadas en todo el proyecto.</p>
 </header>
 <nav class="pestanas" role="tablist">
 <button data-slug="preguntas_junca" role="tab">Preguntas a Junca<span class="n">8/22</span></button>
@@ -145,7 +145,7 @@ window.MathJax={
 <button data-slug="reuniones" role="tab">reuniones<span class="n">5/6</span></button>
 <button data-slug="infra" role="tab">General<span class="n">18/21</span></button>
 <button data-slug="explicaciones" role="tab">explicaciones<span class="n">3/5</span></button>
-<button data-slug="notas_junca" role="tab">notas junca<span class="n">25/32</span></button>
+<button data-slug="notas_junca" role="tab">notas junca<span class="n">26/34</span></button>
 </nav>
 <div class="controles">
 <label><input type="checkbox" id="ocultar"> Esconder las completadas</label>
@@ -1639,8 +1639,8 @@ window.MathJax={
   <div class="contexto-oculto" hidden>
     <p class="contexto">La nota de Mauricio, <em>Continuous-Time Inverse Optimal Control with Prior Beliefs</em> (julio de 2026), reescrita en español y en modo <code>xe</code>, completando los detalles que deja sueltos con las fuentes que ya están fichadas. Overleaf propio. El hilo es uno: de cada objeto, en qué espacio vive, y qué cosas todavía no sabemos dónde viven.</p>
   </div>
-  <div class="barra"><div class="relleno" style="width:78%"></div></div>
-  <p class="cuenta">25 de 32 completadas</p>
+  <div class="barra"><div class="relleno" style="width:76%"></div></div>
+  <p class="cuenta">26 de 34 completadas</p>
   <ul class="tareas">
 <li class="tarea hecha abrible" data-hecha="1">
   <button class="cabecera" type="button" aria-expanded="false">
@@ -2053,6 +2053,35 @@ window.MathJax={
     </ul>
     <p class="alerta">🔴 <strong>El cambio que corregía algo falso era (H2)</strong>: la penalización (17) era la norma de <span class="mate">$H^1$</span> y el régimen (i) pide más, y la Prop. 2.7 del propio documento demuestra que <span class="mate">$H^1$</span> <strong>nunca</strong> sirve con <span class="mate">$n\ge2$</span>. ⚠️ <strong>El toro era la generalización equivocada.</strong> Lo que hacía funcionar a <span class="mate">$\mathbb T^n$</span> era ser compacto y sin frontera, no ser un toro. Por eso (D2) pide variedad cerrada y no periodicidad, y así el estado angular entra sin tratarse aparte. 🔴 <strong>La condición de la partícula cierra (H4) sola</strong>: las aristas salían de que <strong>los dos</strong> factores tuvieran frontera, y la esfera de direcciones no tiene. Adams y Agmon dejan de hacer falta.</p>
     <p class="artefacto">Artefacto: <code>material_pdf/notas_tecnicas/dominio_y_riesz_es.pdf</code></p>
+  </div>
+</li>
+<li class="tarea hecha abrible" data-hecha="1">
+  <button class="cabecera" type="button" aria-expanded="false">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">NJU-30</span>
+    <span class="titulo">Comprobar el dominio nuevo contra Borkar y Kurtz</span>
+    <span class="fecha">2026-08-17</span>
+    <span class="flecha" aria-hidden="true"></span>
+  </button>
+  <div class="detalle" hidden>
+    <p>Pregunta suya: <em>«¿te fijaste que estas hipótesis sigan satisfaciendo lo que asumía Borkar y Kurtz?»</em>. 🔴 <strong>No lo había hecho</strong>, y era obligado: se cambió <span class="mate">$E$</span> y <span class="mate">$A$</span> sin verificar las hipótesis permanentes de las dos fuentes. Salen bien, pero dos no eran automáticas. ✅ <code>prop:condiciones</code>: <span class="mate">$\dom(\gen{})$</span> es álgebra por la regla del producto (KS (v)), y cumple el principio del máximo positivo (KS (iv)) porque en un máximo de frontera <span class="mate">$\partial_n\varphi=0$</span> obliga a <span class="mate">$D^2\varphi\le0$</span> <strong>también en la normal</strong>. Lo demás sale de que <span class="mate">$\overline E\times A$</span> sea compacto. 🔴 <strong>Y la reflexión no era una elección entre varias.</strong> Dirichlet y <span class="mate">$\mathscr C^2_c(E)$</span> son álgebras <strong>sin las constantes</strong>, luego no hay <span class="mate">$\gen{}\mathbf 1=0$</span> y falla la Condición 2 de Bhatt--Borkar; y matando en la frontera la masa pasa a <span class="mate">$1-\E[e^{-\rho\tau}]&lt;1$</span> y se rompe <code>cor:masa</code>. Es la única compatible. ⚠️ <strong>El espacio de estados es <span class="mate">$\overline E$</span>, no <span class="mate">$E$</span>.</strong> El Sobolev sigue sobre el abierto y la inyección cae en <span class="mate">$C(\overline E)$</span>; si <span class="mate">$\sigma\sigma^\top$</span> es no degenerada la ocupación no carga <span class="mate">$\partial E\times A$</span>, así que la distinción no llega a <span class="mate">$\eta$</span>. ⚠️ <strong>Y el Ej. 3.4 de Kurtz--Stockbridge, que se citaba para fijar el dominio, está sobre <span class="mate">$\R^d$</span> sin frontera</strong>, así que solo lo fija en el interior. Corregido. ✅ Censo: se cierran las cajas abiertas 1 y 2, y se abre la de los dos pasos inciertos.</p>
+    <ul>
+      <li>14 → 15 páginas.</li>
+    </ul>
+  </div>
+</li>
+<li class="tarea pendiente abrible" data-hecha="0">
+  <button class="cabecera" type="button" aria-expanded="false">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">NJU-31</span>
+    <span class="titulo">Fichar Stroock--Varadhan o Lions--Sznitman para la reflexión</span>
+    <span class="flecha" aria-hidden="true"></span>
+  </button>
+  <div class="detalle" hidden>
+    <p>Los dos pasos que <code>obs:reflexion-incierta</code> marca <code>[incierto]</code>, y los dos son estándar: que la difusión reflejada resuelva el problema de martingala para <span class="mate">$\dom(\gen{})$</span> (descomposición de Skorokhod, donde el tiempo local entra por <span class="mate">$\partial_n\varphi\,dL_t$</span> y desaparece), y su <strong>existencia desde cada punto</strong>, que es la Condición 3 de Bhatt--Borkar. 🔴 <strong>Primero se busca en el disco</strong>, que es el circuito del <code>CLAUDE.md</code>.</p>
+    <ul>
+      <li>Sin esto, <code>prop:condiciones</code> verifica las condiciones sobre el generador pero no que exista el proceso que las usa.</li>
+    </ul>
   </div>
 </li>
 <li class="tarea pendiente abrible" data-hecha="0">
