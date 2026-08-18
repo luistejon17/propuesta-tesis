@@ -135,10 +135,10 @@ window.MathJax={
 <header class="principal">
 <h1>Propuesta de tesis — control óptimo</h1>
 <p class="sub">Decidir y proponer un tema en control óptimo inverso, en 2–3 meses desde el 2026-07-25.</p>
-<p class="global"><strong>90</strong> de <strong>143</strong> tareas completadas en todo el proyecto.</p>
+<p class="global"><strong>90</strong> de <strong>146</strong> tareas completadas en todo el proyecto.</p>
 </header>
 <nav class="pestanas" role="tablist">
-<button data-slug="preguntas_junca" role="tab">Preguntas a Junca<span class="n">8/22</span></button>
+<button data-slug="preguntas_junca" role="tab">Preguntas a Junca<span class="n">8/25</span></button>
 <button data-slug="preguntas_investigacion" role="tab">Preguntas de investigación<span class="n">7/23</span></button>
 <button data-slug="referencias" role="tab">referencias<span class="n">8/15</span></button>
 <button data-slug="asesor" role="tab">asesor<span class="n">7/8</span></button>
@@ -160,8 +160,8 @@ window.MathJax={
     <p class="contexto"><strong>La otra lista existe y no es esta:</strong> <code>preguntas_investigacion</code>, que son las que <strong>no</strong> responde Mauricio sino el trabajo. Una pregunta se cierra aquí con una respuesta suya; allí, con una referencia o una demostración.</p>
     <p class="contexto">Clasificado el 2026-07-27 con el usuario, pregunta por pregunta. Las prioridades son <strong>propuesta del agente</strong> y se cambian sin ceremonia.</p>
   </div>
-  <div class="barra"><div class="relleno" style="width:36%"></div></div>
-  <p class="cuenta">8 de 22 completadas</p>
+  <div class="barra"><div class="relleno" style="width:32%"></div></div>
+  <p class="cuenta">8 de 25 completadas</p>
   <h3>Prioridad alta</h3>
   <ul class="tareas">
 <li class="tarea pendiente abrible" data-hecha="0">
@@ -269,7 +269,55 @@ window.MathJax={
       <li><strong>Compactificar el estado</strong>: trabajar en <span class="mate">$\overline\Omega$</span> o en el toro, y entonces hay que decir qué pasa en la frontera, que es <code>I-6</code>.</li>
       <li><strong>Costo coercivo</strong>: pedir que <span class="mate">$c\to\infty$</span> al acercarse a <span class="mate">$\partial\Omega$</span>, lo cual <strong>cambia el problema inverso</strong>, porque el previo <span class="mate">$\widehat c$</span> tendría que ser coercivo también.</li>
     </ul>
-    <p class="aviso">⚠️ <strong>Por qué puede merecer una pregunta suya y no solo trabajo nuestro:</strong> la elección depende de qué aplicación tiene en la cabeza, y eso solo lo sabe él. Si el toro le vale, tres preguntas abiertas se cierran de golpe. Emparentada con <code>I-6</code> e <code>I-12</code>.</p>
+    <p class="aviso">⚠️ <strong>Por qué puede merecer una pregunta suya y no solo trabajo nuestro:</strong> la elección depende de qué aplicación tiene en la cabeza, y eso solo lo sabe él. Si el toro le vale, tres preguntas abiertas se cierran de golpe. Emparentada con <code>I-6</code> e <code>I-12</code>. 🔴 <strong>Actualización del 2026-08-17: la segunda salida está cerrada, y no por él sino por su propio espacio de costos.</strong> El umbral <span class="mate">$s&gt;(d+m)/2$</span> mete <span class="mate">$\mathcal H$</span> dentro de <span class="mate">$C_0$</span>, luego toda <span class="mate">$c$</span> admisible <strong>se anula en el infinito</strong> y ningún subnivel suyo es compacto. Un costo coercivo no puede vivir en <span class="mate">$\mathcal H$</span>. ✅ Tomada la primera salida, con <span class="mate">$E=\mathbb R^d$</span>, que es el marco de sus propios ejemplos. Queda entonces <strong>la tensión de <span class="mate">$\mathcal M$</span></strong>, que es <code>P29</code>, y la pregunta pasa de «cuál de las dos» a «cómo cerramos la que queda».</p>
+  </div>
+</li>
+<li class="tarea pendiente abrible" data-hecha="0">
+  <button class="cabecera" type="button" aria-expanded="false">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">P29</span>
+    <span class="titulo">¿Cómo cierras la tensión de <span class="mate">$\mathcal M$</span> sobre <span class="mate">$\mathbb R^d$</span>?</span>
+    <span class="flecha" aria-hidden="true"></span>
+  </button>
+  <div class="detalle" hidden>
+    <p><strong>Propuesta del agente el 2026-08-17.</strong> Es la única pieza que el paso a <span class="mate">$E=\mathbb R^d$</span> deja peor que un dominio acotado. 🔴 <strong>Y no es que las fuentes la tuvieran gratis</strong>: ninguna supone <span class="mate">$E$</span> compacto. Las dos compactifican, <span class="mate">$E^\Delta$</span> Kurtz–Stockbridge y un producto de intervalos Bhatt–Borkar, y el trabajo es ver que no se escapa masa; su contraejemplo es una difusión que sale por <span class="mate">$+\infty$</span> y vuelve por <span class="mate">$-\infty$</span>.</p>
+    <ul>
+      <li>Bhatt–Borkar §3.2 la deducen citando <strong>Borkar (1989), Lema 3.7</strong>, que no tenemos.</li>
+      <li>La alternativa es una condición de Lyapunov sobre <span class="mate">$b$</span> y <span class="mate">$\sigma$</span>, que habría que escribir. <strong>Él sabrá si hay una estándar para este modelo.</strong></li>
+    </ul>
+    <p>Cierra la mitad que queda de <code>P28</code>.</p>
+  </div>
+</li>
+<li class="tarea pendiente abrible" data-hecha="0">
+  <button class="cabecera" type="button" aria-expanded="false">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">P30</span>
+    <span class="titulo">¿El previo puede crecer, o tiene que anularse en el infinito?</span>
+    <span class="flecha" aria-hidden="true"></span>
+  </button>
+  <div class="detalle" hidden>
+    <p><strong>Propuesta del agente el 2026-08-17.</strong> Si <span class="mate">$\widehat c\in\mathcal H$</span> entonces el previo se anula en el infinito, o sea que <strong>estar infinitamente lejos sale gratis</strong>. Para una partícula en <span class="mate">$\mathbb R^d$</span> eso es raro como modelo.</p>
+    <ul>
+      <li>La salida sería separar <span class="mate">$c=\widehat c+c_1$</span> con solo <span class="mate">$c_1\in\mathcal H$</span> y <span class="mate">$\widehat c$</span> libre, pero <strong>eso cambia la hipótesis de su Teorema 4.2</strong>, que pide <span class="mate">$\widehat c\in\mathcal H$</span>.</li>
+    </ul>
+    <p class="aviso">⚠️ Es pregunta suya y no trabajo nuestro porque depende de qué quiere que signifique el previo.</p>
+  </div>
+</li>
+<li class="tarea pendiente abrible" data-hecha="0">
+  <button class="cabecera" type="button" aria-expanded="false">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">P31</span>
+    <span class="titulo">El mapa de Riesz sube a orden <span class="mate">$2s$</span>: ¿rompe eso el solver de tu §8?</span>
+    <span class="flecha" aria-hidden="true"></span>
+  </button>
+  <div class="detalle" hidden>
+    <p><strong>Propuesta del agente el 2026-08-17</strong>, tras corregir que su penalización (17) es la norma de <span class="mate">$H^1$</span> mientras el régimen de medidas pide <span class="mate">$s&gt;(d+m)/2$</span>; con <span class="mate">$n\ge2$</span> las dos no son compatibles.</p>
+    <ul>
+      <li>Con <span class="mate">$s=2$</span> la ecuación del costo pasa de orden dos a <strong>orden cuatro</strong>.</li>
+      <li>Un método conforme necesita entonces elementos <span class="mate">$C^1$</span> (Argyris, Hsieh–Clough–Tocher) o formulación mixta; los <span class="mate">$P_1$</span> de Lagrange <strong>no están en <span class="mate">$H^2$</span></strong> y no sirven.</li>
+      <li>Y el condicionamiento pasa de <span class="mate">$h^{-2}$</span> a <span class="mate">$h^{-4}$</span>.</li>
+    </ul>
+    <p class="aviso">⚠️ <strong>Puede que él ya lo supiera y por eso escribiera <span class="mate">$H^1$</span></strong>, aceptando que el régimen de densidades bastaba. Merece preguntarse antes de dar por hecho que es un error suyo.</p>
   </div>
 </li>
 <li class="tarea pendiente abrible" data-hecha="0">
