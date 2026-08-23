@@ -135,7 +135,7 @@ window.MathJax={
 <header class="principal">
 <h1>Propuesta de tesis — control óptimo</h1>
 <p class="sub">Decidir y proponer un tema en control óptimo inverso, en 2–3 meses desde el 2026-07-25.</p>
-<p class="global"><strong>103</strong> de <strong>165</strong> tareas completadas en todo el proyecto.</p>
+<p class="global"><strong>104</strong> de <strong>166</strong> tareas completadas en todo el proyecto.</p>
 </header>
 <nav class="pestanas" role="tablist">
 <button data-slug="preguntas_junca" role="tab">Preguntas a Junca<span class="n">9/26</span></button>
@@ -144,7 +144,7 @@ window.MathJax={
 <button data-slug="reuniones" role="tab">reuniones<span class="n">5/6</span></button>
 <button data-slug="infra" role="tab">General<span class="n">18/21</span></button>
 <button data-slug="explicaciones" role="tab">explicaciones<span class="n">3/5</span></button>
-<button data-slug="notas_junca" role="tab">notas junca<span class="n">35/48</span></button>
+<button data-slug="notas_junca" role="tab">notas junca<span class="n">36/49</span></button>
 </nav>
 <div class="controles">
 <label><input type="checkbox" id="ocultar"> Esconder las completadas</label>
@@ -1664,7 +1664,7 @@ window.MathJax={
     <p class="contexto">La nota de Mauricio, <em>Continuous-Time Inverse Optimal Control with Prior Beliefs</em> (julio de 2026), reescrita en español y en modo <code>xe</code>, completando los detalles que deja sueltos con las fuentes que ya están fichadas. Overleaf propio. El hilo es uno: de cada objeto, en qué espacio vive, y qué cosas todavía no sabemos dónde viven.</p>
   </div>
   <div class="barra"><div class="relleno" style="width:73%"></div></div>
-  <p class="cuenta">35 de 48 completadas</p>
+  <p class="cuenta">36 de 49 completadas</p>
   <ul class="tareas">
 <li class="tarea hecha abrible" data-hecha="1">
   <button class="cabecera" type="button" aria-expanded="false">
@@ -2420,6 +2420,23 @@ window.MathJax={
     <p><strong>Falta para cerrar:</strong> decidir si el lenguaje de Cameron--Martin entra al §2.1 del Overleaf. La nota no toca <code>notas_junca</code>, igual que <code>NJU-34</code>.</p>
     <p><code>material_mathpix/prerequisitos/espacio_del_costo_recortes/</code></p>
     <p class="artefacto">Artefacto: <code>material_pdf/notas_tecnicas/candidatos_H_es.pdf</code>,</p>
+  </div>
+</li>
+<li class="tarea hecha abrible" data-hecha="1">
+  <button class="cabecera" type="button" aria-expanded="false">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">NJU-48</span>
+    <span class="titulo">Qué núcleo elegir, y el criterio (C6) estaba mal</span>
+    <span class="fecha">2026-08-23</span>
+    <span class="flecha" aria-hidden="true"></span>
+  </button>
+  <div class="detalle" hidden>
+    <p>Segunda tanda: buscar papers de RKHS que <strong>sí elijan</strong> núcleo, y plantear los espacios que darían. Cuatro al buzón en un solo PDF de 101 pp., dos a la cola de después. 🔴 <strong>El reparo suyo a (C6) es correcto y la nota anterior estaba mal.</strong> <em>«el criterio C6 es confuso, se habló del <span class="mate">$c_E$</span> real, pero no tiene por qué existir, ni veo cuándo se usa; lo que se obtiene es <span class="mate">$\eta_E$</span>, que ni siquiera sabemos a priori sea óptimo para algún costo»</em>. <strong>El documento ya lo decía</strong> y la nota no lo recogió: la caja abierta del §2 dice que <span class="mate">$c_E$</span> <em>«los datos no dan: lo que dan es <span class="mate">$\mathcal C_E$</span>»</em>. ✅ Y la pregunta tal como la hace tiene respuesta: <strong><span class="mate">$\eta_E$</span> es óptima para algún costo siempre</strong>, porque <span class="mate">$\mathrm{Gap}(0)=0$</span>, y por eso es vacío. Lo que puede fallar no es sobre el costo sino <strong>sobre el dato</strong>: <span class="mate">$\mathrm{Gap}\ge0$</span> usa <span class="mate">$\eta_E\in\mathcal M$</span>, y con datos empíricos <span class="mate">$\eta_E$</span> es atómica y no es la ocupación de ninguna política. ✅ <strong>(C6) pasa a ser «riqueza»:</strong> que <span class="mate">$\mathcal C_E$</span> no sea ni todo <span class="mate">$\mathcal H$</span> ni solo lo trivial. Corregido <strong>también en la nota anterior</strong>, que se recompiló, incluida la observación de la medida cero, que ahora se enuncia sin hablar de ningún costo verdadero. 🔴 <strong>Y el núcleo de hoy tiene nombre en otra literatura: es Matérn</strong>, con <span class="mate">$\nu=s-n/2$</span>. Escrito así <strong>el umbral <span class="mate">$s&gt;n/2$</span> es <span class="mate">$\nu&gt;0$</span></strong>, o sea que deja de ser una condición que verificar y pasa a ser la definición de la familia. La dimensión no desaparece, deja de aparecer. ✅ <strong>(C5) pasa de argumento propio a teorema.</strong> Sriperumbudur y otros: acotado, continuo e invariante por traslación en <span class="mate">$\mathbb R^d$</span> es característico <strong>sii el soporte de su transformada es todo <span class="mate">$\mathbb R^d$</span></strong>, y avisan que mejora las condiciones que solo valían en compactos. Es exactamente el hueco que dejó <code>NJU-35</code> al fichar a Gretton.</p>
+    <ul>
+      <li><strong>Y una distinción que no habíamos separado:</strong> <span class="mate">$\eta-\eta_E$</span> es una medida <strong>signada</strong>, luego parecería hacer falta <em>universal</em> y no <em>característico</em>. No hace falta: la normalización por <span class="mate">$\rho$</span> de <code>cor:masa</code> vuelve probabilidades a las dos.</li>
+    </ul>
+    <p>🟡 <strong>Lo más grande, y lo menos verificado:</strong> si la distancia del núcleo metriza la convergencia débil (Simon-Gabriel y Schölkopf, sobre localmente compacto Hausdorff), entonces <strong>la tensión de <code>NJU-33</code> deja de ser un problema aparte</strong> y la compacidad en norma de <span class="mate">$\mathcal M$</span> vuelve. Sale del resumen y hay que contrastarlo con el <code>.mmd</code>. ⚠️ <strong>La nota se escribió con los cuatro papers SIN convertir</strong>, así que todo lo que sale de un resumen va marcado <code>[del resumen]</code> y con su declaración de estado. Nada marcado así sostiene una recomendación. <strong>Falta para cerrar:</strong> contrastar los <code>[del resumen]</code> cuando lleguen los <code>.mmd</code>, empezando por el de la convergencia débil.</p>
+    <p class="artefacto">Artefacto: <code>material_pdf/notas_tecnicas/eleccion_de_nucleo_es.pdf</code></p>
   </div>
 </li>
 <li class="tarea pendiente abrible" data-hecha="0">
