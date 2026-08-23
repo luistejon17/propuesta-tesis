@@ -135,7 +135,7 @@ window.MathJax={
 <header class="principal">
 <h1>Propuesta de tesis — control óptimo</h1>
 <p class="sub">Decidir y proponer un tema en control óptimo inverso, en 2–3 meses desde el 2026-07-25.</p>
-<p class="global"><strong>105</strong> de <strong>167</strong> tareas completadas en todo el proyecto.</p>
+<p class="global"><strong>106</strong> de <strong>168</strong> tareas completadas en todo el proyecto.</p>
 </header>
 <nav class="pestanas" role="tablist">
 <button data-slug="preguntas_junca" role="tab">Preguntas a Junca<span class="n">9/26</span></button>
@@ -144,7 +144,7 @@ window.MathJax={
 <button data-slug="reuniones" role="tab">reuniones<span class="n">5/6</span></button>
 <button data-slug="infra" role="tab">General<span class="n">18/21</span></button>
 <button data-slug="explicaciones" role="tab">explicaciones<span class="n">3/5</span></button>
-<button data-slug="notas_junca" role="tab">notas junca<span class="n">37/50</span></button>
+<button data-slug="notas_junca" role="tab">notas junca<span class="n">38/51</span></button>
 </nav>
 <div class="controles">
 <label><input type="checkbox" id="ocultar"> Esconder las completadas</label>
@@ -1663,8 +1663,8 @@ window.MathJax={
   <div class="contexto-oculto" hidden>
     <p class="contexto">La nota de Mauricio, <em>Continuous-Time Inverse Optimal Control with Prior Beliefs</em> (julio de 2026), reescrita en español y en modo <code>xe</code>, completando los detalles que deja sueltos con las fuentes que ya están fichadas. Overleaf propio. El hilo es uno: de cada objeto, en qué espacio vive, y qué cosas todavía no sabemos dónde viven.</p>
   </div>
-  <div class="barra"><div class="relleno" style="width:74%"></div></div>
-  <p class="cuenta">37 de 50 completadas</p>
+  <div class="barra"><div class="relleno" style="width:75%"></div></div>
+  <p class="cuenta">38 de 51 completadas</p>
   <ul class="tareas">
 <li class="tarea hecha abrible" data-hecha="1">
   <button class="cabecera" type="button" aria-expanded="false">
@@ -2383,7 +2383,12 @@ window.MathJax={
     <span class="flecha" aria-hidden="true"></span>
   </button>
   <div class="detalle" hidden>
-    <p>Instrucción suya del 2026-08-23: <em>«Para ir más rápido por un rato deja de editar la versión en inglés»</em>. ✅ <strong>Punto de partida limpio:</strong> <code>en/</code> quedó sincronizado con <code>es/</code> en el commit de <code>NJU-43</code>, con <code>prop:identificado</code>, <code>prop:proyeccion</code>, <code>obs:cono-vs-clase</code> y las dos pruebas nuevas ya puestas en los dos. 🔴 <strong>Lo que hay que vigilar mientras dure:</strong> las <code>\label</code> tienen que ser las mismas en los dos idiomas, que es lo que empareja el LaTeX con la web. Un enunciado nuevo <strong>solo en <code>es/</code></strong> desincroniza la numeración y <code>build.py</code> de <code>Notas_web</code> contará distinto en cada idioma. <strong>Para cerrar:</strong> llevar aquí la lista de lo que se añada solo en español y propagarlo de una pasada cuando él lo diga.</p>
+    <p>Instrucción suya del 2026-08-23: <em>«Para ir más rápido por un rato deja de editar la versión en inglés»</em>. ✅ <strong>Punto de partida limpio:</strong> <code>en/</code> quedó sincronizado con <code>es/</code> en el commit de <code>NJU-43</code>, con <code>prop:identificado</code>, <code>prop:proyeccion</code>, <code>obs:cono-vs-clase</code> y las dos pruebas nuevas ya puestas en los dos. 🔴 <strong>Lo que hay que vigilar mientras dure:</strong> las <code>\label</code> tienen que ser las mismas en los dos idiomas, que es lo que empareja el LaTeX con la web. Un enunciado nuevo <strong>solo en <code>es/</code></strong> desincroniza la numeración y <code>build.py</code> de <code>Notas_web</code> contará distinto en cada idioma. <strong>Para cerrar:</strong> llevar aquí la lista de lo que se añada solo en español y propagarlo de una pasada cuando él lo diga. <strong>Pendiente de propagar a <code>en/</code> (2026-08-23, <code>NJU-50</code>):</strong></p>
+    <ul>
+      <li><code>sec3</code>: subsección nueva <strong>«El espacio por su núcleo»</strong> entera, con <code>prop:nucleo</code>, <code>obs:nu</code>, <code>obs:riesz-integral</code>, <code>obs:caracteristico</code> y <code>obs:c0-del-nucleo</code>. <strong>Cinco enunciados numerados nuevos</strong>, así que la numeración de <code>es/</code> y <code>en/</code> ya no coincide y hay que propagarlos antes de volver a generar la web.</li>
+      <li><code>sec4</code>: dos frases de <code>obs:tension</code>, que ahora atribuye la contención en <span class="mate">$C_0$</span> al núcleo y no a <code>def:espacio</code>.</li>
+      <li><code>sec5</code>: <code>obs:coste-algoritmico</code>, nueva.</li>
+    </ul>
   </div>
 </li>
 <li class="tarea hecha abrible" data-hecha="1">
@@ -2451,6 +2456,32 @@ window.MathJax={
     <p>Dos reparos suyos seguidos, los dos correctos, y los dos obligan a recompilar las <strong>dos</strong> notas técnicas. 🔴 <strong>1. «No entiendo por qué (C6) se viola por pedir <span class="mate">$\mathcal H$</span> inyectado en <span class="mate">$C_0$</span>, de hecho en todos los approach estamos pidiendo esto ¿no?»</strong> Sí. La contención sale de la <strong>acotación del núcleo</strong>, o sea de (C1), y <code>nucleo_y_peso_es</code> §5 ya lo decía en el sitio correcto: <em>«la acotación uniforme (K2), que es lo que mete a <span class="mate">$\mathcal H$</span> dentro de <span class="mate">$C_0$</span>»</em>. Yo lo estaba apuntando como defecto de Sobolev, o sea contando un criterio contra sí mismo. ✅ Proposición nueva con prueba de tres líneas: si <span class="mate">$k$</span> es acotado, continuo y <span class="mate">$k(\cdot,z)\in C_0$</span>, entonces <span class="mate">$\mathcal H\s C_0$</span>, porque <span class="mate">$\|f\|_\infty\le\kappa_\infty^{1/2}\|f\|_{\mathcal H}$</span> y <span class="mate">$C_0$</span> es cerrado bajo límites uniformes. <strong>La comparten todos los candidatos que cumplen (C1)</strong>, luego no discrimina. ✅ <strong>Y su coste no es (C6) sino la tensión</strong>: cierra la vía del costo coercivo para <strong>todo</strong> núcleo acotado. Criterio nuevo (C7) «compacidad de <span class="mate">$\mathcal M$</span>», con sus dos vías, y ahí sí discrimina: <strong>el peso es el único que la mueve, y precisamente porque renuncia a (C1)</strong>. Eso explica por qué en <code>nucleo_y_peso_es</code> lo que se pierde y lo que se gana eran la misma condición. 🔴 <strong>2. «(C7) en qué se usa, creo que es solo vestigio de errores pasados»</strong>. Tenía razón: pedir <span class="mate">$Q=\{q_\phi\}\s\mathcal H$</span> y <span class="mate">$Q$</span> cerrado era lo que necesitaba proyectar sobre <span class="mate">$c_E+Q$</span>, y eso lo superó <code>NJU-43</code>. El único sitio del documento donde <span class="mate">$Q$</span> sigue vivo es <code>obs:cono-vs-clase</code>, que es la comparación con lo superado, y la caja abierta dice que reaparece <strong>solo</strong> bajo el objetivo que necesita postular <span class="mate">$c_E$</span>. ✅ <strong>Retirado como criterio.</strong> Un requisito que solo existe bajo un objetivo que el documento no elige no sirve para elegir <span class="mate">$\mathcal H$</span>. ⚠️ <strong>Las dos tablas cambian</strong>, y la lectura también: (C6) pasa a ser <code>?</code> casi en todas partes, que es lo honesto, porque nadie ha comprobado que <span class="mate">$\mathcal C_E$</span> sea más que trivial en ninguno de los espacios.</p>
     <p><code>candidatos_H_es.pdf</code></p>
     <p class="artefacto">Artefacto: <code>material_pdf/notas_tecnicas/eleccion_de_nucleo_es.pdf</code>,</p>
+  </div>
+</li>
+<li class="tarea hecha abrible" data-hecha="1">
+  <button class="cabecera" type="button" aria-expanded="false">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">NJU-50</span>
+    <span class="titulo">Los hallazgos del núcleo entran al documento, y Matérn se queda</span>
+    <span class="fecha">2026-08-23</span>
+    <span class="flecha" aria-hidden="true"></span>
+  </button>
+  <div class="detalle" hidden>
+    <p>Instrucción suya: llevar a <code>notas_junca</code> lo importante de las dos notas técnicas, <strong>manteniendo Matérn</strong>, y añadir tras el sistema acoplado una observación de qué tan difícil es sacarle un algoritmo, <em>«pues vi que a mi asesor le preocupó el tener que usar <span class="mate">$s&gt;1$</span>»</em>. 14 → 16 páginas, cero errores. Solo <code>es/</code>, por <code>NJU-44</code>. ✅ <strong>Subsección nueva del §2.1, «El espacio por su núcleo».</strong> Cinco enunciados, y cada uno cierra algo que estaba suelto:</p>
+    <ul>
+      <li><code>obs:nu</code>: el núcleo es el de <strong>Matérn</strong> con <span class="mate">$\nu=s-n/2$</span>, y <strong>con esa parametrización <span class="mate">$s&gt;n/2$</span> deja de ser una condición</strong>: es <span class="mate">$\nu&gt;0$</span>, o sea la existencia de la familia. <code>thm:encaje</code>, <code>cor:umbral</code> y la ley de Weyl pasan a ser la misma integral.</li>
+      <li><code>obs:caracteristico</code>: <strong>el emparejamiento separa</strong>, que es lo que da la unicidad de <span class="mate">$\eta_{A,\star}$</span> y <strong>no estaba enunciado en el documento</strong>. Y basta la versión sobre probabilidades porque <code>cor:masa</code> normaliza.</li>
+      <li><code>obs:c0-del-nucleo</code>: la inyección en <span class="mate">$C_0$</span> sale de que <strong>el núcleo sea acotado</strong>, no de Sobolev. <code>obs:tension</code> reescrita en consecuencia: la vía coerciva la cierra todo espacio con núcleo acotado, y reabrirla pide un núcleo que no lo sea.</li>
+    </ul>
+    <p class="alerta">🔴 <strong>La observación que él pidió, y responde al reparo del asesor.</strong> El orden <span class="mate">$2s\ge4$</span> de <span class="mate">$R$</span> <strong>no pone ninguna ecuación de cuarto orden en el camino</strong>: (38) se despeja como <span class="mate">$c=\widehat c+\alpha^{-1}R^{-1}(\eta_A-\eta_E)$</span> y ahí <span class="mate">$R^{-1}$</span> actúa <strong>sobre una medida</strong>, donde es una integral contra el núcleo. Nada de elementos finitos <span class="mate">$C^1$</span> ni formulación mixta.</p>
+    <ul>
+      <li><strong>Y elimina un paso:</strong> con <span class="mate">$\eta_E$</span> empírica de <span class="mate">$N$</span> átomos, <span class="mate">$c$</span> queda determinado por <span class="mate">$N+M$</span> coeficientes <strong>sin discretizar <span class="mate">$\mathcal H$</span></strong>.</li>
+      <li class="aviso">⚠️ <strong>La dependencia en <span class="mate">$s$</span> es la contraria de la que sugiere el orden</strong>: no encarece resolver, encarece <strong>invertir la Gram</strong>, y con <span class="mate">$\nu$</span> pequeño esa penalización es leve.</li>
+      <li><strong>Lo caro es el acople</strong>, cuyo operador directo es de segundo orden para todo <span class="mate">$s$</span>, con el <span class="mate">$\arg\min$</span> dentro. La salida es atacar (34) y no (37), que es lo que ya decía <code>obs:sistema-vs-optimizacion</code>.</li>
+    </ul>
+    <p class="aviso">⚠️ <strong>Él había borrado la caja del previo en Overleaf</strong> (commit <code>53322e6</code>), coherente con sus dos reparos de hoy. Se leyó antes de empujar y se respetó. <strong>Falta para cerrar:</strong> propagar a <code>en/</code>, y son cinco enunciados nuevos, así que hoy la numeración de los dos idiomas <strong>no coincide</strong>. Anotado en <code>NJU-44</code>.</p>
+    <p><code>sec5.tex</code></p>
+    <p class="artefacto">Artefacto: <code>subproyectos/notas_junca/overleaf/es/sec3.tex</code>, <code>sec4.tex</code>,</p>
   </div>
 </li>
 <li class="tarea pendiente abrible" data-hecha="0">
