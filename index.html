@@ -135,7 +135,7 @@ window.MathJax={
 <header class="principal">
 <h1>Propuesta de tesis — control óptimo</h1>
 <p class="sub">Decidir y proponer un tema en control óptimo inverso, en 2–3 meses desde el 2026-07-25.</p>
-<p class="global"><strong>98</strong> de <strong>158</strong> tareas completadas en todo el proyecto.</p>
+<p class="global"><strong>100</strong> de <strong>160</strong> tareas completadas en todo el proyecto.</p>
 </header>
 <nav class="pestanas" role="tablist">
 <button data-slug="preguntas_junca" role="tab">Preguntas a Junca<span class="n">9/26</span></button>
@@ -144,7 +144,7 @@ window.MathJax={
 <button data-slug="reuniones" role="tab">reuniones<span class="n">5/6</span></button>
 <button data-slug="infra" role="tab">General<span class="n">18/21</span></button>
 <button data-slug="explicaciones" role="tab">explicaciones<span class="n">3/5</span></button>
-<button data-slug="notas_junca" role="tab">notas junca<span class="n">30/41</span></button>
+<button data-slug="notas_junca" role="tab">notas junca<span class="n">32/43</span></button>
 </nav>
 <div class="controles">
 <label><input type="checkbox" id="ocultar"> Esconder las completadas</label>
@@ -1663,8 +1663,8 @@ window.MathJax={
   <div class="contexto-oculto" hidden>
     <p class="contexto">La nota de Mauricio, <em>Continuous-Time Inverse Optimal Control with Prior Beliefs</em> (julio de 2026), reescrita en español y en modo <code>xe</code>, completando los detalles que deja sueltos con las fuentes que ya están fichadas. Overleaf propio. El hilo es uno: de cada objeto, en qué espacio vive, y qué cosas todavía no sabemos dónde viven.</p>
   </div>
-  <div class="barra"><div class="relleno" style="width:73%"></div></div>
-  <p class="cuenta">30 de 41 completadas</p>
+  <div class="barra"><div class="relleno" style="width:74%"></div></div>
+  <p class="cuenta">32 de 43 completadas</p>
   <ul class="tareas">
 <li class="tarea hecha abrible" data-hecha="1">
   <button class="cabecera" type="button" aria-expanded="false">
@@ -2327,6 +2327,33 @@ window.MathJax={
   </button>
   <div class="detalle" hidden>
     <p>Hay <strong>dos entradas <code>- [x] NJU-10</code></strong> en este archivo. Las dos están cerradas, así que no rompe nada vivo, pero es justo lo que la regla de no reciclar identificadores protege. Procedimiento, el de la colisión <code>I-20</code>/<code>I-26</code>: <code>grep -rn &quot;NJU-10&quot;</code> por el repo, <strong>la que tenga referencias cruzadas conserva el número</strong>, y la otra pasa al máximo actual <span class="mate">$+1$</span>.</p>
+  </div>
+</li>
+<li class="tarea hecha abrible" data-hecha="1">
+  <button class="cabecera" type="button" aria-expanded="false">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">NJU-41</span>
+    <span class="titulo">La letra <span class="mate">$c$</span> nombraba tres objetos, y «el costo real» era circular</span>
+    <span class="fecha">2026-08-23</span>
+    <span class="flecha" aria-hidden="true"></span>
+  </button>
+  <div class="detalle" hidden>
+    <p>Reparo suyo: <em>«hay que mejorar la notación supongo que escribir <span class="mate">$c_E$</span>, tampoco tengo claro qué es el &quot;costo real&quot;... pues es redundante»</em>. 🔴 <strong>El argumento de circularidad es suyo y es correcto.</strong> Si el costo real se define como el que resuelve (15), ese es <span class="mate">$c_\star$</span>, y (19) lo escribe <strong>en función de <span class="mate">$\widehat c$</span></strong>; entonces «<span class="mate">$\widehat c$</span> está en la clase del costo real» deja de ser hipótesis y pasa a ser una condición de punto fijo. ✅ Separados los tres: <span class="mate">$c$</span> la variable de (15), <span class="mate">$c_\star$</span> la solución, y <span class="mate">$c_E$</span> el costo del experto, <strong>marcado como postulado del modelo y anterior a <span class="mate">$\widehat c$</span></strong>. Macros <code>\cE</code> y <code>\CE</code> en <code>main.tex</code>. 🔴 <strong>Y de paso salió que <code>prop:shaping</code> afirmaba de más.</strong> Decía que lo identificable es la clase módulo <em>shaping</em>; lo identificable es <span class="mate">$\mathcal C_E=\{c:\mathrm{Gap}(c)=0\}$</span>, que es <strong>unión</strong> de clases. Proposición nueva: cono convexo cerrado, invariante por <span class="mate">$q_\phi$</span>, y <strong><span class="mate">$0\in\mathcal C_E$</span></strong>, o sea que el costo nulo explica a cualquier experto. Esa ambigüedad no es de <em>shaping</em> y la nota no la mencionaba. ✅ La caja del previo se reescribe sobre <span class="mate">$\mathcal C_E$</span> y <strong>queda más corta</strong>: la hipótesis que hace falta es <span class="mate">$\widehat c\in\mathcal C_E$</span>, más débil que pedirlo en la clase de <span class="mate">$c_E$</span>, y da lo mismo. ⚠️ <strong>Corregido un número mal atribuido</strong>: <span class="mate">$c_\eta$</span> es la <strong>(19)</strong> de la nota, no la (20), que es la sustitución. Era justo lo que le hizo dudar.</p>
+    <p><code>glosario.txt</code></p>
+    <p class="artefacto">Artefacto: <code>overleaf/{es,en}/sec3.tex</code>, <code>sec4.tex</code>, <code>main.tex</code>,</p>
+  </div>
+</li>
+<li class="tarea hecha abrible" data-hecha="1">
+  <button class="cabecera" type="button" aria-expanded="false">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">NJU-42</span>
+    <span class="titulo">Trampa nueva: <code>&gt; nul</code> en Bash crea un archivo</span>
+    <span class="fecha">2026-08-23</span>
+    <span class="flecha" aria-hidden="true"></span>
+  </button>
+  <div class="detalle" hidden>
+    <p>Se coló un archivo <code>nul</code> <strong>dentro del clon de Overleaf</strong> y reventó el <code>git add -A</code> con <em>«short read while indexing nul»</em>. <code>nul</code> es el dispositivo nulo de cmd.exe; en Bash es un archivo regular. 🔴 <strong>Y no era solo suciedad:</strong> de no haber fallado el <code>add</code>, se habría empujado al Overleaf que se comparte con el asesor. Escrita como <code>T14</code>, con el síntoma que sí se ve, que es el fallo de git varias llamadas después y en un comando distinto.</p>
+    <p class="artefacto">Artefacto: <code>docs/trampas_shell.md</code> §T14</p>
   </div>
 </li>
   </ul>
