@@ -135,7 +135,7 @@ window.MathJax={
 <header class="principal">
 <h1>Propuesta de tesis — control óptimo</h1>
 <p class="sub">Decidir y proponer un tema en control óptimo inverso, en 2–3 meses desde el 2026-07-25.</p>
-<p class="global"><strong>104</strong> de <strong>166</strong> tareas completadas en todo el proyecto.</p>
+<p class="global"><strong>105</strong> de <strong>167</strong> tareas completadas en todo el proyecto.</p>
 </header>
 <nav class="pestanas" role="tablist">
 <button data-slug="preguntas_junca" role="tab">Preguntas a Junca<span class="n">9/26</span></button>
@@ -144,7 +144,7 @@ window.MathJax={
 <button data-slug="reuniones" role="tab">reuniones<span class="n">5/6</span></button>
 <button data-slug="infra" role="tab">General<span class="n">18/21</span></button>
 <button data-slug="explicaciones" role="tab">explicaciones<span class="n">3/5</span></button>
-<button data-slug="notas_junca" role="tab">notas junca<span class="n">36/49</span></button>
+<button data-slug="notas_junca" role="tab">notas junca<span class="n">37/50</span></button>
 </nav>
 <div class="controles">
 <label><input type="checkbox" id="ocultar"> Esconder las completadas</label>
@@ -1663,8 +1663,8 @@ window.MathJax={
   <div class="contexto-oculto" hidden>
     <p class="contexto">La nota de Mauricio, <em>Continuous-Time Inverse Optimal Control with Prior Beliefs</em> (julio de 2026), reescrita en español y en modo <code>xe</code>, completando los detalles que deja sueltos con las fuentes que ya están fichadas. Overleaf propio. El hilo es uno: de cada objeto, en qué espacio vive, y qué cosas todavía no sabemos dónde viven.</p>
   </div>
-  <div class="barra"><div class="relleno" style="width:73%"></div></div>
-  <p class="cuenta">36 de 49 completadas</p>
+  <div class="barra"><div class="relleno" style="width:74%"></div></div>
+  <p class="cuenta">37 de 50 completadas</p>
   <ul class="tareas">
 <li class="tarea hecha abrible" data-hecha="1">
   <button class="cabecera" type="button" aria-expanded="false">
@@ -2437,6 +2437,20 @@ window.MathJax={
     </ul>
     <p>🟡 <strong>Lo más grande, y lo menos verificado:</strong> si la distancia del núcleo metriza la convergencia débil (Simon-Gabriel y Schölkopf, sobre localmente compacto Hausdorff), entonces <strong>la tensión de <code>NJU-33</code> deja de ser un problema aparte</strong> y la compacidad en norma de <span class="mate">$\mathcal M$</span> vuelve. Sale del resumen y hay que contrastarlo con el <code>.mmd</code>. ⚠️ <strong>La nota se escribió con los cuatro papers SIN convertir</strong>, así que todo lo que sale de un resumen va marcado <code>[del resumen]</code> y con su declaración de estado. Nada marcado así sostiene una recomendación. <strong>Falta para cerrar:</strong> contrastar los <code>[del resumen]</code> cuando lleguen los <code>.mmd</code>, empezando por el de la convergencia débil.</p>
     <p class="artefacto">Artefacto: <code>material_pdf/notas_tecnicas/eleccion_de_nucleo_es.pdf</code></p>
+  </div>
+</li>
+<li class="tarea hecha abrible" data-hecha="1">
+  <button class="cabecera" type="button" aria-expanded="false">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">NJU-49</span>
+    <span class="titulo">Dos criterios que estaban mal: el <span class="mate">$C_0$</span> contado dos veces y el shaping vestigial</span>
+    <span class="fecha">2026-08-23</span>
+    <span class="flecha" aria-hidden="true"></span>
+  </button>
+  <div class="detalle" hidden>
+    <p>Dos reparos suyos seguidos, los dos correctos, y los dos obligan a recompilar las <strong>dos</strong> notas técnicas. 🔴 <strong>1. «No entiendo por qué (C6) se viola por pedir <span class="mate">$\mathcal H$</span> inyectado en <span class="mate">$C_0$</span>, de hecho en todos los approach estamos pidiendo esto ¿no?»</strong> Sí. La contención sale de la <strong>acotación del núcleo</strong>, o sea de (C1), y <code>nucleo_y_peso_es</code> §5 ya lo decía en el sitio correcto: <em>«la acotación uniforme (K2), que es lo que mete a <span class="mate">$\mathcal H$</span> dentro de <span class="mate">$C_0$</span>»</em>. Yo lo estaba apuntando como defecto de Sobolev, o sea contando un criterio contra sí mismo. ✅ Proposición nueva con prueba de tres líneas: si <span class="mate">$k$</span> es acotado, continuo y <span class="mate">$k(\cdot,z)\in C_0$</span>, entonces <span class="mate">$\mathcal H\s C_0$</span>, porque <span class="mate">$\|f\|_\infty\le\kappa_\infty^{1/2}\|f\|_{\mathcal H}$</span> y <span class="mate">$C_0$</span> es cerrado bajo límites uniformes. <strong>La comparten todos los candidatos que cumplen (C1)</strong>, luego no discrimina. ✅ <strong>Y su coste no es (C6) sino la tensión</strong>: cierra la vía del costo coercivo para <strong>todo</strong> núcleo acotado. Criterio nuevo (C7) «compacidad de <span class="mate">$\mathcal M$</span>», con sus dos vías, y ahí sí discrimina: <strong>el peso es el único que la mueve, y precisamente porque renuncia a (C1)</strong>. Eso explica por qué en <code>nucleo_y_peso_es</code> lo que se pierde y lo que se gana eran la misma condición. 🔴 <strong>2. «(C7) en qué se usa, creo que es solo vestigio de errores pasados»</strong>. Tenía razón: pedir <span class="mate">$Q=\{q_\phi\}\s\mathcal H$</span> y <span class="mate">$Q$</span> cerrado era lo que necesitaba proyectar sobre <span class="mate">$c_E+Q$</span>, y eso lo superó <code>NJU-43</code>. El único sitio del documento donde <span class="mate">$Q$</span> sigue vivo es <code>obs:cono-vs-clase</code>, que es la comparación con lo superado, y la caja abierta dice que reaparece <strong>solo</strong> bajo el objetivo que necesita postular <span class="mate">$c_E$</span>. ✅ <strong>Retirado como criterio.</strong> Un requisito que solo existe bajo un objetivo que el documento no elige no sirve para elegir <span class="mate">$\mathcal H$</span>. ⚠️ <strong>Las dos tablas cambian</strong>, y la lectura también: (C6) pasa a ser <code>?</code> casi en todas partes, que es lo honesto, porque nadie ha comprobado que <span class="mate">$\mathcal C_E$</span> sea más que trivial en ninguno de los espacios.</p>
+    <p><code>candidatos_H_es.pdf</code></p>
+    <p class="artefacto">Artefacto: <code>material_pdf/notas_tecnicas/eleccion_de_nucleo_es.pdf</code>,</p>
   </div>
 </li>
 <li class="tarea pendiente abrible" data-hecha="0">
