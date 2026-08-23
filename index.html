@@ -135,7 +135,7 @@ window.MathJax={
 <header class="principal">
 <h1>Propuesta de tesis — control óptimo</h1>
 <p class="sub">Decidir y proponer un tema en control óptimo inverso, en 2–3 meses desde el 2026-07-25.</p>
-<p class="global"><strong>101</strong> de <strong>162</strong> tareas completadas en todo el proyecto.</p>
+<p class="global"><strong>102</strong> de <strong>164</strong> tareas completadas en todo el proyecto.</p>
 </header>
 <nav class="pestanas" role="tablist">
 <button data-slug="preguntas_junca" role="tab">Preguntas a Junca<span class="n">9/26</span></button>
@@ -144,7 +144,7 @@ window.MathJax={
 <button data-slug="reuniones" role="tab">reuniones<span class="n">5/6</span></button>
 <button data-slug="infra" role="tab">General<span class="n">18/21</span></button>
 <button data-slug="explicaciones" role="tab">explicaciones<span class="n">3/5</span></button>
-<button data-slug="notas_junca" role="tab">notas junca<span class="n">33/45</span></button>
+<button data-slug="notas_junca" role="tab">notas junca<span class="n">34/47</span></button>
 </nav>
 <div class="controles">
 <label><input type="checkbox" id="ocultar"> Esconder las completadas</label>
@@ -1663,8 +1663,8 @@ window.MathJax={
   <div class="contexto-oculto" hidden>
     <p class="contexto">La nota de Mauricio, <em>Continuous-Time Inverse Optimal Control with Prior Beliefs</em> (julio de 2026), reescrita en español y en modo <code>xe</code>, completando los detalles que deja sueltos con las fuentes que ya están fichadas. Overleaf propio. El hilo es uno: de cada objeto, en qué espacio vive, y qué cosas todavía no sabemos dónde viven.</p>
   </div>
-  <div class="barra"><div class="relleno" style="width:73%"></div></div>
-  <p class="cuenta">33 de 45 completadas</p>
+  <div class="barra"><div class="relleno" style="width:72%"></div></div>
+  <p class="cuenta">34 de 47 completadas</p>
   <ul class="tareas">
 <li class="tarea hecha abrible" data-hecha="1">
   <button class="cabecera" type="button" aria-expanded="false">
@@ -2384,6 +2384,35 @@ window.MathJax={
   </button>
   <div class="detalle" hidden>
     <p>Instrucción suya del 2026-08-23: <em>«Para ir más rápido por un rato deja de editar la versión en inglés»</em>. ✅ <strong>Punto de partida limpio:</strong> <code>en/</code> quedó sincronizado con <code>es/</code> en el commit de <code>NJU-43</code>, con <code>prop:identificado</code>, <code>prop:proyeccion</code>, <code>obs:cono-vs-clase</code> y las dos pruebas nuevas ya puestas en los dos. 🔴 <strong>Lo que hay que vigilar mientras dure:</strong> las <code>\label</code> tienen que ser las mismas en los dos idiomas, que es lo que empareja el LaTeX con la web. Un enunciado nuevo <strong>solo en <code>es/</code></strong> desincroniza la numeración y <code>build.py</code> de <code>Notas_web</code> contará distinto en cada idioma. <strong>Para cerrar:</strong> llevar aquí la lista de lo que se añada solo en español y propagarlo de una pasada cuando él lo diga.</p>
+  </div>
+</li>
+<li class="tarea hecha abrible" data-hecha="1">
+  <button class="cabecera" type="button" aria-expanded="false">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">NJU-45</span>
+    <span class="titulo">La caja no se actualizó y en la web nunca salió: dos fallos distintos</span>
+    <span class="fecha">2026-08-23</span>
+    <span class="flecha" aria-hidden="true"></span>
+  </button>
+  <div class="detalle" hidden>
+    <p>Los ve él: <em>«en overleaf la caja amarilla sigue diciendo proyectar <span class="mate">$c_E+Q$</span> en vez de al cono y en notas_web nunca apareció la caja»</em>. <strong>1. Fallo mío en el Overleaf.</strong> Metí <code>prop:proyeccion</code> y <code>obs:cono-vs-clase</code> en <code>sec4</code> y <strong>dejé la caja de <code>sec3</code> con la versión superada</strong>, que además contradecía a la proposición nueva. Corregida: ahora remite a la proposición y se queda con lo que sigue abierto. ⚠️ <strong>La lección:</strong> al mover una conclusión a un enunciado nuevo hay que releer lo que la anunciaba, no solo añadir. <strong>2. Fallo del generador de <code>Notas_web</code>.</strong> Los entornos <code>vive</code> y <code>abierto</code> <strong>no estaban en <code>build.py</code></strong>, así que caían por la rama de «cualquier otro entorno», que los vuelve un <strong>comentario HTML</strong>: el contenido se perdía entero y en silencio. 🔴 Es el mismo fallo que <code>enumerate</code>/<code>itemize</code> el 2026-08-15, y por la misma causa: un entorno que es <strong>contenido</strong> tratado como decorado.</p>
+    <ul>
+      <li>Tabla <code>CAJAS</code> con rótulo por idioma, nodo <code>caja</code>, <code>caja_html()</code> en los dos renderizadores, y CSS violeta/naranja como en el PDF.</li>
+      <li>El CSS va en <strong>los tres</strong> bloques de tema. Definir el color solo en la media query deja al toggle explícito sin él.</li>
+    </ul>
+    <p><code>overleaf/es/sec3.tex</code></p>
+    <p class="artefacto">Artefacto: <code>Notas_web/build.py</code>, <code>Notas_web/plantillas/pagina.html</code>,</p>
+  </div>
+</li>
+<li class="tarea pendiente abrible" data-hecha="0">
+  <button class="cabecera" type="button" aria-expanded="false">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">NJU-46</span>
+    <span class="titulo">🔴 El apéndice del censo lleva DOS SEMANAS fuera del documento</span>
+    <span class="flecha" aria-hidden="true"></span>
+  </button>
+  <div class="detalle" hidden>
+    <p>Sale de investigar <code>NJU-45</code>: las cajas del apéndice seguían sin salir en la web después de arreglar el generador, y el motivo es que <strong><code>apendice_donde_vive.tex</code> no está en <code>main.tex</code></strong>. No sale en el PDF ni en la web. Comprobado extrayendo el texto del PDF: ni «censo», ni «declaración de alcance», ni los títulos de sus secciones. 🔴 <strong>Se cayó de refilón el 2026-08-09</strong>, en el commit <code>5e2fdf0</code> de la migración a <code>es/</code>+<code>en/</code>, cuyo mensaje anuncia que quita <code>sec1</code> y el contrato de notación y <strong>no menciona el censo</strong>. El archivo se quedó en la raíz cuando lo demás se movió a las carpetas de idioma. ⚠️ <strong>Y se ha seguido editando invisible desde entonces</strong>, cuatro commits, el último de hoy mismo (<code>0a7ec74</code>). <strong>Por qué importa y no es solo un archivo huérfano:</strong> ahí viven el censo, que el <code>CLAUDE.md</code> llama el hilo conductor, las tres preguntas abiertas grandes, y <strong>la declaración de alcance</strong>, que es regla de fidelidad del proyecto («el apéndice declara por escrito qué se leyó de cada fuente y qué no»). Esa declaración no está en el documento entregado. 🔴 <strong>NO se re-añade sin decidirlo él</strong>, y hay dos razones: es un cambio en lo que verá Junca, y el apéndice está <strong>solo en español</strong> mientras el documento es bilingüe, así que entrarlo tal cual mete español en la versión inglesa. <strong>Las tres salidas:</strong> moverlo a <code>es/</code> y <code>en/</code> como los demás; dejarlo fuera del PDF y declararlo documento interno; o retirarlo.</p>
   </div>
 </li>
   </ul>
