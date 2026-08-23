@@ -135,7 +135,7 @@ window.MathJax={
 <header class="principal">
 <h1>Propuesta de tesis — control óptimo</h1>
 <p class="sub">Decidir y proponer un tema en control óptimo inverso, en 2–3 meses desde el 2026-07-25.</p>
-<p class="global"><strong>102</strong> de <strong>164</strong> tareas completadas en todo el proyecto.</p>
+<p class="global"><strong>103</strong> de <strong>165</strong> tareas completadas en todo el proyecto.</p>
 </header>
 <nav class="pestanas" role="tablist">
 <button data-slug="preguntas_junca" role="tab">Preguntas a Junca<span class="n">9/26</span></button>
@@ -144,7 +144,7 @@ window.MathJax={
 <button data-slug="reuniones" role="tab">reuniones<span class="n">5/6</span></button>
 <button data-slug="infra" role="tab">General<span class="n">18/21</span></button>
 <button data-slug="explicaciones" role="tab">explicaciones<span class="n">3/5</span></button>
-<button data-slug="notas_junca" role="tab">notas junca<span class="n">34/47</span></button>
+<button data-slug="notas_junca" role="tab">notas junca<span class="n">35/48</span></button>
 </nav>
 <div class="controles">
 <label><input type="checkbox" id="ocultar"> Esconder las completadas</label>
@@ -1663,8 +1663,8 @@ window.MathJax={
   <div class="contexto-oculto" hidden>
     <p class="contexto">La nota de Mauricio, <em>Continuous-Time Inverse Optimal Control with Prior Beliefs</em> (julio de 2026), reescrita en español y en modo <code>xe</code>, completando los detalles que deja sueltos con las fuentes que ya están fichadas. Overleaf propio. El hilo es uno: de cada objeto, en qué espacio vive, y qué cosas todavía no sabemos dónde viven.</p>
   </div>
-  <div class="barra"><div class="relleno" style="width:72%"></div></div>
-  <p class="cuenta">34 de 47 completadas</p>
+  <div class="barra"><div class="relleno" style="width:73%"></div></div>
+  <p class="cuenta">35 de 48 completadas</p>
   <ul class="tareas">
 <li class="tarea hecha abrible" data-hecha="1">
   <button class="cabecera" type="button" aria-expanded="false">
@@ -2402,6 +2402,24 @@ window.MathJax={
     </ul>
     <p><code>overleaf/es/sec3.tex</code></p>
     <p class="artefacto">Artefacto: <code>Notas_web/build.py</code>, <code>Notas_web/plantillas/pagina.html</code>,</p>
+  </div>
+</li>
+<li class="tarea hecha abrible" data-hecha="1">
+  <button class="cabecera" type="button" aria-expanded="false">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">NJU-47</span>
+    <span class="titulo">Los siete candidatos a <span class="mate">$\mathcal H$</span>, medidos contra los mismos criterios</span>
+    <span class="fecha">2026-08-23</span>
+    <span class="flecha" aria-hidden="true"></span>
+  </button>
+  <div class="detalle" hidden>
+    <p>Sale de una conversación suya con Claude web sobre qué espacio elegir. Triadas sus once fuentes: <strong>tres al buzón, cuatro a la cola de después, cuatro descartadas</strong>, y un error de atribución corregido (<code>1605.05898</code> no es GAIL, es Sullivan sobre previos estables; GAIL es <code>1606.03476</code>). Los tres recortes se pasaron <strong>juntos, en un solo PDF con carátula</strong>, así que hay un <code>.mmd</code> único de 56 pp. en vez de tres. 🔴 <strong>Ninguna propuesta nueva sustituye a <span class="mate">$H^s$</span>, y la nota dice por qué:</strong> <span class="mate">$C_0$</span> y Besov son las dos maneras de relajarlo y las dos cuestan la estructura de Hilbert entera, que es de donde salen la unicidad de <span class="mate">$c_\star$</span>, el mapa de Riesz y la proyección sobre el cono de <code>NJU-43</code>. ✅ <strong>Lo que sí cambia es qué significa haber elegido ese espacio.</strong> Con <span class="mate">$\mu_0=N(\widehat c,\alpha^{-1}R^{-1})$</span>, la (15) es el funcional de Onsager--Machlup y <span class="mate">$\mathcal H$</span> es su espacio de Cameron--Martin: no se elige un espacio, se elige un previo, y <span class="mate">$\alpha$</span> y <span class="mate">$\widehat c$</span> pasan a tener significado. Dashti--Stuart §4.3, Thm. 4.12. 🔴 <strong>Y trae una corrección a la baja, que es el hallazgo:</strong> el previo le da a <span class="mate">$\mathcal H$</span> <strong>medida cero</strong>. O sea que el encuadre bayesiano <strong>no sostiene (K4), afirma lo contrario</strong>. Con covarianza <span class="mate">$A^{-s}$</span> las realizaciones están en <span class="mate">$H^t$</span> para <span class="mate">$t&lt;s-d/2$</span> (Thm. 2.18), así que el costo verdadero queda exactamente <span class="mate">$d/2$</span> derivadas por debajo del espacio donde lo estábamos poniendo. <code>c_\star\in\mathcal H</code> pasa a leerse como enunciado sobre el <strong>estimador</strong>, no sobre el objeto estimado. ⚠️ <strong>El precedente RKHS de Anahtarci carga mucho menos de lo que parece:</strong> sus <code>X</code> y <code>A</code> son <strong>finitos</strong>, su <span class="mate">$Q$</span> vive en <span class="mate">$\mathbb R^{X\times A}$</span> y nunca necesitan medidas en el dual, que es justo (C1) y justo lo que en nuestro caso fuerza todo lo demás. Legitima la abstracción y no transfiere ningún teorema.</p>
+    <ul>
+      <li><strong>Criterio nuevo que no estaba en el documento: (C7) invariancia por discretización.</strong> Es el que decide si el objetivo 3 está bien planteado antes de programarlo, y trae contraejemplo: el previo de variación total no la tiene. De paso <span class="mate">$H^s$</span> <strong>la hereda</strong> de un resultado publicado, porque <span class="mate">$B^s_2=H^s$</span> y esa familia se probó invariante.</li>
+    </ul>
+    <p><strong>Falta para cerrar:</strong> decidir si el lenguaje de Cameron--Martin entra al §2.1 del Overleaf. La nota no toca <code>notas_junca</code>, igual que <code>NJU-34</code>.</p>
+    <p><code>material_mathpix/prerequisitos/espacio_del_costo_recortes/</code></p>
+    <p class="artefacto">Artefacto: <code>material_pdf/notas_tecnicas/candidatos_H_es.pdf</code>,</p>
   </div>
 </li>
 <li class="tarea pendiente abrible" data-hecha="0">
