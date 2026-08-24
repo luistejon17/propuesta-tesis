@@ -135,7 +135,7 @@ window.MathJax={
 <header class="principal">
 <h1>Propuesta de tesis — control óptimo</h1>
 <p class="sub">Decidir y proponer un tema en control óptimo inverso, en 2–3 meses desde el 2026-07-25.</p>
-<p class="global"><strong>107</strong> de <strong>170</strong> tareas completadas en todo el proyecto.</p>
+<p class="global"><strong>109</strong> de <strong>171</strong> tareas completadas en todo el proyecto.</p>
 </header>
 <nav class="pestanas" role="tablist">
 <button data-slug="preguntas_junca" role="tab">Preguntas a Junca<span class="n">9/26</span></button>
@@ -144,7 +144,7 @@ window.MathJax={
 <button data-slug="reuniones" role="tab">reuniones<span class="n">5/6</span></button>
 <button data-slug="infra" role="tab">General<span class="n">18/21</span></button>
 <button data-slug="explicaciones" role="tab">explicaciones<span class="n">3/5</span></button>
-<button data-slug="notas_junca" role="tab">notas junca<span class="n">39/53</span></button>
+<button data-slug="notas_junca" role="tab">notas junca<span class="n">41/54</span></button>
 </nav>
 <div class="controles">
 <label><input type="checkbox" id="ocultar"> Esconder las completadas</label>
@@ -1663,8 +1663,8 @@ window.MathJax={
   <div class="contexto-oculto" hidden>
     <p class="contexto">La nota de Mauricio, <em>Continuous-Time Inverse Optimal Control with Prior Beliefs</em> (julio de 2026), reescrita en español y en modo <code>xe</code>, completando los detalles que deja sueltos con las fuentes que ya están fichadas. Overleaf propio. El hilo es uno: de cada objeto, en qué espacio vive, y qué cosas todavía no sabemos dónde viven.</p>
   </div>
-  <div class="barra"><div class="relleno" style="width:74%"></div></div>
-  <p class="cuenta">39 de 53 completadas</p>
+  <div class="barra"><div class="relleno" style="width:76%"></div></div>
+  <p class="cuenta">41 de 54 completadas</p>
   <ul class="tareas">
 <li class="tarea hecha abrible" data-hecha="1">
   <button class="cabecera" type="button" aria-expanded="false">
@@ -2186,11 +2186,31 @@ window.MathJax={
     <p>⏸️ <strong>En pausa desde <code>NJU-32</code></strong>: solo hace falta si se vuelve a la versión de <code>versiones/dominio_acotado/</code>. Con <span class="mate">$E=\R^d$</span> no hay reflexión que justificar. Los dos pasos serían: que la difusión reflejada resuelva el problema de martingala para <span class="mate">$\dom(\gen{})$</span> (Skorokhod, donde el tiempo local entra por <span class="mate">$\partial_n\varphi\,dL_t$</span> y desaparece), y su <strong>existencia desde cada punto</strong>, que es la Condición 3 de Bhatt--Borkar.</p>
   </div>
 </li>
-<li class="tarea pendiente abrible" data-hecha="0">
+<li class="tarea hecha abrible" data-hecha="1">
+  <button class="cabecera" type="button" aria-expanded="false">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">NJU-53</span>
+    <span class="titulo"><span class="mate">$A$</span> vuelve a ser compacto de <span class="mate">$\R^m$</span>, y se cae el aparato espectral</span>
+    <span class="fecha">2026-08-23</span>
+    <span class="flecha" aria-hidden="true"></span>
+  </button>
+  <div class="detalle" hidden>
+    <p>Sale de preguntar él si hacía falta mencionar la ley de Weyl: <em>«la primera vez que empezamos a usar el espacio <span class="mate">$H^s$</span> no se mencionaban esas cosas»</em>. No hacía falta, y la causa era la hipótesis, no la exposición. 🔴 <strong>Decisión suya:</strong> <span class="mate">$A\s\R^m$</span> compacto por simplicidad, <em>«recuerda que el ejemplo inicial a modelar es la partícula moviéndose en <span class="mate">$\R^2$</span> o <span class="mate">$\R^3$</span>»</em>. Y es consistente: la variedad cerrada se había pedido en <code>NJU-28</code> <strong>para evitar aristas cuando los dos factores tenían frontera</strong>, y desde <code>NJU-32</code> <span class="mate">$E=\R^d$</span> no tiene, así que la razón ya no existía. ✅ <strong><span class="mate">$\Hs=H^s(\R^n)$</span> con la definición de Fourier</strong>, y el costo se mira restringido a <span class="mate">$E\times A$</span>. Se cae de golpe:</p>
+    <ul>
+      <li>la ley de <strong>Weyl</strong>, que aparecía cuatro veces y <strong>sin fuente ninguna</strong>;</li>
+      <li>el espectro de <span class="mate">$\Delta_A$</span> y la resolución espectral conjunta;</li>
+      <li>el operador de extensión y las tres definiciones de <span class="mate">$H^s$</span> sobre dominio;</li>
+      <li>y <strong><span class="mate">$s$</span> deja de tener que ser entero</strong>.</li>
+    </ul>
+    <p><code>prop:delta</code> pasa a ser <strong>una</strong> integral sobre <span class="mate">$\R^n$</span>, que es Folland y ya. ✅ <strong>Y cierra el hueco que había marcado la revisión:</strong> la cota era «uniforme en <span class="mate">$a_0$</span> por compacidad de <span class="mate">$A$</span>», que no bastaba. Ahora <span class="mate">$\|\delta_z\|_{\Hd}=C_\iota$</span> <strong>con igualdad y para todo <span class="mate">$z$</span></strong>, por invariancia por traslación. ✅ <code>obs:restriccion</code> nueva, que es el único precio: dos costos que coincidan en <span class="mate">$E\times A$</span> son indistinguibles, y esa ambigüedad la absorbe <span class="mate">$\CE$</span>, que ya era unión de clases. ⚠️ <strong>Cierra <code>NJU-29</code></strong>, que pedía fuente para Sobolev en variedades. Ya no hace falta ninguna.</p>
+  </div>
+</li>
+<li class="tarea hecha abrible" data-hecha="1">
   <button class="cabecera" type="button" aria-expanded="false">
     <span class="casilla" aria-hidden="true"></span>
     <span class="ident">NJU-29</span>
-    <span class="titulo">Fuente para Sobolev sobre una variedad cerrada</span>
+    <span class="titulo">Fuente para Sobolev sobre una variedad cerrada — ⏹️ cerrada sin hacer por <code>NJU-53</code></span>
+    <span class="fecha">2026-08-23</span>
     <span class="flecha" aria-hidden="true"></span>
   </button>
   <div class="detalle" hidden>
