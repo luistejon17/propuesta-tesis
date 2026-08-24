@@ -135,7 +135,7 @@ window.MathJax={
 <header class="principal">
 <h1>Propuesta de tesis — control óptimo</h1>
 <p class="sub">Decidir y proponer un tema en control óptimo inverso, en 2–3 meses desde el 2026-07-25.</p>
-<p class="global"><strong>106</strong> de <strong>168</strong> tareas completadas en todo el proyecto.</p>
+<p class="global"><strong>107</strong> de <strong>170</strong> tareas completadas en todo el proyecto.</p>
 </header>
 <nav class="pestanas" role="tablist">
 <button data-slug="preguntas_junca" role="tab">Preguntas a Junca<span class="n">9/26</span></button>
@@ -144,7 +144,7 @@ window.MathJax={
 <button data-slug="reuniones" role="tab">reuniones<span class="n">5/6</span></button>
 <button data-slug="infra" role="tab">General<span class="n">18/21</span></button>
 <button data-slug="explicaciones" role="tab">explicaciones<span class="n">3/5</span></button>
-<button data-slug="notas_junca" role="tab">notas junca<span class="n">38/51</span></button>
+<button data-slug="notas_junca" role="tab">notas junca<span class="n">39/53</span></button>
 </nav>
 <div class="controles">
 <label><input type="checkbox" id="ocultar"> Esconder las completadas</label>
@@ -1663,8 +1663,8 @@ window.MathJax={
   <div class="contexto-oculto" hidden>
     <p class="contexto">La nota de Mauricio, <em>Continuous-Time Inverse Optimal Control with Prior Beliefs</em> (julio de 2026), reescrita en español y en modo <code>xe</code>, completando los detalles que deja sueltos con las fuentes que ya están fichadas. Overleaf propio. El hilo es uno: de cada objeto, en qué espacio vive, y qué cosas todavía no sabemos dónde viven.</p>
   </div>
-  <div class="barra"><div class="relleno" style="width:75%"></div></div>
-  <p class="cuenta">38 de 51 completadas</p>
+  <div class="barra"><div class="relleno" style="width:74%"></div></div>
+  <p class="cuenta">39 de 53 completadas</p>
   <ul class="tareas">
 <li class="tarea hecha abrible" data-hecha="1">
   <button class="cabecera" type="button" aria-expanded="false">
@@ -2389,6 +2389,14 @@ window.MathJax={
       <li><code>sec4</code>: dos frases de <code>obs:tension</code>, que ahora atribuye la contención en <span class="mate">$C_0$</span> al núcleo y no a <code>def:espacio</code>.</li>
       <li><code>sec5</code>: <code>obs:coste-algoritmico</code>, nueva.</li>
     </ul>
+    <p><strong>Y de <code>NJU-51</code>, que son correcciones y no añadidos</strong> (<code>NJU-52</code>):</p>
+    <ul>
+      <li><code>apendice_pruebas</code>: los 15 pasos por <code>\fin</code>, y la prueba de <code>cor:masa</code> entera, que en <code>en/</code> sigue usando <span class="mate">$\varphi\equiv1$</span>.</li>
+      <li><code>sec2</code>: hipótesis de masa en <code>prop:balance</code> y en la definición de <span class="mate">$\M$</span>; once fugas de notación; <code>eq:dual</code> a <code>\eqfin</code>.</li>
+      <li><code>sec3</code>: fuera el régimen (ii) y la lista de dos regímenes; fuera la caja <code>abierto</code> del previo, que él borró en <code>es/</code> y en <code>en/</code> sigue.</li>
+      <li><code>sec4</code>: <code>obs:cono-vs-clase</code> sin <span class="mate">$c_E$</span> ni <span class="mate">$Q$</span>.</li>
+      <li><code>sec5</code>: <span class="mate">$Q$</span> de la matriz de tasas pasa a <code>\mathsf Q</code>.</li>
+    </ul>
   </div>
 </li>
 <li class="tarea hecha abrible" data-hecha="1">
@@ -2482,6 +2490,43 @@ window.MathJax={
     <p class="aviso">⚠️ <strong>Él había borrado la caja del previo en Overleaf</strong> (commit <code>53322e6</code>), coherente con sus dos reparos de hoy. Se leyó antes de empujar y se respetó. <strong>Falta para cerrar:</strong> propagar a <code>en/</code>, y son cinco enunciados nuevos, así que hoy la numeración de los dos idiomas <strong>no coincide</strong>. Anotado en <code>NJU-44</code>.</p>
     <p><code>sec5.tex</code></p>
     <p class="artefacto">Artefacto: <code>subproyectos/notas_junca/overleaf/es/sec3.tex</code>, <code>sec4.tex</code>,</p>
+  </div>
+</li>
+<li class="tarea hecha abrible" data-hecha="1">
+  <button class="cabecera" type="button" aria-expanded="false">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">NJU-51</span>
+    <span class="titulo">Revisión del documento entero: notación, hipótesis y vestigios</span>
+    <span class="fecha">2026-08-23</span>
+    <span class="flecha" aria-hidden="true"></span>
+  </button>
+  <div class="detalle" hidden>
+    <p>Encargo suyo, en formato de revisión de código sobre el Overleaf. 🔴 <strong>Su sospecha de notación era correcta y peor de lo que creía: el apéndice entero estaba en de Finetti.</strong> Las cinco secciones del cuerpo usan <code>\eqfin</code>/<code>\fin</code>; <code>apendice_pruebas.tex</code> tenía <strong>cero</strong> macros de notación, así que en <code>\notaEstandar</code> el cuerpo salía en integrales y las 15 demostraciones en de Finetti. Más <strong>once fugas en el cuerpo</strong>, entre ellas <code>eq:dual</code> entera, que era una <code>equation</code> pelada con <span class="mate">$\nu_0(V)$</span>. ✅ Convención suya aplicada: las integrales sobre <span class="mate">$[0,t]$</span> se quedan en forma integral también en modo de Finetti. Era <code>eq:mart</code>, justo la que <code>NJU-10</code> había convertido. La excepción queda escrita en el documento. 🔴 <strong><code>cor:masa</code> se probaba con <span class="mate">$\varphi\equiv1$</span>, que NO está en <span class="mate">$C_0^2(\R^d)$</span>.</strong> El enunciado es cierto, la prueba no valía. Se prueba ahora desde la definición de la ocupación. 🔴 <strong><code>prop:balance</code> omitía una hipótesis, verificado contra el <code>.mmd</code>:</strong> Bhatt--Borkar Thm. 2.2 dice <em>«If <span class="mate">$\mu\in\mathscr P(E\times U)$</span>»</em>, o sea que la masa es hipótesis suya, y tiene que serlo porque sin constantes en el dominio la identidad de balance no la determina. Añadida al recíproco y a la definición de <span class="mate">$\mathcal M$</span>. 🔴 <strong>Vestigios del borrado de su caja:</strong> <code>obs:cono-vs-clase</code> usaba <span class="mate">$c_E$</span> y <span class="mate">$Q$</span>, <strong>ninguno definido ya en el documento</strong>, y la ecuación (15) se había quedado sin frase de entrada. Y <span class="mate">$Q$</span> nombraba a la vez el subespacio de shaping y la matriz de tasas del §4. ⚠️ <strong>Señalado y no tocado:</strong> <code>prop:delta</code> acota la suma espectral «por compacidad de <span class="mate">$A$</span>» y hace falta más; <code>prop:compacidad-M</code> sigue razonando con inyección compacta, que con <span class="mate">$E=\R^d$</span> ya no se tiene; las dos ramas de <code>eq:selector</code> no dicen lo mismo; y «la primera fuente» y «las tres identidades» se quedaron sin antecedente al irse el §1. ⚠️ <strong>Rompí la regla 4.1 a mitad de la revisión</strong>: usé <code>sed</code>, <strong>no hizo nada y devolvió éxito</strong>, y el <code>grep</code> de comprobación salió vacío, que se lee igual que «ya no queda ninguno». Rehecho con Edit. ✅ Compilados <strong>los tres modos</strong>: 16 pp. estándar, 16 de Finetti, 18 ambas. 🔴 <strong>Y un vestigio más, que lo ve él al leer la revisión:</strong> <em>«la formulación (2) por densidades ¿no es un vestigio también? ¿en qué momento se está usando?»</em>. En ninguno. El régimen (ii) aparecía <strong>seis veces</strong>: tres son su propia definición y las otras tres dicen que no aplica («se trabaja en el régimen (i)» dos veces, y «la distinción se cae» en el modelo discreto). <strong>Cero resultados se prueban bajo él.</strong></p>
+    <ul>
+      <li>Es vestigio de cuando la penalización (17) era la norma de <span class="mate">$H^1$</span>, que es lo que <code>NJU-28</code> corrigió dejando el andamio puesto.</li>
+      <li><strong>Y el propio documento lo refuta</strong>: <code>prop:h1-nunca</code> prueba que <span class="mate">$H^1$</span> no sirve con <span class="mate">$n\ge2$</span>, y <span class="mate">$H^1$</span> es justo lo que (ii) venía a permitir.</li>
+      <li class="aviso">⚠️ Además afirmaba algo falso: <em>«es el régimen en el que se escriben la formulación PDE y la numérica»</em>. El §4 <strong>no</strong> lo usa: pide densidad a la marginal del estado <span class="mate">$m_\pi$</span>, que es mucho menos que densidad <span class="mate">$L^2$</span> de la conjunta, y <code>obs:fp-regularidad</code> dice explícitamente que la conjunta es singular con política determinista.</li>
+    </ul>
+    <p class="hecho">✅ Retirado. Se queda la razón, que es lo que valía: la ocupación de una política determinista es singular <span class="mate">$\rt$</span> el emparejamiento es el de dualidad <span class="mate">$\rt$</span> <span class="mate">$\Hs$</span> tiene que inyectarse en <span class="mate">$C$</span>. La alternativa de restringir <span class="mate">$\M$</span> baja a <code>obs:dos-condiciones</code>, dicha como vía cerrada.</p>
+    <p class="artefacto">Artefacto: <code>overleaf/es/</code> y <code>overleaf/es/apendice_pruebas.tex</code></p>
+  </div>
+</li>
+<li class="tarea pendiente abrible" data-hecha="0">
+  <button class="cabecera" type="button" aria-expanded="false">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">NJU-52</span>
+    <span class="titulo">🔴 La versión inglesa está materialmente mal, y es la que se le manda</span>
+    <span class="flecha" aria-hidden="true"></span>
+  </button>
+  <div class="detalle" hidden>
+    <p>Sale de verificar la web. <code>main.tex</code> dice que para mandárselo a Mauricio es <code>\ESfalse</code> + <code>\notaEstandar</code>, y <strong>esa versión lleva hoy</strong>:</p>
+    <ul>
+      <li>La prueba de <code>cor:masa</code> con <span class="mate">$\varphi\equiv1$</span>, que <strong>no es función de prueba admisible</strong>. Es un error, no una diferencia de redacción.</li>
+      <li><code>prop:balance</code> sin la hipótesis de masa.</li>
+      <li><strong>La caja <code>abierto</code> del previo que él borró en <code>es/</code></strong>, con la formulación superada de proyectar sobre <span class="mate">$c_E+Q$</span>.</li>
+      <li>El apéndice entero en de Finetti.</li>
+    </ul>
+    <p class="alerta">🔴 <strong>Y la nota web publica los dos idiomas</strong>, así que eso está en línea. ⚠️ <strong>No se toca sin levantar la congelación de <code>NJU-44</code></strong>, que es instrucción suya. Lo que hay que propagar está listado allí.</p>
   </div>
 </li>
 <li class="tarea pendiente abrible" data-hecha="0">
