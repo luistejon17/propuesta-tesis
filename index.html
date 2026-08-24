@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
 <title>Propuesta de tesis · TODO</title>
-<!-- GENERADO por web/build_todo.py el 2026-08-23. NO EDITAR A MANO: los TODO.md mandan, este archivo se reescribe. -->
+<!-- GENERADO por web/build_todo.py el 2026-08-24. NO EDITAR A MANO: los TODO.md mandan, este archivo se reescribe. -->
 <style>
 :root{
   --fondo:#fbfaf7; --papel:#fff; --tinta:#1c1a17; --suave:#6b6558;
@@ -135,7 +135,7 @@ window.MathJax={
 <header class="principal">
 <h1>Propuesta de tesis — control óptimo</h1>
 <p class="sub">Decidir y proponer un tema en control óptimo inverso, en 2–3 meses desde el 2026-07-25.</p>
-<p class="global"><strong>109</strong> de <strong>171</strong> tareas completadas en todo el proyecto.</p>
+<p class="global"><strong>112</strong> de <strong>175</strong> tareas completadas en todo el proyecto.</p>
 </header>
 <nav class="pestanas" role="tablist">
 <button data-slug="preguntas_junca" role="tab">Preguntas a Junca<span class="n">9/26</span></button>
@@ -144,7 +144,7 @@ window.MathJax={
 <button data-slug="reuniones" role="tab">reuniones<span class="n">5/6</span></button>
 <button data-slug="infra" role="tab">General<span class="n">18/21</span></button>
 <button data-slug="explicaciones" role="tab">explicaciones<span class="n">3/5</span></button>
-<button data-slug="notas_junca" role="tab">notas junca<span class="n">41/54</span></button>
+<button data-slug="notas_junca" role="tab">notas junca<span class="n">44/58</span></button>
 </nav>
 <div class="controles">
 <label><input type="checkbox" id="ocultar"> Esconder las completadas</label>
@@ -1664,7 +1664,7 @@ window.MathJax={
     <p class="contexto">La nota de Mauricio, <em>Continuous-Time Inverse Optimal Control with Prior Beliefs</em> (julio de 2026), reescrita en español y en modo <code>xe</code>, completando los detalles que deja sueltos con las fuentes que ya están fichadas. Overleaf propio. El hilo es uno: de cada objeto, en qué espacio vive, y qué cosas todavía no sabemos dónde viven.</p>
   </div>
   <div class="barra"><div class="relleno" style="width:76%"></div></div>
-  <p class="cuenta">41 de 54 completadas</p>
+  <p class="cuenta">44 de 58 completadas</p>
   <ul class="tareas">
 <li class="tarea hecha abrible" data-hecha="1">
   <button class="cabecera" type="button" aria-expanded="false">
@@ -2405,14 +2405,15 @@ window.MathJax={
   <div class="detalle" hidden>
     <p>Instrucción suya del 2026-08-23: <em>«Para ir más rápido por un rato deja de editar la versión en inglés»</em>. ✅ <strong>Punto de partida limpio:</strong> <code>en/</code> quedó sincronizado con <code>es/</code> en el commit de <code>NJU-43</code>, con <code>prop:identificado</code>, <code>prop:proyeccion</code>, <code>obs:cono-vs-clase</code> y las dos pruebas nuevas ya puestas en los dos. 🔴 <strong>Lo que hay que vigilar mientras dure:</strong> las <code>\label</code> tienen que ser las mismas en los dos idiomas, que es lo que empareja el LaTeX con la web. Un enunciado nuevo <strong>solo en <code>es/</code></strong> desincroniza la numeración y <code>build.py</code> de <code>Notas_web</code> contará distinto en cada idioma. <strong>Para cerrar:</strong> llevar aquí la lista de lo que se añada solo en español y propagarlo de una pasada cuando él lo diga. <strong>Pendiente de propagar a <code>en/</code> (2026-08-23, <code>NJU-50</code>):</strong></p>
     <ul>
-      <li><code>sec3</code>: subsección nueva <strong>«El espacio por su núcleo»</strong> entera, con <code>prop:nucleo</code>, <code>obs:nu</code>, <code>obs:riesz-integral</code>, <code>obs:caracteristico</code> y <code>obs:c0-del-nucleo</code>. <strong>Cinco enunciados numerados nuevos</strong>, así que la numeración de <code>es/</code> y <code>en/</code> ya no coincide y hay que propagarlos antes de volver a generar la web.</li>
+      <li><code>sec3</code>: subsección nueva <strong>«El espacio por su núcleo»</strong> entera, con <code>prop:nucleo</code>, <code>obs:riesz-integral</code>, <code>obs:caracteristico</code> y <code>obs:c0-del-nucleo</code>. <strong>Cuatro enunciados numerados nuevos</strong>, así que la numeración de <code>es/</code> y <code>en/</code> ya no coincide y hay que propagarlos antes de volver a generar la web. ⚠️ <strong><code>obs:nu</code> (Matérn) NO se propaga</strong>: la borró él en <code>es/</code> el 2026-08-24 (<code>be5d527</code>).</li>
       <li><code>sec4</code>: dos frases de <code>obs:tension</code>, que ahora atribuye la contención en <span class="mate">$C_0$</span> al núcleo y no a <code>def:espacio</code>.</li>
       <li><code>sec5</code>: <code>obs:coste-algoritmico</code>, nueva.</li>
     </ul>
     <p><strong>Y de <code>NJU-51</code>, que son correcciones y no añadidos</strong> (<code>NJU-52</code>):</p>
     <ul>
       <li><code>apendice_pruebas</code>: los 15 pasos por <code>\fin</code>, y la prueba de <code>cor:masa</code> entera, que en <code>en/</code> sigue usando <span class="mate">$\varphi\equiv1$</span>.</li>
-      <li><code>sec2</code>: hipótesis de masa en <code>prop:balance</code> y en la definición de <span class="mate">$\M$</span>; once fugas de notación; <code>eq:dual</code> a <code>\eqfin</code>.</li>
+      <li><code>sec2</code>: hipótesis de <strong>finitud</strong> en <code>prop:balance</code> (no de masa: ver <code>NJU-55</code>) y en la definición de <span class="mate">$\M$</span>; once fugas de notación; <code>eq:dual</code> a <code>\eqfin</code>.</li>
+      <li><code>sec2</code>, de <code>NJU-54</code> y <code>NJU-56</code>: el <strong>cuadro de condiciones</strong> entero, <code>obs:psi</code>, la frase de las constantes, y <code>obs:test</code> reescrita. Y en el apéndice, la demostración del corte dentro de <code>prop:balance</code>.</li>
       <li><code>sec3</code>: fuera el régimen (ii) y la lista de dos regímenes; fuera la caja <code>abierto</code> del previo, que él borró en <code>es/</code> y en <code>en/</code> sigue.</li>
       <li><code>sec4</code>: <code>obs:cono-vs-clase</code> sin <span class="mate">$c_E$</span> ni <span class="mate">$Q$</span>.</li>
       <li><code>sec5</code>: <span class="mate">$Q$</span> de la matriz de tasas pasa a <code>\mathsf Q</code>.</li>
@@ -2521,7 +2522,15 @@ window.MathJax={
     <span class="flecha" aria-hidden="true"></span>
   </button>
   <div class="detalle" hidden>
-    <p>Encargo suyo, en formato de revisión de código sobre el Overleaf. 🔴 <strong>Su sospecha de notación era correcta y peor de lo que creía: el apéndice entero estaba en de Finetti.</strong> Las cinco secciones del cuerpo usan <code>\eqfin</code>/<code>\fin</code>; <code>apendice_pruebas.tex</code> tenía <strong>cero</strong> macros de notación, así que en <code>\notaEstandar</code> el cuerpo salía en integrales y las 15 demostraciones en de Finetti. Más <strong>once fugas en el cuerpo</strong>, entre ellas <code>eq:dual</code> entera, que era una <code>equation</code> pelada con <span class="mate">$\nu_0(V)$</span>. ✅ Convención suya aplicada: las integrales sobre <span class="mate">$[0,t]$</span> se quedan en forma integral también en modo de Finetti. Era <code>eq:mart</code>, justo la que <code>NJU-10</code> había convertido. La excepción queda escrita en el documento. 🔴 <strong><code>cor:masa</code> se probaba con <span class="mate">$\varphi\equiv1$</span>, que NO está en <span class="mate">$C_0^2(\R^d)$</span>.</strong> El enunciado es cierto, la prueba no valía. Se prueba ahora desde la definición de la ocupación. 🔴 <strong><code>prop:balance</code> omitía una hipótesis, verificado contra el <code>.mmd</code>:</strong> Bhatt--Borkar Thm. 2.2 dice <em>«If <span class="mate">$\mu\in\mathscr P(E\times U)$</span>»</em>, o sea que la masa es hipótesis suya, y tiene que serlo porque sin constantes en el dominio la identidad de balance no la determina. Añadida al recíproco y a la definición de <span class="mate">$\mathcal M$</span>. 🔴 <strong>Vestigios del borrado de su caja:</strong> <code>obs:cono-vs-clase</code> usaba <span class="mate">$c_E$</span> y <span class="mate">$Q$</span>, <strong>ninguno definido ya en el documento</strong>, y la ecuación (15) se había quedado sin frase de entrada. Y <span class="mate">$Q$</span> nombraba a la vez el subespacio de shaping y la matriz de tasas del §4. ⚠️ <strong>Señalado y no tocado:</strong> <code>prop:delta</code> acota la suma espectral «por compacidad de <span class="mate">$A$</span>» y hace falta más; <code>prop:compacidad-M</code> sigue razonando con inyección compacta, que con <span class="mate">$E=\R^d$</span> ya no se tiene; las dos ramas de <code>eq:selector</code> no dicen lo mismo; y «la primera fuente» y «las tres identidades» se quedaron sin antecedente al irse el §1. ⚠️ <strong>Rompí la regla 4.1 a mitad de la revisión</strong>: usé <code>sed</code>, <strong>no hizo nada y devolvió éxito</strong>, y el <code>grep</code> de comprobación salió vacío, que se lee igual que «ya no queda ninguno». Rehecho con Edit. ✅ Compilados <strong>los tres modos</strong>: 16 pp. estándar, 16 de Finetti, 18 ambas. 🔴 <strong>Y un vestigio más, que lo ve él al leer la revisión:</strong> <em>«la formulación (2) por densidades ¿no es un vestigio también? ¿en qué momento se está usando?»</em>. En ninguno. El régimen (ii) aparecía <strong>seis veces</strong>: tres son su propia definición y las otras tres dicen que no aplica («se trabaja en el régimen (i)» dos veces, y «la distinción se cae» en el modelo discreto). <strong>Cero resultados se prueban bajo él.</strong></p>
+    <p>Encargo suyo, en formato de revisión de código sobre el Overleaf. 🔴 <strong>Su sospecha de notación era correcta y peor de lo que creía: el apéndice entero estaba en de Finetti.</strong> Las cinco secciones del cuerpo usan <code>\eqfin</code>/<code>\fin</code>; <code>apendice_pruebas.tex</code> tenía <strong>cero</strong> macros de notación, así que en <code>\notaEstandar</code> el cuerpo salía en integrales y las 15 demostraciones en de Finetti. Más <strong>once fugas en el cuerpo</strong>, entre ellas <code>eq:dual</code> entera, que era una <code>equation</code> pelada con <span class="mate">$\nu_0(V)$</span>. ✅ Convención suya aplicada: las integrales sobre <span class="mate">$[0,t]$</span> se quedan en forma integral también en modo de Finetti. Era <code>eq:mart</code>, justo la que <code>NJU-10</code> había convertido. La excepción queda escrita en el documento. 🔴 <strong><code>cor:masa</code> se probaba con <span class="mate">$\varphi\equiv1$</span>, que NO está en <span class="mate">$C_0^2(\R^d)$</span>.</strong> El enunciado es cierto, la prueba no valía. Se prueba ahora desde la definición de la ocupación. 🔴 <strong><code>prop:balance</code> omitía una hipótesis, verificado contra el <code>.mmd</code>:</strong> Bhatt--Borkar Thm. 2.2 dice <em>«If <span class="mate">$\mu\in\mathscr P(E\times U)$</span>»</em>, o sea que la masa es hipótesis suya. Añadida al recíproco y a la definición de <span class="mate">$\mathcal M$</span>. ⛔ <strong>La razón que di era falsa y la corrige <code>NJU-55</code> al día siguiente</strong>: escribí que la masa «tiene que serlo porque sin constantes en el dominio la identidad de balance no la determina», y sí la determina. La hipótesis que hace falta es la <strong>finitud</strong>; la masa sale de ella. Lo que queda en pie de esta viñeta es que el enunciado necesitaba <strong>alguna</strong> hipótesis y no la tenía. 🔴 <strong>Vestigios del borrado de su caja:</strong> <code>obs:cono-vs-clase</code> usaba <span class="mate">$c_E$</span> y <span class="mate">$Q$</span>, <strong>ninguno definido ya en el documento</strong>, y la ecuación (15) se había quedado sin frase de entrada. Y <span class="mate">$Q$</span> nombraba a la vez el subespacio de shaping y la matriz de tasas del §4. ⚠️ <strong>Señalado y no tocado</strong>, con lo que ha pasado desde entonces:</p>
+    <ul>
+      <li><code>prop:delta</code> acotaba la suma espectral «por compacidad de <span class="mate">$A$</span>», que no bastaba. ✅ <strong>Cerrado por <code>NJU-53</code></strong>: con <span class="mate">$A\s\R^m$</span> es una integral sobre <span class="mate">$\R^n$</span> y sale <span class="mate">$\|\delta_z\|_{\Hd}=C_\iota$</span> con igualdad.</li>
+      <li><code>prop:condiciones</code> afirmaba cumplir la Condición 2, que pide las constantes, teniendo <span class="mate">$\dom(\gen{})=C_0^2(\R^d)$</span>. ✅ <strong>Cerrado por <code>NJU-56</code></strong>, y resulta que su propio Ejemplo 1 hace lo mismo.</li>
+      <li>⏳ <code>prop:compacidad-M</code> sigue razonando con inyección compacta, que con <span class="mate">$E=\R^d$</span> ya no se tiene.</li>
+      <li>⏳ Las dos ramas de <code>eq:selector</code> no dicen lo mismo.</li>
+      <li>⏳ «La primera fuente» y «las tres identidades» se quedaron sin antecedente al irse el §1.</li>
+    </ul>
+    <p class="aviso">⚠️ <strong>Rompí la regla 4.1 a mitad de la revisión</strong>: usé <code>sed</code>, <strong>no hizo nada y devolvió éxito</strong>, y el <code>grep</code> de comprobación salió vacío, que se lee igual que «ya no queda ninguno». Rehecho con Edit. ✅ Compilados <strong>los tres modos</strong>: 16 pp. estándar, 16 de Finetti, 18 ambas. 🔴 <strong>Y un vestigio más, que lo ve él al leer la revisión:</strong> <em>«la formulación (2) por densidades ¿no es un vestigio también? ¿en qué momento se está usando?»</em>. En ninguno. El régimen (ii) aparecía <strong>seis veces</strong>: tres son su propia definición y las otras tres dicen que no aplica («se trabaja en el régimen (i)» dos veces, y «la distinción se cae» en el modelo discreto). <strong>Cero resultados se prueban bajo él.</strong></p>
     <ul>
       <li>Es vestigio de cuando la penalización (17) era la norma de <span class="mate">$H^1$</span>, que es lo que <code>NJU-28</code> corrigió dejando el andamio puesto.</li>
       <li><strong>Y el propio documento lo refuta</strong>: <code>prop:h1-nunca</code> prueba que <span class="mate">$H^1$</span> no sirve con <span class="mate">$n\ge2$</span>, y <span class="mate">$H^1$</span> es justo lo que (ii) venía a permitir.</li>
@@ -2529,6 +2538,70 @@ window.MathJax={
     </ul>
     <p class="hecho">✅ Retirado. Se queda la razón, que es lo que valía: la ocupación de una política determinista es singular <span class="mate">$\rt$</span> el emparejamiento es el de dualidad <span class="mate">$\rt$</span> <span class="mate">$\Hs$</span> tiene que inyectarse en <span class="mate">$C$</span>. La alternativa de restringir <span class="mate">$\M$</span> baja a <code>obs:dos-condiciones</code>, dicha como vía cerrada.</p>
     <p class="artefacto">Artefacto: <code>overleaf/es/</code> y <code>overleaf/es/apendice_pruebas.tex</code></p>
+  </div>
+</li>
+<li class="tarea hecha abrible" data-hecha="1">
+  <button class="cabecera" type="button" aria-expanded="false">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">NJU-54</span>
+    <span class="titulo">Las condiciones de las dos fuentes, en un cuadro y en mi notación</span>
+    <span class="fecha">2026-08-24</span>
+    <span class="flecha" aria-hidden="true"></span>
+  </button>
+  <div class="detalle" hidden>
+    <p>Encargo suyo: <em>«listes lo más compacto posible las condiciones que pide cada fuente, y verifica lo de <span class="mate">$\psi\equiv1$</span>, pues en algunas partes tomas <span class="mate">$\psi\equiv1$</span> y en otras dices que no se puede»</em>. ✅ <strong>Un cuadro de diez filas</strong> tras <code>prop:condiciones</code>, con las tres hipótesis permanentes de cada fuente, las cuatro que solo pide Kurtz--Stockbridge y, aparte, lo que cada una exige <strong>para el LP</strong>. 🔴 <strong>Y <span class="mate">$\psi\equiv1$</span> sí vale, por una razón que no era la que yo daba.</strong> No sale de que <span class="mate">$\gen{}\varphi$</span> sea acotada: sale de que <strong><span class="mate">$A$</span> sea compacto</strong>, porque entonces toda <span class="mate">$\psi\in C(A)$</span> está acotada y <span class="mate">$b_\varphi\psi$</span> se absorbe en <span class="mate">$a_\varphi$</span>. Es <code>obs:psi</code>. ⚠️ <strong>Y (6.1) no es (6.2).</strong> Se citaban como si fueran la misma: (6.1) es <span class="mate">$\psi\le a+bc$</span>, que con <span class="mate">$\psi\equiv1$</span> se cumple con <span class="mate">$a=1$</span>, <span class="mate">$b=0$</span>; (6.2) pide <strong>subniveles de <span class="mate">$c$</span> compactos</strong> y no menciona a <span class="mate">$\psi$</span>, así que <span class="mate">$\psi\equiv1$</span> no la toca. Es la que <code>obs:tension</code> declara cerrada. 🔴 <strong>Tres correcciones suyas seguidas, y las tres en el mismo sitio:</strong></p>
+    <ul>
+      <li><strong>La lista salió primero en el chat.</strong> <em>«Te pedí que listaras las dichosas condiciones, ¿dónde están?»</em>. Un documento matemático es el entregable; el chat no lo es.</li>
+      <li><strong>Y luego en la notación de ellos.</strong> <em>«PON LA HPTA NOTACIÓN DE MI DOCUMENTO NO LA DEL DOCUMENTO DE ELLOS»</em>. Traducido con la tabla de <code>notacion.tex</code>: <span class="mate">$A\to\gen{}$</span>, <span class="mate">$U\to A$</span>, <span class="mate">$f\to\varphi$</span>, <span class="mate">$\widehat C(E)\to C_0(E)$</span>, <span class="mate">$E^\Delta\to E\cup\{\infty\}$</span>.</li>
+      <li><strong>Y la traducción se anunciaba dentro del PDF.</strong> Captura suya y <em>«JUEPUTA»</em>. La frase que decía que se había traducido la notación es exactamente lo que <code>notacion.tex</code> se mantiene fuera del PDF para evitar. Fuera esa y cinco sobrexplicaciones más.</li>
+    </ul>
+    <p class="hecho">✅ <strong>Y a petición suya el cuadro enuncia cada condición</strong> en vez de numerarla: <em>«¿por qué no defines en el cuadro decaimiento, positividad, crecimiento? Quita la numeración de ellos, y define <span class="mate">$a_\varphi$</span>, <span class="mate">$b_\varphi$</span>, acá no se sabe qué es»</em>. La numeración de la fuente vive solo en el <code>\fuente{}</code> como localizador.</p>
+    <p class="artefacto">Artefacto: <code>overleaf/es/sec2.tex</code>, <code>prop:condiciones</code> y <code>obs:psi</code></p>
+  </div>
+</li>
+<li class="tarea hecha abrible" data-hecha="1">
+  <button class="cabecera" type="button" aria-expanded="false">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">NJU-55</span>
+    <span class="titulo">La hipótesis de 1.6 es la finitud, no la masa</span>
+    <span class="fecha">2026-08-24</span>
+    <span class="flecha" aria-hidden="true"></span>
+  </button>
+  <div class="detalle" hidden>
+    <p class="alerta">🔴 <strong>Corrige a <code>NJU-51</code>, y el que la caza es él:</strong> <em>«pero más abajo habías dicho que no importaba si tomaba como dominio a las funciones <span class="mate">$C_0$</span> o <span class="mate">$C_c$</span>»</em>. Tenía razón, y <strong>mi afirmación de que la identidad de balance no dice nada sobre la masa era falsa.</strong></p>
+    <ul>
+      <li><span class="mate">$\mathbf 1\notin\dom(\gen{})=C_0^2(\R^d)$</span>, pero <strong>sí está en la bp-clausura de la gráfica</strong>: con <span class="mate">$\chi\in\mathscr C_c^\infty$</span> igual a <span class="mate">$1$</span> en la bola unidad y <span class="mate">$\varphi_k=\chi(\cdot/k)$</span> salen <span class="mate">$\nabla\varphi_k=O(1/k)$</span> y <span class="mate">$D^2\varphi_k=O(1/k^2)$</span>, luego <span class="mate">$\|\gen{}\varphi_k\|_\infty=O(1/k)\to0$</span> porque <span class="mate">$b$</span> y <span class="mate">$\sigma\sigma^\top$</span> son acotadas. Convergencia dominada da <span class="mate">$\rho\,\eta(E\times A)=1$</span>.</li>
+    </ul>
+    <p class="hecho">✅ Así que la hipótesis del recíproco es <strong><span class="mate">$\eta$</span> finita</strong>, que es más débil que la masa, y <strong>la masa es consecuencia</strong>. Bhatt--Borkar lo enuncian sobre <span class="mate">$\rho\,\eta\in\mathscr P(E\times A)$</span> porque es lo que les hace falta, no porque haga falta pedirlo. ⚠️ <strong>Y la razón por la que el argumento vale es la misma que sostiene <code>obs:test</code></strong>: las tres clases de funciones de prueba dan el mismo <span class="mate">$\M$</span> por el mismo corte. Era una sola cuenta usada en dos sitios. ✅ <strong>A petición suya la demostración bajó al apéndice</strong>, no al párrafo de después: <em>«si quieres poner una demostración, ponla en el apéndice, no en el párrafo posterior»</em>. El cuerpo se queda con el enunciado.</p>
+  </div>
+</li>
+<li class="tarea hecha abrible" data-hecha="1">
+  <button class="cabecera" type="button" aria-expanded="false">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">NJU-56</span>
+    <span class="titulo">Sus dos banderas dentro del documento, y la contradicción del cuadro</span>
+    <span class="fecha">2026-08-24</span>
+    <span class="flecha" aria-hidden="true"></span>
+  </button>
+  <div class="detalle" hidden>
+    <p>Sale de auditar el chat: había dejado <strong>dos avisos suyos escritos en el <code>.tex</code></strong>, y uno llevaba un día compilado y publicado.</p>
+    <ul>
+      <li><code>obs:riesz-integral</code>: cambió <code>[Lectura propia.]</code> por <strong><code>[No termino de entender.]</code></strong>. Atendido el mismo día desarrollando el enunciado (<span class="mate">$R^{-1}\delta_z=k_z$</span> y <span class="mate">$R^{-1}\eta=\int k_z\,d\eta$</span>).</li>
+      <li><code>obs:test</code>: <strong><code>[Verificar]</code></strong>, sobre que las tres clases den el mismo <span class="mate">$\M$</span>. ✅ <strong>Verificado y es cierto</strong>, con las fuentes delante: ninguna de las dos lo dice (Bhatt--Borkar Ej. 1 usa <span class="mate">$C_0^2$</span>, Kurtz--Stockbridge Ej. 3.4 usa <span class="mate">$\mathscr C^2_c$</span>), así que es lectura propia. Cortar por <span class="mate">$\chi(\cdot/k)$</span> y regularizar dan a la vez <span class="mate">$\varphi_k\to_{bp}\varphi$</span> y <span class="mate">$\gen{}\varphi_k\to_{bp}\gen{}\varphi$</span>, que es la densidad <strong>sobre la gráfica</strong>, y de ahí la doble contención de <span class="mate">$\M$</span>. Escrito en una línea con la razón dentro, respetando que él había cortado las seis mías.</li>
+    </ul>
+    <p class="alerta">🔴 <strong>Y el cuadro de <code>NJU-54</code> destapó una contradicción que <code>NJU-51</code> había señalado sin tocar:</strong> la fila «Estructura» dice en negrita que Bhatt--Borkar piden que <span class="mate">$\dom(\gen{})$</span> <strong>contenga las constantes</strong>, y <code>prop:condiciones</code> afirma justo encima que nuestro <span class="mate">$C_0^2(\R^d)$</span> cumple todas sus hipótesis. <strong><span class="mate">$C_0^2(\R^d)$</span> no las contiene.</strong> ✅ Y no es un fallo nuestro: <strong>su propio Ejemplo 1 toma <span class="mate">$C_0^2(\R^d)$</span></strong> y lo declaran dentro del marco. Lo que su demostración usa es que el dominio sea álgebra, separe puntos y <strong>no se anule en ningún punto</strong>, con lo que encajan <span class="mate">$E$</span> en un producto compacto de intervalos. Dicho en una frase tras el cuadro, apuntando a que <span class="mate">$(\mathbf 1,0)$</span> está en la bp-clausura de la gráfica, que es lo que <code>NJU-55</code> demuestra. ⚠️ <strong>La regla que deja:</strong> un cuadro que enuncia las hipótesis de la fuente <strong>contrasta con lo nuestro sin que nadie lo pida</strong>. Al escribirlo hay que releer el enunciado que dice que las cumplimos, fila por fila.</p>
+    <p class="artefacto">Artefacto: <code>overleaf/es/sec2.tex</code></p>
+  </div>
+</li>
+<li class="tarea pendiente abrible" data-hecha="0">
+  <button class="cabecera" type="button" aria-expanded="false">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">NJU-57</span>
+    <span class="titulo">Decidir qué pasa con el bloque del semigrupo, hoy comentado</span>
+    <span class="flecha" aria-hidden="true"></span>
+  </button>
+  <div class="detalle" hidden>
+    <p>Él comentó en Overleaf (<code>e8bd70a</code>) <code>eq:gen-pi</code>, <code>eq:J</code>, <code>prop:semigrupo</code>, <code>eq:J-semigrupo</code> y la forma resolvente del costo. Se reactivaron <strong>solo <code>eq:gen-pi</code> y <code>eq:J</code></strong>, que es el mínimo para que el §4 no se quede sin <span class="mate">$\Gen{\pi}$</span> ni sin el funcional que minimiza; lo demás sigue como comentario dentro del <code>.tex</code>. ⚠️ <strong>Un bloque comentado no es una decisión, es un aplazamiento</strong>, y además carga con <code>prop:semigrupo</code>, que es la que <code>NJU-24</code> tuvo que reatribuir a lectura propia. Dos salidas: borrarlo, o devolverlo con la justificación de por qué el §4 lo necesita. <strong>Para decidir:</strong> el §4 usa el semigrupo en <code>obs:sistema-vs-optimizacion</code> y en la lectura de <span class="mate">$V$</span> como variable dual. Si esa lectura se queda, la proposición hace falta; si no, se va entera.</p>
   </div>
 </li>
 <li class="tarea pendiente abrible" data-hecha="0">
@@ -2542,7 +2615,7 @@ window.MathJax={
     <p>Sale de verificar la web. <code>main.tex</code> dice que para mandárselo a Mauricio es <code>\ESfalse</code> + <code>\notaEstandar</code>, y <strong>esa versión lleva hoy</strong>:</p>
     <ul>
       <li>La prueba de <code>cor:masa</code> con <span class="mate">$\varphi\equiv1$</span>, que <strong>no es función de prueba admisible</strong>. Es un error, no una diferencia de redacción.</li>
-      <li><code>prop:balance</code> sin la hipótesis de masa.</li>
+      <li><code>prop:balance</code> sin ninguna hipótesis sobre <span class="mate">$\eta$</span> (en <code>es/</code> es la <strong>finitud</strong>, por <code>NJU-55</code>).</li>
       <li><strong>La caja <code>abierto</code> del previo que él borró en <code>es/</code></strong>, con la formulación superada de proyectar sobre <span class="mate">$c_E+Q$</span>.</li>
       <li>El apéndice entero en de Finetti.</li>
     </ul>
@@ -2563,7 +2636,7 @@ window.MathJax={
   </ul>
 </section>
 <footer>
-Generado el 2026-08-23 por <code>web/build_todo.py</code> a partir de los <code>TODO.md</code>. Editar esta página a mano no sirve de nada: se reescribe en la siguiente ejecución.
+Generado el 2026-08-24 por <code>web/build_todo.py</code> a partir de los <code>TODO.md</code>. Editar esta página a mano no sirve de nada: se reescribe en la siguiente ejecución.
 </footer>
 </div>
 <script>
