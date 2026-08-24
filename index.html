@@ -135,13 +135,14 @@ window.MathJax={
 <header class="principal">
 <h1>Propuesta de tesis — control óptimo</h1>
 <p class="sub">Decidir y proponer un tema en control óptimo inverso, en 2–3 meses desde el 2026-07-25.</p>
-<p class="global"><strong>113</strong> de <strong>179</strong> tareas completadas en todo el proyecto.</p>
+<p class="global"><strong>113</strong> de <strong>183</strong> tareas completadas en todo el proyecto.</p>
 </header>
 <nav class="pestanas" role="tablist">
 <button data-slug="preguntas_junca" role="tab">Preguntas a Junca<span class="n">9/28</span></button>
 <button data-slug="preguntas_investigacion" role="tab">Preguntas de investigación<span class="n">8/26</span></button>
 <button data-slug="referencias" role="tab">referencias<span class="n">8/16</span></button>
-<button data-slug="reuniones" role="tab">reuniones<span class="n">5/6</span></button>
+<button data-slug="asesor" role="tab">asesor<span class="n">10/13</span></button>
+<button data-slug="reuniones" role="tab">reuniones<span class="n">5/7</span></button>
 <button data-slug="infra" role="tab">General<span class="n">18/21</span></button>
 <button data-slug="explicaciones" role="tab">explicaciones<span class="n">3/5</span></button>
 <button data-slug="notas_junca" role="tab">notas junca<span class="n">44/59</span></button>
@@ -157,6 +158,7 @@ window.MathJax={
     <p class="contexto">La cola viva de lo que hay que preguntarle <strong>a él</strong>. No es la lista de una reunión: sobrevive a todas, y una pregunta respondida no se borra, se marca. Saber qué se preguntó y cuándo es parte del historial.</p>
     <p class="contexto alerta">🔴 <strong>Las preguntas las pone el usuario.</strong> El agente puede <strong>proponer</strong>, nunca añadir directamente: lo que se le ocurra va al grupo «Sin clasificar», y solo sube a la lista de verdad con permiso explícito. El motivo es que el tiempo del asesor es el recurso más escaso del proyecto, y una lista que crece sola acaba llena de cosas que se podían haber averiguado leyendo.</p>
     <p class="contexto"><strong>La otra lista existe y no es esta:</strong> <code>preguntas_investigacion</code>, que son las que <strong>no</strong> responde Mauricio sino el trabajo. Una pregunta se cierra aquí con una respuesta suya; allí, con una referencia o una demostración.</p>
+    <p class="contexto alerta">🔴 <strong>Desde el 2026-08-24 esta cola sirve para los dos, y NO se marca por destinatario.</strong> En las reuniones está también <strong>Camilo García Trillos</strong> (UCL), y la decisión del usuario es explícita: <em>«las preguntas no importa pa quien sea, se harán en la reunión»</em>. O sea que aquí no se abre grupo nuevo, no se etiqueta a quién va cada una, y <strong>no se abre subproyecto aparte</strong>. Lo que sí cambia al cerrarlas: al marcar <code>[x]</code>, <strong>decir quién contestó</strong>, porque eso sí calibra a quién se le pregunta qué.</p>
     <p class="contexto">Clasificado el 2026-07-27 con el usuario, pregunta por pregunta. Las prioridades son <strong>propuesta del agente</strong> y se cambian sin ceremonia.</p>
   </div>
   <div class="barra"><div class="relleno" style="width:32%"></div></div>
@@ -1212,13 +1214,194 @@ window.MathJax={
 </li>
   </ul>
 </section>
+<section class="panel" id="panel-asesor" role="tabpanel">
+  <h2>Conversaciones con el asesor</h2>
+  <div class="contexto-oculto" hidden>
+    <p class="contexto">Todo lo que sale de hablar con Mauricio Junca: grabaciones, transcripciones, resúmenes y las preguntas que quedan pendientes para la próxima. Es un subproyecto <strong>recurrente</strong>: no se cierra cuando se procesa una reunión, solo espera la siguiente.</p>
+  </div>
+  <div class="barra"><div class="relleno" style="width:77%"></div></div>
+  <p class="cuenta">10 de 13 completadas</p>
+  <ul class="tareas">
+<li class="tarea hecha abrible" data-hecha="1">
+  <button class="cabecera" type="button" aria-expanded="false">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">ASE-1</span>
+    <span class="titulo">Montar el subproyecto y la carpeta <code>2026-07-23/</code></span>
+    <span class="flecha" aria-hidden="true"></span>
+  </button>
+  <div class="detalle" hidden>
+    <p>Estructura creada y los 5 audios volcados a <code>2026-07-23/audio/</code>. El <code>CLAUDE.md</code> del subproyecto fija el procedimiento para las reuniones futuras, que es el motivo de que exista.</p>
+  </div>
+</li>
+<li class="tarea hecha abrible" data-hecha="1">
+  <button class="cabecera" type="button" aria-expanded="false">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">ASE-2</span>
+    <span class="titulo">Transcribir la reunión del 2026-07-23</span>
+    <span class="fecha">2026-07-26</span>
+    <span class="flecha" aria-hidden="true"></span>
+  </button>
+  <div class="detalle" hidden>
+    <p>20:14 en cinco tramos, con <code>large-v3</code> y reloj global continuo. Los tres archivos hechos. <strong>No hizo falta <code>pyannote</code></strong>: la atribución por contenido salió limpia salvo en el tramo administrativo de 00:52–01:46, que es el que menos importa y queda marcado como dudoso. Lo grande que salió: el asesor <strong>saca del alcance</strong> los oráculos, el muestreo y el SMD (<em>«conocemos todo, simplemente resolver el problema de control inverso»</em>), dice que su sistema de EDP <strong>puede salir distinto</strong>, y nombra una segunda ruta, <strong>FBSDE</strong>, que él no domina y Camilo sí.</p>
+    <p><code>resumen.md</code>. Script reutilizable: <code>transcribir.py</code>. ✅ <strong>Las dos dudas que quedaban, cerradas.</strong> El curso <strong>sí</strong> es de transporte óptimo, y <strong>no</strong> toca la tesis (<code>P11</code>, 2026-07-26). Y la atribución de 00:52–01:46 <strong>se deja como está sin investigarla</strong> (2026-07-27): el usuario zanja que lo de Andrés Medaglia no tiene nada que ver. Los turnos siguen marcados <code>?</code>, que es lo honesto. ⚠️ <strong>Lo que sí sigue abierto son cinco reconstrucciones marcadas</strong>, y una es grave: en <strong>[19:26] añadí una negación que no está en el audio</strong>. Sin ella la frase es matemáticamente al revés, pero eso es interpretar, no transcribir. Ubicación exacta para reescuchar y el resto de dudas, en <code>dudas_de_audio.md</code>.</p>
+    <p class="artefacto">Artefactos: <code>2026-07-23/transcripcion_cruda.md</code>, <code>transcripcion_limpia.md</code>,</p>
+  </div>
+</li>
+<li class="tarea hecha abrible" data-hecha="1">
+  <button class="cabecera" type="button" aria-expanded="false">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">ASE-3</span>
+    <span class="titulo">Extraer de la transcripción lo que sea tarea o referencia</span>
+    <span class="fecha">2026-07-26</span>
+    <span class="flecha" aria-hidden="true"></span>
+  </button>
+  <div class="detalle" hidden>
+    <p>Repartido a <code>referencias</code>. <strong>Dos tareas nuevas</strong>, las dos por encargo explícito del asesor: <code>REF-9</code> (revisión de literatura, que él ya intentó sin encontrar nada) y <code>REF-10</code> (la ruta alternativa del principio del máximo y las FBSDE). <strong>Cuatro reencuadradas</strong>: <code>REF-4</code> recupera el transporte óptimo y baja el SMD; <code>REF-5</code> pasa de iniciativa a encargo y gana la pista de Touzi; <code>REF-6</code> baja de urgencia; <code>REF-7</code> sube a prerrequisito duro. El acotamiento del alcance (control inverso con todo conocido, sin oráculos ni muestreo) va en la cabecera del <code>TODO.md</code> de <code>referencias</code>, porque manda sobre todas sus tareas.</p>
+  </div>
+</li>
+<li class="tarea hecha abrible" data-hecha="1">
+  <button class="cabecera" type="button" aria-expanded="false">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">ASE-5</span>
+    <span class="titulo">Transcribir la reunión del 2026-08-03</span>
+    <span class="fecha">2026-08-03</span>
+    <span class="flecha" aria-hidden="true"></span>
+  </button>
+  <div class="detalle" hidden>
+    <p>17:53 en dos tramos, con <code>large-v3</code>. Los tres archivos hechos, más <code>dudas_de_audio.md</code>. <strong>La atribución de turnos está SIN CONFIRMAR</strong>: a diferencia de la vez pasada, nadie ha validado ningún pasaje de prueba. 🔴 Lo grande: el asesor da <strong>un encargo concreto que no estaba en la agenda</strong>, <em>«el primer reto: justificar bien este teorema 4.2»</em>, con su lista de lo que hay que fijar (quién es <span class="mate">$H$</span>, dónde vive <span class="mate">$c$</span>, y <span class="mate">$\mathcal M$</span> acotado, convexo y compacto). Y responde <strong>media <code>P16</code></strong>: la función de valor no tiene por qué aparecer, depende de cómo se plantee el gap. 🔴 <strong>Y lo que NO pasó pesa igual</strong>: se pidió la decisión de las cinco direcciones y <em>«no se había llegado»</em>; <code>P21</code> no se mencionó nunca; la grabación se corta con un tercero entrando. ⚠️ <strong>Nueve dudas abiertas</strong>, y la 1 es grave: la frase que explica por qué el v2 evita el punto fijo está mal transcrita y <strong>no se ha reconstruido</strong>.</p>
+    <p><code>resumen.md</code>, <code>dudas_de_audio.md</code>. Nota de infraestructura: el venv de Whisper <strong>no existía en la Surface</strong> (ARM64, y no hay wheels <code>win_arm64</code> de <code>ctranslate2</code> ni de <code>torch</code>). Se montó con Python 3.13 x64 emulado en la misma ruta de siempre. Corrió a 2,2x tiempo real. Hizo falta <code>hf_xet</code>: sin él la descarga del modelo se queda clavada en cero.</p>
+    <p class="artefacto">Artefactos: <code>2026-08-03/transcripcion_cruda.md</code>, <code>transcripcion_limpia.md</code>,</p>
+  </div>
+</li>
+<li class="tarea hecha abrible" data-hecha="1">
+  <button class="cabecera" type="button" aria-expanded="false">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">ASE-6</span>
+    <span class="titulo">Confirmar la atribución y las dudas de la reunión</span>
+    <span class="fecha">2026-08-03</span>
+    <span class="flecha" aria-hidden="true"></span>
+  </button>
+  <div class="detalle" hidden>
+    <p><strong>Las nueve preguntadas y cerradas el mismo día.</strong> ✅ La atribución de la limpia entera queda <strong>confirmada</strong> sobre sus dos pasajes de prueba. 🔴🔴 <strong>El hallazgo grande no era ninguna de las que yo priorizaba: cuando Mauricio habla en tercera persona se refiere a ChatGPT.</strong> Parte de la arquitectura del v2 salió de ahí, él lo sabe, y su <em>«todo eso asume todo este tipo de cosas que no sabemos»</em> [12:00] pasa de sonar a modestia a ser un diagnóstico. Es la razón de fondo de que <code>REF-13</code> sea verificar. ✅ <strong>Y dos deícticos resueltos que no estaban en el audio</strong>: <em>«este problema»</em> de [07:12] es la <strong>ecuación (23)</strong>, y <em>«esto»</em> de [13:51] es el <strong>§7.1</strong>, con el motivo del «curiosamente» de propina. ✅ La <strong>6</strong> se resolvió <strong>sin audio</strong>, contra el <code>.mmd</code>: el «3.1» es <em>«A technical point: the cost space matters»</em>, y de paso salió que el «4.2» es un teorema cuyas hipótesis <strong>corrigen</strong> las que yo había escrito de oído. ⬜ <strong>Tres quedan sin resolver</strong> (4:17, 8:12 y 16:41) y <strong>así se quedan</strong>. Rellenarlas por plausibilidad es el fallo que esta lista existe para evitar. Método, ya portado a la skill <code>procesa</code>: <strong>todas de corrido con <code>AskUserQuestion</code></strong>, en orden temporal, con la reconstrucción propia como opciones y el crudo en el <code>preview</code>.</p>
+  </div>
+</li>
+<li class="tarea hecha abrible" data-hecha="1">
+  <button class="cabecera" type="button" aria-expanded="false">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">ASE-4</span>
+    <span class="titulo">Abrir <code>preguntas_pendientes.md</code></span>
+    <span class="fecha">2026-07-26</span>
+    <span class="flecha" aria-hidden="true"></span>
+  </button>
+  <div class="detalle" hidden>
+    <p>Quince preguntas en tres niveles. <strong>D1 sigue sin preguntarse</strong> y encabeza la lista: decide si el plan de estudio es ancho o estrecho. Las otras tres de prioridad alta salen de que el asesor dejó abierto más de lo que parecía: si el borrador es enunciado o trabajo en curso, si la ruta es HJB o FBSDE, y si la variable son medidas de ocupación o políticas, que dudó él mismo en el primer minuto.</p>
+    <p class="artefacto">Artefacto: <code>subproyectos/asesor/preguntas_pendientes.md</code></p>
+  </div>
+</li>
+<li class="tarea hecha abrible" data-hecha="1">
+  <button class="cabecera" type="button" aria-expanded="false">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">ASE-4</span>
+    <span class="titulo">La reunión del 2026-08-10 no se dio</span>
+    <span class="fecha">2026-08-12</span>
+    <span class="flecha" aria-hidden="true"></span>
+  </button>
+  <div class="detalle" hidden>
+    <p>Confirmado por él: <em>«No, no se dio. Y mañana tampoco habrá pues es festivo»</em>. <strong>No hay audio, no hay nada que procesar</strong> y no se abre carpeta en <code>subproyectos/asesor/</code>. ✅ <strong>La agenda no se pierde ni se rehace.</strong> <code>REU-5</code> la dejó escrita y compilada, y sigue vigente: lo que llevaba (las preguntas de <code>preguntas_junca</code> y el estado de los tres objetivos) no ha cambiado. Cuando se fije fecha nueva se reutiliza y se le añade lo que haya salido en medio. ⚠️ <strong>El 2026-08-13 es festivo</strong>, así que la reunión no puede caer ahí. 🔴 <strong>Y queda una tarea de verdad, que es suya: pedirle fecha a Mauricio.</strong> Es <code>ASE-5</code>.</p>
+    <p class="artefacto">Artefacto: <code>subproyectos/reuniones/overleaf/reuniones/2026-08-10/agenda.tex</code></p>
+  </div>
+</li>
+<li class="tarea hecha abrible" data-hecha="1">
+  <button class="cabecera" type="button" aria-expanded="false">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">ASE-5</span>
+    <span class="titulo">Pedirle a Mauricio fecha nueva de reunión</span>
+    <span class="fecha">2026-08-18</span>
+    <span class="flecha" aria-hidden="true"></span>
+  </button>
+  <div class="detalle" hidden>
+    <p>La del 2026-08-10 no se dio y el 13 es festivo, así que <strong>no había ninguna reunión en el calendario</strong>. La agenda de <code>REU-5</code> estaba escrita y esperando. 🔴 <strong>Depende de él, no del proyecto.</strong> Aquí solo se puede dejar el borrador de correo si lo pide; el subproyecto <code>correos</code> tiene el registro y el estilo. ⚠️ <strong>Y es lo que bloqueaba el calendario entero:</strong> el horizonte de la propuesta es 2–3 meses desde el 2026-07-25, y las preguntas que solo cierra él (<code>preguntas_junca</code>) se quedan quietas mientras no haya fecha. ✅ <strong>Cerrada por los hechos: hubo reunión el 2026-08-18.</strong> Se preparó para el lunes 17, que resultó festivo, y se corrió al martes. La agenda que se llevó es la de <code>2026-08-17</code>, no la de <code>2026-08-10</code>.</p>
+  </div>
+</li>
+<li class="tarea hecha abrible" data-hecha="1">
+  <button class="cabecera" type="button" aria-expanded="false">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">ASE-7</span>
+    <span class="titulo">Procesar la reunión del 2026-08-18</span>
+    <span class="fecha">2026-08-20</span>
+    <span class="flecha" aria-hidden="true"></span>
+  </button>
+  <div class="detalle" hidden>
+    <p>31:32 en un solo tramo, grabado con el celular. Transcrita con <code>large-v3</code> en CPU, atribuida, resumida y repartida. 🔴 <strong>El hallazgo, y no estaba en el guión:</strong> dice que el Teorema 4.2 <strong>no depende de la norma de <span class="mate">$\mathcal H$</span> ni del operador <span class="mate">$R$</span></strong>, que es <em>«escribir bonito»</em>, y que lo único que se usa es unicidad en cada una de las dos mitades [17:58]. Va a verificarse en <code>I-24</code>, <strong>no</strong> a la nota, por instrucción del usuario: <em>«lo dijo Mauricio pero no significa que ya sea verdad»</em>. ✅ <strong><code>P31</code> respondida a medias</strong>: escribió <span class="mate">$H^1$</span> <em>«imaginando algo un poco más estándar, como un laplaciano normal»</em> [05:43], o sea por defecto y no a sabiendas. Del §8 no se habló, así que no se cierra. ✅ <strong>Tarea nueva: <code>REF-15</code></strong>, las penalizaciones de procesamiento de imágenes. Y <code>I-25</code>, la no localidad de <span class="mate">$R$</span> con <span class="mate">$s$</span> fraccionario. 🔴 <strong>Esta reunión va al revés que las dos anteriores: el que expone es el estudiante.</strong> La heurística de atribución de las otras dos no vale aquí, y la primera versión de la limpia se equivocó por usarla: le atribuyó al asesor una validación independiente del umbral, el argumento de las esquinas del producto y un PDF prometido. <strong>Ninguna de las tres era suya.</strong> Las tres se corrigieron con el usuario. ⚠️ <strong>Ocho de las doce dudas de audio resueltas; cuatro siguen marcadas</strong> y ninguna bloquea nada. La que más se llevaría si se reescuchara es la 7, [21:30], que sería el argumento de por qué el régimen de densidades es peligroso.</p>
+    <p class="artefacto">Artefacto: <code>subproyectos/asesor/2026-08-18/resumen.md</code></p>
+  </div>
+</li>
+<li class="tarea hecha abrible" data-hecha="1">
+  <button class="cabecera" type="button" aria-expanded="false">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">ASE-8</span>
+    <span class="titulo">Procesar la reunión del 2026-08-24</span>
+    <span class="fecha">2026-08-24</span>
+    <span class="flecha" aria-hidden="true"></span>
+  </button>
+  <div class="detalle" hidden>
+    <p>4:42 en un solo tramo. Transcrita con <code>large-v3</code> en CPU, atribuida, resumida y repartida el mismo día. 🔴 <strong>Solo se grabó el final.</strong> El audio empieza y termina a mitad de frase, y de la mayor parte de la reunión no queda registro. Lo que sobrevive de ella, además, es <strong>el tablero</strong>, con tres objetivos que aporta el usuario y que el audio da por escritos. 🔴 <strong>El hallazgo grande es un desacuerdo de estado, no un contenido nuevo.</strong> Los tres objetivos del tablero <strong>son los mismos del 2026-08-09</strong> que ya estaban en <code>docs/plan.md</code> §7, allí como recuerdo del usuario y hoy por escrito. Pero el plan marcaba los objetivos 1 y 2 como cubiertos y <strong>él no los da por cerrados</strong>: sigue pidiendo <em>«terminar esto, encontrar las condiciones donde estamos viviendo»</em> [01:20] y reabre si el espacio es todo <span class="mate">$\mathbb R^d$</span> [01:14]. Corregido en <code>plan.md</code>, sin borrar lo que decía. ✅ <strong>El objetivo 3 gana el porqué de su orden</strong>, que no estaba registrado: la vía discreta es el <em><strong>benchmark</strong></em>, la del cuadrático es (25)→(26) de la nota, y la del sistema de EDP lleva <span class="mate">$R$</span> pero no cuadrático. 🔴 <strong>Repite la afirmación de <code>I-25</code></strong>, que con <span class="mate">$s&gt;1$</span> el operador ya no es lineal, y ahora <strong>como premisa del orden de dificultad numérica</strong>. El usuario: <em>«hay que verificar esto»</em>. Sube de prioridad y no entra a la nota. ✅ <strong><code>REF-15</code> no se cierra y él insiste dos veces</strong>: la búsqueda que se hizo fue general y no entró en imágenes, por reconocimiento propio [02:26]. Lo que sí aportó es que la pasada general está agotada. ✅ <strong>Turnos mixtos, y confirmados uno a uno.</strong> Expone M en [00:00]–[02:07] y L en [02:09]–[04:37]. Sin guión de <code>/reunion</code> que calibrara, así que se preguntó todo. ⚠️ <strong>Doce dudas de audio: diez resueltas</strong> — dos leyendo el documento y ocho con el usuario — <strong>y dos siguen marcadas</strong>, las dos de vocabulario y ninguna bloquea nada. 🔴 <strong>Una de las resueltas era una negación que Whisper no transcribe</strong> [02:51], del mismo tipo que el incidente del 2026-07-23. Se preguntó antes de escribirla, y el usuario la confirmó. <strong>Tareas nuevas: <code>NJU-58</code></strong> (cerrar las condiciones del objetivo 1 y dejar la nota limpia), y dos preguntas propuestas sin aprobar, <strong><code>P33</code></strong> y <strong><code>P34</code></strong>. Reencuadradas <code>REF-13</code>, <code>REF-15</code>, <code>NJU-7</code>, <code>NJU-12</code>, <code>I-18</code>, <code>I-24</code>, <code>I-25</code>, <code>P28</code> y <code>P29</code>.</p>
+    <p class="artefacto">Artefacto: <code>subproyectos/asesor/2026-08-24/resumen.md</code></p>
+  </div>
+</li>
+<li class="tarea pendiente abrible" data-hecha="0">
+  <button class="cabecera" type="button" aria-expanded="false">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">ASE-9</span>
+    <span class="titulo">🔴 Asegurar la grabación completa del Zoom del 2026-08-28</span>
+    <span class="flecha" aria-hidden="true"></span>
+  </button>
+  <div class="detalle" hidden>
+    <p><strong>Es el riesgo más caro que tiene el proyecto abierto, y ya se materializó una vez.</strong> De la reunión del 2026-08-24 existen <strong>4:42</strong> y el resto no. Una reunión no grabada no se recupera: no hay transcripción, no hay resumen, y lo accionable se pierde entero. <strong>Qué cambia el 28:</strong> es por Zoom, así que el celular deja de ser el plan. El usuario, preguntado: <em>«no sé, pues de algún modo grabaré, pero si no puedo grabar por Zoom grabaré el audio del PC, algo haré»</em>. O sea que <strong>no está decidido</strong>, y decidirlo la mañana del viernes es cómo se pierde otra. <strong>Lo que hay que dejar resuelto antes, y en este orden:</strong></p>
+    <ul>
+      <li>¿Tiene permiso de grabación en ese Zoom? Con un tercero en la sala <strong>la decisión deja de ser solo suya</strong>, y conviene pedirlo al empezar.</li>
+      <li>Si Zoom graba: ¿local o en la nube, y <strong>por pistas separadas</strong>? Las pistas separadas resuelven de gratis la atribución de turnos, que es <code>ASE-10</code>.</li>
+      <li>Si no: capturar el audio del PC. Hay que <strong>probarlo antes del viernes</strong>, no ese día.</li>
+    </ul>
+    <p class="aviso">⚠️ <strong>Y sea cual sea la vía, el archivo va a <code>2026-08-28/audio/</code></strong> y el resto del procedimiento no cambia.</p>
+  </div>
+</li>
+<li class="tarea pendiente abrible" data-hecha="0">
+  <button class="cabecera" type="button" aria-expanded="false">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">ASE-10</span>
+    <span class="titulo">La atribución de turnos con tres voces</span>
+    <span class="flecha" aria-hidden="true"></span>
+  </button>
+  <div class="detalle" hidden>
+    <p class="alerta">🔴 <strong>La heurística de <code>/procesa</code> está escrita para dos</strong>, y es «el asesor explica, el estudiante pregunta». Con <strong>Camilo García Trillos</strong> en la reunión hay <strong>dos personas que explican</strong>, así que el contenido deja de decidir quién habla. El fallo que esto produce es el mismo del 2026-08-18 pero peor: entonces se confundían dos voces y ahora pueden ser tres. <strong>Las dos salidas, y no son excluyentes:</strong></p>
+    <ul>
+      <li>🟢 <strong>Pistas separadas de Zoom</strong>, si la grabación las da. Es la salida barata y la resuelve entera. Depende de <code>ASE-9</code>.</li>
+      <li><strong><code>WhisperX</code> + <code>pyannote</code></strong>, que hasta hoy era plan B. Con tres hablantes deja de serlo. ⚠️ Arrastra <code>torch</code> y exige cuenta de HuggingFace con modelos <em>gated</em>, y <strong>en ARM64 no hay ruedas de <code>torch</code></strong>, así que montarlo no es inmediato. <strong>Se monta antes de necesitarlo, no después.</strong></li>
+    </ul>
+    <p><strong>Y una cosa que no se arregla con tecnología:</strong> aunque la diarización diga que hay tres voces, <strong>cuál es cuál sigue necesitando al usuario</strong>. Lo que se gana es no tener que adivinar los cortes. ⚠️ <strong>Mientras no esté resuelto, la limpia del 28 se escribe con los turnos marcados <code>?</code> y se pregunta</strong>, que es lo honesto.</p>
+  </div>
+</li>
+<li class="tarea pendiente abrible" data-hecha="0">
+  <button class="cabecera" type="button" aria-expanded="false">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">ASE-11</span>
+    <span class="titulo">Fichar quién es Camilo García Trillos y en qué puede ayudar</span>
+    <span class="flecha" aria-hidden="true"></span>
+  </button>
+  <div class="detalle" hidden>
+    <p><strong>Nace el 2026-08-24 con su incorporación.</strong> Del UCL, en Londres, y hasta aquí llega lo que se sabe: <em>«un conocido de Junca se interesó en el problema e investigará con nosotros»</em>. 🔴 <strong>No se le atribuye ningún área de trabajo sin comprobarla.</strong> La regla 6 del proyecto — el perfil se afirma con evidencia — vale también para la gente, y con la de Camilo <strong>Hernández</strong> ya se vio para qué sirve tenerlo escrito: saber que él es quien sabe de FBSDE cambió a quién se le pregunta qué. <strong>Por qué importa y no es cortesía:</strong> los tres objetivos del tablero incluyen uno enteramente numérico, y <code>I-25</code>, <code>I-18</code> y <code>P31</code> son preguntas de análisis y de discretización donde Junca ya dijo tres veces que no es su terreno. <strong>Si el nuevo cubre ese hueco, cambia a quién se le lleva qué</strong>; si no, no cambia nada y conviene saberlo igual. ⚠️ <strong>No confundirlo con Camilo Hernández</strong>, que es otra persona y otro papel. Los dos están en <code>CLAUDE.md</code>. <strong>Cómo se piensa atacar:</strong> su página del UCL y sus publicaciones, que es uso navegacional. Antes del viernes 28, para no llegar a ciegas.</p>
+  </div>
+</li>
+  </ul>
+</section>
 <section class="panel" id="panel-reuniones" role="tabpanel">
   <h2>Preparar cada reunión con el asesor</h2>
   <div class="contexto-oculto" hidden>
     <p class="contexto">Hermano de <code>asesor</code> y con la frontera clara: aquel procesa el <strong>después</strong> de una reunión, este prepara el <strong>antes</strong>. Un capítulo por semana en un Overleaf propio, con las preguntas que se llevan, las lecturas que hay que hacer, y el contexto matemático que hace falta para poder seguir la conversación. <strong>Recurrente</strong>: no se cierra, solo espera la siguiente.</p>
   </div>
-  <div class="barra"><div class="relleno" style="width:83%"></div></div>
-  <p class="cuenta">5 de 6 completadas</p>
+  <div class="barra"><div class="relleno" style="width:71%"></div></div>
+  <p class="cuenta">5 de 7 completadas</p>
   <ul class="tareas">
 <li class="tarea hecha abrible" data-hecha="1">
   <button class="cabecera" type="button" aria-expanded="false">
@@ -1293,6 +1476,24 @@ window.MathJax={
   </button>
   <div class="detalle" hidden>
     <p>Hallazgo del 2026-08-09 auditando la migración de estilo. La plantilla tiene los tres modos y las tres macros, pero el <strong>contenido</strong> usa <code>\displayfin</code> <strong>cero veces</strong>, así que <code>\notaDeFinetti</code> no puede reemplazar ningún display y el modo no hace nada. En <code>notas_junca</code> ya está arreglado (<code>NJU-11</code>): el guard de <code>\dfin</code> pasa a <code>=2</code> y se añadió <code>\eqfin</code> para displays <strong>numerados</strong>, que <code>\displayfin</code> no cubre. Aquí falta portar las dos cosas y autorar los displays.</p>
+  </div>
+</li>
+<li class="tarea pendiente abrible" data-hecha="0">
+  <button class="cabecera" type="button" aria-expanded="false">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">REU-7</span>
+    <span class="titulo">Capítulo de la reunión del 2026-08-28, la primera del formato nuevo</span>
+    <span class="flecha" aria-hidden="true"></span>
+  </button>
+  <div class="detalle" hidden>
+    <p class="alerta">🔴 <strong>Viernes por la mañana y por Zoom</strong>, y con <strong>Camilo García Trillos</strong> (UCL) además de Junca. Es la primera del formato nuevo, decidido el 2026-08-24. El último capítulo preparado es el del 2026-08-17: <strong>hubo dos reuniones sin guión</strong>, la del 18 y la del 24. <strong>Lo que hay que llevar, y sale entero de la reunión del 24:</strong></p>
+    <ul>
+      <li><strong>El encargo, que es <code>NJU-58</code>:</strong> cerrar las condiciones del objetivo 1 — en particular si el espacio es todo <span class="mate">$\mathbb R^d$</span>, que es <code>P29</code> — y dejar la nota limpia con la elección de <span class="mate">$\mathcal H$</span>.</li>
+      <li><strong><code>REF-15</code></strong>, que él no dio por cerrada e insistió dos veces: la literatura de penalizaciones en imágenes.</li>
+      <li><strong><code>I-25</code></strong>, si para entonces está cerrada. Es su afirmación de que el operador con <span class="mate">$s&gt;1$</span> ya no es lineal, y <strong>sostiene el orden que propuso para las tres vías numéricas</strong>. Se lleva como resultado propio, no como corrección suya.</li>
+      <li><strong><code>P33</code> y <code>P34</code></strong>, si el usuario las aprueba: si el objetivo 3 pide las tres vías o una, y si la nota deja varias elecciones de <span class="mate">$\mathcal H$</span>.</li>
+    </ul>
+    <p class="aviso">⚠️ <strong>El paso 0 de <code>/reunion</code> no puede copiarse del estado del 18.</strong> La entrada del 2026-08-24 de <code>estado_de_conocimiento.md</code> está <strong>observada, no declarada</strong>, y solo cubre 4:42 de reunión. Hay que preguntarle. 🔴 <strong>Y hay un lector nuevo del que no se sabe nada.</strong> El contexto matemático se sigue calibrando <strong>para el usuario</strong>; lo que cambia es que la agenda es más probable que se enseñe. Ver <code>CLAUDE.md</code>, «Cuándo, y quién va a estar». <strong>Depende de <code>ASE-9</code></strong> solo en un sentido: si la grabación no está resuelta, el capítulo lo dice para que no se olvide ese día.</p>
   </div>
 </li>
   </ul>
@@ -1895,7 +2096,7 @@ window.MathJax={
       <li><strong>Fijar dónde se vive</strong>, y en particular si el espacio de estados es todo <span class="mate">$\mathbb R^d$</span>. Eso es <code>P29</code> y <code>REF-13</code>; lo que hay escrito es la Lyapunov de <code>NJU-34</code> (Prop. 5.6), y lo que falta es la extensión de la identidad de balance a funciones test no acotadas.</li>
       <li><strong>Dejar una versión limpia</strong> con la elección de <span class="mate">$\mathcal H$</span> — <em>«que ya simplemente es RKHS»</em> [02:01].</li>
     </ul>
-    <p class="alerta">🔴 <strong>Y es la palanca del objetivo 2:</strong> <em>«si uno está listo, los dos no deberían ser tan complicados»</em> [01:29], precisado por el usuario como que si el objetivo 1 queda bien escrito el 2 no debería ser difícil. <strong>Nada del §6 se adelanta antes que esto.</strong> ⚠️ <strong>El plural «o con elecciones de <span class="mate">$\mathcal H$</span>: puede que no sea una sola» no se ejecuta todavía.</strong> Depende de <code>I-24</code>, sin verificar, y de qué conteste <code>P34</code>. Escribir la nota sobre hipótesis abstractas en vez de sobre <span class="mate">$H^s$</span> es reescribirla entera. ⚠️ <strong>Y lo que él va a leer es la versión inglesa</strong>, que <code>NJU-52</code> declara materialmente mal. Eso hay que resolverlo antes de mandarle <em>«uno bien escrito»</em>. <strong>Cómo se piensa atacar:</strong> primero la tensión de <code>P29</code>, que es lo único que falta de las condiciones; después la pasada de limpieza sobre <code>es/</code>, y solo entonces la inglesa.</p>
+    <p class="alerta">🔴 <strong>Y es la palanca del objetivo 2:</strong> <em>«si uno está listo, los dos no deberían ser tan complicados»</em> [01:29], precisado por el usuario como que si el objetivo 1 queda bien escrito el 2 no debería ser difícil. <strong>Nada del §6 se adelanta antes que esto.</strong> ⚠️ <strong>El plural «o con elecciones de <span class="mate">$\mathcal H$</span>: puede que no sea una sola» no se ejecuta todavía.</strong> Depende de <code>I-24</code>, sin verificar, y de qué conteste <code>P34</code>. Escribir la nota sobre hipótesis abstractas en vez de sobre <span class="mate">$H^s$</span> es reescribirla entera. ⚠️ <strong>Y lo que él va a leer es la versión inglesa</strong>, que <code>NJU-52</code> declara materialmente mal. Eso hay que resolverlo antes de mandarle <em>«uno bien escrito»</em>. 🔴 <strong>El plazo se acorta: no es el lunes, es el VIERNES 2026-08-28.</strong> En el audio él dice <em>«para el siguiente lunes»</em> [01:02], pero ese mismo día se cambió el formato de las reuniones a viernes por la mañana. Son cuatro días, no siete. Ver <code>docs/plan.md</code> §8. <strong>Cómo se piensa atacar:</strong> primero la tensión de <code>P29</code>, que es lo único que falta de las condiciones; después la pasada de limpieza sobre <code>es/</code>, y solo entonces la inglesa.</p>
   </div>
 </li>
 <li class="tarea hecha abrible" data-hecha="1">
