@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
 <title>Propuesta de tesis · TODO</title>
-<!-- GENERADO por web/build_todo.py el 2026-08-24. NO EDITAR A MANO: los TODO.md mandan, este archivo se reescribe. -->
+<!-- GENERADO por web/build_todo.py el 2026-09-10. NO EDITAR A MANO: los TODO.md mandan, este archivo se reescribe. -->
 <style>
 :root{
   --fondo:#fbfaf7; --papel:#fff; --tinta:#1c1a17; --suave:#6b6558;
@@ -135,7 +135,7 @@ window.MathJax={
 <header class="principal">
 <h1>Propuesta de tesis — control óptimo</h1>
 <p class="sub">Decidir y proponer un tema en control óptimo inverso, en 2–3 meses desde el 2026-07-25.</p>
-<p class="global"><strong>113</strong> de <strong>183</strong> tareas completadas en todo el proyecto.</p>
+<p class="global"><strong>115</strong> de <strong>186</strong> tareas completadas en todo el proyecto.</p>
 </header>
 <nav class="pestanas" role="tablist">
 <button data-slug="preguntas_junca" role="tab">Preguntas a Junca<span class="n">9/28</span></button>
@@ -143,9 +143,9 @@ window.MathJax={
 <button data-slug="referencias" role="tab">referencias<span class="n">8/16</span></button>
 <button data-slug="asesor" role="tab">asesor<span class="n">10/13</span></button>
 <button data-slug="reuniones" role="tab">reuniones<span class="n">5/7</span></button>
-<button data-slug="infra" role="tab">General<span class="n">18/21</span></button>
+<button data-slug="infra" role="tab">General<span class="n">19/22</span></button>
 <button data-slug="explicaciones" role="tab">explicaciones<span class="n">3/5</span></button>
-<button data-slug="notas_junca" role="tab">notas junca<span class="n">44/59</span></button>
+<button data-slug="notas_junca" role="tab">notas junca<span class="n">45/61</span></button>
 </nav>
 <div class="controles">
 <label><input type="checkbox" id="ocultar"> Esconder las completadas</label>
@@ -733,7 +733,7 @@ window.MathJax={
       <li>la matriz deja de ser rala, y con ella el coste por iteración;</li>
       <li>sobre <span class="mate">$\mathbb R^d$</span> hay salida limpia por Fourier, y sobre el toro también, pero eso es una restricción sobre el dominio, no un detalle.</li>
     </ul>
-    <p class="hecho">✅ <strong>Lo que probablemente lo desactiva, y hay que comprobarlo:</strong> <code>NJU-34</code> ya estableció que la (24) nunca pide resolver <span class="mate">$Rc=\eta$</span>, sino que aplica <span class="mate">$R^{-1}$</span> a una <strong>medida</strong>, y eso es convolución con el núcleo de Bessel, sin malla. Si eso vale, la no localidad no cuesta nada. <strong>Pero entonces la respuesta hay que escribirla</strong>, porque hoy no está escrita en ningún sitio. Emparentada con <code>I-18</code> y con <code>P31</code>. 🔴 <strong>SUBE de prioridad el 2026-08-24: lo repitió, y ahora ordena el trabajo numérico.</strong> <em>«Ese pedazo es no lineal; llevarlo a ese vuelve a ser no lineal, y cualquier cosa no lineal obviamente es más complicada»</em> [00:00]–[00:22]. El usuario confirma qué señalaba — <strong>la última ecuación del sistema acoplado</strong>, <span class="mate">$\alpha(I-\kappa\Delta)^s(c-\widehat c)=\eta_A-\eta_E$</span> — y con qué sentido: <strong>con <span class="mate">$s=1$</span> era lineal y con <span class="mate">$s&gt;1$</span> ya no</strong>. Y añade, textual: <em>«hay que verificar esto»</em>. <strong>Lo que cambia respecto del 18, y por eso no es una repetición inocua:</strong> el 18 era un comentario al margen; hoy <strong>es la premisa desde la que ordena las tres vías numéricas del objetivo 3</strong>. Es lo que hace de la vía del sistema de EDP la difícil y de la discreta el <em>benchmark</em>. Si la premisa es falsa, el orden de dificultad que propone puede no ser el que es. ⚠️ <strong>Y hay un matiz que la respuesta tiene que recoger, o no responde:</strong> el umbral no es <span class="mate">$s&gt;1$</span> sino <strong><span class="mate">$s$</span> no entero</strong>. Con <span class="mate">$s$</span> entero <span class="mate">$(I-\kappa\Delta)^s$</span> sigue siendo un operador <strong>diferencial</strong> de orden <span class="mate">$2s$</span>, o sea local; lo que rompe la localidad es la potencia fraccionaria. Es coherente con lo que ya observó <code>NJU-50</code> sobre que subir <span class="mate">$s$</span> no pone una ecuación de cuarto orden en el camino. <strong>Lectura propia y sin verificar.</strong> 🔴 <strong>No se le repite como suyo ni entra a la nota</strong> hasta que esto se cierre. Regla del 2026-08-18: una afirmación suya sin demostración es una pregunta de investigación, no un hecho.</p>
+    <p class="hecho">✅ <strong>Lo que probablemente lo desactiva, y hay que comprobarlo:</strong> <code>NJU-34</code> ya estableció que la (24) nunca pide resolver <span class="mate">$Rc=\eta$</span>, sino que aplica <span class="mate">$R^{-1}$</span> a una <strong>medida</strong>, y eso es convolución con el núcleo de Bessel, sin malla. Si eso vale, la no localidad no cuesta nada. <strong>Pero entonces la respuesta hay que escribirla</strong>, porque hoy no está escrita en ningún sitio. Emparentada con <code>I-18</code> y con <code>P31</code>. 🔴 <strong>SUBE de prioridad el 2026-08-24: lo repitió, y ahora ordena el trabajo numérico.</strong> <em>«Ese pedazo es no lineal; llevarlo a ese vuelve a ser no lineal, y cualquier cosa no lineal obviamente es más complicada»</em> [00:00]–[00:22]. El usuario confirma qué señalaba — <strong>la última ecuación del sistema acoplado</strong>, <span class="mate">$\alpha(I-\kappa\Delta)^s(c-\widehat c)=\eta_A-\eta_E$</span> — y con qué sentido: <strong>con <span class="mate">$s=1$</span> era lineal y con <span class="mate">$s&gt;1$</span> ya no</strong>. Y añade, textual: <em>«hay que verificar esto»</em>. <strong>Lo que cambia respecto del 18, y por eso no es una repetición inocua:</strong> el 18 era un comentario al margen; hoy <strong>es la premisa desde la que ordena las tres vías numéricas del objetivo 3</strong>. Es lo que hace de la vía del sistema de EDP la difícil y de la discreta el <em>benchmark</em>. Si la premisa es falsa, el orden de dificultad que propone puede no ser el que es. ⚠️ <strong>Y hay un matiz que la respuesta tiene que recoger, o no responde:</strong> el umbral no es <span class="mate">$s&gt;1$</span> sino <strong><span class="mate">$s$</span> no entero</strong>. Con <span class="mate">$s$</span> entero <span class="mate">$(I-\kappa\Delta)^s$</span> sigue siendo un operador <strong>diferencial</strong> de orden <span class="mate">$2s$</span>, o sea local; lo que rompe la localidad es la potencia fraccionaria. Es coherente con lo que ya observó <code>NJU-50</code> sobre que subir <span class="mate">$s$</span> no pone una ecuación de cuarto orden en el camino. <strong>Lectura propia y sin verificar.</strong> 🔴 <strong>No se le repite como suyo ni entra a la nota</strong> hasta que esto se cierre. Regla del 2026-08-18: una afirmación suya sin demostración es una pregunta de investigación, no un hecho. ✅ <strong>Medio cerrada el 2026-09-10, por demostración</strong> (<code>NJU-59</code>, Prop. 5.5 de <code>espacio_H_es</code>). <span class="mate">$R=(I-\kappa\Delta)^s$</span> es <strong>lineal para todo <span class="mate">$s$</span></strong>, y es un operador diferencial con coeficientes constantes <strong>si y solo si <span class="mate">$s\in\N$</span></strong>, porque solo entonces su símbolo es un polinomio (Folland 9.12). Con <span class="mate">$n\ge2$</span> el menor <span class="mate">$s$</span> entero admisible da orden <span class="mate">$\ge4$</span>. Y la Obs. 3.8 confirma lo de <code>NJU-34</code>: el costo recuperado es una suma de núcleos y <span class="mate">$R$</span> no se discretiza nunca en la vía del cuadrático. <strong>Falta para cerrar:</strong> qué rompe de verdad en la <strong>vía 3</strong>, la que discretiza el sistema acoplado con <span class="mate">$R$</span> dentro. La nota prueba «no diferencial», no «no local» en sentido fuerte, que es el teorema de Peetre y no está en el material.</p>
   </div>
 </li>
 <li class="tarea hecha abrible" data-hecha="1">
@@ -1504,7 +1504,7 @@ window.MathJax={
     <p class="contexto">Todo lo que no es contenido: montaje, herramientas, la web de TODOs y la migración de skills. El plan completo, con dependencias y decisiones, vive en <code>docs/plan.md</code>.</p>
   </div>
   <div class="barra"><div class="relleno" style="width:86%"></div></div>
-  <p class="cuenta">18 de 21 completadas</p>
+  <p class="cuenta">19 de 22 completadas</p>
   <h3>Fase 0 — Fontanería</h3>
   <ul class="tareas">
 <li class="tarea hecha abrible" data-hecha="1">
@@ -1598,6 +1598,19 @@ window.MathJax={
   </button>
   <div class="detalle" hidden>
     <p>El usuario abrió <code>6a78fdbe8640285a59f7c673</code> para escribir a mano, en una página, lo que la nota traducida decía en diez. Sirvió: de ahí salió la revisión del 2026-08-09 y cuatro correcciones de notación. ⚠️ <strong>No tiene subproyecto ni <code>CLAUDE.md</code></strong>, y el manual sigue diciendo que los Overleaf son <strong>tres</strong>. Hoy está clonado solo en el scratchpad de la sesión, que se pierde al cerrarla. Arrastra además una plantilla de taller: 19 PNG sin usar y una cabecera que imprime «Apunticos (MATE 3127)» y «Bogotá D.C., 03/12/2024». <strong>Decidir si nace subproyecto o se absorbe</strong>, no dejarlo huérfano. ✅ <strong>Medio hecha el 2026-07-30.</strong> <code>material/</code> se parte en dos, que no eran lo mismo y estaban revueltas: <strong><code>material_mathpix/</code></strong> con los <code>.mmd</code>, que se versiona porque es texto y es lo que se lee aquí, y <strong><code>material_pdf/</code></strong> con los libros enteros, que <strong>no</strong> se versiona porque pesa y tiene derechos. La regla que queda: <strong>cada <code>.mmd</code> con su libro completo al lado</strong>, y la lista de lo que falta en <code>material_pdf/INVENTARIO.md</code>. <strong>Trece libros recogidos del escritorio</strong> y ordenados por área. Aparecieron sueltos y sin identificar el <strong>Baudoin</strong>, el <strong>Chewi</strong> y el <strong>Särkkä–Solin</strong>, que tachan tres huecos del inventario. Los PDFs de apuntes se quedan en el escritorio, por instrucción del usuario, y el <strong>Wellner</strong> deja copia allí. ⚠️ <code>Optimización_convexa.pdf</code> resultó ser <strong>apuntes de Junca</strong> para su curso de optimización convexa, que el usuario <strong>verá el próximo semestre con él</strong>. O sea que es material de referencia, <strong>no formación suya</strong>, y por eso no entra a <code>perfil/formacion.md</code>. Nace además <code>temporal/</code>, para lo que el usuario tenga que coger a mano. ✅ <strong>Otro trozo el 2026-08-04:</strong> <code>mathpix_inbox/</code> deja de estar suelta en el escritorio y se mete <strong>dentro del proyecto</strong>. El motivo apareció ese mismo día: nació <code>Escritorio/Tutorial_OT/</code>, que tiene la suya, y una bandeja fuera del proyecto se comparte sin querer entre proyectos. Se fueron también los tres <code>.zip</code> de transporte óptimo y el programa del curso, que ahora viven en <code>Tutorial_OT/</code>. <strong>Lo que falta para cerrar:</strong> el resto del escritorio, que son los apuntes y lo que no es libro.</p>
+  </div>
+</li>
+<li class="tarea hecha abrible" data-hecha="1">
+  <button class="cabecera" type="button" aria-expanded="false">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">INF-9</span>
+    <span class="titulo">Las notas técnicas salían con el texto en mapas de bits</span>
+    <span class="fecha">2026-09-10</span>
+    <span class="flecha" aria-hidden="true"></span>
+  </button>
+  <div class="detalle" hidden>
+    <p>Lo vio el usuario: <em>«la fuente de las notas técnicas se ve como pixelada»</em>, y le parecía distinta de la del Overleaf. 🔴 <strong>Era la misma fuente, rasterizada.</strong> Las notas y el Overleaf cargan lo mismo, <code>[T1]{fontenc}</code> sin paquete de fuentes, así que las dos piden las EC. En Overleaf salen de <code>cm-super</code> en Type 1; en este MiKTeX <code>cm-super</code> <strong>no estaba instalado</strong>, y como no falta ningún archivo la instalación automática no salta: genera <code>.pk</code> a 600 dpi y los incrusta como Type 3, con código de salida 0 y sin un aviso. ✅ Instalado <code>cm-super</code>, recompiladas las seis notas con <code>.tex</code> y copiadas a <code>material_pdf/notas_tecnicas/</code>. Verificado con <code>pdffonts</code>: <strong>cero Type 3</strong> en las seis, y en la nueva de <code>NJU-59</code>. ⚠️ <strong>Queda una con mapas de bits</strong>, <code>niveles_dos_formulaciones_control_aleatorizado.pdf</code>, que no tiene <code>.tex</code> conocido y no se puede recompilar. ⚠️ <strong>Hay que repetirlo en la Surface</strong>: MiKTeX vive fuera de OneDrive. ⚠️ Y una colisión de ids que ya estaba: hay <strong>dos <code>INF-8</code></strong> en este archivo. No se renumeran; por eso esta es la 9.</p>
+    <p class="artefacto">Artefacto: <code>docs/trampas_shell.md</code> §T15</p>
   </div>
 </li>
 <li class="tarea hecha abrible" data-hecha="1">
@@ -1886,8 +1899,8 @@ window.MathJax={
   <div class="contexto-oculto" hidden>
     <p class="contexto">La nota de Mauricio, <em>Continuous-Time Inverse Optimal Control with Prior Beliefs</em> (julio de 2026), reescrita en español y en modo <code>xe</code>, completando los detalles que deja sueltos con las fuentes que ya están fichadas. Overleaf propio. El hilo es uno: de cada objeto, en qué espacio vive, y qué cosas todavía no sabemos dónde viven.</p>
   </div>
-  <div class="barra"><div class="relleno" style="width:75%"></div></div>
-  <p class="cuenta">44 de 59 completadas</p>
+  <div class="barra"><div class="relleno" style="width:74%"></div></div>
+  <p class="cuenta">45 de 61 completadas</p>
   <ul class="tareas">
 <li class="tarea hecha abrible" data-hecha="1">
   <button class="cabecera" type="button" aria-expanded="false">
@@ -2097,6 +2110,55 @@ window.MathJax={
       <li><strong>Dejar una versión limpia</strong> con la elección de <span class="mate">$\mathcal H$</span> — <em>«que ya simplemente es RKHS»</em> [02:01].</li>
     </ul>
     <p class="alerta">🔴 <strong>Y es la palanca del objetivo 2:</strong> <em>«si uno está listo, los dos no deberían ser tan complicados»</em> [01:29], precisado por el usuario como que si el objetivo 1 queda bien escrito el 2 no debería ser difícil. <strong>Nada del §6 se adelanta antes que esto.</strong> ⚠️ <strong>El plural «o con elecciones de <span class="mate">$\mathcal H$</span>: puede que no sea una sola» no se ejecuta todavía.</strong> Depende de <code>I-24</code>, sin verificar, y de qué conteste <code>P34</code>. Escribir la nota sobre hipótesis abstractas en vez de sobre <span class="mate">$H^s$</span> es reescribirla entera. ⚠️ <strong>Y lo que él va a leer es la versión inglesa</strong>, que <code>NJU-52</code> declara materialmente mal. Eso hay que resolverlo antes de mandarle <em>«uno bien escrito»</em>. 🔴 <strong>El plazo se acorta: no es el lunes, es el VIERNES 2026-08-28.</strong> En el audio él dice <em>«para el siguiente lunes»</em> [01:02], pero ese mismo día se cambió el formato de las reuniones a viernes por la mañana. Son cuatro días, no siete. Ver <code>docs/plan.md</code> §8. <strong>Cómo se piensa atacar:</strong> primero la tensión de <code>P29</code>, que es lo único que falta de las condiciones; después la pasada de limpieza sobre <code>es/</code>, y solo entonces la inglesa.</p>
+  </div>
+</li>
+<li class="tarea hecha abrible" data-hecha="1">
+  <button class="cabecera" type="button" aria-expanded="false">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">NJU-59</span>
+    <span class="titulo">Nota técnica del espacio de costos: definición, propiedades, justificación y precio</span>
+    <span class="fecha">2026-09-10</span>
+    <span class="flecha" aria-hidden="true"></span>
+  </button>
+  <div class="detalle" hidden>
+    <p>Encargo del usuario: <em>«una nota técnica definiendo la elección actual de espacio H, diciendo qué propiedades tiene (demostrando o citando de un libro) y justificando la elección y qué contras tiene»</em>. <strong>La elección que fija:</strong> <span class="mate">$\mathcal H=H^s(\R^n)$</span> con peso <span class="mate">$(1+4\pi^2\kappa|\xi|^2)^s$</span>, <span class="mate">$s&gt;n/2$</span>, <span class="mate">$n=d+m$</span>, mirado sobre <span class="mate">$E\times A$</span>. Es la de <code>def:espacio</code>, con el <span class="mate">$4\pi^2$</span> que hace exactas <span class="mate">$R=(I-\kappa\Delta)^s$</span> y la lectura con <span class="mate">$s=1$</span> (ver <code>NJU-60</code>). ✅ <strong>Cierra cuatro de las seis banderas que el usuario dejó en el Overleaf el 2026-08-28</strong>, las cuatro del §2.1, con demostración completa:</p>
+    <ul>
+      <li><code>prop:nucleo</code> → Prop. 3.5, más la constante cerrada <span class="mate">$C_\iota^2=(4\pi\kappa)^{-n/2}\Gamma(s-n/2)/\Gamma(s)$</span>.</li>
+      <li><code>obs:riesz-integral</code>, la que el 2026-08-24 llevaba «No termino de entender» → Prop. 3.7(b): <span class="mate">$R^{-1}\eta=G*\eta$</span> sale en tres líneas de la propiedad reproductora, sin integral de Bochner.</li>
+      <li><code>obs:caracteristico</code> → Prop. 3.9, con el paso que faltaba: de <span class="mate">$\widehat\eta=0$</span> a <span class="mate">$\eta=0$</span> por la inyectividad de Fourier en <span class="mate">$\mathscr S&#x27;$</span>.</li>
+      <li><code>obs:c0-del-nucleo</code> → Props. 3.1 y 5.1.</li>
+    </ul>
+    <p>Y el <code>prop:h1-nunca</code> que comentó pasa a ser el Cor. 3.4, con una prueba de una línea por Fourier en vez de la construcción con <span class="mate">$\log\log$</span>. ⚠️ <strong>No toca las otras dos</strong>: la de <code>sec2</code> (que <span class="mate">$C_0^2$</span>, <span class="mate">$\mathscr C^2_c$</span> y <span class="mate">$C^\infty_c$</span> dan el mismo <span class="mate">$\mathcal M$</span>) y el <code>incierto</code> de Borkar 1989 en <code>sec4</code>. No son sobre <span class="mate">$\mathcal H$</span>. Quitar las cuatro banderas del Overleaf queda a juicio del usuario. <strong>Lo nuevo que no estaba en ninguna nota:</strong></p>
+    <ul>
+      <li>La restricción a <span class="mate">$E\times A$</span> (Prop. 3.11): <span class="mate">$c_\star-\widehat c$</span> es automáticamente la extensión de norma mínima de su restricción, así que poner el espacio sobre <span class="mate">$\R^n$</span> no cuesta nada.</li>
+      <li>Por qué la compacidad de <span class="mate">$\mathcal M$</span> no puede venir del espacio (Prop. 5.2): con <span class="mate">$|x_k|\to\infty$</span>, <span class="mate">$\rho^{-1}\delta_{(x_k,a_0)}\rightharpoonup0$</span> en <span class="mate">$\mathcal H^*$</span>, así que las medidas de masa <span class="mate">$1/\rho$</span> no son débilmente cerradas. Vale para todo núcleo acotado con secciones en <span class="mate">$C_0$</span>.</li>
+      <li>Lo débil que es la distancia (Prop. 5.3): trasladar masa una longitud <span class="mate">$r$</span> cuesta del orden de <span class="mate">$\sqrt{r/\kappa}$</span> en <span class="mate">$\mathcal H^*$</span> y <span class="mate">$2$</span> en variación total.</li>
+      <li><span class="mate">$R$</span> es lineal para todo <span class="mate">$s$</span> y diferencial solo si <span class="mate">$s\in\N$</span> (Prop. 5.5), que es la mitad demostrada de <code>I-25</code>.</li>
+    </ul>
+    <p><strong>Fuentes:</strong> Folland cap. 9 y Brezis caps. 3 y 5, citados por número y leídos en <code>.mmd</code>. Nada sale de un resumen. Nueve páginas, registro Folland, compila limpio y con <strong>cero fuentes Type 3</strong> (<code>INF-9</code>).</p>
+    <p class="artefacto">Artefacto: <code>material_pdf/notas_tecnicas/espacio_H_es.pdf</code></p>
+  </div>
+</li>
+<li class="tarea pendiente abrible" data-hecha="0">
+  <button class="cabecera" type="button" aria-expanded="false">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">NJU-60</span>
+    <span class="titulo">La (17) mezcla dos convenios de Fourier, y le sobra o le falta un <span class="mate">$4\pi^2$</span></span>
+    <span class="flecha" aria-hidden="true"></span>
+  </button>
+  <div class="detalle" hidden>
+    <p>Sale de escribir la nota técnica del espacio (<code>NJU-59</code>), el 2026-09-10. 🔴 <strong>El documento usa la transformada de Folland</strong>, <span class="mate">$\widehat f(\xi)=\int f\,e^{-2\pi i x\cdot\xi}$</span> (lo dice <code>apendice_pruebas.tex</code> al calcular <span class="mate">$\widehat\delta$</span>), <strong>con el peso <span class="mate">$(1+\kappa|\xi|^2)^s$</span></strong>. Con esa transformada <span class="mate">$-\Delta$</span> tiene símbolo <span class="mate">$4\pi^2|\xi|^2$</span>, así que ese peso es el de <span class="mate">$(I-\kappa\Delta/4\pi^2)^s$</span> y no el de <span class="mate">$(I-\kappa\Delta)^s$</span>. <strong>Tres afirmaciones de <code>es/sec3.tex</code> quedan desfasadas en <span class="mate">$\kappa\mapsto\kappa/4\pi^2$</span>:</strong></p>
+    <ul>
+      <li>la segunda igualdad de la (17), <span class="mate">$=\int c\,(\mathrm{Id}-\kappa\Delta)^s c$</span>;</li>
+      <li><em>«Con <span class="mate">$s=1$</span> es <span class="mate">$\int(|c|^2+\kappa|\nabla c|^2)$</span>»</em>;</li>
+      <li><code>prop:riesz</code>, que da <span class="mate">$R=(\mathrm{Id}-\kappa\Delta)^s$</span> con símbolo <span class="mate">$(1+\kappa|\xi|^2)^s$</span>.</li>
+    </ul>
+    <p class="aviso">⚠️ <strong>No es grave, es reescalar <span class="mate">$\kappa$</span>, pero es falso tal como está</strong>, y la nota va a Junca y a la web. <strong>Las dos salidas:</strong></p>
+    <ul>
+      <li><strong>Peso <span class="mate">$(1+4\pi^2\kappa|\xi|^2)^s$</span></strong>, que es la que toma la nota técnica. Deja exactas las tres afirmaciones y cambia en cadena <code>prop:nucleo</code> (<span class="mate">$\widehat G=\omega^{-1}$</span>) y la <span class="mate">$C_\iota$</span> del apéndice, que pasa a ser <span class="mate">$(4\pi\kappa)^{-n/2}\Gamma(s-n/2)/\Gamma(s)$</span>.</li>
+      <li><strong>Dejar el peso y corregir las tres afirmaciones</strong>, poniendo <span class="mate">$\kappa/4\pi^2$</span> donde hoy dice <span class="mate">$\kappa$</span>. No toca el apéndice.</li>
+    </ul>
+    <p class="aviso">⚠️ <strong>No se aplicó al Overleaf, y a propósito.</strong> Es el documento que lee Junca, la sección tiene hoy <strong>cuatro banderas «Verificar» del usuario</strong> (su edición del 2026-08-28), y la inglesa está congelada (<code>NJU-44</code>), así que corregir solo <code>es/</code> abre otra divergencia. <strong>Elegir la salida es suyo.</strong></p>
   </div>
 </li>
 <li class="tarea hecha abrible" data-hecha="1">
@@ -2881,7 +2943,7 @@ window.MathJax={
   </ul>
 </section>
 <footer>
-Generado el 2026-08-24 por <code>web/build_todo.py</code> a partir de los <code>TODO.md</code>. Editar esta página a mano no sirve de nada: se reescribe en la siguiente ejecución.
+Generado el 2026-09-10 por <code>web/build_todo.py</code> a partir de los <code>TODO.md</code>. Editar esta página a mano no sirve de nada: se reescribe en la siguiente ejecución.
 </footer>
 </div>
 <script>
