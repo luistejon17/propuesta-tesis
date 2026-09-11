@@ -135,17 +135,17 @@ window.MathJax={
 <header class="principal">
 <h1>Propuesta de tesis — control óptimo</h1>
 <p class="sub">Decidir y proponer un tema en control óptimo inverso, en 2–3 meses desde el 2026-07-25.</p>
-<p class="global"><strong>115</strong> de <strong>187</strong> tareas completadas en todo el proyecto.</p>
+<p class="global"><strong>121</strong> de <strong>195</strong> tareas completadas en todo el proyecto.</p>
 </header>
 <nav class="pestanas" role="tablist">
 <button data-slug="preguntas_junca" role="tab">Preguntas a Junca<span class="n">9/28</span></button>
-<button data-slug="preguntas_investigacion" role="tab">Preguntas de investigación<span class="n">8/27</span></button>
+<button data-slug="preguntas_investigacion" role="tab">Preguntas de investigación<span class="n">13/33</span></button>
 <button data-slug="referencias" role="tab">referencias<span class="n">8/16</span></button>
 <button data-slug="asesor" role="tab">asesor<span class="n">10/13</span></button>
 <button data-slug="reuniones" role="tab">reuniones<span class="n">5/7</span></button>
 <button data-slug="infra" role="tab">General<span class="n">19/22</span></button>
 <button data-slug="explicaciones" role="tab">explicaciones<span class="n">3/5</span></button>
-<button data-slug="notas_junca" role="tab">notas junca<span class="n">45/61</span></button>
+<button data-slug="notas_junca" role="tab">notas junca<span class="n">46/63</span></button>
 </nav>
 <div class="controles">
 <label><input type="checkbox" id="ocultar"> Esconder las completadas</label>
@@ -562,8 +562,8 @@ window.MathJax={
     <p class="contexto">Las de <strong>prioridad alta</strong> están en el camino crítico: sin ellas no hay enunciado de tesis.</p>
     <p class="contexto alerta">🔴 <strong>Revisadas contra el v2 del borrador el 2026-08-05</strong> (<code>REF-14</code>, <code>fichas/junca_fixed_point_continuo_v2.md</code>). El v2 pasó de cero teoremas a dos resultados demostrados, así que varias de estas preguntas cambian de estado y <strong>dos se cierran</strong>. Lo que hay que retener: el Teorema 4.2 del v2 da existencia y unicidad <strong>esquivando</strong> la continuidad del selector de políticas y la HJB, así que lo que antes era «demostrar el punto fijo» hoy es <strong>justificar sus hipótesis sobre <span class="mate">$\mathcal M$</span></strong>. Cada entrada tocada lo dice en su detalle.</p>
   </div>
-  <div class="barra"><div class="relleno" style="width:30%"></div></div>
-  <p class="cuenta">8 de 27 completadas</p>
+  <div class="barra"><div class="relleno" style="width:39%"></div></div>
+  <p class="cuenta">13 de 33 completadas</p>
   <h3>Prioridad alta · Las dos mitades del trabajo</h3>
   <ul class="tareas">
 <li class="tarea pendiente abrible" data-hecha="0">
@@ -734,17 +734,6 @@ window.MathJax={
       <li>sobre <span class="mate">$\mathbb R^d$</span> hay salida limpia por Fourier, y sobre el toro también, pero eso es una restricción sobre el dominio, no un detalle.</li>
     </ul>
     <p class="hecho">✅ <strong>Lo que probablemente lo desactiva, y hay que comprobarlo:</strong> <code>NJU-34</code> ya estableció que la (24) nunca pide resolver <span class="mate">$Rc=\eta$</span>, sino que aplica <span class="mate">$R^{-1}$</span> a una <strong>medida</strong>, y eso es convolución con el núcleo de Bessel, sin malla. Si eso vale, la no localidad no cuesta nada. <strong>Pero entonces la respuesta hay que escribirla</strong>, porque hoy no está escrita en ningún sitio. Emparentada con <code>I-18</code> y con <code>P31</code>. 🔴 <strong>SUBE de prioridad el 2026-08-24: lo repitió, y ahora ordena el trabajo numérico.</strong> <em>«Ese pedazo es no lineal; llevarlo a ese vuelve a ser no lineal, y cualquier cosa no lineal obviamente es más complicada»</em> [00:00]–[00:22]. El usuario confirma qué señalaba — <strong>la última ecuación del sistema acoplado</strong>, <span class="mate">$\alpha(I-\kappa\Delta)^s(c-\widehat c)=\eta_A-\eta_E$</span> — y con qué sentido: <strong>con <span class="mate">$s=1$</span> era lineal y con <span class="mate">$s&gt;1$</span> ya no</strong>. Y añade, textual: <em>«hay que verificar esto»</em>. <strong>Lo que cambia respecto del 18, y por eso no es una repetición inocua:</strong> el 18 era un comentario al margen; hoy <strong>es la premisa desde la que ordena las tres vías numéricas del objetivo 3</strong>. Es lo que hace de la vía del sistema de EDP la difícil y de la discreta el <em>benchmark</em>. Si la premisa es falsa, el orden de dificultad que propone puede no ser el que es. ⚠️ <strong>Y hay un matiz que la respuesta tiene que recoger, o no responde:</strong> el umbral no es <span class="mate">$s&gt;1$</span> sino <strong><span class="mate">$s$</span> no entero</strong>. Con <span class="mate">$s$</span> entero <span class="mate">$(I-\kappa\Delta)^s$</span> sigue siendo un operador <strong>diferencial</strong> de orden <span class="mate">$2s$</span>, o sea local; lo que rompe la localidad es la potencia fraccionaria. Es coherente con lo que ya observó <code>NJU-50</code> sobre que subir <span class="mate">$s$</span> no pone una ecuación de cuarto orden en el camino. <strong>Lectura propia y sin verificar.</strong> 🔴 <strong>No se le repite como suyo ni entra a la nota</strong> hasta que esto se cierre. Regla del 2026-08-18: una afirmación suya sin demostración es una pregunta de investigación, no un hecho. ✅ <strong>Medio cerrada el 2026-09-10, por demostración</strong> (<code>NJU-59</code>, en la primera versión de <code>espacio_H_es</code>, la definida con Fourier). <span class="mate">$R=(I-\kappa\Delta)^s$</span> es <strong>lineal para todo <span class="mate">$s$</span></strong>, y es un operador diferencial con coeficientes constantes <strong>si y solo si <span class="mate">$s\in\N$</span></strong>, porque solo entonces su símbolo es un polinomio (Folland 9.12). Con <span class="mate">$n\ge2$</span> el menor <span class="mate">$s$</span> entero admisible da orden <span class="mate">$\ge4$</span>. Y la Obs. 3.8 confirma lo de <code>NJU-34</code>: el costo recuperado es una suma de núcleos y <span class="mate">$R$</span> no se discretiza nunca en la vía del cuadrático. <strong>Falta para cerrar:</strong> qué rompe de verdad en la <strong>vía 3</strong>, la que discretiza el sistema acoplado con <span class="mate">$R$</span> dentro. La nota prueba «no diferencial», no «no local» en sentido fuerte, que es el teorema de Peetre y no está en el material. ✅ <strong>Y con la nota rehecha el mismo día sobre <span class="mate">$s$</span> entero, a lo Brezis, la pregunta pierde casi todo su objeto:</strong> <span class="mate">$R=(I-\kappa\Delta)^s$</span> es entonces un operador diferencial de orden <span class="mate">$2s$</span> y la no localidad no aparece. Lo que queda es el orden, <span class="mate">$\ge4$</span> en cuanto <span class="mate">$n\ge2$</span>, para quien discretice la vía 3.</p>
-  </div>
-</li>
-<li class="tarea pendiente abrible" data-hecha="0">
-  <button class="cabecera" type="button" aria-expanded="false">
-    <span class="casilla" aria-hidden="true"></span>
-    <span class="ident">I-27</span>
-    <span class="titulo"><strong>¿Están en <span class="mate">$(H^1)^*$</span> las ocupaciones de políticas deterministas?</strong> Parece que sí cuando <span class="mate">$A$</span> tiene dimensión uno.</span>
-    <span class="flecha" aria-hidden="true"></span>
-  </button>
-  <div class="detalle" hidden>
-    <p>Sale de rehacer la nota técnica del espacio (<code>NJU-59</code>) el 2026-09-10. La <code>prop:h1-nunca</code> que el usuario comentó en el Overleaf el 2026-08-28 decía, <em>«en particular»</em>, que las ocupaciones singulares de las políticas deterministas no están en <span class="mate">$(H^1)^*$</span>. 🟡 <strong>Lectura propia, sin verificar.</strong> Con <span class="mate">$m=1$</span>, la gráfica <span class="mate">$\Gamma_u$</span> de una <span class="mate">$u$</span> Lipschitz es una hipersuperficie de <span class="mate">$\R^{d+1}$</span>, y un teorema de trazas manda <span class="mate">$H^1$</span> a <span class="mate">$L^2(\Gamma_u)$</span> continuamente. Si además la marginal de estados <span class="mate">$\mu$</span> tiene densidad en <span class="mate">$L^2$</span>, entonces <span class="mate">$|\eta_u(f)|\le C\|f\|_{H^1}$</span> y <span class="mate">$\eta_u\in(H^1)^*$</span>. Con <span class="mate">$m\ge2$</span> la gráfica tiene codimensión <span class="mate">$\ge2$</span>, no hay traza en <span class="mate">$H^1$</span> y el argumento de la proposición sí valdría. <strong>Por qué importa poco hoy, y por qué se anota:</strong> la nota técnica ya no descarta <span class="mate">$H^1$</span> con las gráficas sino con las <strong>medidas atómicas</strong>, que están en el problema de todos modos (el <span class="mate">$\eta_E$</span> empírico y cualquier discretización son atómicos), así que nada se cae. Pero la frase comentada <strong>no debe volver al Overleaf tal cual</strong>. <strong>Cómo se cierra:</strong> con un teorema de trazas para <span class="mate">$H^1$</span> sobre gráficas Lipschitz, que no está en el material fichado.</p>
   </div>
 </li>
 <li class="tarea hecha abrible" data-hecha="1">
@@ -939,9 +928,119 @@ window.MathJax={
     </ul>
   </div>
 </li>
+<li class="tarea pendiente abrible" data-hecha="0">
+  <button class="cabecera" type="button" aria-expanded="false">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">I-32</span>
+    <span class="titulo"><strong>¿Es <span class="mate">$\bigcup_h\mathcal M_h$</span> débilmente densa en <span class="mate">$\mathcal M$</span>?</strong></span>
+    <span class="flecha" aria-hidden="true"></span>
+  </button>
+  <div class="detalle" hidden>
+    <p>Sale de la nota técnica <code>h1_ocupacion_es</code> (Obs. 4.6), el 2026-09-10. <span class="mate">$\mathcal M_h$</span> son las ocupaciones de las políticas cuya ley de acciones tiene densidad <span class="mate">$\le h$</span> respecto de Lebesgue en <span class="mate">$A$</span>. Si la unión es densa, la brecha sobre <span class="mate">$\mathcal M_h$</span> tiende a la brecha sobre <span class="mate">$\mathcal M$</span> para costos continuos, y la tercera manera de quedarse con <span class="mate">$H^1$</span> aproxima el problema original. <strong>Cómo se cierra:</strong> con una demostración. El paso que falta es la continuidad de la ocupación respecto de la política, que pide unicidad para Fokker–Planck estacionaria con deriva solo medible.</p>
+  </div>
+</li>
+<li class="tarea pendiente abrible" data-hecha="0">
+  <button class="cabecera" type="button" aria-expanded="false">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">I-33</span>
+    <span class="titulo"><strong>¿Qué forma tienen las políticas óptimas sobre <span class="mate">$\mathcal M_h$</span>?</strong></span>
+    <span class="flecha" aria-hidden="true"></span>
+  </button>
+  <div class="detalle" hidden>
+    <p>Sale de la misma observación que <code>I-32</code>. 🟡 <strong>Lectura propia, sin demostrar:</strong> en cada <span class="mate">$x$</span>, minimizar <span class="mate">$\pi_x^a\bigl(c(x,a)+\mathcal L^aV(x)\bigr)$</span> sobre densidades <span class="mate">$\le h$</span> es un problema de «bañera», que pone todo el peso <span class="mate">$h$</span> sobre la fracción <span class="mate">$1/h$</span> de acciones más baratas. Eso cambiaría el selector del sistema de optimalidad. <strong>Cómo se cierra:</strong> con programación dinámica para la clase restringida.</p>
+  </div>
+</li>
   </ul>
   <h3>Respondidas</h3>
   <ul class="tareas">
+<li class="tarea hecha abrible" data-hecha="1">
+  <button class="cabecera" type="button" aria-expanded="false">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">I-27</span>
+    <span class="titulo"><strong>¿Están en <span class="mate">$(H^1)^*$</span> las ocupaciones de políticas deterministas?</strong> Parece que sí cuando <span class="mate">$A$</span> tiene dimensión uno.</span>
+    <span class="fecha">2026-09-10</span>
+    <span class="flecha" aria-hidden="true"></span>
+  </button>
+  <div class="detalle" hidden>
+    <p>Sale de rehacer la nota técnica del espacio (<code>NJU-59</code>) el 2026-09-10. La <code>prop:h1-nunca</code> que el usuario comentó en el Overleaf el 2026-08-28 decía, <em>«en particular»</em>, que las ocupaciones singulares de las políticas deterministas no están en <span class="mate">$(H^1)^*$</span>. ✅ <strong>Respondida con demostración el mismo día, y sin teorema de trazas</strong> (<code>NJU-61</code>):</p>
+    <ul>
+      <li><strong>Con <span class="mate">$m=1$</span>, sí, y para toda política.</strong> Si la marginal en el estado tiene densidad <span class="mate">$m\in L^2(\R^d)$</span>, entonces <span class="mate">$|\eta(\varphi)|\le(2\sqrt\kappa)^{-1/2}\|m\|_{L^2}\|\varphi\|_{H^1}$</span> (Prop. 3.4). Solo usa Sobolev en la acción, así que no pide <span class="mate">$u$</span> lipschitziana; y la densidad <span class="mate">$L^2$</span> la tiene toda ocupación de una difusión movida por deriva con ruido no degenerado si <span class="mate">$d\le3$</span> (Prop. 3.2).</li>
+      <li><strong>Con <span class="mate">$m\ge2$</span> y <span class="mate">$u$</span> lipschitziana, no.</strong> La energía <span class="mate">$\eta^z\eta^{z&#x27;}G(z-z&#x27;)$</span> es infinita (Prop. 3.6), y es el cuadrado de la norma dual (Prop. 2.2).</li>
+      <li>Queda fuera, declarado: <span class="mate">$u$</span> solo medible con <span class="mate">$m\ge2$</span>.</li>
+    </ul>
+    <p>La frase comentada sigue sin poder volver al Overleaf tal cual: vale con <span class="mate">$m\ge2$</span> y es falsa con <span class="mate">$m=1$</span>.</p>
+    <p class="artefacto">Artefacto: <code>material_pdf/notas_tecnicas/h1_ocupacion_es.pdf</code></p>
+  </div>
+</li>
+<li class="tarea hecha abrible" data-hecha="1">
+  <button class="cabecera" type="button" aria-expanded="false">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">I-28</span>
+    <span class="titulo"><strong>¿Cómo son las medidas de ocupación de una difusión?</strong></span>
+    <span class="fecha">2026-09-10</span>
+    <span class="flecha" aria-hidden="true"></span>
+  </button>
+  <div class="detalle" hidden>
+    <p>Sale de la última reunión, la primera con García Trillos, según el relato del usuario del 2026-09-10; no hay audio procesado. Los dos la dejaron abierta, junto con <code>I-29</code> a <code>I-31</code>. ✅ <strong>Para una partícula movida por deriva con ruido browniano no degenerado</strong> (<span class="mate">$b$</span> continua y acotada, <span class="mate">$\sigma=\sigma_0I$</span>):</p>
+    <ul>
+      <li>la marginal en el estado es <span class="mate">$\mu_\eta=g_\rho*\nu_0-\nabla g_\rho*\beta_\eta$</span>, con <span class="mate">$g_\rho$</span> la ocupación del browniano sin control y <span class="mate">$\beta_\eta$</span> el flujo de la deriva (Prop. 3.2);</li>
+      <li>si <span class="mate">$d\le3$</span>, tiene densidad en <span class="mate">$L^2$</span> con una cota que no depende de la política;</li>
+      <li>en la acción nada suaviza: una política determinista pone una delta en <span class="mate">$a$</span> sobre cada <span class="mate">$x$</span>.</li>
+    </ul>
+    <p>🟡 Lectura propia: es lo que parece decir la frase <em>«si uno se mueve solo con brownianos por drift, uno conoce las medidas de ocupación»</em>. Girsanov da la cota <span class="mate">$L^2$</span> solo con <span class="mate">$\rho&gt;\bar b^2/(2\sigma_0^2)$</span> (Obs. 3.3).</p>
+    <p class="artefacto">Artefacto: <code>material_pdf/notas_tecnicas/h1_ocupacion_es.pdf</code> §3</p>
+  </div>
+</li>
+<li class="tarea hecha abrible" data-hecha="1">
+  <button class="cabecera" type="button" aria-expanded="false">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">I-29</span>
+    <span class="titulo"><strong>¿Qué significa que una ocupación esté en el dual de <span class="mate">$H^1$</span>, y que la esperanza descontada de sus costos sea finita?</strong></span>
+    <span class="fecha">2026-09-10</span>
+    <span class="flecha" aria-hidden="true"></span>
+  </button>
+  <div class="detalle" hidden>
+    <p>Sale de la misma reunión que <code>I-28</code>. La lectura del usuario, que la «esperanza descontada» de un costo es integrarlo contra <span class="mate">$\eta$</span>, es la correcta: <span class="mate">$\eta_\pi(c)=\mathbb E\int_0^\infty e^{-\rho t}c(X_t,a_t)\,dt$</span>. ✅ <strong>Tres respuestas equivalentes, demostradas:</strong></p>
+    <ul>
+      <li><strong>Esperanza descontada:</strong> <span class="mate">$\eta\in(H^1)^*$</span> si y solo si está acotada en la bola unidad de los costos <span class="mate">$c\ge0$</span>; si no, hay costos que convergen en <span class="mate">$H^1$</span> con esperanza descontada que diverge (Prop. 2.5).</li>
+      <li><strong>Energía:</strong> <span class="mate">$\|\eta\|^2_{(H^1)^*}=\eta^z\eta^{z&#x27;}G(z-z&#x27;)$</span> (Prop. 2.2).</li>
+      <li><strong>Browniano auxiliar:</strong> <span class="mate">$G(\cdot-z)$</span> es la densidad de ocupación descontada de un browniano de generador <span class="mate">$\kappa\Delta$</span> en el espacio estado-acción, salido de <span class="mate">$z$</span> (Prop. 2.1(d)).</li>
+    </ul>
+    <p class="artefacto">Artefacto: <code>material_pdf/notas_tecnicas/h1_ocupacion_es.pdf</code> §2</p>
+  </div>
+</li>
+<li class="tarea hecha abrible" data-hecha="1">
+  <button class="cabecera" type="button" aria-expanded="false">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">I-30</span>
+    <span class="titulo"><strong>Traducir la pregunta del espacio al lenguaje del proceso</strong></span>
+    <span class="fecha">2026-09-10</span>
+    <span class="flecha" aria-hidden="true"></span>
+  </button>
+  <div class="detalle" hidden>
+    <p>Sale de la misma reunión que <code>I-28</code>: pidieron verla en un «mundo probabilista». ✅ <strong>La traducción (Cor. 2.3):</strong> <span class="mate">$\rho\eta_\pi$</span> es la ley de <span class="mate">$(X_S,a_S)$</span>, con <span class="mate">$S$</span> exponencial de tasa <span class="mate">$\rho$</span> independiente. El producto de <span class="mate">$(H^s)^*$</span> es <span class="mate">$\rho^{-2}\,\mathbb E\,G_s(Y-Y&#x27;)$</span> con <span class="mate">$Y,Y&#x27;$</span> independientes, o sea la MMD con núcleo <span class="mate">$G_s$</span> (<code>I-26</code>), y <span class="mate">$\mathbb E\,G_s(Y-Y&#x27;)$</span> es la densidad en <span class="mate">$0$</span> de <span class="mate">$Y-Y&#x27;+\sqrt{2\kappa}\,B_T$</span>, con <span class="mate">$T$</span> de ley gamma de parámetro <span class="mate">$s$</span>. Elegir el espacio es elegir la ley del reloj <span class="mate">$T$</span>: exponencial para <span class="mate">$H^1$</span>, gamma para <span class="mate">$H^s$</span>.</p>
+    <p class="artefacto">Artefacto: <code>material_pdf/notas_tecnicas/h1_ocupacion_es.pdf</code>, Cor. 2.3</p>
+  </div>
+</li>
+<li class="tarea hecha abrible" data-hecha="1">
+  <button class="cabecera" type="button" aria-expanded="false">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">I-31</span>
+    <span class="titulo"><strong>¿Qué se pierde exactamente con <span class="mate">$H^1$</span> en vez de <span class="mate">$H^s$</span>?</strong></span>
+    <span class="fecha">2026-09-10</span>
+    <span class="flecha" aria-hidden="true"></span>
+  </button>
+  <div class="detalle" hidden>
+    <p>Sale de la misma reunión que <code>I-28</code>. ✅ <strong>Lo decide la dimensión <span class="mate">$m$</span> de la acción</strong> (Obs. 5.3 y tablas del §6):</p>
+    <ul>
+      <li><strong>Con <span class="mate">$m=1$</span>, solo las muestras sin regularizar.</strong> Con ruido no degenerado y <span class="mate">$d\le3$</span>, todo <span class="mate">$\mathcal M$</span> está en <span class="mate">$(H^1)^*$</span> (Cor. 3.5).</li>
+      <li><strong>Con <span class="mate">$m\ge2$</span>, tres cosas:</strong> el experto determinista, la comparación con las políticas óptimas regulares, y las muestras.</li>
+      <li><strong>En el proceso:</strong> con el reloj exponencial de <span class="mate">$H^1$</span>, un átomo tiene energía infinita en cuanto <span class="mate">$n\ge2$</span> (Obs. 2.4), y una gráfica de codimensión <span class="mate">$\ge2$</span> también (Prop. 3.6).</li>
+    </ul>
+    <p>Para las ocupaciones basta <span class="mate">$s&gt;m/2$</span>; <span class="mate">$s&gt;n/2$</span> solo lo piden las muestras sin regularizar.</p>
+    <p class="artefacto">Artefacto: <code>material_pdf/notas_tecnicas/h1_ocupacion_es.pdf</code> §§5–6</p>
+  </div>
+</li>
 <li class="tarea hecha abrible" data-hecha="1">
   <button class="cabecera" type="button" aria-expanded="false">
     <span class="casilla" aria-hidden="true"></span>
@@ -1910,8 +2009,8 @@ window.MathJax={
   <div class="contexto-oculto" hidden>
     <p class="contexto">La nota de Mauricio, <em>Continuous-Time Inverse Optimal Control with Prior Beliefs</em> (julio de 2026), reescrita en español y en modo <code>xe</code>, completando los detalles que deja sueltos con las fuentes que ya están fichadas. Overleaf propio. El hilo es uno: de cada objeto, en qué espacio vive, y qué cosas todavía no sabemos dónde viven.</p>
   </div>
-  <div class="barra"><div class="relleno" style="width:74%"></div></div>
-  <p class="cuenta">45 de 61 completadas</p>
+  <div class="barra"><div class="relleno" style="width:73%"></div></div>
+  <p class="cuenta">46 de 63 completadas</p>
   <ul class="tareas">
 <li class="tarea hecha abrible" data-hecha="1">
   <button class="cabecera" type="button" aria-expanded="false">
@@ -2170,6 +2269,39 @@ window.MathJax={
       <li><strong>Dejar el peso y corregir las tres afirmaciones</strong>, poniendo <span class="mate">$\kappa/4\pi^2$</span> donde hoy dice <span class="mate">$\kappa$</span>. No toca el apéndice.</li>
     </ul>
     <p class="aviso">⚠️ <strong>No se aplicó al Overleaf, y a propósito.</strong> Es el documento que lee Junca, la sección tiene hoy <strong>cuatro banderas «Verificar» del usuario</strong> (su edición del 2026-08-28), y la inglesa está congelada (<code>NJU-44</code>), así que corregir solo <code>es/</code> abre otra divergencia. <strong>Elegir la salida es suyo.</strong> ✅ <strong>2026-09-10: la nota técnica rehecha deja ver cuál es la salida natural.</strong> Con el espacio definido a lo Brezis, derivadas débiles y <span class="mate">$s$</span> entero, la norma se escribe en derivadas con <span class="mate">$\kappa$</span> exactamente como en la (17), y el <span class="mate">$4\pi^2$</span> solo aparece en el peso de Fourier <span class="mate">$(1+4\pi^2\kappa|\xi|^2)^s$</span>, dentro de la única proposición que usa Fourier. Aplicado al Overleaf: <strong>la (17) se queda</strong>, y lo que se corrige es el símbolo de <code>prop:riesz</code>, el <span class="mate">$\widehat G$</span> de <code>prop:nucleo</code> y la <span class="mate">$C_\iota$</span> del apéndice. Sigue siendo decisión suya.</p>
+  </div>
+</li>
+<li class="tarea hecha abrible" data-hecha="1">
+  <button class="cabecera" type="button" aria-expanded="false">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">NJU-61</span>
+    <span class="titulo">Nota técnica: <span class="mate">$H^1$</span> y las medidas de ocupación</span>
+    <span class="fecha">2026-09-10</span>
+    <span class="flecha" aria-hidden="true"></span>
+  </button>
+  <div class="detalle" hidden>
+    <p>Encargo del usuario tras la reunión en que García Trillos y Junca no se convencieron de subir a <span class="mate">$H^s$</span> con <span class="mate">$s&gt;1$</span>: investigar, escribir una nota que responda sus ideas y preguntas y concluya cómo quedarse con <span class="mate">$H^1$</span>, hacer la partícula en <span class="mate">$\R^2$</span> y cerrar con una tabla. ✅ <strong>Lo que concluye:</strong> con acción de dimensión uno, <span class="mate">$H^1$</span> y todo <span class="mate">$\mathcal M$</span> funcionan (Props. 4.2 y 5.1), porque con ruido no degenerado toda ocupación tiene marginal <span class="mate">$L^2$</span> en el estado y a la acción le basta <span class="mate">$s&gt;m/2$</span>. Con <span class="mate">$m\ge2$</span>, <span class="mate">$H^1$</span> obliga a <span class="mate">$K=\mathcal M_h$</span> y a un experto que aleatorice; si el experto puede ser determinista, sirve <span class="mate">$H^{\lfloor m/2\rfloor+1}$</span>, que con <span class="mate">$m\in\{2,3\}$</span> es el menor posible, y <span class="mate">$H^{\lfloor n/2\rfloor+1}$</span> solo hace falta para muestras sin regularizar. <strong>Cómo responde a lo que trajo el usuario:</strong></p>
+    <ul>
+      <li>«¿En qué momento se usa (I)?» → Props. 1.3 y 1.4: en (1) al evaluar <span class="mate">$\eta(c)$</span> en toda <span class="mate">$c$</span>, y en (2) en <span class="mate">$\|\eta-\eta_E\|$</span>, y solo para <span class="mate">$K\cup\{\eta_E\}$</span>.</li>
+      <li>«(III) es solo una propiedad de las normas» → Prop. 1.5: pide que medidas distintas den funcionales distintos, y un espacio de rasgos la pierde, porque solo identifica las esperanzas de los rasgos.</li>
+      <li>Idea 1, brownianos por deriva → §3 y la primera manera (Prop. 4.2).</li>
+      <li>Idea 2, brecha sobre <span class="mate">$\mathcal M\cap\mathcal H^*$</span> → Prop. 4.3: es lo que ya resuelve (2), y compara al experto solo con <span class="mate">$K_1$</span>.</li>
+      <li>Idea 3, un <span class="mate">$\mathcal M_0$</span> bien escogido → <span class="mate">$\mathcal M_h$</span> (Prop. 4.5).</li>
+      <li>Preguntas 1 a 4 → <code>I-28</code> a <code>I-31</code>, cerradas con demostración.</li>
+    </ul>
+    <p class="hecho">✅ <strong>Y corrige tres frases de la nota del espacio (<code>NJU-59</code>):</strong> el (i) de su Obs. 1.2 dice ahora que se usa sobre <span class="mate">$\mathcal M$</span> y <span class="mate">$\eta_E$</span>, el (iii) que es la inyectividad, y su Obs. 4.2 que «el umbral no se elige» vale pidiendo (i) para toda medida. Fuentes: Brezis Thm. 4.33, Thm. 5.2 y Cor. 3.22; Folland Prop. 9.16 y 8.24; Bhatt–Borkar Thm. 2.2; Baudoin Thm. 5.72. Queda sin demostrar, y declarado en la nota: la densidad de <span class="mate">$\bigcup_h\mathcal M_h$</span> (<code>I-32</code>) y la forma de las políticas óptimas en <span class="mate">$\mathcal M_h$</span> (<code>I-33</code>).</p>
+    <p class="artefacto">Artefacto: <code>material_pdf/notas_tecnicas/h1_ocupacion_es.pdf</code></p>
+  </div>
+</li>
+<li class="tarea pendiente abrible" data-hecha="0">
+  <button class="cabecera" type="button" aria-expanded="false">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">NJU-62</span>
+    <span class="titulo">El Overleaf descarta <span class="mate">$H^1$</span> «en cuanto <span class="mate">$n\ge2$</span>», y con <span class="mate">$m=1$</span> no hace falta</span>
+    <span class="flecha" aria-hidden="true"></span>
+  </button>
+  <div class="detalle" hidden>
+    <p>Sale de <code>NJU-61</code>. <code>es/sec3.tex</code> dice <em>«Luego <span class="mate">$H^1$</span> queda descartado en cuanto <span class="mate">$n\ge2$</span>»</em>. Con deriva controlada, ruido no degenerado, <span class="mate">$d\le3$</span> y <span class="mate">$m=1$</span>, todo <span class="mate">$\mathcal M$</span> está en <span class="mate">$(H^1)^*$</span> (Cor. 3.5 de la nota), y con <span class="mate">$m\ge2$</span> basta <span class="mate">$s&gt;m/2$</span>. ⚠️ <strong>No se aplicó</strong>, por la misma razón que <code>NJU-60</code>: es el documento de Junca, tiene banderas del usuario y la inglesa está congelada. <strong>La redacción es decisión suya</strong>, y probablemente dependa de qué <span class="mate">$m$</span> se acuerde para el caso guía.</p>
   </div>
 </li>
 <li class="tarea hecha abrible" data-hecha="1">
