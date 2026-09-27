@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
 <title>Propuesta de tesis · TODO</title>
-<!-- GENERADO por web/build_todo.py el 2026-09-10. NO EDITAR A MANO: los TODO.md mandan, este archivo se reescribe. -->
+<!-- GENERADO por web/build_todo.py el 2026-09-27. NO EDITAR A MANO: los TODO.md mandan, este archivo se reescribe. -->
 <style>
 :root{
   --fondo:#fbfaf7; --papel:#fff; --tinta:#1c1a17; --suave:#6b6558;
@@ -135,16 +135,17 @@ window.MathJax={
 <header class="principal">
 <h1>Propuesta de tesis — control óptimo</h1>
 <p class="sub">Decidir y proponer un tema en control óptimo inverso, en 2–3 meses desde el 2026-07-25.</p>
-<p class="global"><strong>121</strong> de <strong>195</strong> tareas completadas en todo el proyecto.</p>
+<p class="global"><strong>138</strong> de <strong>215</strong> tareas completadas en todo el proyecto.</p>
 </header>
 <nav class="pestanas" role="tablist">
-<button data-slug="preguntas_junca" role="tab">Preguntas a Junca<span class="n">9/28</span></button>
-<button data-slug="preguntas_investigacion" role="tab">Preguntas de investigación<span class="n">13/33</span></button>
-<button data-slug="referencias" role="tab">referencias<span class="n">8/16</span></button>
+<button data-slug="preguntas_junca" role="tab">Preguntas a Junca<span class="n">9/29</span></button>
+<button data-slug="preguntas_investigacion" role="tab">Preguntas de investigación<span class="n">13/34</span></button>
+<button data-slug="referencias" role="tab">referencias<span class="n">9/17</span></button>
 <button data-slug="asesor" role="tab">asesor<span class="n">10/13</span></button>
 <button data-slug="reuniones" role="tab">reuniones<span class="n">5/7</span></button>
 <button data-slug="infra" role="tab">General<span class="n">19/22</span></button>
 <button data-slug="explicaciones" role="tab">explicaciones<span class="n">3/5</span></button>
+<button data-slug="nota_m1" role="tab">nota m1<span class="n">7/8</span></button>
 <button data-slug="notas_junca" role="tab">notas junca<span class="n">46/63</span></button>
 </nav>
 <div class="controles">
@@ -161,8 +162,8 @@ window.MathJax={
     <p class="contexto alerta">🔴 <strong>Desde el 2026-08-24 esta cola sirve para los dos, y NO se marca por destinatario.</strong> En las reuniones está también <strong>Camilo García Trillos</strong> (UCL), y la decisión del usuario es explícita: <em>«las preguntas no importa pa quien sea, se harán en la reunión»</em>. O sea que aquí no se abre grupo nuevo, no se etiqueta a quién va cada una, y <strong>no se abre subproyecto aparte</strong>. Lo que sí cambia al cerrarlas: al marcar <code>[x]</code>, <strong>decir quién contestó</strong>, porque eso sí calibra a quién se le pregunta qué.</p>
     <p class="contexto">Clasificado el 2026-07-27 con el usuario, pregunta por pregunta. Las prioridades son <strong>propuesta del agente</strong> y se cambian sin ceremonia.</p>
   </div>
-  <div class="barra"><div class="relleno" style="width:32%"></div></div>
-  <p class="cuenta">9 de 28 completadas</p>
+  <div class="barra"><div class="relleno" style="width:31%"></div></div>
+  <p class="cuenta">9 de 29 completadas</p>
   <h3>Prioridad alta</h3>
   <ul class="tareas">
 <li class="tarea pendiente abrible" data-hecha="0">
@@ -434,6 +435,17 @@ window.MathJax={
     <p><strong>Propuesta del agente, 2026-08-05, al fichar el v2 (<code>REF-14</code>).</strong> El §5 prueba que <span class="mate">$c$</span> y <span class="mate">$c+q_\phi$</span> dan los mismos optimizadores, con <span class="mate">$q_\phi=\rho\phi-\mathcal L^a\phi$</span>, y concluye que el objeto identificable es <em>«an equivalence class of costs modulo functions of the form (30)»</em>. <strong>La inclusión recíproca no se prueba ni se afirma</strong>, o sea que podría haber más ambigüedad de la que esa clase captura. Es <code>I-21</code>. <strong>Por qué es pregunta suya y no solo trabajo:</strong> de este argumento cuelga la justificación de por qué el previo es necesario y no un truco, que es material de la propuesta. Saber si él lo considera cerrado, folclore conocido del <em>reward shaping</em>, o un hueco real, ahorra semanas en la dirección equivocada.</p>
   </div>
 </li>
+<li class="tarea pendiente abrible" data-hecha="0">
+  <button class="cabecera" type="button" aria-expanded="false">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">P35</span>
+    <span class="titulo">¿La nota de <span class="mate">$m=1$</span> tiene que demostrar que lo discreto converge al refinar la malla, o le basta que el problema discreto tenga la misma estructura?</span>
+    <span class="flecha" aria-hidden="true"></span>
+  </button>
+  <div class="detalle" hidden>
+    <p><strong>Propuesta del agente el 2026-09-27</strong>, al fichar Kushner–Dupuis (<code>REF-16</code>). Hoy la Obs. 6.3 de <code>nota_m1</code> dice que esa convergencia no se prueba y no se usa. <strong>Por qué es pregunta de ellos y no trabajo nuestro:</strong> decide el tamaño del entregable, y la respuesta depende de para qué quieren la nota. <strong>El dato que la hace concreta:</strong> el libro da la convergencia del valor para el problema <strong>directo</strong> (Teorema 10.5.2), pero en un dominio acotado con frontera absorbente o reflejante, <strong>no en el toro</strong> que usa la nota, y <strong>sin tasa</strong>. Para el problema inverso no da nada; la ruta y lo que falta están en <code>I-34</code>. ⚠️ <strong>Y se cruza con el P3 de la reunión del 2026-09-25</strong>, qué poner en el borde: si se pasa a <span class="mate">$V=0$</span> en el borde, el libro cubre el problema directo tal cual; con el toro, no.</p>
+  </div>
+</li>
   </ul>
   <h3>Respondidas</h3>
   <ul class="tareas">
@@ -562,8 +574,8 @@ window.MathJax={
     <p class="contexto">Las de <strong>prioridad alta</strong> están en el camino crítico: sin ellas no hay enunciado de tesis.</p>
     <p class="contexto alerta">🔴 <strong>Revisadas contra el v2 del borrador el 2026-08-05</strong> (<code>REF-14</code>, <code>fichas/junca_fixed_point_continuo_v2.md</code>). El v2 pasó de cero teoremas a dos resultados demostrados, así que varias de estas preguntas cambian de estado y <strong>dos se cierran</strong>. Lo que hay que retener: el Teorema 4.2 del v2 da existencia y unicidad <strong>esquivando</strong> la continuidad del selector de políticas y la HJB, así que lo que antes era «demostrar el punto fijo» hoy es <strong>justificar sus hipótesis sobre <span class="mate">$\mathcal M$</span></strong>. Cada entrada tocada lo dice en su detalle.</p>
   </div>
-  <div class="barra"><div class="relleno" style="width:39%"></div></div>
-  <p class="cuenta">13 de 33 completadas</p>
+  <div class="barra"><div class="relleno" style="width:38%"></div></div>
+  <p class="cuenta">13 de 34 completadas</p>
   <h3>Prioridad alta · Las dos mitades del trabajo</h3>
   <ul class="tareas">
 <li class="tarea pendiente abrible" data-hecha="0">
@@ -858,7 +870,7 @@ window.MathJax={
     <span class="flecha" aria-hidden="true"></span>
   </button>
   <div class="detalle" hidden>
-    <p>Procedencia: de la reunión del 2026-08-03. <em>«Lo que está al final está basado en este sistema, es la resolución de este sistema numéricamente. Esos son los ejemplos numéricos que están ahí. <strong>No están basados en esto de aquí arriba</strong>, sino en esto.»</em> [15:27] Y acto seguido: <em>«numéricamente también hay que pensar si uno coge este problema y trata de hacer un esquema numérico, porque el esquema numérico tiene que discretizar de alguna forma. Entonces, ¿cómo se discretiza eso?»</em> [15:35]. <strong>Por qué no es una pega menor de implementación.</strong> Él mismo separa los <strong>dos puntos de vista</strong> [16:11]: la vía de arriba es <em>«más teórica»</em> y da que <span class="mate">$c$</span> existe y es único; la de abajo es la que corre. Que solo una de las dos tenga esquema numérico es un hueco declarado por el autor. Emparentada con <code>I-15</code>, que es el mismo problema visto por el lado del coste del bucle interno. Y hereda la disyuntiva del §3.1: discretizar en el régimen de medidas no es lo mismo que en el de densidades. ⚠️ <strong>Prioridad media a propósito</strong>, pese a venir de la última reunión: el encargo del asesor es <code>REF-13</code>, que es teórico. Esto es lo siguiente, no lo primero. ✅ <strong>REENCUADRADA el 2026-08-24: el hueco ya tiene nombre y receta, y es una de las tres vías del objetivo 3.</strong> En la reunión enumeró las tres, y la segunda es exactamente esto: <em>«resolver el problema cuadrático, encontrar el <span class="mate">$\eta$</span>, y después del <span class="mate">$\eta$</span> encontrar el <span class="mate">$c$</span> resolviendo el <span class="mate">$R$</span>»</em> [00:36]–[00:46]. El usuario lo precisa contra el documento: es el <span class="mate">$\eta$</span> óptimo del problema <strong>(25)</strong> del Overleaf de <code>notas_junca</code>, con funcional objetivo <span class="mate">$\Psi$</span>, pasado a la ecuación <strong>(26)</strong> para obtener <span class="mate">$c_\star$</span>. Verificado en <code>main.aux</code>: <code>eq:reducido</code> es (25) y <code>eq:cstar</code> es (26). 🔴 <strong>Lo que se cierra y lo que no.</strong> Se cierra <em>qué</em> se discretiza: ya no es «una de las dos formulaciones sin decidir», es la vía 2 y está en el tablero. <strong>Sigue abierto el cómo</strong>, que es la pregunta original: discretizar <span class="mate">$\min_{\eta\in\M}\Psi(\eta)$</span> pide representar medidas y la restricción <span class="mate">$\eta\in\M$</span>, y eso no lo da ninguna malla de la vía 3. ⚠️ <strong>Y hereda un contraste que conviene tener delante:</strong> él la separa de la vía 3 diciendo que ahí <em>«el <span class="mate">$R$</span> también está metido, pero no hay que resolver el problema cuadrático»</em> [00:51]. O sea que las dos tocan <span class="mate">$R$</span> y se distinguen por el cuadrático, no por el operador.</p>
+    <p>Procedencia: de la reunión del 2026-08-03. <em>«Lo que está al final está basado en este sistema, es la resolución de este sistema numéricamente. Esos son los ejemplos numéricos que están ahí. <strong>No están basados en esto de aquí arriba</strong>, sino en esto.»</em> [15:27] Y acto seguido: <em>«numéricamente también hay que pensar si uno coge este problema y trata de hacer un esquema numérico, porque el esquema numérico tiene que discretizar de alguna forma. Entonces, ¿cómo se discretiza eso?»</em> [15:35]. <strong>Por qué no es una pega menor de implementación.</strong> Él mismo separa los <strong>dos puntos de vista</strong> [16:11]: la vía de arriba es <em>«más teórica»</em> y da que <span class="mate">$c$</span> existe y es único; la de abajo es la que corre. Que solo una de las dos tenga esquema numérico es un hueco declarado por el autor. Emparentada con <code>I-15</code>, que es el mismo problema visto por el lado del coste del bucle interno. Y hereda la disyuntiva del §3.1: discretizar en el régimen de medidas no es lo mismo que en el de densidades. ⚠️ <strong>Prioridad media a propósito</strong>, pese a venir de la última reunión: el encargo del asesor es <code>REF-13</code>, que es teórico. Esto es lo siguiente, no lo primero. ✅ <strong>REENCUADRADA el 2026-08-24: el hueco ya tiene nombre y receta, y es una de las tres vías del objetivo 3.</strong> En la reunión enumeró las tres, y la segunda es exactamente esto: <em>«resolver el problema cuadrático, encontrar el <span class="mate">$\eta$</span>, y después del <span class="mate">$\eta$</span> encontrar el <span class="mate">$c$</span> resolviendo el <span class="mate">$R$</span>»</em> [00:36]–[00:46]. El usuario lo precisa contra el documento: es el <span class="mate">$\eta$</span> óptimo del problema <strong>(25)</strong> del Overleaf de <code>notas_junca</code>, con funcional objetivo <span class="mate">$\Psi$</span>, pasado a la ecuación <strong>(26)</strong> para obtener <span class="mate">$c_\star$</span>. Verificado en <code>main.aux</code>: <code>eq:reducido</code> es (25) y <code>eq:cstar</code> es (26). 🔴 <strong>Lo que se cierra y lo que no.</strong> Se cierra <em>qué</em> se discretiza: ya no es «una de las dos formulaciones sin decidir», es la vía 2 y está en el tablero. <strong>Sigue abierto el cómo</strong>, que es la pregunta original: discretizar <span class="mate">$\min_{\eta\in\M}\Psi(\eta)$</span> pide representar medidas y la restricción <span class="mate">$\eta\in\M$</span>, y eso no lo da ninguna malla de la vía 3. ⚠️ <strong>Y hereda un contraste que conviene tener delante:</strong> él la separa de la vía 3 diciendo que ahí <em>«el <span class="mate">$R$</span> también está metido, pero no hay que resolver el problema cuadrático»</em> [00:51]. O sea que las dos tocan <span class="mate">$R$</span> y se distinguen por el cuadrático, no por el operador. ✅ <strong>La mitad lineal tiene referencia desde el 2026-09-27 (<code>REF-16</code>).</strong> En Kushner–Dupuis §6.8.2, las ocupaciones de la cadena de Markov que aproxima la difusión forman un LP cuyo dual es la ecuación de Bellman discreta, y con un cambio de variables ese LP es el <span class="mate">$\mathcal M_h$</span> de <code>nota_m1</code> §6. Para el problema <strong>directo</strong>, discretizar desde el principio y discretizar la HJB al final con upwind dan lo mismo. La mitad cuadrática es el Teorema 6.2 de <code>nota_m1</code>, demostrado allí y sin revisar por los asesores. <strong>Qué falta para cerrar:</strong> que ese Teorema 6.2 pase la revisión, y la convergencia al refinar la malla, que se separa en <code>I-34</code>.</p>
   </div>
 </li>
 <li class="tarea pendiente abrible" data-hecha="0">
@@ -948,6 +960,17 @@ window.MathJax={
   </button>
   <div class="detalle" hidden>
     <p>Sale de la misma observación que <code>I-32</code>. 🟡 <strong>Lectura propia, sin demostrar:</strong> en cada <span class="mate">$x$</span>, minimizar <span class="mate">$\pi_x^a\bigl(c(x,a)+\mathcal L^aV(x)\bigr)$</span> sobre densidades <span class="mate">$\le h$</span> es un problema de «bañera», que pone todo el peso <span class="mate">$h$</span> sobre la fracción <span class="mate">$1/h$</span> de acciones más baratas. Eso cambiaría el selector del sistema de optimalidad. <strong>Cómo se cierra:</strong> con programación dinámica para la clase restringida.</p>
+  </div>
+</li>
+<li class="tarea pendiente abrible" data-hecha="0">
+  <button class="cabecera" type="button" aria-expanded="false">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">I-34</span>
+    <span class="titulo"><strong>¿Convergen los minimizadores discretos <span class="mate">$w_h$</span> a <span class="mate">$\eta_{A,\star}$</span> al refinar la malla?</strong></span>
+    <span class="flecha" aria-hidden="true"></span>
+  </button>
+  <div class="detalle" hidden>
+    <p>Sale de fichar Kushner–Dupuis (<code>REF-16</code>) el 2026-09-27. La Obs. 6.3 de <code>nota_m1</code> dice que no se prueba y que no se usa; esto es lo que haría falta para usarlo. <strong>Lo que el libro da, y lo que no.</strong> Da <span class="mate">$V^h\to V$</span> para el problema <strong>directo</strong> (Teorema 10.5.2), con frontera absorbente o reflejante en un compacto, sin tasa. No da nada sobre minimizar una cuadrática sobre las ocupaciones, ni sobre dominios periódicos. 🟡 <strong>Ruta, y es lectura propia sin demostrar:</strong> una Γ-convergencia de <span class="mate">$\Psi_h$</span> a <span class="mate">$\Psi$</span>. Por el Teorema 10.4.1, todo límite débil de ocupaciones discretas es la ocupación de una difusión con control relajado, o sea que está en <span class="mate">$\mathcal M$</span>; por el Teorema 10.3.1 y la prueba del 10.5.2, toda ocupación de esa clase se alcanza con controles de la cadena. Las dos piezas que faltan: que la norma dual <span class="mate">$\|\cdot\|_{(H^1)^*_h}$</span> de la malla converja a la del continuo, y pasar del compacto con frontera del libro al toro de la nota. Emparentada con <code>I-32</code>, que es la misma pregunta de densidad para otra familia de conjuntos <span class="mate">$\mathcal M_h$</span>. <strong>Cómo se cierra:</strong> con una demostración. Antes, <code>P35</code> decide si entra en el trabajo.</p>
   </div>
 </li>
   </ul>
@@ -1081,8 +1104,8 @@ window.MathJax={
     <p class="contexto alerta">🔴 <strong>Y el 2026-08-03 el asesor dio un encargo concreto que reordena esta lista:</strong> <em>«creo que ese sea como el primer reto: justificar bien este teorema 4.2»</em>. Es <code>REF-13</code>, va primero, y <strong>es anterior a elegir dirección</strong>: se le fue a preguntar cuál de las cinco del §11 atacar y lo que dio fue el prerrequisito que está por debajo de todas. Eso significa que <strong><code>REF-8</code> ya no espera a <code>P22</code> para arrancar</strong>.</p>
     <p class="contexto"><strong>Las preguntas abiertas viven en dos sitios y no se mezclan:</strong> las que dependen de su criterio, en <code>preguntas_junca/TODO.md</code>; las que responde el trabajo, en <code>preguntas_investigacion/TODO.md</code>.</p>
   </div>
-  <div class="barra"><div class="relleno" style="width:50%"></div></div>
-  <p class="cuenta">8 de 16 completadas</p>
+  <div class="barra"><div class="relleno" style="width:53%"></div></div>
+  <p class="cuenta">9 de 17 completadas</p>
   <ul class="tareas">
 <li class="tarea pendiente abrible" data-hecha="0">
   <button class="cabecera" type="button" aria-expanded="false">
@@ -1115,6 +1138,19 @@ window.MathJax={
   </button>
   <div class="detalle" hidden>
     <p class="alerta">🔴 <strong>Es la única tarea nueva de la reunión del 2026-08-18</strong>, sugerida por el asesor y asumida por el usuario en la propia reunión: &gt; <strong>M</strong> — <em>«Estoy pensando por ejemplo en lo que hacen en imágenes: &gt; investigar lo que hacen en imágenes con las penalizaciones.»</em> [12:26] &gt; &gt; <strong>M</strong> — <em>«Pues pensaría un poco en revisar la literatura, en ver lo de &gt; imágenes, a ver un poco qué hacen ahí.»</em> [22:49] &gt; &gt; <strong>L</strong> — <em>«Yo me pongo a investigar qué hacen en los papers […] lo de &gt; las imágenes.»</em> [30:26] <strong>Por qué ahí y no en otro sitio, y el argumento es del usuario:</strong> <em>«en imágenes trabajan necesariamente con cosas acotadas — es una imagen — y no está el problema de la otra inyección»</em> [30:39]. Esa literatura ha tenido que resolver el emparejamiento <strong>sin poder huir a <span class="mate">$\mathbb R^d$</span></strong>, que es justo la salida que se tomó aquí. 🔴 <strong>Depende de <code>I-24</code>, y hay que decirlo antes de gastar horas.</strong> Esta tarea sólo tiene sentido si es verdad que la penalización no está obligada a ser la cuadrática de Hilbert, que es exactamente lo que <code>I-24</code> pone en duda. <strong>Si <code>I-24</code> sale que no, <code>REF-15</code> se queda sin objeto.</strong> El orden barato es mirar primero qué hipótesis mínima pide el §4. ⚠️ <strong>No se nombró ninguna norma concreta en la reunión</strong>, confirmado con el usuario al cerrar la duda 5. La variación total es el candidato obvio de esa literatura, pero <strong>es lectura propia y no se le atribuye a él</strong>. <strong>Cómo se piensa atacar:</strong> primero <code>I-24</code>; después, y sólo si sobrevive, una pasada de estado del arte buscando qué penalizaciones se usan sobre medidas o funciones no suaves, y con qué teoría de existencia. 🔴 <strong>NO se cierra con lo que se hizo, y él lo dijo dos veces en noventa segundos el 2026-08-24.</strong> La búsqueda que se hizo fue general y <strong>no entró en imágenes</strong>, por reconocimiento del propio usuario: &gt; <strong>L</strong> — <em>«pues no busqué exactamente en imágenes: simplemente pedí como &gt; un panorama»</em> [02:26] &gt; &gt; <strong>M</strong> — <em>«Hay que buscar en imágenes, que esa es una literatura mucho más &gt; grande.»</em> [02:35] &gt; &gt; <strong>M</strong> — <em>«Pues yo creo que vale la pena echar otra revisada a la parte de &gt; imágenes, porque puede ser que esto no sea lo que creemos.»</em> [03:53] ⚠️ <strong>Y el motivo que da no es «falta cobertura», es una duda de fondo:</strong> <em>«puede ser que esto no sea lo que creemos»</em>. Para él la elección de <span class="mate">$\mathcal H$</span> <strong>sigue sin estar decidida</strong>, pese al trabajo del 18 al 23. ✅ <strong>Lo que sí dio la búsqueda general, y acota qué buscar:</strong> lo que se encontró era <strong>discreto</strong> o de <strong>dimensión finita</strong> — <em>«lo típico es como algo discreto»</em> [02:30], <em>«era un span de esas funciones, era algo finito, no estaba como en dimensión infinita»</em> [02:46] — y lo único en dimensión infinita que apareció fueron <strong>RKHS</strong> [03:03], que es donde ya se está. O sea: <strong>la pasada general está agotada y no hay que repetirla.</strong> Lo que queda es la literatura de imágenes, que es la que él pide. ⚠️ <strong>Parte de lo que se miró salió de un resumen de ChatGPT</strong>, no de los papers: <em>«no sé si los papers o si le pido a ChatGPT algo que sea un resumen»</em> [03:32], confirmado por el usuario. Nada de ahí sostiene una recomendación sin contrastar.</p>
+  </div>
+</li>
+<li class="tarea hecha abrible" data-hecha="1">
+  <button class="cabecera" type="button" aria-expanded="false">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">REF-16</span>
+    <span class="titulo">Fichar Kushner–Dupuis, los métodos numéricos por cadenas de Markov</span>
+    <span class="fecha">2026-09-27</span>
+    <span class="flecha" aria-hidden="true"></span>
+  </button>
+  <div class="detalle" hidden>
+    <p><strong>Tarea abierta y cerrada el mismo día.</strong> El usuario dejó en el escritorio el libro entero y su <code>.mmd</code> completo; archivados en <code>control/</code> y leído de principio a fin, 12 717 líneas. 🔴 <strong>NÚCLEO, acotado.</strong> Es la fuente de la discretización de <code>nota_m1</code> §6, que ya lo citaba <strong>sin número</strong>. Se estudian §§4.1–4.3, 5.1–5.3, 6.2.1 y 6.8; se ojean la frontera, el cap. 10 y el 16; los caps. 8, 13, 14 y 15 quedan fuera por alcance, no por calidad. ✅ <strong>Lo que ya hace por la nota:</strong> su generador es la (5.3.7) del libro; su condición de optimalidad, la (4.3.7); y la parte lineal de su Teorema 6.2 está en el §6.8.2, donde las ocupaciones de la cadena forman un LP cuyo dual es la ecuación de Bellman. El cambio de variables que lo muestra es lectura propia, comprobada a mano. ✅ <strong>Y responde tres puntos de la reunión del 2026-09-25:</strong> la condición para diferencias centradas que citó García Trillos es la (5.1.17); <span class="mate">$V=0$</span> en el borde es frontera absorbente y la cubre el Teorema 10.5.2; y para el problema directo discretizar primero o al final coinciden. ⚠️ <strong>Lo que el libro NO da:</strong> ninguna tasa de convergencia, nada sobre dominios periódicos, y nada sobre problemas inversos. El docstring de <code>e7_desajuste</code> le atribuía un primer orden y se corrigió. <strong>Repartido:</strong> <code>I-34</code> nueva (convergencia de <span class="mate">$w_h$</span> al refinar), ✅ en <code>I-18</code>, <code>P35</code> propuesta sin aprobar, tres marcas de procedencia en <code>NM1-8</code>, una línea en <code>estado_del_arte.md</code> §6 y el PDF en <code>INVENTARIO.md</code>.</p>
+    <p class="artefacto">Artefacto: <code>subproyectos/referencias/fichas/kushner_dupuis_numerical_methods.md</code></p>
   </div>
 </li>
 <li class="tarea hecha abrible" data-hecha="1">
@@ -2000,6 +2036,126 @@ window.MathJax={
   </button>
   <div class="detalle" hidden>
     <p>Hallazgo del 2026-08-09 auditando la migración de estilo en los tres Overleaf. La plantilla trae los tres modos, pero el contenido usa <code>\displayfin</code> <strong>una sola vez</strong>, así que <code>\notaDeFinetti</code> deja el display estándar escrito literal y solo añade el gris: modo 1 y modo 2 salen iguales. Portar de <code>notas_junca</code> (<code>NJU-11</code>) las dos piezas: el guard de <code>\dfin</code> en <code>=2</code>, y <code>\eqfin{label}{std}{dF}</code> para displays <strong>numerados</strong>, que <code>\displayfin</code> no cubre porque emite <code>\[...\]</code>. ⚠️ La migración está aplicada en la <strong>plantilla</strong> de los tres proyectos y sin aplicar en el <strong>contenido</strong> de los tres.</p>
+  </div>
+</li>
+  </ul>
+</section>
+<section class="panel" id="panel-nota_m1" role="tabpanel">
+  <h2>La nota técnica del caso m = 1</h2>
+  <div class="contexto-oculto" hidden>
+    <p class="contexto">La nota compartida reescrita entera en el caso donde todo funciona: acción de dimensión uno, volatilidad constante y no controlada, y <span class="mate">$s=1$</span>. Con las hipótesis demostradas en vez de supuestas, las dos rutas de solución formalizadas hasta poder programarlas, y las simulaciones de la partícula en el plano. Sale del reparto de la reunión del 2026-09-18. El contexto y las fronteras del caso, en <code>CLAUDE.md</code>.</p>
+  </div>
+  <div class="barra"><div class="relleno" style="width:88%"></div></div>
+  <p class="cuenta">7 de 8 completadas</p>
+  <ul class="tareas">
+<li class="tarea hecha abrible" data-hecha="1">
+  <button class="cabecera" type="button" aria-expanded="false">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">NM1</span>
+    <span class="titulo">1 — Abrir el subproyecto y clonar el fork</span>
+    <span class="fecha">2026-09-24</span>
+    <span class="flecha" aria-hidden="true"></span>
+  </button>
+  <div class="detalle" hidden>
+    <p>Clonado <code>6ab565795ee4f56c94ea7ac0</code> en <code>overleaf/</code>, con el mismo patrón que los otros cuatro: repo anidado, ignorado por el de fuera, con su token en el <code>.git/config</code>. Añadido a <code>.gitignore</code>. <strong>Lo que había dentro:</strong> una copia exacta de la nota compartida en <code>d599d54</code>, verificada archivo a archivo. Un solo commit, <em>«Update on Overleaf»</em> (<code>ccbaf43</code>). ⚠️ <strong>No había identidad de git</strong>, ni local ni global, así que el commit habría fallado. Configurada solo en este repo.</p>
+    <p class="artefacto">Artefacto: <code>subproyectos/nota_m1/CLAUDE.md</code></p>
+  </div>
+</li>
+<li class="tarea hecha abrible" data-hecha="1">
+  <button class="cabecera" type="button" aria-expanded="false">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">NM1</span>
+    <span class="titulo">2 — Los capítulos 1 a 5: las 28 ecuaciones y los 19 enunciados</span>
+    <span class="fecha">2026-09-24</span>
+    <span class="flecha" aria-hidden="true"></span>
+  </button>
+  <div class="detalle" hidden>
+    <p>Reescritas las 28 ecuaciones, con su tabla de correspondencia en el §1.1, y los 19 enunciados numerados, cada uno con su marca de procedencia. 🔴 <strong>El Ejemplo 1 de Bhatt–Borkar ya pide <span class="mate">$\sigma=\sigma(x)$</span></strong>, deriva acotada y Lipschitz: el caso no es una restricción que añadimos, es el ejemplo que la fuente escribe. El Supuesto 1.1 pasa a ser la Prop. 2.1, demostrada, con el dominio ampliado a <span class="mate">$C_0^2\oplus\R\mathbf 1$</span> porque su Condición 2 pide las constantes y <span class="mate">$C_0^2$</span> no las tiene. ✅ <strong>Lo que allí es hipótesis y aquí es teorema:</strong> la desintegración (22) vale para toda <span class="mate">$\eta\in\M$</span> con cota uniforme (Cor. 2.8), la tensión es la Prop. 4.5, y el encaje por fibras (Thm. 3.7) sustituye al Thm. 2.5 y a la Prop. 2.6 con umbral <span class="mate">$s&gt;m/2$</span> y constante <span class="mate">$C_A^2=1/(2\sqrt\kappa)$</span>. ✅ <strong>Y el umbral es afilado:</strong> la Prop. 3.10 demuestra que con <span class="mate">$m\ge2$</span> y política determinista lipschitziana la energía diverge. ⚠️ <strong>Corrección sobre el plan:</strong> <span class="mate">$c_\star$</span> <strong>no</strong> es continuo ni acotado en general; lo que vale, y es lo único que hace falta, es que <span class="mate">$c_\star(x,\cdot)$</span> sea continua para casi todo <span class="mate">$x$</span> (Prop. 4.9). ⚠️ <strong>La Prop. 5.3 va en un solo sentido.</strong> El recíproco pide que exista la <span class="mate">$V$</span> que alcanza el dual, o sea ausencia de salto de dualidad, que no se demuestra; queda dicho en la Obs. 5.4.</p>
+    <p class="artefacto">Artefacto: <code>subproyectos/nota_m1/overleaf/main.pdf</code></p>
+  </div>
+</li>
+<li class="tarea hecha abrible" data-hecha="1">
+  <button class="cabecera" type="button" aria-expanded="false">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">NM1</span>
+    <span class="titulo">3 — Capítulo 6: el enfoque directo, hasta poder programarlo</span>
+    <span class="fecha">2026-09-24</span>
+    <span class="flecha" aria-hidden="true"></span>
+  </button>
+  <div class="detalle" hidden>
+    <p>La Prop. 6.1 completa el cuadrado: (18) es una <strong>proyección</strong>, y de paso el experto deja de tener que estar en <span class="mate">$\M$</span>, que es lo que legitima usar datos muestreados. ✅ <strong>El KKT del P6 de la reunión, demostrado en dimensión finita</strong> (Thm. 6.2): discretizado con cadena de Markov en malla periódica, el sistema de optimalidad <strong>es</strong> el KKT de (18), y la función de valor es el multiplicador de la restricción de balance. Es lo que el continuo no da. ✅ <strong><span class="mate">$G(0)=+\infty$</span> hecho número</strong> (Prop. 6.5): la energía discreta de un átomo crece como <span class="mate">$h^{2-n}$</span>, o sea <span class="mate">$1/h$</span> con <span class="mate">$d=2$</span>. Consecuencia operativa: el suavizado hay que <strong>elegirlo</strong>, a escala fija e independiente de la malla, porque la malla ya suaviza y su número no converge. ✅ Tres maneras de aplicar <span class="mate">$R^{-1}$</span>, con lo que cada una le pide al dominio, y el error de periodizar acotado por <span class="mate">$e^{-L/\sqrt\kappa}$</span>. ✅ El algoritmo es gradiente condicional con <strong>el problema directo como oráculo lineal</strong>, con tasa <span class="mate">$O(1/\ell)$</span> (Thm. 6.8) y certificado computable.</p>
+  </div>
+</li>
+<li class="tarea hecha abrible" data-hecha="1">
+  <button class="cabecera" type="button" aria-expanded="false">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">NM1</span>
+    <span class="titulo">4 — Capítulo 7: el sistema de EDP, hasta poder programarlo</span>
+    <span class="fecha">2026-09-24</span>
+    <span class="flecha" aria-hidden="true"></span>
+  </button>
+  <div class="detalle" hidden>
+    <p>El sistema escrito entero en la malla, con el laplaciano fuera del mínimo por <span class="mate">$\sigma$</span> constante, y el barrido HJB → transporte → costo. 🔴 <strong>El barrido amortiguado ES el gradiente condicional del §6</strong> (Prop. 7.2), porque <span class="mate">$\eta\mapsto c_\eta$</span> es afín. Los dos métodos son la misma iteración en coordenadas distintas, así que comparten tasa y certificado, y lo que hay que medir no es cuál converge sino cuánto cuesta cada dígito. ⚠️ Sin amortiguar (<span class="mate">$\tau=1$</span>), que es lo que uno escribe primero, no hay nada que garantice la convergencia: el oráculo es constante a trozos en <span class="mate">$c$</span> y la órbita puede ciclar. Se mide en el capítulo 8.</p>
+  </div>
+</li>
+<li class="tarea hecha abrible" data-hecha="1">
+  <button class="cabecera" type="button" aria-expanded="false">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">NM1</span>
+    <span class="titulo">5 — Los dos métodos en Python, y su validación cruzada</span>
+    <span class="fecha">2026-09-24</span>
+    <span class="flecha" aria-hidden="true"></span>
+  </button>
+  <div class="detalle" hidden>
+    <p><code>numerica/</code>, con numpy y sin scipy: <code>modelo.py</code>, <code>metodos.py</code>, <code>pruebas.py</code>, <code>experimentos.py</code> y <code>figuras.py</code>. Siete experimentos, ocho figuras y cuatro tablas, todas escritas directamente al Overleaf. ✅ <strong>Seis identidades comprobadas</strong> antes de medir nada, entre ellas <span class="mate">$\nu^{\top}V=\langle c,w\rangle$</span>, que prueba el adjunto contra el directo, y que el gradiente conjugado da lo mismo que la transformada. ✅ <strong>Los dos métodos coinciden a <span class="mate">$3\cdot10^{-12}$</span></strong> en cuatro mallas: es la Prop. 7.2 medida. El barrido sin amortiguar cicla, como dice la Obs. 7.3. ✅ <strong>La Prop. 6.5 se ve</strong>: pendiente local <span class="mate">$-1.09$</span> hacia <span class="mate">$-1$</span>, y <span class="mate">$h\|\delta_h\|^2$</span> subiendo a una constante. 🔴 <strong>Lo que recupera el problema inverso, dicho como toca:</strong> la brecha del experto cae de 0.060 a 0.0016, y <span class="mate">$c_\star-\hat c$</span> se parte en una parte de estado (19 % de la energía) que correlaciona 0.88 con el pozo verdadero donde hay datos, con la amplitud amortiguada, y una <strong>capa sobre la gráfica de la política</strong> que el costo verdadero no tiene. El error <span class="mate">$L^2$</span> crudo contra el verdadero no ve nada de esto. ⚠️ <strong>Con datos de verdad manda la malla, no la muestra:</strong> el error baja como <span class="mate">$n^{-1/2}$</span> hasta un piso que es el desajuste entre la cadena y la difusión, <span class="mate">$0.40\,h$</span> en norma dual y de primer orden. Se cruzan hacia las 1400 trayectorias.</p>
+    <p class="artefacto">Artefacto: <code>subproyectos/nota_m1/overleaf/main.pdf</code></p>
+  </div>
+</li>
+<li class="tarea hecha abrible" data-hecha="1">
+  <button class="cabecera" type="button" aria-expanded="false">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">NM1</span>
+    <span class="titulo">7 — Capítulo 8: el análisis de las simulaciones</span>
+    <span class="fecha">2026-09-24</span>
+    <span class="flecha" aria-hidden="true"></span>
+  </button>
+  <div class="detalle" hidden>
+    <p>Escrito con los números de Python, no con capturas: <code>experimentos.py</code> escribe <code>overleaf/tablas/numeros.tex</code> con una macro por número y el <code>.tex</code> las usa, así que la nota se actualiza sola al cambiar un parámetro. 32 páginas, cero errores, cero referencias rotas, cero cajas desbordadas. Antes de dibujar se miró la literatura de control inverso: el repertorio es camino de regularización con curva L, error de recuperación contra el parámetro, y tablas de normas de error.</p>
+  </div>
+</li>
+<li class="tarea hecha abrible" data-hecha="1">
+  <button class="cabecera" type="button" aria-expanded="false">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">NM1</span>
+    <span class="titulo">6 — El artefacto interactivo de la partícula en el plano</span>
+    <span class="fecha">2026-09-24</span>
+    <span class="flecha" aria-hidden="true"></span>
+  </button>
+  <div class="detalle" hidden>
+    <p><strong>«Recovering the Cost»</strong>, en <code>artefacto/index.html</code>. Los dos métodos en JavaScript, con el previo, la deriva, <span class="mate">$\sigma_0$</span>, <span class="mate">$\alpha$</span>, <span class="mate">$\kappa$</span> y <span class="mate">$\rho$</span> elegibles, el pozo se mueve haciendo clic en el mapa del experto, y el interruptor de experto exacto o muestreado con su suavizado. ✅ <strong>Contrastado contra Python</strong>, no a ojo: el mismo script corrido en node con el DOM simulado da <span class="mate">$\Psi=-0.00492672$</span> contra <span class="mate">$-0.004927$</span> y <span class="mate">$\max|c_\star-\hat c|$</span> a <span class="mate">$1.2\cdot10^{-7}$</span>.</p>
+    <ul>
+      <li>Transformada rápida escrita a mano, radix 2: <strong>N y K potencias de dos</strong>.</li>
+      <li>El certificado se dibuja en escala logarítmica mientras corre, así que el ciclo del barrido sin amortiguar se ve en directo.</li>
+    </ul>
+    <p class="aviso">⚠️ <strong>Es privado.</strong> Para enseñárselo a Junca o a García Trillos hay que compartirlo desde el menú de la página.</p>
+    <p class="artefacto">Artefacto: <code>https://claude.ai/artifact/73NPd5GW6WL1W6V3c237o2</code></p>
+  </div>
+</li>
+<li class="tarea pendiente abrible" data-hecha="0">
+  <button class="cabecera" type="button" aria-expanded="false">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">NM1</span>
+    <span class="titulo">8 — La auditoría de procedencia, enunciado por enunciado</span>
+    <span class="flecha" aria-hidden="true"></span>
+  </button>
+  <div class="detalle" hidden>
+    <p>El punto 4 del encargo: ningún enunciado sin una de las tres marcas. Termina en una tabla en el apéndice. 🔴 <strong>Tres marcas del §6 cambian con Kushner–Dupuis ya fichado</strong> (<code>REF-16</code>, 2026-09-27; detalle en el §4.1 de la ficha):</p>
+    <ul>
+      <li><code>sec6.tex:64</code> cita <code>\fuente{Kushner--Dupuis}</code> sin número. La cita exacta es su (5.3.7) con el §4.3: el generador de la nota es <span class="mate">$p^h/\Delta t^h$</span>.</li>
+      <li>El Teorema 6.2 va entero como <code>\nv</code>, y su parte lineal está en el §6.8.2 del libro: el LP de ocupaciones de la cadena, con la ecuación de Bellman como dual, tras un cambio de variables. Marca mixta.</li>
+      <li>La Prop. 6.7 (Howard) va como <code>\nv</code>; el decrecimiento y la convergencia son su Teorema 6.2.1. La terminación en finitos pasos y la inversa no negativa no están en el libro. Marca mixta.</li>
+    </ul>
+    <p class="aviso">⚠️ <strong>El libro no demuestra ninguna tasa.</strong> Si el cap. 8 afirma primer orden en algún sitio, tiene que decir que es medido. El docstring de <code>e7_desajuste</code> se lo atribuía al libro y se corrigió el 2026-09-27.</p>
   </div>
 </li>
   </ul>
@@ -3086,7 +3242,7 @@ window.MathJax={
   </ul>
 </section>
 <footer>
-Generado el 2026-09-10 por <code>web/build_todo.py</code> a partir de los <code>TODO.md</code>. Editar esta página a mano no sirve de nada: se reescribe en la siguiente ejecución.
+Generado el 2026-09-27 por <code>web/build_todo.py</code> a partir de los <code>TODO.md</code>. Editar esta página a mano no sirve de nada: se reescribe en la siguiente ejecución.
 </footer>
 </div>
 <script>
