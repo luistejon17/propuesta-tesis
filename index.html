@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
 <title>Propuesta de tesis · TODO</title>
-<!-- GENERADO por web/build_todo.py el 2026-09-27. NO EDITAR A MANO: los TODO.md mandan, este archivo se reescribe. -->
+<!-- GENERADO por web/build_todo.py el 2026-10-01. NO EDITAR A MANO: los TODO.md mandan, este archivo se reescribe. -->
 <style>
 :root{
   --fondo:#fbfaf7; --papel:#fff; --tinta:#1c1a17; --suave:#6b6558;
@@ -135,17 +135,17 @@ window.MathJax={
 <header class="principal">
 <h1>Propuesta de tesis — control óptimo</h1>
 <p class="sub">Decidir y proponer un tema en control óptimo inverso, en 2–3 meses desde el 2026-07-25.</p>
-<p class="global"><strong>138</strong> de <strong>215</strong> tareas completadas en todo el proyecto.</p>
+<p class="global"><strong>139</strong> de <strong>220</strong> tareas completadas en todo el proyecto.</p>
 </header>
 <nav class="pestanas" role="tablist">
-<button data-slug="preguntas_junca" role="tab">Preguntas a Junca<span class="n">9/29</span></button>
-<button data-slug="preguntas_investigacion" role="tab">Preguntas de investigación<span class="n">13/34</span></button>
+<button data-slug="preguntas_junca" role="tab">Preguntas a Junca<span class="n">9/30</span></button>
+<button data-slug="preguntas_investigacion" role="tab">Preguntas de investigación<span class="n">13/35</span></button>
 <button data-slug="referencias" role="tab">referencias<span class="n">9/17</span></button>
 <button data-slug="asesor" role="tab">asesor<span class="n">10/13</span></button>
 <button data-slug="reuniones" role="tab">reuniones<span class="n">5/7</span></button>
 <button data-slug="infra" role="tab">General<span class="n">19/22</span></button>
 <button data-slug="explicaciones" role="tab">explicaciones<span class="n">3/5</span></button>
-<button data-slug="nota_m1" role="tab">nota m1<span class="n">7/8</span></button>
+<button data-slug="nota_m1" role="tab">nota m1<span class="n">8/11</span></button>
 <button data-slug="notas_junca" role="tab">notas junca<span class="n">46/63</span></button>
 </nav>
 <div class="controles">
@@ -162,8 +162,8 @@ window.MathJax={
     <p class="contexto alerta">🔴 <strong>Desde el 2026-08-24 esta cola sirve para los dos, y NO se marca por destinatario.</strong> En las reuniones está también <strong>Camilo García Trillos</strong> (UCL), y la decisión del usuario es explícita: <em>«las preguntas no importa pa quien sea, se harán en la reunión»</em>. O sea que aquí no se abre grupo nuevo, no se etiqueta a quién va cada una, y <strong>no se abre subproyecto aparte</strong>. Lo que sí cambia al cerrarlas: al marcar <code>[x]</code>, <strong>decir quién contestó</strong>, porque eso sí calibra a quién se le pregunta qué.</p>
     <p class="contexto">Clasificado el 2026-07-27 con el usuario, pregunta por pregunta. Las prioridades son <strong>propuesta del agente</strong> y se cambian sin ceremonia.</p>
   </div>
-  <div class="barra"><div class="relleno" style="width:31%"></div></div>
-  <p class="cuenta">9 de 29 completadas</p>
+  <div class="barra"><div class="relleno" style="width:30%"></div></div>
+  <p class="cuenta">9 de 30 completadas</p>
   <h3>Prioridad alta</h3>
   <ul class="tareas">
 <li class="tarea pendiente abrible" data-hecha="0">
@@ -446,6 +446,17 @@ window.MathJax={
     <p><strong>Propuesta del agente el 2026-09-27</strong>, al fichar Kushner–Dupuis (<code>REF-16</code>). Hoy la Obs. 6.3 de <code>nota_m1</code> dice que esa convergencia no se prueba y no se usa. <strong>Por qué es pregunta de ellos y no trabajo nuestro:</strong> decide el tamaño del entregable, y la respuesta depende de para qué quieren la nota. <strong>El dato que la hace concreta:</strong> el libro da la convergencia del valor para el problema <strong>directo</strong> (Teorema 10.5.2), pero en un dominio acotado con frontera absorbente o reflejante, <strong>no en el toro</strong> que usa la nota, y <strong>sin tasa</strong>. Para el problema inverso no da nada; la ruta y lo que falta están en <code>I-34</code>. ⚠️ <strong>Y se cruza con el P3 de la reunión del 2026-09-25</strong>, qué poner en el borde: si se pasa a <span class="mate">$V=0$</span> en el borde, el libro cubre el problema directo tal cual; con el toro, no.</p>
   </div>
 </li>
+<li class="tarea pendiente abrible" data-hecha="0">
+  <button class="cabecera" type="button" aria-expanded="false">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">P36</span>
+    <span class="titulo">Con <span class="mate">$L=3$</span> el toro se aparta 12 % y <span class="mate">$V=0$</span> un 5 %. ¿Se cambia el borde, se agranda la caja, o las dos?</span>
+    <span class="flecha" aria-hidden="true"></span>
+  </button>
+  <div class="detalle" hidden>
+    <p><strong>Propuesta del agente el 2026-10-01</strong>, al revisar el artefacto del barrido (<code>NM1-9</code>). Es la respuesta medida a la pregunta abierta del 25, «¿cuánto afecta la condición en el borde a la solución dentro?». <strong>El dato:</strong> mismo <span class="mate">$h$</span>, cajas de <span class="mate">$L=3$</span>, <span class="mate">$4.5$</span> y <span class="mate">$6$</span>. En <span class="mate">$L=6$</span> los dos bordes coinciden. En <span class="mate">$L=3$</span>, que es la caja de la nota y de los dos artefactos, el costo recuperado se aparta 12 % con el toro y 5 % con <span class="mate">$V=0$</span> fuera; en <span class="mate">$L=4.5$</span>, 3 % y 1 %. <strong>Por qué es pregunta de ellos:</strong> cambiar el borde rehace el §6 de <code>nota_m1</code>, que usa la periodicidad para invertir <span class="mate">$R_h$</span> con Fourier, y agrandar la caja solo cuesta cómputo. Elegir depende de si quieren el dominio acotado como objeto, que es uno de los aplazados del 25.</p>
+  </div>
+</li>
   </ul>
   <h3>Respondidas</h3>
   <ul class="tareas">
@@ -574,8 +585,8 @@ window.MathJax={
     <p class="contexto">Las de <strong>prioridad alta</strong> están en el camino crítico: sin ellas no hay enunciado de tesis.</p>
     <p class="contexto alerta">🔴 <strong>Revisadas contra el v2 del borrador el 2026-08-05</strong> (<code>REF-14</code>, <code>fichas/junca_fixed_point_continuo_v2.md</code>). El v2 pasó de cero teoremas a dos resultados demostrados, así que varias de estas preguntas cambian de estado y <strong>dos se cierran</strong>. Lo que hay que retener: el Teorema 4.2 del v2 da existencia y unicidad <strong>esquivando</strong> la continuidad del selector de políticas y la HJB, así que lo que antes era «demostrar el punto fijo» hoy es <strong>justificar sus hipótesis sobre <span class="mate">$\mathcal M$</span></strong>. Cada entrada tocada lo dice en su detalle.</p>
   </div>
-  <div class="barra"><div class="relleno" style="width:38%"></div></div>
-  <p class="cuenta">13 de 34 completadas</p>
+  <div class="barra"><div class="relleno" style="width:37%"></div></div>
+  <p class="cuenta">13 de 35 completadas</p>
   <h3>Prioridad alta · Las dos mitades del trabajo</h3>
   <ul class="tareas">
 <li class="tarea pendiente abrible" data-hecha="0">
@@ -971,6 +982,17 @@ window.MathJax={
   </button>
   <div class="detalle" hidden>
     <p>Sale de fichar Kushner–Dupuis (<code>REF-16</code>) el 2026-09-27. La Obs. 6.3 de <code>nota_m1</code> dice que no se prueba y que no se usa; esto es lo que haría falta para usarlo. <strong>Lo que el libro da, y lo que no.</strong> Da <span class="mate">$V^h\to V$</span> para el problema <strong>directo</strong> (Teorema 10.5.2), con frontera absorbente o reflejante en un compacto, sin tasa. No da nada sobre minimizar una cuadrática sobre las ocupaciones, ni sobre dominios periódicos. 🟡 <strong>Ruta, y es lectura propia sin demostrar:</strong> una Γ-convergencia de <span class="mate">$\Psi_h$</span> a <span class="mate">$\Psi$</span>. Por el Teorema 10.4.1, todo límite débil de ocupaciones discretas es la ocupación de una difusión con control relajado, o sea que está en <span class="mate">$\mathcal M$</span>; por el Teorema 10.3.1 y la prueba del 10.5.2, toda ocupación de esa clase se alcanza con controles de la cadena. Las dos piezas que faltan: que la norma dual <span class="mate">$\|\cdot\|_{(H^1)^*_h}$</span> de la malla converja a la del continuo, y pasar del compacto con frontera del libro al toro de la nota. Emparentada con <code>I-32</code>, que es la misma pregunta de densidad para otra familia de conjuntos <span class="mate">$\mathcal M_h$</span>. <strong>Cómo se cierra:</strong> con una demostración. Antes, <code>P35</code> decide si entra en el trabajo.</p>
+  </div>
+</li>
+<li class="tarea pendiente abrible" data-hecha="0">
+  <button class="cabecera" type="button" aria-expanded="false">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">I-35</span>
+    <span class="titulo"><strong>¿Cómo decae con <span class="mate">$L$</span> el efecto del borde sobre el costo recuperado?</strong></span>
+    <span class="flecha" aria-hidden="true"></span>
+  </button>
+  <div class="detalle" hidden>
+    <p>Sale de revisar el artefacto del barrido (<code>NM1-9</code>) el 2026-10-01. ✅ <strong>Medido, no demostrado:</strong> con el mismo <span class="mate">$h$</span>, el costo recuperado se aparta del de <span class="mate">$L=6$</span> un 12 % en <span class="mate">$L=3$</span> y un 3 % en <span class="mate">$L=4.5$</span> con el toro, y un 5 % y un 1 % con la cadena matada al salir. La ocupación del experto, 8.5 % y 0.4 % en <span class="mate">$L=3$</span>. <strong>Lo que hay escrito:</strong> la Obs. 6.4 de <code>nota_m1</code> acota el error de periodizar el núcleo por <span class="mate">$e^{-L/\sqrt\kappa}$</span>, que aquí es despreciable, y remite las ocupaciones a la cota de tensión, de orden <span class="mate">$1/(\rho^2L)$</span>. Lo medido es compatible con que mande la segunda. <strong>Cómo se cierra:</strong> con una cota del error en <span class="mate">$c_\star$</span> en función de <span class="mate">$L$</span> para cada borde, o con una referencia.</p>
   </div>
 </li>
   </ul>
@@ -2045,8 +2067,8 @@ window.MathJax={
   <div class="contexto-oculto" hidden>
     <p class="contexto">La nota compartida reescrita entera en el caso donde todo funciona: acción de dimensión uno, volatilidad constante y no controlada, y <span class="mate">$s=1$</span>. Con las hipótesis demostradas en vez de supuestas, las dos rutas de solución formalizadas hasta poder programarlas, y las simulaciones de la partícula en el plano. Sale del reparto de la reunión del 2026-09-18. El contexto y las fronteras del caso, en <code>CLAUDE.md</code>.</p>
   </div>
-  <div class="barra"><div class="relleno" style="width:88%"></div></div>
-  <p class="cuenta">7 de 8 completadas</p>
+  <div class="barra"><div class="relleno" style="width:73%"></div></div>
+  <p class="cuenta">8 de 11 completadas</p>
   <ul class="tareas">
 <li class="tarea hecha abrible" data-hecha="1">
   <button class="cabecera" type="button" aria-expanded="false">
@@ -2156,6 +2178,42 @@ window.MathJax={
       <li>La Prop. 6.7 (Howard) va como <code>\nv</code>; el decrecimiento y la convergencia son su Teorema 6.2.1. La terminación en finitos pasos y la inversa no negativa no están en el libro. Marca mixta.</li>
     </ul>
     <p class="aviso">⚠️ <strong>El libro no demuestra ninguna tasa.</strong> Si el cap. 8 afirma primer orden en algún sitio, tiene que decir que es medido. El docstring de <code>e7_desajuste</code> se lo atribuía al libro y se corrigió el 2026-09-27.</p>
+  </div>
+</li>
+<li class="tarea hecha abrible" data-hecha="1">
+  <button class="cabecera" type="button" aria-expanded="false">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">NM1</span>
+    <span class="titulo">9 — El artefacto del barrido: revisado, medido contra la reunión del 25 y explicado</span>
+    <span class="fecha">2026-10-01</span>
+    <span class="flecha" aria-hidden="true"></span>
+  </button>
+  <div class="detalle" hidden>
+    <p>El segundo artefacto, <strong>«El sistema de optimalidad, línea por línea»</strong>, lo hizo una sesión de Claude de escritorio antes de la reunión del 25 y no se mostró. Su código queda en <code>numerica/artefacto_barrido/</code>, con las pruebas de esta revisión en <code>revision/</code>. ✅ <strong>Sin errores en el núcleo.</strong> 24 identidades independientes (adjunto, balance, símbolo de <span class="mate">$R_h$</span>, paso exacto, <span class="mate">$\Psi$</span> decreciente), y el ciclo de la propia página corrido fuera del navegador reproduce la tabla de mallas. Las pruebas que traía validaban el núcleo con otro ciclo. 🔴 <strong>El toro pesa.</strong> Con <span class="mate">$L=3$</span> se aparta 12 % en el costo recuperado y 16 % en <span class="mate">$\Psi$</span> de lo que da una caja de <span class="mate">$L=6$</span>; el borde <span class="mate">$V=0$</span> que propusieron Junca y García Trillos, 5 % y 4 %. Los números de la página y los del §8 cargan con eso. Va a <code>P36</code>. 🔴 <strong>El <span class="mate">$\tau$</span> constante no converge</strong>, oscila en una banda proporcional a <span class="mate">$\tau$</span> (demostrado y medido); el mejor en 400 barridos es <span class="mate">$0.02$</span>. La búsqueda exacta usa pasos de mediana <span class="mate">$0.0016$</span>. 🔴 <strong>El ciclo con <span class="mate">$\tau=1$</span> no es por falta de convexidad estricta</strong>, como se dijo el 25: el problema es fuertemente convexo y no diferenciable, y el barrido es el método del subgradiente con paso <span class="mate">$\tau/\alpha$</span>. Sin relajar no puede converger si la solución mezcla acciones, y aquí mezcla en 511 de 1024 estados. ⚠️ El upwind agrega difusión <span class="mate">$h|b_j|$</span>, hasta <span class="mate">$0.19$</span> frente a <span class="mate">$\sigma_0^2=0.25$</span> en <span class="mate">$N=32$</span>; las centradas eran válidas en las tres mallas y dan <span class="mate">$\Psi$</span> un 8 % distinta. ⚠️ La parada en <span class="mate">$10^{-9}$</span> no se alcanza nunca, y un certificado de <span class="mate">$2\cdot10^{-5}$</span> es un 8 % en la norma del costo. Con el previo nulo el método devuelve el costo nulo, y es lo correcto. ⚠️ El material de Zoom del 25 no estaba archivado; ahora está en <code>asesor/2026-09-25/zoom/</code> y <code>/procesar_reunion</code> lo archiva en su paso 0.</p>
+    <p class="artefacto">Artefacto: <code>material_pdf/notas_tecnicas/artefacto_barrido_es.pdf</code></p>
+  </div>
+</li>
+<li class="tarea pendiente abrible" data-hecha="0">
+  <button class="cabecera" type="button" aria-expanded="false">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">NM1</span>
+    <span class="titulo">10 — Medir la comprensión del barrido: cuestionario y ronda oral</span>
+    <span class="flecha" aria-hidden="true"></span>
+  </button>
+  <div class="detalle" hidden>
+    <p class="hecho">✅ Hecho: 36 preguntas en cinco bloques, 14 de primera vuelta, y sus soluciones en un PDF aparte. <strong>Falta para cerrar:</strong> que el usuario responda, calificar, y la ronda oral en el chat sobre lo que salga flojo.</p>
+    <p class="artefacto">Artefacto: <code>material_pdf/notas_tecnicas/artefacto_barrido_preguntas_es.pdf</code></p>
+  </div>
+</li>
+<li class="tarea pendiente abrible" data-hecha="0">
+  <button class="cabecera" type="button" aria-expanded="false">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">NM1</span>
+    <span class="titulo">11 — Corregir la brecha del experto bajo el previo en el §8</span>
+    <span class="flecha" aria-hidden="true"></span>
+  </button>
+  <div class="detalle" hidden>
+    <p>El §8 dice <span class="mate">$0.060$</span> y es <span class="mate">$0.030$</span>. <code>experimentos.py:107</code> resta <span class="mate">$\nu\cdot V_E$</span>, el valor del experto bajo el costo <strong>verdadero</strong>, donde la definición pide el valor óptimo bajo el <strong>previo</strong>, que es cero. La página del barrido lo calcula bien. La brecha bajo <span class="mate">$c_\star$</span>, <span class="mate">$0.0016$</span>, está bien. No se tocó: corregirlo reescribe <code>overleaf/tablas/numeros.tex</code>, y la instrucción del 2026-10-01 fue no modificar el Overleaf y avisar.</p>
   </div>
 </li>
   </ul>
@@ -3242,7 +3300,7 @@ window.MathJax={
   </ul>
 </section>
 <footer>
-Generado el 2026-09-27 por <code>web/build_todo.py</code> a partir de los <code>TODO.md</code>. Editar esta página a mano no sirve de nada: se reescribe en la siguiente ejecución.
+Generado el 2026-10-01 por <code>web/build_todo.py</code> a partir de los <code>TODO.md</code>. Editar esta página a mano no sirve de nada: se reescribe en la siguiente ejecución.
 </footer>
 </div>
 <script>
