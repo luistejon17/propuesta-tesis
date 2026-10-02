@@ -135,17 +135,17 @@ window.MathJax={
 <header class="principal">
 <h1>Propuesta de tesis — control óptimo</h1>
 <p class="sub">Decidir y proponer un tema en control óptimo inverso, en 2–3 meses desde el 2026-07-25.</p>
-<p class="global"><strong>139</strong> de <strong>220</strong> tareas completadas en todo el proyecto.</p>
+<p class="global"><strong>139</strong> de <strong>222</strong> tareas completadas en todo el proyecto.</p>
 </header>
 <nav class="pestanas" role="tablist">
 <button data-slug="preguntas_junca" role="tab">Preguntas a Junca<span class="n">9/30</span></button>
-<button data-slug="preguntas_investigacion" role="tab">Preguntas de investigación<span class="n">13/35</span></button>
+<button data-slug="preguntas_investigacion" role="tab">Preguntas de investigación<span class="n">13/36</span></button>
 <button data-slug="referencias" role="tab">referencias<span class="n">9/17</span></button>
 <button data-slug="asesor" role="tab">asesor<span class="n">10/13</span></button>
 <button data-slug="reuniones" role="tab">reuniones<span class="n">5/7</span></button>
 <button data-slug="infra" role="tab">General<span class="n">19/22</span></button>
 <button data-slug="explicaciones" role="tab">explicaciones<span class="n">3/5</span></button>
-<button data-slug="nota_m1" role="tab">nota m1<span class="n">8/11</span></button>
+<button data-slug="nota_m1" role="tab">nota m1<span class="n">8/12</span></button>
 <button data-slug="notas_junca" role="tab">notas junca<span class="n">46/63</span></button>
 </nav>
 <div class="controles">
@@ -585,8 +585,8 @@ window.MathJax={
     <p class="contexto">Las de <strong>prioridad alta</strong> están en el camino crítico: sin ellas no hay enunciado de tesis.</p>
     <p class="contexto alerta">🔴 <strong>Revisadas contra el v2 del borrador el 2026-08-05</strong> (<code>REF-14</code>, <code>fichas/junca_fixed_point_continuo_v2.md</code>). El v2 pasó de cero teoremas a dos resultados demostrados, así que varias de estas preguntas cambian de estado y <strong>dos se cierran</strong>. Lo que hay que retener: el Teorema 4.2 del v2 da existencia y unicidad <strong>esquivando</strong> la continuidad del selector de políticas y la HJB, así que lo que antes era «demostrar el punto fijo» hoy es <strong>justificar sus hipótesis sobre <span class="mate">$\mathcal M$</span></strong>. Cada entrada tocada lo dice en su detalle.</p>
   </div>
-  <div class="barra"><div class="relleno" style="width:37%"></div></div>
-  <p class="cuenta">13 de 35 completadas</p>
+  <div class="barra"><div class="relleno" style="width:36%"></div></div>
+  <p class="cuenta">13 de 36 completadas</p>
   <h3>Prioridad alta · Las dos mitades del trabajo</h3>
   <ul class="tareas">
 <li class="tarea pendiente abrible" data-hecha="0">
@@ -993,6 +993,17 @@ window.MathJax={
   </button>
   <div class="detalle" hidden>
     <p>Sale de revisar el artefacto del barrido (<code>NM1-9</code>) el 2026-10-01. ✅ <strong>Medido, no demostrado:</strong> con el mismo <span class="mate">$h$</span>, el costo recuperado se aparta del de <span class="mate">$L=6$</span> un 12 % en <span class="mate">$L=3$</span> y un 3 % en <span class="mate">$L=4.5$</span> con el toro, y un 5 % y un 1 % con la cadena matada al salir. La ocupación del experto, 8.5 % y 0.4 % en <span class="mate">$L=3$</span>. <strong>Lo que hay escrito:</strong> la Obs. 6.4 de <code>nota_m1</code> acota el error de periodizar el núcleo por <span class="mate">$e^{-L/\sqrt\kappa}$</span>, que aquí es despreciable, y remite las ocupaciones a la cota de tensión, de orden <span class="mate">$1/(\rho^2L)$</span>. Lo medido es compatible con que mande la segunda. <strong>Cómo se cierra:</strong> con una cota del error en <span class="mate">$c_\star$</span> en función de <span class="mate">$L$</span> para cada borde, o con una referencia.</p>
+  </div>
+</li>
+<li class="tarea pendiente abrible" data-hecha="0">
+  <button class="cabecera" type="button" aria-expanded="false">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">I-36</span>
+    <span class="titulo"><strong>¿Converge <span class="mate">$\Psi$</span> al refinar solo la malla de acciones, y a qué ritmo?</strong></span>
+    <span class="flecha" aria-hidden="true"></span>
+  </button>
+  <div class="detalle" hidden>
+    <p>Sale de la revisión de la página rehecha del barrido (<code>NM1-12</code>) el 2026-10-01. ✅ <strong>Medido, dos puntos nada más:</strong> con <span class="mate">$L=6$</span> y <span class="mate">$N=64$</span> fijos, <span class="mate">$\Psi$</span> pasa de <span class="mate">$-0.004239$</span> con <span class="mate">$K=16$</span> a <span class="mate">$-0.003621$</span> con <span class="mate">$K=32$</span>, un 15 %, a los 100 barridos y con cota del error de <span class="mate">$5\cdot10^{-5}$</span>. Es tanto como el efecto de la caja (<code>I-35</code>) y cuatro veces el de <span class="mate">$N$</span> entre 48, 64 y 96. 🔴 <strong>La tabla de mallas de <code>nota_m1</code> §8 y la del esquema en la nota técnica movían <span class="mate">$N$</span> y <span class="mate">$K$</span> juntos</strong>, así que no separan los dos efectos. <strong>Lo que no se sabe:</strong> si es error de discretización del ángulo, que con <span class="mate">$K=16$</span> solo ofrece direcciones cada <span class="mate">$22.5^\circ$</span>, o del peso <span class="mate">$h_a$</span> en la norma de <span class="mate">$\mathcal H_h$</span>. Faltan <span class="mate">$K=24$</span>, <span class="mate">$48$</span> y <span class="mate">$64$</span>. <strong>Cómo se cierra:</strong> con la serie en <span class="mate">$K$</span> a <span class="mate">$N$</span> fijo y un orden observado, o con una cota del error de la cadena en <span class="mate">$h_a$</span>.</p>
   </div>
 </li>
   </ul>
@@ -2067,8 +2078,8 @@ window.MathJax={
   <div class="contexto-oculto" hidden>
     <p class="contexto">La nota compartida reescrita entera en el caso donde todo funciona: acción de dimensión uno, volatilidad constante y no controlada, y <span class="mate">$s=1$</span>. Con las hipótesis demostradas en vez de supuestas, las dos rutas de solución formalizadas hasta poder programarlas, y las simulaciones de la partícula en el plano. Sale del reparto de la reunión del 2026-09-18. El contexto y las fronteras del caso, en <code>CLAUDE.md</code>.</p>
   </div>
-  <div class="barra"><div class="relleno" style="width:73%"></div></div>
-  <p class="cuenta">8 de 11 completadas</p>
+  <div class="barra"><div class="relleno" style="width:67%"></div></div>
+  <p class="cuenta">8 de 12 completadas</p>
   <ul class="tareas">
 <li class="tarea hecha abrible" data-hecha="1">
   <button class="cabecera" type="button" aria-expanded="false">
@@ -2219,6 +2230,34 @@ window.MathJax={
   </button>
   <div class="detalle" hidden>
     <p>El §8 dice <span class="mate">$0.060$</span> y es <span class="mate">$0.030$</span>. <code>experimentos.py:107</code> resta <span class="mate">$\nu\cdot V_E$</span>, el valor del experto bajo el costo <strong>verdadero</strong>, donde la definición pide el valor óptimo bajo el <strong>previo</strong>, que es cero. La página del barrido lo calcula bien. La brecha bajo <span class="mate">$c_\star$</span>, <span class="mate">$0.0016$</span>, está bien. No se tocó: corregirlo reescribe <code>overleaf/tablas/numeros.tex</code>, y la instrucción del 2026-10-01 fue no modificar el Overleaf y avisar.</p>
+  </div>
+</li>
+<li class="tarea pendiente abrible" data-hecha="0">
+  <button class="cabecera" type="button" aria-expanded="false">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">NM1</span>
+    <span class="titulo">12 — La página del barrido, rehecha para que se entienda</span>
+    <span class="flecha" aria-hidden="true"></span>
+  </button>
+  <div class="detalle" hidden>
+    <p>Pedido del 2026-10-01: ancho completo, el costo a la vista, sin párrafos, fórmula de cada previo, preconfiguraciones, otro nombre para el certificado, definición de cada símbolo al pasar el puntero, arranque elegible, caja <span class="mate">$L=6$</span> y una revisión en busca de errores. ✅ Hecho y publicado en el mismo enlace (versión 3 del artefacto):</p>
+    <ul>
+      <li>Caja <span class="mate">$L=6$</span> (con <span class="mate">$L=3$</span> de opción), malla inicial <span class="mate">$N=64$</span>, <span class="mate">$K=16$</span>, que conserva <span class="mate">$h=0.1875$</span>. Unos 125 ms por barrido.</li>
+      <li><span class="mate">$g_\ell$</span> se llama <strong>cota del error</strong>, con su expresión escrita.</li>
+      <li>27 símbolos con cuadro de definición; <code>pagina.js</code> comprueba que cada símbolo tiene cuadro y cada cuadro se usa.</li>
+      <li>15 preconfiguraciones, con lo que cada una mide.</li>
+      <li>Mapa nuevo de <span class="mate">$c_E-\widehat c$</span> y dos medidas nuevas de cuánto se recupera.</li>
+      <li>Núcleo: <code>startx</code>, <code>starty</code> y el previo <code>&quot;true&quot;</code>. <span class="mate">$\Psi$</span> de <code>psi.js</code> igual antes y después (<span class="mate">$-0.005056$</span> y <span class="mate">$-0.004925$</span>).</li>
+    </ul>
+    <p class="alerta">🔴 Lo que salió de la revisión:</p>
+    <ul>
+      <li><span class="mate">$\Psi$</span> cambia un <strong>15 %</strong> de <span class="mate">$K=16$</span> a <span class="mate">$K=32$</span> con <span class="mate">$N$</span> fijo, tanto como por la caja. La tabla de mallas de la nota movía <span class="mate">$N$</span> y <span class="mate">$K$</span> juntos.</li>
+      <li>Lo recuperado se parece poco al costo verdadero en la norma de <span class="mate">$\mathcal H_h$</span>: coseno <span class="mate">$\le 0.33$</span>, y a lo sumo un 5 % más cerca que el previo.</li>
+      <li>Los costos <strong>no son periódicos</strong> en una caja periódica: salto de hasta <span class="mate">$0.13A$</span> en la costura con <span class="mate">$L=3$</span>, despreciable con <span class="mate">$L=6$</span>. Sin corregir, porque cambiaría <code>psi.js</code>.</li>
+      <li>El mapa estaba corrido media celda respecto del círculo del pozo. Corregido.</li>
+    </ul>
+    <p class="hecho">✅ La nota técnica lleva una §2.5 con lo que cambió y la tabla de las preconfiguraciones (30 páginas, compila sin avisos). <strong>Falta para cerrar:</strong> que él abra la página en un navegador real y confirme los cuadros con el ratón, el ancho de teléfono y el tema oscuro: solo se comprobaron en Chrome sin ventana, a 1700 px y en claro.</p>
+    <p class="artefacto">Artefacto: <code>subproyectos/nota_m1/numerica/artefacto_barrido/sistema_barrido.html</code></p>
   </div>
 </li>
   </ul>
