@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
 <title>Propuesta de tesis · TODO</title>
-<!-- GENERADO por web/build_todo.py el 2026-10-01. NO EDITAR A MANO: los TODO.md mandan, este archivo se reescribe. -->
+<!-- GENERADO por web/build_todo.py el 2026-10-08. NO EDITAR A MANO: los TODO.md mandan, este archivo se reescribe. -->
 <style>
 :root{
   --fondo:#fbfaf7; --papel:#fff; --tinta:#1c1a17; --suave:#6b6558;
@@ -135,7 +135,7 @@ window.MathJax={
 <header class="principal">
 <h1>Propuesta de tesis — control óptimo</h1>
 <p class="sub">Decidir y proponer un tema en control óptimo inverso, en 2–3 meses desde el 2026-07-25.</p>
-<p class="global"><strong>139</strong> de <strong>222</strong> tareas completadas en todo el proyecto.</p>
+<p class="global"><strong>139</strong> de <strong>223</strong> tareas completadas en todo el proyecto.</p>
 </header>
 <nav class="pestanas" role="tablist">
 <button data-slug="preguntas_junca" role="tab">Preguntas a Junca<span class="n">9/30</span></button>
@@ -145,7 +145,7 @@ window.MathJax={
 <button data-slug="reuniones" role="tab">reuniones<span class="n">5/7</span></button>
 <button data-slug="infra" role="tab">General<span class="n">19/22</span></button>
 <button data-slug="explicaciones" role="tab">explicaciones<span class="n">3/5</span></button>
-<button data-slug="nota_m1" role="tab">nota m1<span class="n">8/12</span></button>
+<button data-slug="nota_m1" role="tab">nota m1<span class="n">8/13</span></button>
 <button data-slug="notas_junca" role="tab">notas junca<span class="n">46/63</span></button>
 </nav>
 <div class="controles">
@@ -2078,8 +2078,8 @@ window.MathJax={
   <div class="contexto-oculto" hidden>
     <p class="contexto">La nota compartida reescrita entera en el caso donde todo funciona: acción de dimensión uno, volatilidad constante y no controlada, y <span class="mate">$s=1$</span>. Con las hipótesis demostradas en vez de supuestas, las dos rutas de solución formalizadas hasta poder programarlas, y las simulaciones de la partícula en el plano. Sale del reparto de la reunión del 2026-09-18. El contexto y las fronteras del caso, en <code>CLAUDE.md</code>.</p>
   </div>
-  <div class="barra"><div class="relleno" style="width:67%"></div></div>
-  <p class="cuenta">8 de 12 completadas</p>
+  <div class="barra"><div class="relleno" style="width:62%"></div></div>
+  <p class="cuenta">8 de 13 completadas</p>
   <ul class="tareas">
 <li class="tarea hecha abrible" data-hecha="1">
   <button class="cabecera" type="button" aria-expanded="false">
@@ -2258,6 +2258,18 @@ window.MathJax={
     </ul>
     <p class="hecho">✅ La nota técnica lleva una §2.5 con lo que cambió y la tabla de las preconfiguraciones (30 páginas, compila sin avisos). <strong>Falta para cerrar:</strong> que él abra la página en un navegador real y confirme los cuadros con el ratón, el ancho de teléfono y el tema oscuro: solo se comprobaron en Chrome sin ventana, a 1700 px y en claro.</p>
     <p class="artefacto">Artefacto: <code>subproyectos/nota_m1/numerica/artefacto_barrido/sistema_barrido.html</code></p>
+  </div>
+</li>
+<li class="tarea pendiente abrible" data-hecha="0">
+  <button class="cabecera" type="button" aria-expanded="false">
+    <span class="casilla" aria-hidden="true"></span>
+    <span class="ident">NM1</span>
+    <span class="titulo">13 — La ruta de Frank–Wolfe: qué se quiere probar</span>
+    <span class="flecha" aria-hidden="true"></span>
+  </button>
+  <div class="detalle" hidden>
+    <p>Pendiente de la reunión del 2026-10-02, pedido por Mauricio: identificar la ruta, dónde estamos y qué falta, con los huecos escritos como lemas. ✅ Nota técnica en inglés, 14 páginas: del problema continuo al esquema implementado y a su límite, y cada enunciado con su marca (fuente con número, nota compartida, directo o por estudiar). Cita a Pokutta y las notas B6.1 de Süli, archivadas el mismo día, además de Kushner–Dupuis y Bhatt–Borkar. No cita <code>nota_m1</code>, que no es fuente. ✅ <strong>Con la malla fija la ruta está completa:</strong> el barrido es Frank–Wolfe sobre el problema reducido discreto, con tasa <span class="mate">$O(1/\ell)$</span> y una cota del error del costo en función de <span class="mate">$g_\ell$</span>. El término en <span class="mate">$r_{\min}$</span> de <span class="mate">$g_\ell$</span> hace que la cota valga aunque la línea 1 no se resuelva exacta. 🔴 <strong>Nueve enunciados por estudiar</strong>, todos en el límite de malla, el caso <span class="mate">$s=1$</span> y el cálculo inexacto. La lista está en el §7 de la nota. ⚠️ La penalización implementada es <span class="mate">$H^1$</span> del toro de dimensión 3, no la <span class="mate">$H^s(\R^n)$</span> de la nota compartida, y con <span class="mate">$s=1$</span> no llega al umbral <span class="mate">$s&gt;3/2$</span>. <strong>Falta para cerrar:</strong> que el usuario la lea y escoja qué huecos lleva a la reunión siguiente.</p>
+    <p class="artefacto">Artefacto: <code>material_pdf/notas_tecnicas/frank_wolfe_ruta_en.pdf</code></p>
   </div>
 </li>
   </ul>
@@ -3344,7 +3356,7 @@ window.MathJax={
   </ul>
 </section>
 <footer>
-Generado el 2026-10-01 por <code>web/build_todo.py</code> a partir de los <code>TODO.md</code>. Editar esta página a mano no sirve de nada: se reescribe en la siguiente ejecución.
+Generado el 2026-10-08 por <code>web/build_todo.py</code> a partir de los <code>TODO.md</code>. Editar esta página a mano no sirve de nada: se reescribe en la siguiente ejecución.
 </footer>
 </div>
 <script>
